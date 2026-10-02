@@ -5,6 +5,7 @@
 !/herramientas/
 !/tablas/
 !/traduccion/
+!/screenshots/
 herramientas/*
 !herramientas/generar_disco.py
 !herramientas/construir_disco.py
@@ -32,3 +33,5 @@ traduccion/*
 !traduccion/traduccion_es.csv
 !traduccion/etiquetas_cortas.csv
 !traduccion/mando_es.bin
+screenshots/*
+!screenshots/recortadas/
