@@ -7,7 +7,7 @@ import json, struct
 def _o(a): return a - 0x80010000 + 0x800
 TABLA_X = 0x80060C00
 TITULO = ['Empezar', 'Ayuda', 'Avance']          # はじめる / 説明 / 特報!!
-CENTROS_PX = [82, 177, 267]                       # centro de cada texto original (px)
+CENTROS_PX = [65.5, 160.4, 252.3]                 # centro del BOTON de cada texto (px de juego; medido en capturas de v41). Antes 82/177/267 = centros del texto JP
 MENSAJES = [  # (JP, ES, solo_en_direccion o None)
     ('セーブ', 'Guardar', None), ('オプション', 'Opciones', None), ('終了', 'Salir', None), ('もどる●', 'Volver ●', None),
     ('終了しますか?', '¿Salir?', None), ('はい', 'Sí', None), ('いいえ', 'No', None), ('本を選ぶ', 'Elegir libro', None),
@@ -47,6 +47,7 @@ for _k, _p in [(2, 5), (4, 53), (12, 59), (23, 46), (32, 49), (33, 43), (33, 50)
 DINAMICOS = {9, 28}                                    # llamados tambien con y/posicion calculados: no se tocan sus posiciones
 TABLA_POS = 0x80065060
 def _enc(op, **k): return op
+def AV(a, b): return (a + b + 1) // 2 + 1 if a + b < 32 else 16      # v42: avance ENTERO entre centros de casillas (igual que las cuevas A y B)
 def _i(op, rs, rt, imm): return op << 26 | rs << 21 | rt << 16 | (imm & 0xffff)
 def _r(rs, rt, rd, sa, fn): return rs << 21 | rt << 16 | rd << 11 | sa << 6 | fn
 def codigo_avance():
@@ -71,12 +72,12 @@ def codigo_avance():
             _i(0x0F, 0, V0, 0x8006),               # 13 lui v0,0x8006
             _r(A0, V0, A0, 0, 0x21),               # 14 addu a0,a0,v0
             _i(0x24, A0, A0, -0x3E55),             # 15 lbu a0,-0x3e55(a0)    ancho del siguiente
-            0,                                     # 16 nop
-            _r(T2, A0, A0, 0, 0x21),               # 17 addu a0,t2,a0
-            _i(0x0B, A0, T2, 32),                  # 18 sltiu t2,a0,32
+            _i(0x09, T2, T2, 3),                   # 16 addiu t2,t2,3        (rellena el retardo de la carga; t2 = w0+3)
+            _r(T2, A0, A0, 0, 0x21),               # 17 addu a0,t2,a0         a0 = w0+w1+3
+            _i(0x0B, A0, T2, 35),                  # 18 sltiu t2,a0,35        (w0+w1 < 32)
             _i(0x04, T2, 0, 4),                    # 19 beq t2,zero,full
-            _r(0, A0, A0, 3, 0x00),                # 20 sll a0,a0,3           (retardo)
-            _i(0x09, A0, A0, 16),                  # 21 addiu a0,a0,16
+            _r(0, A0, A0, 1, 0x02),                # 20 srl a0,a0,1           (retardo)  v42: avance ENTERO = ceil((w0+w1)/2)+1 px
+            _r(0, A0, A0, 4, 0x00),                # 21 sll a0,a0,4           (1/16 px)
             _r(RA, 0, 0, 0, 0x08),                 # 22 jr ra
             _r(S1, A0, S1, 0, 0x21),               # 23 addu s1,s1,a0         (retardo)
             _r(RA, 0, 0, 0, 0x08),                 # 24 full: jr ra
@@ -140,7 +141,7 @@ FILAS = [(0x8006543c, 0x800656dc, 'Instrucciones', 'izq'), (0x8006546c, 0x800656
 def filas_opciones(exe, ID, ANCHO, inv, exe0):
     assert exe[_o(SUFIJO_H):_o(SUFIJO_H) + 0x24] == bytes(0x24), 'hueco SUFIJO_H/XS_USO ocupado'
     gw = lambda c: min(ANCHO[c], 16)
-    def avance(a, b): return (a + b) / 2 + (1 if a + b < 32 else 0)
+    def avance(a, b): return AV(a, b)
     def tinta(ws):                                   # ws[0] = marcador (espacio ES, no se ve); (inicio, fin) de la tinta visible desde el borde izq. de la casilla del marcador
         pos = [0.0]
         for a_, b_ in zip(ws, ws[1:]): pos.append(pos[-1] + avance(a_, b_))
@@ -269,7 +270,7 @@ def pantalla_nombre(exe, ID, ANCHO):
         struct.pack_into('<24H', exe, _o(REG_NOMBRE) + 48 * k, *(v + [0] * 24)[:24])
         if not txt: continue
         ws = [gw(c) for c in txt]
-        S = sum((a + b) / 2 + (1 if a + b < 32 else 0) for a, b in zip(ws, ws[1:]))            # distancia entre centros de la 1a y la ultima casilla
+        S = sum(AV(a, b) for a, b in zip(ws, ws[1:]))            # distancia entre centros de la 1a y la ultima casilla
         for p_, modo in ps:
             o = _o(POS_NOMBRE) + 4 * p_; x_jp = struct.unpack_from('<h', exe, o)[0]
             if modo == 'c': x = CENTRO_NOMBRE - (S + (ws[-1] - ws[0]) / 2) / 2                 # centro de la tinta = 156
@@ -311,7 +312,7 @@ def pantalla_fin(exe, ID, ANCHO):
     for k, (txt, modo) in FIN_TXT.items():
         v = [ID[c] - 0x100 for c in txt]; assert len(v) <= 24 and not {1, 4, 7, 0xa, 0} & set(v), (k, txt)
         ws = [gw(c) for c in txt]
-        S = sum((a + b) / 2 + (1 if a + b < 32 else 0) for a, b in zip(ws, ws[1:]))
+        S = sum(AV(a, b) for a, b in zip(ws, ws[1:]))
         o = _o(POS_FIN) + 4 * k; x_jp = struct.unpack_from('<h', exe, o)[0]
         if modo == 'c': x = CENTRO_FIN - (S + (ws[-1] - ws[0]) / 2) / 2 + 3
         else: x = x_jp - 8 + ws[0] / 2
@@ -325,7 +326,7 @@ def mensajes_genericos(exe, ID, ANCHO, ch, inv, regs0, verbose=True):
     struct.pack_into('<I', exe, i, 0x0C000000 | (CUEVA >> 2) & 0x3FFFFFF)                 # jal cueva
     # 2) registros
     gw = lambda c: min(ANCHO[c], 16)                                # ancho de tinta del glifo ES
-    def avance(w0, w1): return (w0 + w1) / 2 + (1 if w0 + w1 < 32 else 0)      # px entre bordes izq. de casillas (igual que la cueva)
+    def avance(w0, w1): return AV(w0, w1)      # px entre bordes izq. de casillas (igual que la cueva)
     def tinta(ws):                                                  # (inicio, fin) de la tinta respecto al borde izq. de la 1a casilla
         pos = 0.0; ini = 8 - ws[0] / 2
         for a_, b_ in zip(ws, ws[1:]): pos += avance(a_, b_)
@@ -754,9 +755,12 @@ def aplicar(exe, ID, ANCHO, mapa_json='tablas/mapa_ids_otogiri.json', verbose=Tr
     xs = []
     for r, (t, cpx) in enumerate(zip(TITULO, CENTROS_PX)):
         ids = [es(c) for c in t]; assert len(ids) <= 10
-        w = [ANCHO[c] + 1 for c in t]; x0 = cpx * 16 - sum(w) * 8
-        x = x0
-        for c, wi in zip(t, w): xs.append(int(x)); x += wi * 16
+        # v42: avance ENTERO entre centros (como las cuevas A/B; antes se avanzaba el ancho del glifo ACTUAL + 1 -> 'Em pezar') y tinta centrada en el
+        # centro del boton (medido en capturas: 65.5 / 160.4 / 252.3 px). x de la tabla = centro de la casilla + 8.5 (calibrado con las capturas de v41).
+        w = [min(ANCHO[c], 16) for c in t]; st = [AV(a, b) for a, b in zip(w, w[1:])]
+        c0 = cpx - (sum(st) + (w[-1] - w[0]) / 2) / 2; x = int(round(c0 + 8.5))
+        xs.append(x * 16)
+        for s_ in st: x += s_; xs.append(x * 16)
         struct.pack_into('<10H', exe, base + 20 * r, *(ids + [0] * (10 - len(ids))))
     assert len(xs) <= 40
     o = _o(TABLA_X); assert exe[o:o + 80] == bytes(80), 'hueco no vacio'
