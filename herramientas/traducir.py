@@ -189,6 +189,9 @@ def _pasada(X, U, tr, M, stats, inc, cad, deficit):
             u = por.get((sc, i))
             if u:
                 raw = u['raw']; fin = len(raw) - len(raw.rstrip('\n')); skip01 = False
+                if fin and u['id'] in tr and u['id'] not in cad and u['tok1'] < len(L) and L[u['tok1']].kind == 'c' and L[u['tok1']].op in (0x12, 0x2d):
+                    _t = T.normalizar(tr[u['id']]).rstrip()          # v44b: el original rompe fila ANTES del nombre; en espanol la frase sigue ('La voz de' + Nami): se quita ese salto
+                    if _t[-1:].isalpha() or _t[-1:] in ',;': fin = 0
                 if u['id'] in tr:
                     s = T.normalizar(tr[u['id']]); bad = M.comprobar(s)
                     if bad: prob.append((u['id'], bad))
@@ -198,6 +201,7 @@ def _pasada(X, U, tr, M, stats, inc, cad, deficit):
                             if fin and u['id'] not in cad: st.update(x=T.X0, pw=0, lin=st['lin'] + fin)      # v43: su salto de linea SI ocurre en el motor -> el estado vuelve al inicio de linea (antes seguia mid-linea: cortes prematuros)
                             continue
                         ch = cad.get(u['id']); opcion = ch is not None and all(e['id'] in tr for e in ch)
+                        ap0 = ''; nl0 = 0
                         if opcion:
                             txt, xx, pp, ps, piezas = lab(ch); r = piezas[ch.index(u)]          # la etiqueta se compone ENTERA: sus 01 originales sobran (filas vacias)
                             if u is ch[-1]:
@@ -217,9 +221,13 @@ def _pasada(X, U, tr, M, stats, inc, cad, deficit):
                                 r = M.componer_unidad(s, st, fin, ml, maxl_fin=mf, gmax_fin=max(40, M.gmax - G)) + '\n' * fin
                                 if ultima and st['lin'] + 1 > lim: deficit[mk] = min(8, deficit.get(mk, 0) + st['lin'] + 1 - lim)
                             else:
-                                r = M.componer_unidad(s, st, fin, ml) + '\n' * fin
-                        ap = ''; nlap = 0
-                        if not opcion:      # v44: signo de apertura (“ ¿ ¡ () que queda al final de una fila con un salto detras: pasa a abrir la fila siguiente (el original es salto + 「)
+                                _st0 = dict(st); r = M.componer_unidad(s, st, fin, ml) + '\n' * fin
+                                _m = re.search(r'([“¿¡(]+)(\n+)$', r); _sr = s.rstrip(' ')
+                                if _m and r[:_m.start()].strip() and _sr.endswith(_m.group(1)):      # v44: recomponer SIN el signo (su ancho podia forzar un corte antes)
+                                    st.clear(); st.update(_st0); _nl = max(fin, 1)
+                                    r = M.componer_unidad(_sr[:len(_sr) - len(_m.group(1))].rstrip(' '), st, fin, ml) + '\n' * _nl + _m.group(1); ap0 = _m.group(1); nl0 = _nl
+                        ap = ap0; nlap = nl0
+                        if not opcion and not ap0:      # v44: signo de apertura (“ ¿ ¡ () que queda al final de una fila con un salto detras: pasa a abrir la fila siguiente (el original es salto + 「)
                             mm = re.search(r'([“¿¡(]+)(\n+)$', r)
                             if mm and r[:mm.start()].strip(): ap = mm.group(1); nlap = len(mm.group(2)); r = r[:mm.start()].rstrip(' ') + mm.group(2) + ap
                         res[u['id']] = r; fin_en[(sc, u['tok1'])] = u['id']
