@@ -2,6 +2,19 @@
 
 Fan translation into **Spanish** of *Otogirisou – Sosei Hen* (弟切草 蘇生篇, *Sound Novel Evolution 1*), the Sony PlayStation sound novel by Chunsoft. The whole script is translated, along with the menus, the save/copy/erase screens, the end-of-game screens and the controller image.
 
+**Screenshots** (DuckStation)
+
+<p>
+<img src="screenshots/recortadas/captura_01.png" width="250" alt="Title screen">
+<img src="screenshots/recortadas/captura_02.png" width="250" alt="Controller image">
+<img src="screenshots/recortadas/captura_03.png" width="250" alt="Name screen">
+</p>
+<p>
+<img src="screenshots/recortadas/captura_04.png" width="250" alt="Story text">
+<img src="screenshots/recortadas/captura_05.png" width="250" alt="Choices">
+<img src="screenshots/recortadas/captura_06.png" width="250" alt="In-game menu">
+</p>
+
 > **Work in progress.** This repository does **not** contain the game. You need your own copy of the original disc image. Ready-made patches (xdelta) will be published in [Releases](../../releases) when the project is finished; until then, you can build the disc yourself (see below).
 
 ## Building the translated disc from source
