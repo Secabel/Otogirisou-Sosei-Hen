@@ -218,9 +218,17 @@ def _pasada(X, U, tr, M, stats, inc, cad, deficit):
                                 if ultima and st['lin'] + 1 > lim: deficit[mk] = min(8, deficit.get(mk, 0) + st['lin'] + 1 - lim)
                             else:
                                 r = M.componer_unidad(s, st, fin, ml) + '\n' * fin
+                        ap = ''; nlap = 0
+                        if not opcion:      # v44: signo de apertura (“ ¿ ¡ () que queda al final de una fila con un salto detras: pasa a abrir la fila siguiente (el original es salto + 「)
+                            mm = re.search(r'([“¿¡(]+)(\n+)$', r)
+                            if mm and r[:mm.start()].strip(): ap = mm.group(1); nlap = len(mm.group(2)); r = r[:mm.start()].rstrip(' ') + mm.group(2) + ap
                         res[u['id']] = r; fin_en[(sc, u['tok1'])] = u['id']
                         if stats is not None: stats.append((u['id'], st['lin'] + 1, st['gl'], opcion))
                         if fin and not opcion: st.update(x=T.X0, pw=0, lin=st['lin'] + fin)
+                        if ap:      # v44: el texto siguiente continua tras el signo, en la fila nueva
+                            x_, pw_ = T.X0, 0
+                            for c_ in ap: x_, pw_ = M.avanzar(x_, pw_, c_)
+                            st.update(x=x_, pw=pw_, gl=st['gl'] + len(ap), lin=st['lin'] + nlap - fin)
                 else:
                     for ch in raw:
                         if ch == '\n': st.update(x=T.X0, pw=0, lin=st['lin'] + 1)
@@ -253,8 +261,14 @@ def _pasada(X, U, tr, M, stats, inc, cad, deficit):
                             break
                     if x1 + extra > M.lim and st['x'] != T.X0 and pid in res and not res[pid].endswith('\n'):
                         # v21: el motor corta DENTRO del nombre ('Kohe' / 'i'); el nombre se pasa entero a la linea siguiente
-                        res[pid] = res[pid].rstrip(' ') + '\n'
-                        st.update(x=T.X0, pw=0, lin=st['lin'] + 1); x1, p1 = M.avanzar_nombre(T.X0, 0)
+                        rp = res[pid].rstrip(' '); mm = re.search(r'([“¿¡(]+)$', rp)
+                        if mm and rp[:mm.start()].strip():      # v44: un signo de apertura pegado al nombre viaja con el (no se queda colgando al final de la fila)
+                            res[pid] = rp[:mm.start()].rstrip(' ') + '\n' + mm.group(1); xs, ps = T.X0, 0
+                            for c_ in mm.group(1): xs, ps = M.avanzar(xs, ps, c_)
+                            st.update(x=xs, pw=ps, lin=st['lin'] + 1); x1, p1 = M.avanzar_nombre(xs, ps)
+                        else:
+                            res[pid] = rp + '\n'
+                            st.update(x=T.X0, pw=0, lin=st['lin'] + 1); x1, p1 = M.avanzar_nombre(T.X0, 0)
                     st['x'], st['pw'] = x1, p1; st['gl'] += len(M.nombre)
             i += 1
     return res, prob
