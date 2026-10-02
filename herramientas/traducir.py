@@ -193,7 +193,10 @@ def _pasada(X, U, tr, M, stats, inc, cad, deficit):
                     s = T.normalizar(tr[u['id']]); bad = M.comprobar(s)
                     if bad: prob.append((u['id'], bad))
                     else:
-                        if not s.strip(): res[u['id']] = '' if u['id'] in cad else '\n' * fin; i = u['tok1']; continue      # fragmento vaciado por fusionar: en etiquetas, sin su 01
+                        if not s.strip():
+                            res[u['id']] = '' if u['id'] in cad else '\n' * fin; i = u['tok1']      # fragmento vaciado por fusionar: en etiquetas, sin su 01
+                            if fin and u['id'] not in cad: st.update(x=T.X0, pw=0, lin=st['lin'] + fin)      # v43: su salto de linea SI ocurre en el motor -> el estado vuelve al inicio de linea (antes seguia mid-linea: cortes prematuros)
+                            continue
                         ch = cad.get(u['id']); opcion = ch is not None and all(e['id'] in tr for e in ch)
                         if opcion:
                             txt, xx, pp, ps, piezas = lab(ch); r = piezas[ch.index(u)]          # la etiqueta se compone ENTERA: sus 01 originales sobran (filas vacias)
