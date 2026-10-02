@@ -56,7 +56,8 @@ Only what is needed to generate the disc is included here. The game files, disc 
 
 - Translation and ROM hacking: **Talion**.
 - Tools: Python, [Keystone](https://www.keystone-engine.org/), [Capstone](https://www.capstone-engine.org/), [DuckStation](https://www.duckstation.org/) and [PCSX-Redux](https://github.com/grumpycoders/pcsx-redux) for testing.
-- More credits and the license will be added at the first release.
+- Part of the Spanish script reuses text from an earlier Spanish translation of the Super Famicom version, which is based on the English translation project [otogirisou-english](https://github.com/ButThouMust/otogirisou-english) by **ButThouMust** and **Guest** (GPL v3). Thanks to them for their work.
+- The license will be defined at the first release (it must be compatible with GPL v3 because of the text above).
 
 ## Legal
 
