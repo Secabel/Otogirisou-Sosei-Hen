@@ -486,6 +486,17 @@ def pausa_menu(exe, ID, ANCHO, exe0):
     q.L('a2'); q.i(0x23, 't6', 't3', 0); q.i(9, 't3', 't3', 0x28); q.i(9, 't5', 't5', -1); q.i(0x2B, 't6', 't4', 0); q.br(5, 't5', 'zero', 'a2'); q.i(9, 't4', 't4', 4)
     q.i(0x2B, 't2', 't7', M_O)
     q.L('o1'); q.r(8, 'ra', 'zero', 'zero'); q.nop()
+    # v48: SAVEG = SAVEX para la entrada a 'Guardar' (0x8003654c: `addiu v0,zero,6` -> jal SAVEG). Mismo guardado de los huecos de escena 0x46..0x63;
+    # no toca 0x5b4(gp); deja v0 = 6 (la instruccion original). La restauracion es RBX, enganchada en las salidas del modulo de tarjeta (v0 = 0x12).
+    SAVEG = D0 + 4 * len(q.w)
+    q.i(0x0F, 't0', 'zero', 0x8008); q.i(0x0F, 't7', 'zero', 0x1f80); q.i(0x23, 't1', 't7', M_O); q.i(0x0F, 't2', 'zero', 0x5afe); q.i(0x0D, 't2', 't2', 0x1234)
+    q.br(4, 't1', 't2', 'g1'); q.nop()
+    q.i(9, 't3', 't0', SRC & 0xffff); q.i(9, 't4', 't7', DST_O); q.i(9, 't5', 'zero', N * 6)
+    q.L('ga1'); q.i(0x23, 't6', 't3', 0); q.i(9, 't3', 't3', 4); q.i(9, 't5', 't5', -1); q.i(0x2B, 't6', 't4', 0); q.br(5, 't5', 'zero', 'ga1'); q.i(9, 't4', 't4', 4)
+    q.i(9, 't3', 't0', PC4); q.i(9, 't4', 't7', CS_O); q.i(9, 't5', 'zero', N)
+    q.L('ga2'); q.i(0x23, 't6', 't3', 0); q.i(9, 't3', 't3', 0x28); q.i(9, 't5', 't5', -1); q.i(0x2B, 't6', 't4', 0); q.br(5, 't5', 'zero', 'ga2'); q.i(9, 't4', 't4', 4)
+    q.i(0x2B, 't2', 't7', M_O)
+    q.L('g1'); q.r(8, 'ra', 'zero', 'zero'); q.i(9, 'v0', 'zero', 6)
     RBX = D0 + 4 * len(q.w)
     q.i(9, 't1', 'zero', 0x12); q.br(5, 'v0', 't1', 's1'); q.i(0x0F, 't0', 'zero', 0x8008)
     q.i(0x0F, 't7', 'zero', 0x1f80); q.i(0x23, 't1', 't7', M_O); q.i(0x0F, 't2', 'zero', 0x5afe); q.i(0x0D, 't2', 't2', 0x1234)
@@ -501,6 +512,9 @@ def pausa_menu(exe, ID, ANCHO, exe0):
     for k, w in enumerate(wq): struct.pack_into('<I', exe, _o(D0) + 4 * k, w)
     parche(0x8003986c, _i(0x2B, 28, 0, 0x5b4), jal(SAVEX))                  # init de Opciones: sw zero,0x5b4(gp) -> jal SAVEX (lo hace dentro)
     parche(0x8003a97c, 0x3c018008, jal(RBX))                                # salida real de Opciones: RBX hace el sh del estado
+    parche(0x8003654c, 0x24020006, jal(SAVEG))                              # v48: entrada a Guardar: guarda los huecos de escena
+    for _a in (0x8003475c, 0x80034830, 0x80034910):                         # v48: salidas del modulo de tarjeta/libros hacia la pausa (v0 = 0x12): RBX restaura y hace el sh del estado
+        parche(_a, 0x3c018008, jal(RBX)); parche(_a + 4, 0xa422a8b2, 0)
     parche(0x80035f78, _i(0x2B, 28, 0, 0x55c), jal(CLR2))                 # constructor de la pausa: desmarca + control de atenuado
     parche(0x800366ec, 0x3c028008, J << 26 | (EXD2 >> 2) & 0x3FFFFFF)   # v29: segunda salida
     parche(0x800364d0, 0x3c028008, jal(EXD))                               # salida de la pausa (entrada comun 0x800364d0: la rama de modo != 3 salta aqui): duplicar con tope en vez del bucle original
