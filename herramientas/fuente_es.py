@@ -11,9 +11,11 @@ UVO = 0x8005C1A8 - 0x80010000 + 0x800
 ml.PUNT['ʼ'] = (4, [(1, 2), (2, 2), (1, 3), (2, 3), (1, 4), (0, 5)])
 ml.PUNT['ʻ'] = (4, [(1, 2), (2, 2), (1, 3), (2, 3), (2, 4), (3, 5)])
 ml.PUNT['*'] = (6, [(2, 2), (0, 3), (2, 3), (4, 3), (1, 4), (2, 4), (3, 4), (1, 5), (3, 5)])      # v59: asterisco de las notas de traduccion
-NUEVOS_2B = ['ú', '¿', '¡', 'ü', 'Á', 'É', 'Í', 'Ó', 'Ú', 'Ñ', ':', ';', '-', 'ʻ', 'ʼ', '*']
+NUEVOS_2B = ['ú', '¿', '¡', 'ü', 'Á', 'É', 'Í', 'Ó', 'Ú', 'Ñ', ':', ';', '-', 'ʻ', 'ʼ']
+NUEVOS_NOTAS = ['*']      # solo si notas=True (el '*' no se usa en el juego sin notas)
 
-def aplicar_fuente(cd, exe, verbose=False):
+def aplicar_fuente(cd, exe, verbose=False, notas=False):
+    NUEVOS = NUEVOS_2B + (NUEVOS_NOTAS if notas else [])
     hdr = struct.unpack('<9I', cd[:36])
     pages = []
     for i in range(8):
@@ -48,13 +50,13 @@ def aplicar_fuente(cd, exe, verbose=False):
     # '?' y '!' usan el glifo original 0x103/0x102, pero el motor trata los ids 0x101/2/3/6/7 como 'puntuacion de pausa'
     # ([0x356]=id-0x100, funcion 0x8001b64c): tras ellos mira el script y pinta el cursor antes de la '”'. El japones usa 0x196/0x200
     # (que remapea a 0x103/0x102 con [0x356]=0x96/0x100 y no dispara nada). Solucion: copiar su UV a ids 1-byte libres 'neutros'.
-    usados = set(NEW1.values()) | set(libres2[:len(NUEVOS_2B)]) | {inv[c] for c in 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789()“”…♪'} | {0x1fd}
+    usados = set(NEW1.values()) | set(libres2[:len(NUEVOS)]) | {inv[c] for c in 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789()“”…♪'} | {0x1fd}
     neutros = sorted((i for i in range(0x104, 0x1f0) if i not in usados and i != ESP and i not in (0x196, 0x14e)
                       and not 0x110 <= i <= 0x14d and (i - 0x100) not in (1, 2, 3, 6, 7)), key=lambda i: cnt[i])
     assert len(neutros) >= 2
     ID_SIG = {'?': neutros[0], '!': neutros[1]}
     NEWID = dict(NEW1)
-    for c, i in zip(NUEVOS_2B, libres2): NEWID[c] = i
+    for c, i in zip(NUEVOS, libres2): NEWID[c] = i
     P7 = pages[7]; celdas = []
     for n, t in enumerate(tab):
         if (t[0] & 3) == 3 and (t[0] >> 4) & 1 and t[4] >= 128 and t[3] == 16 and t[5] % 16 == 0 and t[4] % 16 == 0:

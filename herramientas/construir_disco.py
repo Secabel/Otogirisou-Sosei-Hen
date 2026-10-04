@@ -39,7 +39,7 @@ so = list(struct.unpack('<46I', bytes(exe[0x80062030 - 0x80010000 + 0x800:][:184
 escenas_orig = [bytes(cd[88 * 2048 + so[i]:88 * 2048 + so[i + 1]]) for i in range(45)]
 if a.traduccion:
     import json, fuente_es, texto_es, traducir
-    ID, AN = fuente_es.aplicar_fuente(cd, exe)
+    ID, AN = fuente_es.aplicar_fuente(cd, exe, notas=a.notas)
     import parche_nombre; NOMBRE = 'Kohei'; parche_nombre.aplicar(exe, ID, NOMBRE)
     import parche_menus; parche_menus.aplicar(exe, ID, AN)
     if a.notas: import parche_notas; parche_notas.aplicar(exe, ID)      # v59 experimental      # EXPERIMENTO v8: titulo + mensajes de menu (ver docs/08)
