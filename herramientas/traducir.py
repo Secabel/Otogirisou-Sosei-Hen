@@ -284,7 +284,7 @@ def _pasada(X, U, tr, M, stats, inc, cad, deficit):
 CAE_A_SIGUIENTE = (5, 7, 14, 16, 17, 19, 23, 27, 32)
 
 
-def escenas_es(tr, M, verbose=False):
+def escenas_es(tr, M, verbose=False, notas=False):
     X = S.load(E.cargar_escenas()); U = E.unidades(X)
     comp, prob = componer_todo(X, U, tr, M)
     if prob: raise SystemExit('caracteres sin glifo: %s' % prob[:10])
@@ -323,6 +323,9 @@ def escenas_es(tr, M, verbose=False):
                 texto = False; ult = k
             k += 1
     if verbose: print('paginas en blanco eliminadas:', quitadas)
+    if notas:
+        import notas as N
+        N.insertar_notas(X, M, DEST)
     # v46: en el original las escenas estan contiguas en RAM y estas terminan SIN salto (el script sigue en la escena siguiente).
     # Con el cargador por demanda la escena siguiente no esta pegada: se anade un salto explicito a su inicio.
     for k in CAE_A_SIGUIENTE:

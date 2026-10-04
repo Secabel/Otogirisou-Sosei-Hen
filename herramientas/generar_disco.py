@@ -8,8 +8,9 @@ import sys, os, subprocess, argparse
 ROM_BASE    = "rom/Sound Novel Evolution 1 - Otogirisou - Sosei-hen (Japan) (Rev 1).bin"   # ROM original
 CSV_BASE    = "traduccion/traduccion_es.csv"       # traduccion
 SALIDA      = "rom/es_completo"                    # carpeta de salida
-NOMBRE      = "Otogirisou_ES_v58"                   # <-- cambiar en cada version (si el emulador tiene abierto el anterior)
+NOMBRE      = "Otogirisou_ES_v64"                   # <-- cambiar en cada version (si el emulador tiene abierto el anterior)
 PRESUPUESTO = "100"
+NOTAS       = False                                # v59 experimental: notas de traduccion (False = igual que v58)
 REINICIAR   = True                                 # True = empezar de cero (equivale a --reiniciar)
 # ===============================================================
 
@@ -20,10 +21,11 @@ ap.add_argument('--salida', default=SALIDA)
 ap.add_argument('--nombre', default=NOMBRE)
 ap.add_argument('--presupuesto', default=PRESUPUESTO)
 ap.add_argument('--reiniciar', action='store_true', default=REINICIAR)
+ap.add_argument('--notas', action='store_true', default=NOTAS)
 ap.add_argument('--apertura14', action='store_true', help='solo pruebas')
 a = ap.parse_args()
 cmd = [sys.executable, 'herramientas/construir_disco.py', '--traduccion', '--rom', a.rom, '--csv', a.csv, '--salida', a.salida,
-       '--nombre', a.nombre, '--presupuesto', a.presupuesto, '--escala', '1'] + (['--reiniciar'] if a.reiniciar else []) + (['--apertura14'] if a.apertura14 else [])
+       '--nombre', a.nombre, '--presupuesto', a.presupuesto, '--escala', '1'] + (['--reiniciar'] if a.reiniciar else []) + (['--apertura14'] if a.apertura14 else []) + (['--notas'] if a.notas else [])
 env = dict(os.environ, PYTHONUTF8='1', PYTHONIOENCODING='utf-8')      # Windows: abrir los .json/.csv como UTF-8 (no cp1252)
 print('Generando', a.nombre, 'en', a.salida)
 while True:

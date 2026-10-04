@@ -9,6 +9,7 @@ import cargador_escenas as cg, disco
 
 ap = argparse.ArgumentParser()
 ap.add_argument('--escala', type=float, default=1.0)
+ap.add_argument('--notas', action='store_true', help='v59 experimental: notas de traduccion con color')
 ap.add_argument('--salida', default='rom/m2')
 ap.add_argument('--maxslots', type=int, default=16)
 ap.add_argument('--nombre', default='Otogirisou_M2')
@@ -40,12 +41,13 @@ if a.traduccion:
     import json, fuente_es, texto_es, traducir
     ID, AN = fuente_es.aplicar_fuente(cd, exe)
     import parche_nombre; NOMBRE = 'Kohei'; parche_nombre.aplicar(exe, ID, NOMBRE)
-    import parche_menus; parche_menus.aplicar(exe, ID, AN)      # EXPERIMENTO v8: titulo + mensajes de menu (ver docs/08)
+    import parche_menus; parche_menus.aplicar(exe, ID, AN)
+    if a.notas: import parche_notas; parche_notas.aplicar(exe, ID)      # v59 experimental      # EXPERIMENTO v8: titulo + mensajes de menu (ver docs/08)
     M = texto_es.Modelo(ID, AN, nombre=NOMBRE)
     import csv
     tr = {r['id']: r['espanol'] for r in csv.DictReader(open(a.csv, encoding='utf-8-sig', newline=''), delimiter=';') if r['espanol'] != ''}
     import etiquetas_cortas; tr, nc = etiquetas_cortas.aplicar(tr); print('opciones de menu acortadas:', nc)
-    escenas_orig, comp = traducir.escenas_es(tr, M)
+    escenas_orig, comp = traducir.escenas_es(tr, M, notas=a.notas)
     print('traduccion: %d unidades, script %d B (original %d B)' % (len(tr), sum(map(len, escenas_orig)), so[45]))
 if a.apertura14:
     b44 = bytearray(escenas_orig[44])
