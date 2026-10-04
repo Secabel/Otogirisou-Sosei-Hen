@@ -58,7 +58,9 @@ def fusionar(X, U, tr):
                     m = re.compile(r'[.?!…]+”?').search(B, p0) if p0 is not None else None
                     pre, rest = (B[:m.end()], B[m.end():]) if m else (B, '')
                     if '/' in pre: pre, rest = B.split('/', 1)[0], '/' + B.split('/', 1)[1]   # no cruzar saltos de linea forzados
-                    B = rest.lstrip(' '); tr[cur] = A + pre
+                    B = rest.lstrip(' ')
+                    sep = ' ' if (A and pre and A[-1] not in ' /-“¿¡(‘ʻ' and pre[0] not in ' /”’ʼ»)!?.,;:…-' and not (A[-1].isalnum() and pre[0].isalnum())) else ''     # v60: frase que sigue a puntuacion ('...' '.”') sin espacio -> se anade (letra+letra = palabra partida a proposito: no se toca)
+                    tr[cur] = A + sep + pre + (' ' if rest and not rest.strip() else '')          # grupo 4: el espacio final de la unidad (antes del nombre/etc.) no se pierde al fusionar ('bien.Kohei')
                     if B and not B.startswith('/') and not pre.endswith('/'): B = ' ' + B           # el espacio va al inicio de B (si cae al inicio de linea se descarta)
                     tr[u['id']] = B; n += 1
             if B.strip():
@@ -198,6 +200,8 @@ def _pasada(X, U, tr, M, stats, inc, cad, deficit):
                     else:
                         if not s.strip():
                             res[u['id']] = '' if u['id'] in cad else '\n' * fin; i = u['tok1']      # fragmento vaciado por fusionar: en etiquetas, sin su 01
+                            if u['id'] in cad and u is cad[u['id']][-1] and all(e['id'] in tr for e in cad[u['id']]):      # grupo 1: si el ULTIMO fragmento de la etiqueta quedo vacio (fusionado), el estado de pagina tras elegirla no se actualizaba (lin 1 en vez de 4) y el texto tras el goto se componia como pagina casi vacia -> desborde ('pantalla sucia', escena 20 0x243)
+                                txt_, xx_, pp_, ps_, pz_ = lab(cad[u['id']]); st.update(x=max(T.X0, xx_ - (M.x_opcion - T.X0)), pw=pp_, lin=txt_.count('\n'), gl=M.glifos(txt_.split('\n')))
                             if fin and u['id'] not in cad: st.update(x=T.X0, pw=0, lin=st['lin'] + fin)      # v43: su salto de linea SI ocurre en el motor -> el estado vuelve al inicio de linea (antes seguia mid-linea: cortes prematuros)
                             continue
                         ch = cad.get(u['id']); opcion = ch is not None and all(e['id'] in tr for e in ch)
@@ -215,10 +219,12 @@ def _pasada(X, U, tr, M, stats, inc, cad, deficit):
                             if fin or next((o for o in ops if o != 1), None) in (0x13, 0x0e, 9, 0x0a, 2): s = s.rstrip(' ')     # espacio final inutil (sigue salto de linea, fin de pagina o menu)
                             lm = limite_menu(L, sc, MA[u['tok0']]) if MA[u['tok0']] is not None else None
                             if lm:                 # la ULTIMA pagina (la que comparte pantalla con las opciones) deja sitio al menu
-                                R, G = lm; mk = (sc, MA[u['tok0']]); lim = max(1, 9 - R)
-                                ultima = not any((sc, q) in por for q in range(u['tok1'], MA[u['tok0']]))
-                                mf = lim if ultima else max(1, lim - deficit.get(mk, 0))
-                                r = M.componer_unidad(s, st, fin, ml, maxl_fin=mf, gmax_fin=max(40, M.gmax - G)) + '\n' * fin
+                                R, G = lm; mk = (sc, MA[u['tok0']]); lim = 9 - R          # grupo 4: R==9 (opciones ocupan toda la pantalla) -> lim 0: el enunciado va solo en su(s) pagina(s)
+                                ultima = not any((sc, q) in por and (por[(sc, q)]['id'] not in tr or T.normalizar(tr[por[(sc, q)]['id']]).strip()) for q in range(u['tok1'], MA[u['tok0']]))      # grupo 2: unidades posteriores VACIAS (fusionadas) no cuentan
+                                if ultima: r = M.componer_unidad(s, st, fin, ml, maxl_fin=lim, gmax_fin=max(40, M.gmax - G), menu_limpio=True)
+                                else: r = M.componer_unidad(s, st, fin, ml)          # grupo 2: las unidades previas NO comparten pantalla con las opciones (solo la ultima lo decide); antes se las comprimia a 1 fila y partia las preguntas en dos pantallas
+                                if r.endswith('\f'): fin = 0          # grupo 2: opciones en pagina limpia; sin salto de linea tras la espera
+                                else: r += '\n' * fin
                                 if ultima and st['lin'] + 1 > lim: deficit[mk] = min(8, deficit.get(mk, 0) + st['lin'] + 1 - lim)
                             else:
                                 _st0 = dict(st); r = M.componer_unidad(s, st, fin, ml) + '\n' * fin
@@ -253,6 +259,7 @@ def _pasada(X, U, tr, M, stats, inc, cad, deficit):
                     if skip01: skip01 = False
                     else: st.update(x=T.X0, pw=0, lin=st['lin'] + 1)
                 elif t.op == 0x13: st.update(x=T.X0, pw=0, lin=0, gl=0); skip01 = True; i += 1; continue
+                elif t.op == 0x14: st.update(x=T.X0, pw=0, lin=0, gl=0)      # grupo 2: 0x14 tambien limpia la pagina. Prueba con el guion JP: si solo 0x13 limpiara, 68 de 7434 paginas pasarian de 9 filas (hasta 16); si limpian ambos, 15 de 7561. Ademas 33 de las 37 secuencias de >=10 filas entre 0x13 llevan un 0x14 que las parte bien.
                 elif t.op == 0x12:
                     x1, p1 = M.avanzar_nombre(st['x'], st['pw']); extra = 0
                     un = por.get((sc, i + 1))

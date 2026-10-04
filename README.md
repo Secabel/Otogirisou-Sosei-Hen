@@ -69,7 +69,8 @@ Only what is needed to generate the disc is included here. The game files, disc 
 
 Build numbers (vNN) are internal disc versions used during development; only the important milestones are listed. Later build numbers only reflect rebuilds of the same content.
 
-- **v56–v58 (current):** menu fixes (5-option menus fit within 9 rows), last wording corrections after a full playthrough.
+- **v65 (current):** translation fixes (13 reviewed cases), player name no longer glued to the previous word, page state after a menu choice followed by a jump fixed (dirty screens), and menu questions no longer split into one-line screens (the question stays whole and the options go alone on a clean screen) and one-/two-word leftover screens mid-sentence removed (the 0x14 wait is now treated as a page break); also fixed text fragments joined without a space (19 words such as diary dates `julioEs`, `dispersascayeron`, `ahoraparecía`, plus ~110 places after punctuation such as `Nami...¡Nami!`).
+- **v56–v58:** menu fixes (5-option menus fit within 9 rows), last wording corrections after a full playthrough.
 - **v50–v57:** full quality review of the Spanish text against the Japanese (~210 corrections), short menu labels reviewed, menu options always capitalised, glossary unified.
 - **v49:** critical fix: 9 scenes ended without a jump and fell into garbage (Japanese text and repeated scenes on screen). Script flow verified identical to the original.
 - **v43–v48:** line-break fixes (premature breaks after merged fragments, hanging opening marks `“ ¿ ¡`, no break before names mid-sentence).
