@@ -8,7 +8,7 @@ import sys, os, subprocess, argparse
 ROM_BASE    = "rom/Sound Novel Evolution 1 - Otogirisou - Sosei-hen (Japan) (Rev 1).bin"   # ROM original
 CSV_BASE    = "traduccion/traduccion_es.csv"       # traduccion
 SALIDA      = "rom/es_completo"                    # carpeta de salida
-NOMBRE      = "Otogirisou_ES_v55"                   # <-- cambiar en cada version (si el emulador tiene abierto el anterior)
+NOMBRE      = "Otogirisou_ES_v58"                   # <-- cambiar en cada version (si el emulador tiene abierto el anterior)
 PRESUPUESTO = "100"
 REINICIAR   = True                                 # True = empezar de cero (equivale a --reiniciar)
 # ===============================================================
