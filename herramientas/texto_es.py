@@ -68,7 +68,7 @@ class Modelo:
         try: ls, xx, pp = self.envolver(s, self.x_opcion, 0, self.x_opcion)
         finally: self.lim = lim0
         return '\n'.join(l.rstrip(' ') for l in ls).replace(SALTO, ''), xx, pp
-    def componer_unidad(self, s, estado, fin_nl, maxl=None, maxl_fin=None, gmax_fin=None):
+    def componer_unidad(self, s, estado, fin_nl, maxl=None, maxl_fin=None, gmax_fin=None, menu_limpio=False):
         """s: texto ES normalizado (con '/'); estado = dict(x, pw, lin, gl). Devuelve texto con \\n y \\f (paginas cortadas en finales de frase, <=maxl filas y <=gmax glifos); actualiza estado.
         maxl_fin/gmax_fin: limite SOLO para la ultima pagina (la que comparte pantalla con las opciones de un menu): si no cabe, las ultimas frases pasan a una pagina nueva."""
         maxl = maxl or self.maxl
@@ -83,6 +83,8 @@ class Modelo:
         gfin = self.gmax if gmax_fin is None else gmax_fin
         def cabe(e): return e['lin'] + 1 <= maxl_fin and e['gl'] <= gfin
         if cabe(st): estado.update(st); return txt
+        if menu_limpio and maxl_fin <= 0:      # grupo 4: las opciones llenan la pantalla -> enunciado entero y opciones solas en pagina limpia
+            estado.update(st); r = txt.rstrip('\n'); estado.update(x=X0, pw=0, lin=0, gl=0); return r + '\f'
         g0 = self.gmax
         for k in range(len(chunks), 0, -1):        # cuantas mas frases finales quepan en la pagina del menu, mejor
             pre = chunks[:-k]
@@ -91,10 +93,13 @@ class Modelo:
             st2 = dict(x=X0, pw=0, lin=0, gl=0); self.gmax = gfin
             try: t2 = self._paginar(chunks[-k:], st2, maxl_fin).replace(SALTO, '')
             finally: self.gmax = g0
-            if ('\f' not in t2 or k == 1) and cabe(st2):      # ultimo recurso (k=1): la ultima frase se parte por lineas entre paginas
+            if ('\f' not in t2 or (k == 1 and not menu_limpio)) and cabe(st2):      # ultimo recurso (k=1): la ultima frase se parte por lineas entre paginas
                 vacia = not pre and not estado.get('lin', 0) and not estado.get('gl', 0)
                 estado.update(st2)
                 return t2 if vacia else t1.rstrip('\n') + '\f' + t2
+        if menu_limpio:      # grupo 2: el enunciado no cabe junto a las opciones -> se queda ENTERO (sin partir su ultima frase) y las opciones van solas en una pagina limpia (tras una espera 0x13, como en 98 menus del original)
+            estado.update(st); r = txt.rstrip('\n')
+            estado.update(x=X0, pw=0, lin=0, gl=0); return r + '\f'
         estado.update(st); return txt
     def _paginar(self, chunks, estado, maxl):
         x, pw, lin0, gl0 = estado['x'], estado['pw'], estado['lin'], estado.get('gl', 0)
