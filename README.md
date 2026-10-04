@@ -65,6 +65,19 @@ Only what is needed to generate the disc is included here. The game files, disc 
 - The disc includes a demo of another game ("Machi"). Its menus are left untouched on purpose.
 - Not every route has been re-tested after every change; some typos or inconsistencies may remain.
 
+## Changelog
+
+Build numbers (vNN) are internal disc versions used during development; only the important milestones are listed. Later build numbers only reflect rebuilds of the same content.
+
+- **v56–v58 (current):** menu fixes (5-option menus fit within 9 rows), last wording corrections after a full playthrough.
+- **v50–v57:** full quality review of the Spanish text against the Japanese (~210 corrections), short menu labels reviewed, menu options always capitalised, glossary unified.
+- **v49:** critical fix: 9 scenes ended without a jump and fell into garbage (Japanese text and repeated scenes on screen). Script flow verified identical to the original.
+- **v43–v48:** line-break fixes (premature breaks after merged fragments, hanging opening marks `“ ¿ ¡`, no break before names mid-sentence).
+- **v40–v42:** visual review of 426 rare kanji (77 corrected), integer pixel advance on the book screens and the title, title recentred.
+- **v30–v38:** end-of-game notice, controller image translated (own lossless MDEC encoder), book screens (header, copy, erase, "Sin usar") and save-slot screens working.
+- **v12–v29:** memory-card and shared message screens, options and help frame, name confirmation, pause menu reimplemented (several graphical bugs after Options fixed).
+- **First builds:** script extraction and re-insertion, Latin glyphs (accents, ñ, ¿ ¡) added to the font, proportional text layout.
+
 ## Credits
 
 - Translation and ROM hacking: **Talion**.
