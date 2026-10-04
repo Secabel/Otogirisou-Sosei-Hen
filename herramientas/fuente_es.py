@@ -10,7 +10,8 @@ UVO = 0x8005C1A8 - 0x80010000 + 0x800
 # apostrofos tipograficos para comillas anidadas (ʻ abre, ʼ cierra)
 ml.PUNT['ʼ'] = (4, [(1, 2), (2, 2), (1, 3), (2, 3), (1, 4), (0, 5)])
 ml.PUNT['ʻ'] = (4, [(1, 2), (2, 2), (1, 3), (2, 3), (2, 4), (3, 5)])
-NUEVOS_2B = ['ú', '¿', '¡', 'ü', 'Á', 'É', 'Í', 'Ó', 'Ú', 'Ñ', ':', ';', '-', 'ʻ', 'ʼ']
+ml.PUNT['*'] = (6, [(2, 2), (0, 3), (2, 3), (4, 3), (1, 4), (2, 4), (3, 4), (1, 5), (3, 5)])      # v59: asterisco de las notas de traduccion
+NUEVOS_2B = ['ú', '¿', '¡', 'ü', 'Á', 'É', 'Í', 'Ó', 'Ú', 'Ñ', ':', ';', '-', 'ʻ', 'ʼ', '*']
 
 def aplicar_fuente(cd, exe, verbose=False):
     hdr = struct.unpack('<9I', cd[:36])
