@@ -42,7 +42,7 @@ if a.traduccion:
     ID, AN = fuente_es.aplicar_fuente(cd, exe, notas=a.notas)
     import parche_nombre; NOMBRE = 'Kohei'; parche_nombre.aplicar(exe, ID, NOMBRE)
     import parche_menus; parche_menus.aplicar(exe, ID, AN)
-    if a.notas: import parche_notas; parche_notas.aplicar(exe, ID)      # v59 experimental      # EXPERIMENTO v8: titulo + mensajes de menu (ver docs/08)
+    if a.notas: import parche_notas; parche_notas.aplicar_y(exe, ID)      # v59 experimental      # EXPERIMENTO v8: titulo + mensajes de menu (ver docs/08)
     M = texto_es.Modelo(ID, AN, nombre=NOMBRE)
     import csv
     tr = {r['id']: r['espanol'] for r in csv.DictReader(open(a.csv, encoding='utf-8-sig', newline=''), delimiter=';') if r['espanol'] != ''}

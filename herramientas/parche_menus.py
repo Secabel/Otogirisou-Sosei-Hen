@@ -161,6 +161,10 @@ def filas_opciones(exe, ID, ANCHO, inv, exe0):
     for pos, l in x_nuevas.items(): struct.pack_into('<h', exe, _o(pos), int(round(sum(l) / len(l))))
     # v15: la fila 0x8006552c era 'デュアルショック)' (lo que seguia a 'Vib.('); ahora 'Vibración' va sola -> se vacia (primer glifo 0 = fin de fila)
     struct.pack_into('<24H', exe, _o(0x8006552c), *([0] * 24))
+    # LOOP 3: el cuadro de zapping en partida dibuja 'ZAPPINGする' glifo a glifo (fila 0x8006561c, x por glifo en 0x80065704..: 117,131,146,159,170,180,194; de ahi 'する' = 210,225).
+    # Se vacian los 2 kana (el primer 0 termina la fila): queda 'ZAPPING' (letras latinas originales, mismas posiciones).
+    assert list(struct.unpack_from('<2H', exe0, _o(0x8006561c) + 14)) == [0x5b, 0x77], 'fila ZAPPING distinta'
+    struct.pack_into('<2H', exe, _o(0x8006561c) + 14, 0, 0)
 
 # La pantalla de opciones (0x80039838) numera los sprites de texto desde el hueco 30 (+0x1e); las filas dinamicas (estereo/mono, ON/OFF)
 # usan huecos fijos (contador := 0x1e y 0x23) y la pantalla limpia/dibuja solo hasta el hueco 0x45. Con filas ES mas largas se pisaban
@@ -189,6 +193,38 @@ def parchear_slots_opciones(exe, esp_glifo):
     for k, w in enumerate(cod): struct.pack_into('<I', exe, o + 4 * k, w)
     i = _o(0x8003a568); assert struct.unpack_from('<I', exe, i)[0] == _i(0x2B, 28, 2, 0x5ac)
     struct.pack_into('<I', exe, i, 0x0C000000 | (LIMPIA >> 2) & 0x3FFFFFF)
+
+# ---------------- LOOP 3: el cuadro de ZAPPING (script op 0x38, manejador 0x80017c74) reutiliza la rutina de la pantalla de Opciones (0x8003a690).
+# Al salir, esa rutina limpia los flags de los sprites 0x12..(limite-1) y la de atenuado (0x800394ac) oscurece hasta el hueco limite-1. En JP el limite era 0x46
+# (el texto de la historia empieza en el hueco 0x50); las versiones ES lo amplian (0x59/0x64) para las filas largas de Opciones -> en el zapping se borraban
+# las casillas 0x50..0x63 del texto (primeras ~20 letras de la pagina) y se oscurecian las 0x42..0x58 (confirmado con estados guardados antes/despues).
+# Arreglo: el limite ampliado solo si ST_ (0x8007a8ba) != 0 (Opciones desde el titulo = 1, desde la pausa = 2); con ST_ == 0 (zapping) vale el original 0x46.
+CUEVA_LIM_A, CUEVA_LIM_B = 0x8005BCF0, 0x8005BD70
+def limite_zapping(exe):
+    def cueva(cave, w):
+        o = _o(cave); assert exe[o:o + 0x38] == bytes(0x38), 'hueco limite zapping ocupado ' + hex(cave)
+        assert len(w) <= 14
+        for k, x in enumerate(w): struct.pack_into('<I', exe, o + 4 * k, x)
+    jal_ = lambda a_: 0x0C000000 | (a_ >> 2) & 0x3FFFFFF
+    j_ = lambda a_: 0x08000000 | (a_ >> 2) & 0x3FFFFFF
+    # (1) atenuado 0x800394ac: rutina HOJA (no se puede usar jal: ra vivo). Al entrar se calcula el limite en t4 (0x59 o 0x46 segun ST_) y se salta de vuelta.
+    cueva(CUEVA_LIM_A, [_i(9, 0, 7, 0x40),                                   # addiu a3,zero,0x40 (la instruccion original de 0x800394b4)
+                        _i(0x0F, 0, 10, 0x8008), _i(0x25, 10, 10, -0x5746), _i(9, 0, 12, 0x59),   # t2 = ST_ ; t4 = 0x59
+                        _i(5, 10, 0, 2), 0,                                  # bne t2,zero,+2 (ST_ != 0: limite ampliado)
+                        _i(9, 0, 12, 0x46),                                  # ST_ == 0 (zapping): limite original
+                        j_(0x800394b8), 0])
+    i = _o(0x800394b4); assert struct.unpack_from('<I', exe, i)[0] == _i(9, 0, 7, 0x40)
+    struct.pack_into('<I', exe, i, j_(CUEVA_LIM_A))
+    i = _o(0x80039508); assert struct.unpack_from('<I', exe, i)[0] == _i(0x0A, 6, 2, 0x59)
+    struct.pack_into('<I', exe, i, _r(6, 12, 2, 0, 0x2a))                    # slt v0,a2,t4
+    # (2) limpieza al salir (0x8003a764 / 0x8003a7b8): el manejador NO es hoja (guarda ra en la pila), asi que aqui si vale un jal
+    cueva(CUEVA_LIM_B, [_i(9, 3, 3, 1),                                       # addiu v1,v1,1 (original)
+                        _i(0x0F, 0, 10, 0x8008), _i(0x25, 10, 10, -0x5746), _i(9, 0, 11, 0x64),
+                        _i(4, 10, 0, 4), 0, _r(3, 11, 2, 0, 0x2a), _r(31, 0, 0, 0, 8), 0,
+                        _i(0x0A, 3, 2, 0x46), _r(31, 0, 0, 0, 8), 0])
+    for a in (0x8003a768, 0x8003a7bc):
+        i = _o(a); assert struct.unpack_from('<I', exe, i)[0] == _i(9, 3, 3, 1) and struct.unpack_from('<I', exe, i + 4)[0] == _i(0x0A, 3, 2, 0x64), hex(a)
+        struct.pack_into('<I', exe, i, jal_(CUEVA_LIM_B))     # el slti queda en el retardo del jal (inocuo: la cueva recalcula v0)
 
 # ---------------- v21: seleccion 'Ranura 1 / Ranura 2' (rutina 0x8003727c) ----------------
 # Atenua/aviva por RANGO FIJO de sprites: opcion 1 = slots 0x181..0x184 (4 glifos JP), opcion 2 = 0x185..0x188.
@@ -821,6 +857,7 @@ def aplicar(exe, ID, ANCHO, mapa_json='tablas/mapa_ids_otogiri.json', verbose=Tr
     parchear_ranuras(exe)
     tp_ = pausa_menu(exe, ID, ANCHO, exe0)
     parchear_limites_v23(exe)
+    limite_zapping(exe)
     if verbose: print('parche_menus: pausa (glifos filas, hueco selector, palabras titulo):', tp_)
     if verbose: print('parche_menus: PEN %d palabras, %d sitios' % (n_pen, len(SITIOS_FILA)))
     if verbose:

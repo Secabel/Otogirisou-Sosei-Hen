@@ -20,6 +20,8 @@ herramientas/*
 !herramientas/mando_es.py
 !herramientas/mdec_psx.py
 !herramientas/etiquetas_cortas.py
+!herramientas/notas.py
+!herramientas/parche_notas.py
 !herramientas/script_fmt.py
 !herramientas/extraer_unidades.py
 !herramientas/reinsertar.py
