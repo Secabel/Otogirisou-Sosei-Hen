@@ -132,6 +132,11 @@ def _pasada(X, U, tr, M, stats, inc, cad, deficit):
     """deficit[(escena, token del menu)] = filas que la ultima unidad de la pregunta no pudo liberar (empieza a mitad de linea): se reservan en las unidades anteriores de esa pagina (ronda siguiente)"""
     cad, cdest = cad
     por = {(u['escena'], u['tok0']): u for u in U}; res = {}; prob = []; DEST = E.destinos(X)
+    # v68b: la escena 33 es el bloque ZAPPING (perspectiva de Nami, 53 cuadros op 0x38). TODAS las entradas desde otras escenas son op 0x2d.
+    # El zapping empieza en pantalla limpia (el usuario lo razona: antes se ve a Kohei, dentro a Nami; confirmado en la captura 'Fingi no' del LOOP 4):
+    # el estado de llegada de esas entradas NO se toma de los llamantes (antes: el maximo de las 34 entradas -> 8 filas ocupadas -> 'Fingi no' + pagina nueva).
+    zap = {(s2, o2) for sc2, (L2, _) in enumerate(X) if sc2 != 33 for t2 in L2 if t2.kind == 'c' and t2.op == 0x2d
+           for (_, s2, o2) in S.ptrs(('c', t2.op, bytes(t2.data))) if s2 == 33}
     cache_lab = {}; fin_en = {}
     por_old = {(u['escena'], X[u['escena']][0][u['tok0']].old): u for u in U}
     def textos(ch): return [T.normalizar(tr[e['id']]) for e in ch]
@@ -184,6 +189,7 @@ def _pasada(X, U, tr, M, stats, inc, cad, deficit):
                 cand = [inc[(sc, t.old)]] if (sc, t.old) in inc else []
                 if alcanzable: cand.append(dict(st))
                 if (sc, t.old) in cdest or (u0 is not None and u0['id'] in cad): cand = []          # el menu reinicia la ventana
+                if (sc, t.old) in zap: cand = []          # v68b: el zapping reinicia la ventana
                 if cand:
                     c = max(cand, key=lambda d: (d['lin'], d['gl'])); st.update(c)
                 else: st.update(x=T.X0, pw=0, lin=0, gl=0)
@@ -251,7 +257,7 @@ def _pasada(X, U, tr, M, stats, inc, cad, deficit):
             if t.kind == 'c':
                 if t.op not in (1, 0x13): skip01 = False
                 for (_, s2, o2) in S.ptrs(('c', t.op, bytes(t.data))):
-                    if t.op not in (9, 0x0a):                      # los punteros del menu van a etiquetas (ventana nueva)
+                    if t.op not in (9, 0x0a) and not (t.op == 0x2d and (s2, o2) in zap):      # los punteros del menu van a etiquetas (ventana nueva); v68b: ni los del zapping
                         d = inc.get((s2, o2))
                         if d is None or (st['lin'], st['gl']) > (d['lin'], d['gl']): inc[(s2, o2)] = dict(st)
                 if t.op == 0x0e: alcanzable = False
