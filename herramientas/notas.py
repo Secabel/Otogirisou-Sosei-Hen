@@ -27,6 +27,7 @@ NOTAS = [  # (regex, nota)  -- la nota debe caber en UNA fila
 ]
 NOTAS = [(re.compile(r, re.I), n) for r, n in NOTAS]
 GMAX_TOTAL = 200
+POSPONER = False      # notas pospuestas a la pagina siguiente: DESACTIVADO (la pagina siguiente puede alcanzarse sin haber leido el termino)
 OPS_CORTE = ()
 
 def comprobar(M):
@@ -77,7 +78,7 @@ def insertar_notas(X, M, DEST, verbose=True):
                             L[k:k] = [S.Tok('c', 1, b'\x00\x01', None) for _ in range(pad)] + [S.Tok('t', 0, M.codificar(nn[0]), None)]
                             vistos.add(nn[0]); puestas.append((sc, nn[0])); texto_pagina.append((sc, nn[0] + (' [pospuesta]' if (de_pend and nn[0] == pend) else ''), ' '.join(pag_txt)[:90])); k += pad + 1
                             if de_pend and nn[0] == pend: pend_total += 1
-                    pend = riesgo[0] if riesgo else None
+                    pend = riesgo[0] if (riesgo and POSPONER) else None      # v68b: POSPONER=False (LOOP 4: la nota pospuesta salia fuera de contexto, docs/08 32aj)
                     lines = 0; gl = 0; terms = {}; skip01 = (t.op == 0x13); pag_txt = []; prev_txt = False; dests = []; saltos = False
                     k += 1; continue
                 if t.old is not None and (sc, t.old) in DEST: dests.append(k)
