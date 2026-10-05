@@ -662,15 +662,15 @@
 02_06d7;2;「その方がイイ」/「結局弟がその薬の作り方を他人にバラしちゃうんだよ。それでアニキが怒って弟を切ったのサ。そのときの血しぶきがついた草の名前が……」;“Mejor.” “Al final, el hermano menor le contó a otro la receta de esa medicina. Entonces el hermano mayor se enfureció y lo cortó. Y la hierba que quedó salpicada con su sangre se llama...”
 02_0740;2;「弟切草になったわけネ」/「そゆコト」/;“O sea que se volvió la otogirisou, ¿no?” “Así es.”
 02_075d;2;「アリガチな話ね……;“Qué historia tan típica...
-02_076a;2;あっ、雨が降ってきた」/「それで弟切草には花言葉があって……。アレッ？　思い出せないなあ」/「忘れたの？」; Ah, empezó a llover.” “Y la otogirisou tiene un lenguaje de las flores que... ¿Eh? No me acuerdo.” “¿Lo olvidaste?”
+02_076a;2;あっ、雨が降ってきた」/「それで弟切草には花言葉があって……。アレッ？　思い出せないなあ」/「忘れたの？」; Ah, empezó a llover.” “Y la otogirisou tiene un significado en el lenguaje de las flores que... ¿Eh? No me acuerdo.” “¿Lo olvidaste?”
 02_07b1;2;「ここまで出かかってるんだけど……」/「そういうのって気になるのよね」/「なんだったっけなあ……切腹でもないし……」/;“Lo tengo en la punta de la lengua...” “Esas cosas dan mucha curiosidad.” “¿Cuál era...? Tampoco es seppuku...”
-02_07f3;2;「花言葉は切腹？;“¿El lenguaje de las flores es el seppuku? 
+02_07f3;2;「花言葉は切腹？;“¿Su significado en el lenguaje de las flores es el seppuku? 
 02_0803;2;……聞いたこともないわ！」/;...¡Jamás había oído algo así!” 
 02_081c;2;奈美;Nami
 02_0822;2;は笑った。; se rio.
 02_0840;2;「ないヨなあ」/ぼくもいっしょに笑った。;“Claro que no...” Yo también me reí con ella.
 02_0860;2;「ないとは限らないよ」/ぼくは冷静にいった。;“No se puede descartar.” Dije con calma.
-02_087e;2;「この広い世界には、切腹という花言葉をもつ花だって……」;“En este vasto mundo hasta hay una flor cuyo lenguaje de las flores es seppuku...”
+02_087e;2;「この広い世界には、切腹という花言葉をもつ花だって……」;“En este vasto mundo hasta hay una flor que en el lenguaje de las flores significa seppuku...”
 02_08ad;2;「笑うことないだろっ」/ぼくは腹を立てた。;“¡No tienes por qué reírte!” Me enojé.
 02_08ca;2;「……」/;“...”
 02_08da;2;「ねえ、それより大丈夫?　道、これで合ってる?　来たときと、ずいぶん景色がちがうみたいだけど」/……そういわれると、そんな気もする。;“Oye, y más importante: ¿estás seguro? ¿Es por aquí el camino? El paisaje parece muy distinto al de cuando vinimos.” ...Ahora que lo decía, yo también tenía esa impresión.
@@ -5507,7 +5507,7 @@
 14_1de2;14;ぼくは懷中電灯で、奈美の足元を照らした。/「きゃあ、イヤ！」/何かの骨が散乱している。/バラバラなのではっきりしないが、どうも小動物のホネのようだ。/「コワイ……」;Iluminé los pies de Nami con la linterna. “¡Kyaa, qué asco!” Había huesos esparcidos. Estaban sueltos y no se distinguía bien, pero parecían huesos de algún animal pequeño. “Qué miedo...”
 14_1e4d;14;ぼくもコワイので取りつくろっていった。/;Yo también tenía miedo, así que dije para disimular:
 14_1e7f;14;「このホネの花言葉は、きっとホネまで愛してだね」;“El lenguaje de las flores de este hueso debe de ser ʻÁmame hasta los huesosʼ.”
-14_1e9f;14;「え、ホネにも花言葉があるの？」/「いや、ホネ言葉……ホネ折り損のくたびれ儲け。ここらでちょっとホネ休め」/ぼくらは玄関へ向かって走った。;“¿Los huesos también tienen lenguaje de las flores?” “No, lenguaje de los huesos... Romperse los huesos por nada y quedar agotado. Ya es hora de descansar un poco los huesos.” Corrimos hacia la entrada.
+14_1e9f;14;「え、ホネにも花言葉があるの？」/「いや、ホネ言葉……ホネ折り損のくたびれ儲け。ここらでちょっとホネ休め」/ぼくらは玄関へ向かって走った。;“¿Los huesos también tienen un significado en el lenguaje de las flores?” “No, lenguaje de los huesos... Romperse los huesos por nada y quedar agotado. Ya es hora de descansar un poco los huesos.” Corrimos hacia la entrada.
 14_1efd;14;「ホネより、肉つきの奈美がイイ♥」;“Prefiero a Nami con carnecita antes que a un hueso ♥”
 14_1f16;14;「わかったから、行きましょ……」/「ふぇい……」/;“Ya entendí, vámonos...” “Fe-ei...”
 14_1f38;14;「食ったのはどこの馬のホネだ、出て来い！」;“¡¿Qué clase de don nadie se lo comió?! ¡Sal de ahí!”
@@ -6982,7 +6982,7 @@
 18_2801;18;そんなものは気にするなと奈美を外へ連れ出した。;Saqué a Nami afuera diciéndole que no le diera importancia a eso.
 18_2828;18;その弟切草を口にくわえておどけて見せた。;Me puse esa otogirisou en la boca para hacerme el gracioso.
 18_2845;18;奈美が笑ったのでホッとして連れ出した。/;Nami se rio, así que, aliviado, la saqué de allí.
-18_2866;18;花言葉は“復習”だとウソをつけばよかったと思った。;Pensé que habría sido mejor mentir y decir que el lenguaje de la flor era ʻrepasoʼ.
+18_2866;18;花言葉は“復習”だとウソをつけばよかったと思った。;Pensé que habría sido mejor mentir y decir que su significado en el lenguaje de las flores era ʻrepasoʼ.
 18_288b;18;でもそれじゃ何のことかわからない。/;Pero así nadie habría entendido de qué se trataba.
 18_28a5;18;中は調理器具でいっぱいだった。/どれもホコリをかぶっていて、よく洗わないととても使えそうもない。/だが包丁だけは、ピカピカにみがかれたキレ味のよさそうなものばかりだ。/「ザンネン。料理の腕前見せたかったのにね」;Adentro estaba lleno de utensilios de cocina. Todos estaban cubiertos de polvo y, sin lavarlos bien, no se podrían usar. Pero los cuchillos de cocina eran todos de filo reluciente, bien pulidos./“Qué lástima. Y yo que quería lucir mis dotes de cocinera.”
 18_2924;18;奈美は包丁を手にとっている。/「よし、冷蔵■見てみるか」/ぼくは冷蔵■のドアをあけた。/;Nami tenía en la mano un cuchillo de cocina. “Bien, miremos el refrigerador.” Abrí la puerta del refrigerador.
@@ -8304,7 +8304,7 @@
 22_1a0a;22;「気をつけろよ、奈美」/おっかなびっくりぼくらは入った。/「;“Ten cuidado, Nami.”/Entramos temerosos./“
 22_1a30;22;……」/「どうした？」/ぼくは奈美の視線をたどって、いま入ってきたドアを見た。;...”/“¿Qué pasa?”/Seguí la mirada de Nami hasta la puerta por la que acabábamos de entrar.
 22_1a63;22;そこに……;Allí...
-22_1a71;22;五寸釘で2体のワラ人形が打ちつけられていた。/「いまどき、ワラ人形……！」/「この釘、新しいわ」/奈美の声はふるえている。/「でも、どうしてふたつなのかしら？」/「ひ、ひとりじゃワラ人形もさびしいのさ」/「……出たほうがいいみたい」;Había dos muñecos de paja clavados con clavos de 15 cm./“¡Hoy en día, muñecos de paja...!”/“Estos clavos son nuevos.”/La voz de Nami temblaba./“Pero, ¿por qué son dos?”/“S-será que hasta un muñeco de paja se siente solito.”/“...Mejor salgamos.”
+22_1a71;22;五寸釘で2体のワラ人形が打ちつけられていた。/「いまどき、ワラ人形……！」/「この釘、新しいわ」/奈美の声はふるえている。/「でも、どうしてふたつなのかしら？」/「ひ、ひとりじゃワラ人形もさびしいのさ」/「……出たほうがいいみたい」;Había dos muñecos de paja clavados con clavos de cinco sun (15 cm)./“¡Hoy en día, muñecos de paja...!”/“Estos clavos son nuevos.”/La voz de Nami temblaba./“Pero, ¿por qué son dos?”/“S-será que hasta un muñeco de paja se siente solito.”/“...Mejor salgamos.”
 22_1b08;22;奈美は急いで出て行った。/きっとぼくと同じことを考えたのだ。/;Nami salió apurada. Seguro que pensó lo mismo que yo.
 22_1b33;22;2体のワラ人形は……もしかしたら、ぼくと奈美なのではないか。/「ま、待て;Esos dos muñecos de paja... ¿serían quizá Nami y yo?/“E-espera
 22_1b60;22;。ひとりで行くな！」/ぼくはあわてて奈美を追った。;. ¡No te vayas sola!”/Corrí tras Nami, alarmado.
@@ -8313,7 +8313,7 @@
 22_1bd0;22;人に怨まれる覚えはないと思った。;Pensé que no tenía motivos para que nadie me guardara rencor.
 22_1bee;22;鬼女が五寸釘を打つ姿を想像した。;Imaginé a una bruja clavando clavos.
 22_1c0b;22;ぼくらはいったんホールまで戻った。/;Volvimos por un momento al vestíbulo.
-22_1c25;22;五寸釘はメートル法でいうと15゛15センチ釘だと暗算した。;Calculé de cabeza el largo exacto de un clavo de maldición tradicional: 15,15 centímetros.
+22_1c25;22;五寸釘はメートル法でいうと15゛15センチ釘だと暗算した。;Calculé de cabeza que un clavo de cinco sun, en sistema métrico, era un clavo de 15 centímetros.
 22_1c52;22;ちょっと、うれしかった。/「何ニヤニヤしてるの？」/「いや、別に……」;Me alegré un poco./“¿Por qué sonríes así?”/“No, por nada...”
 22_1c83;22;奈美みたいな美女になら、怨まれるようなコトをしてみたいと思った。;Pensé que, tratándose de una belleza como Nami, hasta me gustaría hacer algo que mereciera su rencor.
 22_1cad;22;奈美はいきなり走り出した。/「え……」;Nami echó a correr de repente./“¿Eh...?”
@@ -12273,7 +12273,7 @@
 35_0a42;35;は懷中電灯の光を中へ射しこんだ。/; dirigió la luz de la linterna hacia adentro.
 35_0a5f;35;「あっ！;“¡Ah!
 35_0a6d;35;」/私たちは同時に声を上げた。/「まただ……！」;” Los dos gritamos a la vez. “¡Otra vez...!”
-35_0a91;35;弟切草だった。/私はその花言葉を思い出した。/;Era otogirisou. Recordé su lenguaje de las flores.
+35_0a91;35;弟切草だった。/私はその花言葉を思い出した。/;Era otogirisou. Recordé su significado en el lenguaje de las flores.
 35_0ab7;35;「復警の温室……」/「おい、気持ちの悪いこというなよっ」/「なによ、自分はしょっちゅういうくせに！」/これで、おあいこよ。;“El invernadero de la venganza...” “Oye, no digas cosas que dan asco.” “¡Mira quién habla, si tú lo dices a cada rato!” Con esto, estamos a mano.
 35_0b09;35;私たちは中へ光を当てながら、温室の周りを巡った。/別に変わったこともなく、とうとうウラ側まで来てしまった。;Dimos la vuelta al invernadero iluminando el interior. No había nada extraño y acabamos llegando hasta la parte de atrás.
 35_0b4f;35;そこで私は、/;Entonces, 
