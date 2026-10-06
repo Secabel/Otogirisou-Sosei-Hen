@@ -24,9 +24,10 @@ NOTAS = [  # (regex, nota)  -- la nota debe caber en UNA fila
     (r'\bsuigyomatsu', '*Suigyomatsu: cuento Jugemu'),
     (r'\boiwa', '*Oiwa, Okiku: fantasmas'),
     (r'\bkaguya', '*Kaguya: princesa lunar'),
+    (r'hubiera un incendio', '*NT: es un refrán japonés'),     # 06_1caf (terremoto, rayo, incendio, padre)
 ]
 NOTAS = [(re.compile(r, re.I), n) for r, n in NOTAS]
-GMAX_TOTAL = 200
+GMAX_TOTAL = 196      # el motor limpia 200 huecos; margen de 4 sobre el recuento del compositor (LOOP 5 limpieza)
 POSPONER = False      # notas pospuestas a la pagina siguiente: DESACTIVADO (la pagina siguiente puede alcanzarse sin haber leido el termino)
 OPS_CORTE = ()
 

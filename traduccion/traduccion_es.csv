@@ -13,7 +13,7 @@
 00_04d4;0;「ばれちゃうんでしょ」/「そう、近在のタカはすべて飛べるようになっていた。お殿様は大満足。村の鷹匠たちもホッと胸をなでおろしていたのだが……」/「それで、弟はどうなるの？」/「弟はその日は狩りには出なかった。白装束に身を固め、覚悟を決めて兄の帰りを待っていた。すると、そこへ」;“Se van a enterar, ¿no?”/“Sí, todos los halcones de la comarca habían vuelto a volar. El señor feudal quedó encantado y los halconeros del pueblo respiraron aliviados, pero...”/“¿Y qué le pasa al hermano menor?”/“El hermano menor no salió a cazar ese día. Vestido de blanco y resuelto a todo, esperaba el regreso de su hermano mayor. Entonces, en ese preciso momento...”
 00_0582;0;「お兄さんが帰ってきたのね！」/「帰るなり兄はいった。/『弟よ、悔いはないな？』/『はい』/そして、;“¡Volvió el hermano mayor!”/“Nada más llegar, el hermano mayor dijo: ʻHermano, ¿no te arrepientes de nada?ʼ ʻNoʼ. Y entonces, 
 00_05c8;0;兄はその場で弟の首をハネた」/「！！……」;en el acto, el hermano mayor le cortó la cabeza al menor.”/“¡¡...!!”
-00_05ee;0;「そのときに飛び散った血が、庭先に生えている草の葉についた。そしてその血の痕はずっと消えることなく、黒い斑点となって残った。そののち、誰がつけたか、その草は弟切草と呼ばれるようになった……」/「ふうん……それで？」;“La sangre que salpicó en ese momento cayó sobre las hojas de una hierba que crecía en el jardín. Y las huellas de sangre no se borraron jamás: quedaron como manchas negras. Desde entonces, no se sabe quién lo dijo, a esa hierba se la llamó otogirisou...”/“Mmm... ¿y luego?”
+00_05ee;0;「そのときに飛び散った血が、庭先に生えている草の葉についた。そしてその血の痕はずっと消えることなく、黒い斑点となって残った。そののち、誰がつけたか、その草は弟切草と呼ばれるようになった……」/「ふうん……それで？」;“La sangre que salpicó en ese momento cayó sobre las hojas de una hierba que crecía en el jardín. Y las huellas de sangre no se borraron jamás: quedaron como manchas negras. Desde entonces, no se sabe quién lo dijo, a esa hierba se la llamó otogiriso...”/“Mmm... ¿y luego?”
 00_0673;0;「それで、その花言葉は……;“Y, en el lenguaje de las flores, su significado es... 
 00_0685;0;あれ、花言葉、あったんだけどな……;Eh... Tenía uno, estoy seguro, pero... 
 00_069b;0;おかしいな、ド忘れしちゃった」/「初恋とか……」/「いまの話のドコから、そんなのがでてくんだよ！」/「だって女の人と、池のほとりで……」/;Qué raro, se me fue por completo.”/“¿Primer amor, quizá...?”/“¡¿De qué parte de lo que conté sale eso?!”/“Es que había una mujer, a la orilla de una laguna...”
@@ -40,8 +40,8 @@
 00_09ea;0;?　奈美、バッグなんて持って出たんだ」/「だってサイフも着がえもこの中に入ってるんだもん……といってもお金があってもこれじゃどうしようもないけど」;... Nami, ¿te trajiste el bolso?”/“Es que la billetera y la ropa de cambio están ahí dentro... Aunque, con esto, ni teniendo dinero se puede hacer nada.”
 00_0a41;0;「いいんだよ、いいんだよ。えらいよ;“Está bien, está bien. Buena idea
 00_0a54;0;。奈美」/ぼくは自分のバッグを開けて、懷中電灯を取り出した。/「ほらね」/;, Nami.” Abrí mi bolso y saqué la linterna. “¡Mira!”
-00_0a8c;0;スイッチを入れると、弟切草の黄色い花がヤミの中に浮かび上がった。;Al encenderla, las flores amarillas de otogirisou resaltaron en la oscuridad.
-00_0abb;0;「まあ……」/「こんなところにも■いてんだ……」/ふしぎなことに、弟切草以外の草花は、みんな枯れてしまっている……。/;“Vaya...”/“Crecen incluso aquí...” Lo curioso es que todas las plantas y flores, salvo las otogirisou, estaban marchitas...
+00_0a8c;0;スイッチを入れると、弟切草の黄色い花がヤミの中に浮かび上がった。;Al encenderla, las flores amarillas de otogiriso resaltaron en la oscuridad.
+00_0abb;0;「まあ……」/「こんなところにも■いてんだ……」/ふしぎなことに、弟切草以外の草花は、みんな枯れてしまっている……。/;“Vaya...”/“Crecen incluso aquí...” Lo curioso es que todas las plantas y flores, salvo las otogiriso, estaban marchitas...
 00_0b06;0;そして、その黄色い花々は、まるでぼくらを案内するように、点々と森の中までつづいている。;Y esas flores amarillas seguían, a trechos, hacia el interior del bosque, como si nos guiaran.
 00_0b3f;0;「何だか、道しるべみたい……」/「ほんとだ;“Parecen señales que marcan el camino...”/“Es verdad
 00_0b59;0;。どこまでつづいてるんだろう」/「ねえ;. ¿Hasta dónde llegarán?”/“Oye
@@ -52,7 +52,7 @@
 00_0c57;0;「はは、まさかな。きっと明かりがついてなかっただけだよ」/「そうよね。そう考えた方がまともよね……」/奈美は笑った。/本心はコワイのだろう、その笑みがぎごちない。;“Jaja, no creo. Seguro que solo estaba apagada.”/“Sí, tienes razón. Es mejor pensarlo así...” Nami se rio. Seguro que en el fondo tenía miedo, pues su sonrisa era forzada.
 00_0cb8;0;「とにかく、助かったよ。あの家で休ませてもらおう。行こっ」/;“En fin, ¡nos salvamos! Vamos a ver si nos dejan descansar en esa casa. ¡Vamos!”
 00_0cdb;0;ぼくは奈美の手をとって、ずんずん歩いた。;Tomé la mano de Nami y avancé a zancadas.
-00_0cf7;0;進むにつれ、弟切草の生えている密度もこくなってきた。/どうやら本当にあの家まで道案内してくれそうだ。;A medida que avanzábamos, las otogirisou crecían cada vez más densas. Parecía que de verdad nos iban a guiar hasta esa casa.
+00_0cf7;0;進むにつれ、弟切草の生えている密度もこくなってきた。/どうやら本当にあの家まで道案内してくれそうだ。;A medida que avanzábamos, las otogiriso crecían cada vez más densas. Parecía que de verdad nos iban a guiar hasta esa casa.
 00_0d3b;0;と思っていると、道が3つに別れているところに出た。/真ん中の道はいままで歩いてきた道と同じ道だ。/左の道は少し細く、ぬかるんでいる。/右の道は、木がうっそうと茂り、オバケでも出そうなふんいきだ。;Pensaba eso cuando llegamos a un punto donde el camino se dividía en tres. El del medio era el mismo por el que habíamos venido. El de la izquierda era algo más estrecho y fangoso. El de la derecha tenía árboles tan espesos que parecía el lugar perfecto para que apareciera un fantasma.
 00_0dcb;0;「よし、こっちだ」/ぼくは右の道を選んだ。;“Bien, por aquí.” Elegí el camino de la derecha.
 00_0de8;0;「ねえ、私、なんだかここの木こわい……;“Oye, a mí, no sé por qué, estos árboles me dan miedo... 
@@ -231,10 +231,10 @@
 00_2992;0;まずは、ひとつ目のドアを叩いたが、返事はない。/ノブを回すと、カギはかかってない。/ぼくはそっとドアを押し開いた。;Primero golpeé la primera puerta, pero no hubo respuesta. Giré el pomo y no tenía llave. Empujé la puerta con suavidad hasta abrirla.
 00_29df;0;廊下の光が中へさしこむ。/「ねえ、何かへんなにおいしない？」/奈美が鼻をつまんだ。/ぼくはドアを開き切った。/「な……なんだ、この部屋は！」/;La luz del pasillo entró en la habitación./“Oye, ¿no huele raro?”/Nami se tapó la nariz. Abrí la puerta del todo./“¡¿Q-qué es esta habitación?!”
 00_2a3f;0;カベというカベ、家具という家具のすべてに、すきまなくワラ人形が打ち込まれている。/それも、すべて五寸釘で。;En cada pared y en cada mueble había muñecos de paja clavados, sin dejar ni un espacio. Y todos con clavos de quince centímetros.
-00_2a84;0;「……よくもこれだけのワラ人形を」/全部で何百体になるだろうか……。/「いや、待て……これ……弟切草だ」/……単なるワラ人形ではなかった。/ワラと見えたのは、ぜんぶ枯れた弟切草だったのだ。;“...Vaya cantidad de muñecos de paja.”/¿Cuántos cientos habría en total?.../“No, espera... esto... es otogirisou.”/...No eran simples muñecos de paja. Lo que parecía paja era todo otogirisou seca.
-00_2afd;0;奈美がボソリとつぶやいた。/「こんなにいっぱいのワラ人形を……よっぽど誰かを怨んでいたのね……」/「あッ、思いだした！」/奈美はビクンとぼくを見た。/「な、何を……？」/「花言葉だよ、弟切草の！」;Nami murmuró en voz baja./“Tantos muñecos de paja... debían de guardarle mucho rencor a alguien...”/“¡Ah, ya me acordé!”/Nami me miró sobresaltada./“¿Q-qué cosa...?”/“¡El lenguaje de las flores, el de la otogirisou!”
-00_2b7c;0;「花言葉……」/「ぴったりなんだよ。このワラ人形……いや、弟切草人形と、この奇妙な部屋と」/「えっ？」/「復警！……弟切草の花言葉は、復警だったんだ！」;“El lenguaje de las flores...”/“Encaja perfecto. Con estos muñecos de paja... no, muñecos de otogirisou, y con esta habitación tan extraña.”/“¿Eh?”/“¡Venganza!... ¡En el lenguaje de las flores, la otogirisou era venganza!”
-00_2bf1;0;マドからさす雷光が、何百体もの弟切草人形を妖しくてらしだした。/「;La luz de un relámpago que entraba por la ventana iluminó de forma siniestra los cientos de muñecos de otogirisou./“
+00_2a84;0;「……よくもこれだけのワラ人形を」/全部で何百体になるだろうか……。/「いや、待て……これ……弟切草だ」/……単なるワラ人形ではなかった。/ワラと見えたのは、ぜんぶ枯れた弟切草だったのだ。;“...Vaya cantidad de muñecos de paja.”/¿Cuántos cientos habría en total?.../“No, espera... esto... es otogiriso.”/...No eran simples muñecos de paja. Lo que parecía paja era todo otogiriso seca.
+00_2afd;0;奈美がボソリとつぶやいた。/「こんなにいっぱいのワラ人形を……よっぽど誰かを怨んでいたのね……」/「あッ、思いだした！」/奈美はビクンとぼくを見た。/「な、何を……？」/「花言葉だよ、弟切草の！」;Nami murmuró en voz baja./“Tantos muñecos de paja... debían de guardarle mucho rencor a alguien...”/“¡Ah, ya me acordé!”/Nami me miró sobresaltada./“¿Q-qué cosa...?”/“¡El lenguaje de las flores, el de la otogiriso!”
+00_2b7c;0;「花言葉……」/「ぴったりなんだよ。このワラ人形……いや、弟切草人形と、この奇妙な部屋と」/「えっ？」/「復警！……弟切草の花言葉は、復警だったんだ！」;“El lenguaje de las flores...”/“Encaja perfecto. Con estos muñecos de paja... no, muñecos de otogiriso, y con esta habitación tan extraña.”/“¿Eh?”/“¡Venganza!... ¡En el lenguaje de las flores, la otogiriso era venganza!”
+00_2bf1;0;マドからさす雷光が、何百体もの弟切草人形を妖しくてらしだした。/「;La luz de un relámpago que entraba por la ventana iluminó de forma siniestra los cientos de muñecos de otogiriso./“
 00_2c20;0;……私、コワイ……！」/「出よう;... tengo miedo...!”/“Salgamos
 00_2c36;0;。なんだか、呪い殺されそうだ」/ふたりで逃げ出すように部屋を出た。;. Siento que nos van a matar a maldiciones.”/Salimos de la habitación casi huyendo.
 00_2c6d;0;ぼくらは念のために2階の他の部屋も調べたが;Por si acaso, revisamos también las demás habitaciones del segundo piso, pero
@@ -541,7 +541,7 @@
 01_3632;1;ストーブは炎を上げて燃え上がった。/火事になる……。/そしたら、焼け死ぬ。/あのドアさえ開けば……。/「木のドアだ、体当りすればなんとか……」;La estufa se encendió en llamas. Habrá un incendio... Y moriré quemado. Si tan solo esa puerta se abriera... “Es una puerta de madera, si me lanzo contra ella, tal vez...”
 01_368d;1;だが、立ち上がろうとしても、どうしても力が出ない。/ドアまでいけない。/目の前に見えているドアまで行けない。/意識がもうろうとしてきた。/……ぼくはここで死ぬんだろうか?;Pero aunque intentaba levantarme, no me salían las fuerzas. No podía llegar a la puerta. No llegaba a la puerta que tenía delante. La conciencia se me nublaba... ¿Iba a morir aquí?
 01_36f8;1;「奈美……」/頭の中に、奈美の顔が浮かんだ。/「ごめん……だめだよ;“Nami...” Su rostro apareció en mi mente. “Perdón... no puedo
-01_3725;1;。動けない」/最後に見た奈美の笑顔はいつだっけ?/テニス場、車の中……。/「そうだ……弟切草の話をしたんだっけ」;. No puedo moverme”. ¿Cuándo fue la última vez que vi la sonrisa de Nami? En la cancha de tenis, en el auto... “Ah, es verdad... hablamos de la historia de la otogirisou”.
+01_3725;1;。動けない」/最後に見た奈美の笑顔はいつだっけ?/テニス場、車の中……。/「そうだ……弟切草の話をしたんだっけ」;. No puedo moverme”. ¿Cuándo fue la última vez que vi la sonrisa de Nami? En la cancha de tenis, en el auto... “Ah, es verdad... hablamos de la historia de la otogiriso”.
 01_3773;1;そうよ。/奈美が悲しそうにこたえる。/「あんな話、しなきゃよかった……」/ストーブが、煙をあげはじめた。/奈美の顔がぐるぐると回る。/……ああ、息ができなくなるのも時間の間題だ。;Sí. Nami respondió con tristeza: “Nunca debimos hablar de esa historia...” La estufa empezó a echar humo. El rostro de Nami giraba y giraba. ...Ah, era cuestión de tiempo que me faltara el aire.
 01_37e3;1;もうお別れね……。/私たち、家族3人で暮していくわ……。/奈美の冷たい声が頭にひびく。/「ちがう！　あれは奈美じゃない。奈美があんなことをいうわけはない。あれはナオミだ、あれがナオミだったんだ……」;Ya es hora de despedirnos... Las tres viviremos juntas, en familia... La fría voz de Nami resonaba en mi cabeza. “¡No! Esa no es Nami. Nami no diría algo así. Es Naomi, esa era Naomi...”
 01_385d;1;弟を切る……。/「まさか、奈美。ちがうよね。3人で暮らすのに邪魔だから、おれを殺すんじゃないよね」/復警……。/「そんな復警ないよね……奈美、おれほんとうに、ほんとうに好きだったんだよ……」;Cortar al hermano menor... “No puede ser, Nami. No, ¿verdad? No me matarás porque estorbo para que vivan las tres, ¿cierto?” Venganza... “Eso no puede ser una venganza... Nami, yo de verdad, de verdad te quería...”
@@ -644,7 +644,7 @@
 02_0318;2;はマドの外を見た。/「ねえ、; miró por la ventana./“Oye, 
 02_032b;2;……」/「うん？」/「ねえ……あれ何の花？」;...”/“¿Mm?”/“Oye... ¿qué flores son esas?”
 02_0353;2;道のわきに黄色い花がつづいている。/ヒョロリと細長いクキとだ円形の葉。;Al borde del camino se extendían flores amarillas, de tallos finos y largos y hojas ovaladas.
-02_0385;2;「ああ、あれ。あれはオトギリソウだよ。弟に切るって書いて、弟切草」/「弟切草？」/「うん」/弟切草には奇妙ないわれがある。/気分転換に;“Ah, esas. Son otogirisou. Se escribe con los kanji de ʻhermano menorʼ y ʻcortarʼ: otogirisou.”/“¿Otogirisou?”/“Sí.”/La otogirisou tiene un origen extraño. Para cambiar de ambiente, pensé en contársela a 
+02_0385;2;「ああ、あれ。あれはオトギリソウだよ。弟に切るって書いて、弟切草」/「弟切草？」/「うん」/弟切草には奇妙ないわれがある。/気分転換に;“Ah, esas. Son otogiriso. Se escribe con los kanji de ʻhermano menorʼ y ʻcortarʼ: otogiriso.”/“¿Otogiriso?”/“Sí.”/La otogiriso tiene un origen extraño. Para cambiar de ambiente, pensé en contársela a 
 02_03e6;2;奈美;Nami
 02_03ec;2;に話してやろうと思った。;.
 02_03fe;2;どうせ話すなら……;Ya que iba a contársela...
@@ -660,9 +660,9 @@
 02_06a5;2;「とにかく長いけど聞けよ」;“Es larga, sí, pero escucha hasta el final.”
 02_06be;2;「じゃあ手みじかに話そう」;“Entonces te lo cuento en pocas palabras.”
 02_06d7;2;「その方がイイ」/「結局弟がその薬の作り方を他人にバラしちゃうんだよ。それでアニキが怒って弟を切ったのサ。そのときの血しぶきがついた草の名前が……」;“Mejor.” “Al final, el hermano menor le contó a otro la receta de esa medicina. Entonces el hermano mayor se enfureció y lo cortó. Y la hierba que quedó salpicada con su sangre se llama...”
-02_0740;2;「弟切草になったわけネ」/「そゆコト」/;“O sea que se volvió la otogirisou, ¿no?” “Así es.”
+02_0740;2;「弟切草になったわけネ」/「そゆコト」/;“O sea que se volvió la otogiriso, ¿no?” “Así es.”
 02_075d;2;「アリガチな話ね……;“Qué historia tan típica...
-02_076a;2;あっ、雨が降ってきた」/「それで弟切草には花言葉があって……。アレッ？　思い出せないなあ」/「忘れたの？」; Ah, empezó a llover.” “Y la otogirisou tiene un significado en el lenguaje de las flores que... ¿Eh? No me acuerdo.” “¿Lo olvidaste?”
+02_076a;2;あっ、雨が降ってきた」/「それで弟切草には花言葉があって……。アレッ？　思い出せないなあ」/「忘れたの？」; Ah, empezó a llover.” “Y la otogiriso tiene un significado en el lenguaje de las flores que... ¿Eh? No me acuerdo.” “¿Lo olvidaste?”
 02_07b1;2;「ここまで出かかってるんだけど……」/「そういうのって気になるのよね」/「なんだったっけなあ……切腹でもないし……」/;“Lo tengo en la punta de la lengua...” “Esas cosas dan mucha curiosidad.” “¿Cuál era...? Tampoco es seppuku...”
 02_07f3;2;「花言葉は切腹？;“¿Su significado en el lenguaje de las flores es el seppuku? 
 02_0803;2;……聞いたこともないわ！」/;...¡Jamás había oído algo así!” 
@@ -748,7 +748,7 @@
 02_140b;2;「道をさがすって……;“Dices que busquemos el camino... 
 02_1419;2;真っ暗よ」/燃えていた車の火も、この雨でもう消えてしまった。/「そういうときのために」/ぼくは持ち出しておいたバッグから、懷中電灯を取り出した。;si está oscuro como boca de lobo.”/El fuego del auto que ardía ya se había apagado con esta lluvia./“Para eso mismo.”/Del bolso que había sacado, saqué una linterna.
 02_147b;2;「えらい……よく気がついたわね」/スイッチをいれると、ヤミの中に一面の黄色い花の群れが浮かび上がった。;“Muy bien... Qué buena idea haberla traído.”/Al encender el interruptor, en la oscuridad surgió un campo de flores amarillas.
-02_14c4;2;「まあ……」/「なんだヨ……ここ、弟切草だらけだぞ」/「ねえ、あんなとこに郵便受けがある！」/奈美がちょっと先の森を指さした。/赤い郵便受けが野ざらしにされ、後ろの森へつづく細い道がある。;“Vaya...”/“Qué es esto... Este lugar está lleno de otogirisou.”/“¡Oye, mira, allá hay un buzón!”/Nami señaló el bosque un poco más adelante. Un buzón rojo estaba abandonado a la intemperie y había un camino angosto que seguía hacia el bosque de atrás.
+02_14c4;2;「まあ……」/「なんだヨ……ここ、弟切草だらけだぞ」/「ねえ、あんなとこに郵便受けがある！」/奈美がちょっと先の森を指さした。/赤い郵便受けが野ざらしにされ、後ろの森へつづく細い道がある。;“Vaya...”/“Qué es esto... Este lugar está lleno de otogiriso.”/“¡Oye, mira, allá hay un buzón!”/Nami señaló el bosque un poco más adelante. Un buzón rojo estaba abandonado a la intemperie y había un camino angosto que seguía hacia el bosque de atrás.
 02_153f;2;「ってことは、この先に家があるのよ！」/;“¡Eso quiere decir que más adelante hay una casa!”
 02_155f;2;奈美;Nami
 02_1565;2;の声が明るくなった。/「よし、奈美、行こう」/「待って」/奈美は焼けこげのぼくの車のトランクから、車のシートカバーを引きずりだしてきた。; sonaba más animada./“Bien, Nami, vamos.”/“Espera.”/Nami sacó a rastras una funda de asiento del maletero de mi auto chamuscado.
@@ -756,7 +756,7 @@
 02_1632;2;。かぶりたいのっ！」;¡Quiero ponérmela!”
 02_1641;2;ぼくらはシートをかぶって、森へつづく細道へ向かった。/郵便受けをチラッと見たが、サビと汚れで、表札に何と書いてあるのかさえわからなかった。/おそらくもう、使われていないのだろう。/この先にほんとうに家があるのかどうか不安になったが、奈美にはそのことはだまっておいた。;Nos pusimos la funda encima y fuimos por el sendero angosto hacia el bosque. Eché un vistazo al buzón, pero con el óxido y la suciedad ni siquiera se entendía qué decía la placa del nombre. Seguramente ya no se usaba. Me dio inquietud que de verdad hubiera una casa más adelante, pero no le dije nada a Nami.
 02_16e5;2;森の奥へ懷中電灯の光を向けると、;Al apuntar la linterna hacia lo profundo del bosque, 
-02_1701;2;細い道の両脇には、まるでぼくらを誘うように、点々と弟切草の黄色い花がつづいている。;a ambos lados del sendero, como para invitarnos, se sucedían las flores amarillas de otogirisou.
+02_1701;2;細い道の両脇には、まるでぼくらを誘うように、点々と弟切草の黄色い花がつづいている。;a ambos lados del sendero, como para invitarnos, se sucedían las flores amarillas de otogiriso.
 02_1742;2;「ねえ;“Oye, 
 02_1747;2;、なんだかコワイ……」/さっきまで元気だった奈美が、うしろからおびえたようにいった。/そこでぼくはいった。/;, como que me da miedo...”/Nami, que hasta hacía un momento estaba tan animada, lo dijo asustada desde atrás./Entonces dije:
 02_1798;2;「じゃあ、ここでテントでも張る？」;“Entonces, ¿armamos una carpa aquí?”
@@ -873,14 +873,14 @@
 02_2bf5;2;しかしインターホンはウンともスンともいわない。/「……いないのかな？」/「とにかく、入れてもらいましょうよ。雨もこんなにひどいんだから」/奈美は門扉を開けると、どんどん勝手に入って行ってしまった。;Pero el citófono no daba señales de vida. “¿No habrá nadie?” “Entremos de todos modos. Con esta lluvia tan fuerte...” Nami abrió la reja y entró por su cuenta sin más.
 02_2c69;2;……いざとなると、やっぱり女の方が度胸ある。/ぼくは急いであとを追った。;...A la hora de la verdad, las mujeres tienen más agallas. Me apuré a seguirla.
 02_2cab;2;数地の中は荒れほうだいだ。/草が庭中にぼうぼうと腰の高さまで生え、レンガ道の左右は、まるで草でできたカベのようになっている。;El terreno estaba completamente descuidado. La hierba crecía por todo el jardín hasta la cintura, y a los lados del camino de ladrillo formaba como muros.
-02_2cfc;2;「全然手入れしないんだなあ……」/「ねえっ、これ、弟切草じゃない？」/「ほんとだ、ここにも■いてるんだ」/「これだけじゃないわ。ほら、ここにもっ、あそこにもっ！……ねえっ、ちょっと懷中電灯かしてっ！」/奈美は庭全体になめるように光をあてた。;“No lo cuidan para nada...” “Oye, ¿esto no es otogirisou?” “Es cierto, aquí también hay flores.” “Y no es solo esta. Mira, aquí también, ¡y allá!... Oye, ¡préstame la linterna!” Nami iluminó todo el jardín como si lo lamiera con la luz.
-02_2d97;2;「……！」/ぼくらは思わず息を吞んだ。/1本や2本ではなかった。/庭はすきまなく弟切草で埋め尽くされている……。/「なんで、こんなにたくさん……」;“...!” Contuvimos el aliento sin querer. No eran una o dos plantas. El jardín estaba cubierto de otogirisou sin dejar un solo espacio... “¿Por qué hay tantas...?”
+02_2cfc;2;「全然手入れしないんだなあ……」/「ねえっ、これ、弟切草じゃない？」/「ほんとだ、ここにも■いてるんだ」/「これだけじゃないわ。ほら、ここにもっ、あそこにもっ！……ねえっ、ちょっと懷中電灯かしてっ！」/奈美は庭全体になめるように光をあてた。;“No lo cuidan para nada...” “Oye, ¿esto no es otogiriso?” “Es cierto, aquí también hay flores.” “Y no es solo esta. Mira, aquí también, ¡y allá!... Oye, ¡préstame la linterna!” Nami iluminó todo el jardín como si lo lamiera con la luz.
+02_2d97;2;「……！」/ぼくらは思わず息を吞んだ。/1本や2本ではなかった。/庭はすきまなく弟切草で埋め尽くされている……。/「なんで、こんなにたくさん……」;“...!” Contuvimos el aliento sin querer. No eran una o dos plantas. El jardín estaba cubierto de otogiriso sin dejar un solo espacio... “¿Por qué hay tantas...?”
 02_2df7;2;とつぜん、強い風が吹きわたって、無数の花が波のようにざわめいた。/波は門から屋数の方へと移動して、最後に屋数そのものをふるわせるように打ちよせて、消えた。/……ぼくらは何か不吉なものでも見たように雨の中に立ちつくした。;De pronto sopló un viento fuerte y innumerables flores se agitaron como olas. La ola avanzó desde el portón hacia la mansión y, al final, rompió contra la propia mansión como haciéndola estremecer, y se desvaneció. ...Nos quedamos inmóviles bajo la lluvia, como si hubiéramos visto algo de mal agüero.
 02_2e87;2;「ねえ！」/;“¡Oye!”
 02_2e97;2;奈美;Nami 
 02_2e9d;2;が耳に手を当てた。/「……何か聞こえない?　ほら、何か、カサカサって……！」/「え？……風で草がゆれてんだろ」/「ちがう;se llevó la mano al oído. “...¿No oyes algo? ¡Escucha, algo hace cric, cric...!” “¿Eh?... Es la hierba moviéndose con el viento, ¿no?” “No
 02_2ee7;2;。それとは別に……」;. Es otra cosa aparte...”
-02_2f01;2;弟切草の草むらからまだらのヘビが飛び出した。/;De entre la maleza de otogirisou salió disparada una serpiente moteada.
+02_2f01;2;弟切草の草むらからまだらのヘビが飛び出した。/;De entre la maleza de otogiriso salió disparada una serpiente moteada.
 02_2f22;2;大きく開けた口には鋭いキバが光る。;En su boca muy abierta brillaban unos colmillos afilados.
 02_2f3c;2;「ほら、これ;“¡Mira, esto
 02_2f44;2;!　この音！」/「何いってんだよ;! ¡Este ruido!” “¡Qué dices
@@ -1053,15 +1053,15 @@
 02_4881;2;「あっ、ネコ」/テーブルの陰から黒いネコが出て来た。/なんだかちょっとブキミなネコだ。/「おいで……」/奈美はひざをついてネコを抱き上げた。;“Ah, el gato.” De detrás de la mesa salió un gato negro. Era un gato algo siniestro./“Ven...” Nami se arrodilló y lo alzó en brazos.
 02_48d7;2;「おかしいな……」/ぼくは首をひねった。/「さっきはマボロシでも見たのかな……けど、奈美も見てるよな？」/返事がない。/奈美はネコをあやすのに夢中になっている。/ぼくは落ちている本を拾った。;“Qué raro...” Incliné la cabeza. “¿Habré visto un espejismo hace rato?... Pero Nami también lo vio, ¿verdad?” No hubo respuesta. Nami estaba absorta mimando al gato. Recogí el libro caído.
 02_4951;2;それはどうやら日記のようだった。/日付けは6年前になっている。/ペラペラとページをめくっていくと、突然真っ赤なページが現われた。;Parecía ser un diario. La fecha era de hace 6 años. Al pasar las páginas, de pronto apareció una página roja.
-02_49a8;2;「血だ……」/「えっ」/「それにまだ新しい……！」/何も書かれていないページに、弟切草の黄色い花がしおりのようにはさまれ、そこへべっとりと赤いものがついている。/;“Sangre...”/“¿Eh?”/“Y todavía es reciente...!” En la página sin escribir había una flor amarilla de otogirisou prensada como marcapáginas, y encima, algo rojo y pegajoso.
+02_49a8;2;「血だ……」/「えっ」/「それにまだ新しい……！」/何も書かれていないページに、弟切草の黄色い花がしおりのようにはさまれ、そこへべっとりと赤いものがついている。/;“Sangre...”/“¿Eh?”/“Y todavía es reciente...!” En la página sin escribir había una flor amarilla de otogiriso prensada como marcapáginas, y encima, algo rojo y pegajoso.
 02_4a0f;2;ネコは奈美の手をはなれて向こうへ行った。/のぞき込んだ奈美は青い顔になった。;El gato se soltó de Nami y se fue hacia allá. Nami se asomó y se puso pálida.
 02_4a60;2;「人の日記なんか見るもんじゃないよ;“No deberíamos mirar el diario de otra persona
 02_4a77;2;。出よう」;. Salgamos.”
 02_4a87;2;ぼくらは部屋を出た。/;Salimos de la habitación.
 02_4a9c;2;「これ、まさか、ミイラの血……」;“Esto... no será sangre de la momia...”
 02_4ab1;2;ぼくはつぶやいた。/;Murmuré.
-02_4ac8;2;「赤い血に青い顔、そして弟切草の黄色い花。これではまるで！」;“Sangre roja, cara verde y la flor amarilla de la otogirisou. ¡Esto es como...!”
-02_4af5;2;「赤い血に青い顔、そして弟切草の黄色い花。これではまるで！　交通信……」;“Sangre roja, cara verde y una flor amarilla de otogirisou. ¡Esto parece justo un semáfo...”
+02_4ac8;2;「赤い血に青い顔、そして弟切草の黄色い花。これではまるで！」;“Sangre roja, cara verde y la flor amarilla de la otogiriso. ¡Esto es como...!”
+02_4af5;2;「赤い血に青い顔、そして弟切草の黄色い花。これではまるで！　交通信……」;“Sangre roja, cara verde y una flor amarilla de otogiriso. ¡Esto parece justo un semáfo...”
 02_4b2b;2;「イヤッ……」/;“¡Ay, no...!”
 02_4b38;2;ぼくのシャレを最後まで聞かず、奈美は部屋をトビ出した。;Sin escuchar mi chiste hasta el final, Nami salió corriendo de la habitación.
 02_4b66;2;ぼくが追って出ると、/「キャッ！」/奈美のヒメイだ。/「どうしたっ!　奈美！」/ぼくもあわててかけよった。/;Salí tras ella y “¡Kyaa!”, era el grito de Nami./“¡Qué pasó! ¡Nami!” Corrí hacia ella con prisa.
@@ -1171,13 +1171,13 @@
 02_5d11;2;部屋の真ん中には、まるでドラキュラでも入れておきそうな大きな棺がおかれているのだ。/その棺を囲んで、無数のローソクが灯されている。/ぼくは棺に吸いよせられるように手を伸ばした。;En medio de la habitación había un enorme ataúd, de esos donde podría dormir Drácula. Alrededor del ataúd ardían incontables velas. Como atraído por él, estiré la mano hacia el ataúd.
 02_5d80;2;「やめて;“¡Detente, 
 02_5d86;2;！」/奈美が叫んだ。/自分でも、してはいけないことをしようとしていることは頭ではわかっていた。/しかし、手がひとりでにふたを開けてしまう。;!”/Nami gritó. En el fondo yo sabía bien que estaba a punto de hacer algo que no debía. Pero mi mano abrió la tapa por sí sola.
-02_5ddb;2;「あ……！」/中には黄色い花をつけた弟切草がぎっしりと詰められていた。/そして、その上には、人型に切り取られた半航が1枚……。;“Ah...!”/Adentro había otogirisou de flores amarillas, apretadas hasta el tope. Y encima, un papel recortado en forma de persona...
+02_5ddb;2;「あ……！」/中には黄色い花をつけた弟切草がぎっしりと詰められていた。/そして、その上には、人型に切り取られた半航が1枚……。;“Ah...!”/Adentro había otogiriso de flores amarillas, apretadas hasta el tope. Y encima, un papel recortado en forma de persona...
 02_5e31;2;その半航には、血文字で『復警;En ese papel estaba escrito con letras de sangre ʻVenganza
 02_5e48;2;』と書かれている。/;ʼ.
 02_5e57;2;「復警……」/「フクシュウ……？」/いつのまにか奈美が横にきていた。;“Venganza...”/“¿Venganza...?”/Sin darme cuenta, Nami había llegado a mi lado.
 02_5e85;2;「そうだ！　思い出した……！」/「え」/;“¡Eso es! ¡Ya lo recordé...!”/“¿Eh?”
-02_5ea2;2;「弟切草の花言葉……;“La otogirisou, en el lenguaje de las flores... 
-02_5eb5;2;復警だったんだ！」/「復警……弟切草の花言葉……復警……」/奈美は半航の人形を見つめながら、うわごとのようにつぶやきだした。;¡era venganza!”/“Venganza... la otogirisou en el lenguaje de las flores... venganza...”/Nami empezó a murmurar como delirando, con la vista fija en el muñeco de papel.
+02_5ea2;2;「弟切草の花言葉……;“La otogiriso, en el lenguaje de las flores... 
+02_5eb5;2;復警だったんだ！」/「復警……弟切草の花言葉……復警……」/奈美は半航の人形を見つめながら、うわごとのようにつぶやきだした。;¡era venganza!”/“Venganza... la otogiriso en el lenguaje de las flores... venganza...”/Nami empezó a murmurar como delirando, con la vista fija en el muñeco de papel.
 02_5f0d;2;「おい、奈美……」/奈美は血の気を失っている。/顔が真っ青だ。/;“Oye, Nami...”/Nami había perdido el color. Tenía la cara pálida.
 02_5f3a;2;「出よう！」/ぼくは奈美の手をつかんだ。;“¡Salgamos!”/Tomé a Nami de la mano.
 02_5f58;2;「ヤバイ気がする;“Tengo mala espina
@@ -1286,7 +1286,7 @@
 03_0a13;3;ぼくたちは温室の前についた。/「中はまっ暗よ……」/温室のガラスに顔を押しつけて、奈美がいった。/ぼくは懷中電灯の光を中へ射しこんだ。/;Llegamos frente al invernadero. “Dentro está negro...” dijo Nami, con la cara pegada al vidrio. Dirigí la luz de la linterna hacia adentro.
 03_0a71;3;「あっ！;“¡Ah!
 03_0a7f;3;」/ぼくと奈美は同時に声を上げた。/「まただ……！」;” Nami y yo gritamos a la vez. “¡Otra vez...!”
-03_0aa6;3;弟切草だった。/他の観葉植物にまじって、小さな黄色い花がよりそうように■いている。/;Era otogirisou. Entre otras plantas de interior, pequeñas flores amarillas florecían apretadas unas contra otras.
+03_0aa6;3;弟切草だった。/他の観葉植物にまじって、小さな黄色い花がよりそうように■いている。/;Era otogiriso. Entre otras plantas de interior, pequeñas flores amarillas florecían apretadas unas contra otras.
 03_0ae3;3;「復警の温室……」/奈美がボソリとつぶやいた。/「おい、きもちの悪いこというなよっ」/「なによ、自分はしょっちゅういうくせに！」;“El invernadero de la venganza...” murmuró Nami. “Oye, no digas cosas que dan asco.” “¡Mira quién habla, si tú lo dices a cada rato!”
 03_0b3b;3;ぼくらは注意深くガラスの中へ光を当てながら、温室のまわりを回った。/周囲は特に変わったこともなく、とうとう温室をひと回りしてしまった。;Dimos la vuelta al invernadero iluminando con cuidado el interior a través del vidrio. No había nada raro alrededor y acabamos completando toda la vuelta.
 03_0ba3;3;「結局誰もいなかったね」/ぼくらは屋数に戻ることにした。;“Al final no había nadie, ¿eh?” Decidimos volver a la mansión.
@@ -1648,7 +1648,7 @@
 04_1cd3;4;「そう思う？」/なぜか奈美はすごくうれしそうな顔をした。;“¿Tú crees?”/Por alguna razón, Nami se puso muy contenta.
 04_1cf8;4;「なんでそんなに喜ぶの？」/「ねっ、ねっ。この絵の人、なんとなく私に似てない？」/;“¿Por qué te alegras tanto?”/“Oye, oye. ¿No crees que la mujer del cuadro se parece un poco a mí?”
 04_1d2b;4;「はあっ？」;“¿Eeeh?”
-04_1d3b;4;「あっ、この花、弟切草じゃ……」;“Ah, estas flores son otogirisou...”
+04_1d3b;4;「あっ、この花、弟切草じゃ……」;“Ah, estas flores son otogiriso...”
 04_1d53;4;「ああ、そういえばそうだけど……ねえっ、それ以外に何か……」/「うーん」/「私に似てないっ？」/;“Ah, ahora que lo dices, sí... Pero, oye, ¿no ves algo más...?”/“Mmm.”/“¿No me parezco a ella?”
 04_1d8e;4;「えっ！」;“¡¿Eh?!”
 04_1d9e;4;「まるで全盛期の熟きゴッホだ」;“Parece un joven Van Gogh en su mejor época.”
@@ -1824,7 +1824,7 @@
 04_43ef;4;「うあああああ！」/体中に電気が走った!/手がノブから離れない!/目の前が真っ白になり、意識が遠のくのを感じた。;“¡Uaaaah!” ¡Una descarga recorrió todo mi cuerpo! ¡Mi mano no se despegaba del pomo! Todo se puso blanco ante mis ojos y sentí que me desvanecía.
 04_4450;4;「……奈美、かわいいね、奈美」/誰かがぶつぶつとつぶやいている……。/ぼくはうっすらと目をあけた。/;“... Nami, qué linda, Nami.” Alguien murmuraba algo... Entreabrí los ojos.
 04_448f;4;天井のシャンデリアがまぶしい。/「うっ！」/起き上がろうとしたが、縛られていて、手も足も動かせない。;La lámpara del techo deslumbraba. “¡Ugh!” Intenté incorporarme, pero estaba atado y no podía mover ni las manos ni los pies.
-04_44d1;4;首をめぐらすと、黄色い花が目に入った。/弟切草だ……。/ぼくは自分が寝かされているものに気づいた。/「これは、棺じゃないか……！」/ぼくはうしろ手に縛られ、弟切草の数き詰められた棺の中に寝かされているのだ。/「髪はこれくらいね……」/また声がした。;Al girar la cabeza vi unas flores amarillas. Otogirisou... Me di cuenta de dónde me habían acostado. “¡Esto es un ataúd!” Estaba atado con las manos a la espalda, acostado en un ataúd lleno de otogirisou. “El pelo más o menos así...” Volvió a oírse la voz.
+04_44d1;4;首をめぐらすと、黄色い花が目に入った。/弟切草だ……。/ぼくは自分が寝かされているものに気づいた。/「これは、棺じゃないか……！」/ぼくはうしろ手に縛られ、弟切草の数き詰められた棺の中に寝かされているのだ。/「髪はこれくらいね……」/また声がした。;Al girar la cabeza vi unas flores amarillas. Otogiriso... Me di cuenta de dónde me habían acostado. “¡Esto es un ataúd!” Estaba atado con las manos a la espalda, acostado en un ataúd lleno de otogiriso. “El pelo más o menos así...” Volvió a oírse la voz.
 04_4572;4;奈美の声にそっくりだ。/そっと首をあげると、ギリギリ室内が見える。/奈美がこちら向きに車椅子に座らされ、白いドレスを着た女が、奈美の髪をクシでとかしている。/これがナオミだろう。/奈美は眠らされているのか、気を失っているのか、目を閉じたままだ。;Era idéntica a la voz de Nami. Levanté despacio la cabeza y alcancé a ver justo el interior de la sala. Nami estaba sentada en una silla de ruedas mirando hacia mí, y una mujer de vestido blanco le peinaba el cabello con un peine. Esa debía de ser Naomi. Nami tenía los ojos cerrados, dormida o inconsciente.
 04_460f;4;「次は口紅……」/女がこちらを向く。/ぼくはあわてて首を引っ込めた。/下手に騒いでも体の自由がきかない。/しばらくはまだ気絶しているふりをつづけよう。/ぼくは息を殺して、女の言葉に耳を傾けた。;“Ahora, el lápiz labial...” La mujer se volvió hacia aquí. Me apresuré a meter la cabeza. Si armaba escándalo no podría moverme. Seguiré fingiendo estar inconsciente un rato. Contuve el aliento y presté atención a las palabras de la mujer.
 04_468f;4;「……私なんとなく覚えがあったのよ。ずっとむかし……いつも一緒に遊んでた女の子がいたこと、どっかで覚えてたのよね。でもね、お母さんにそれをいっても、その子はもう引越したとかいって、ずっとごまかしてたのよ。妹がいることがわかったあとも、死んだとかいって会わせてくれなかったの。ひどいお母さんでしょう」;“... Yo tenía como un recuerdo. Hace mucho tiempo... recordaba de algún modo que hubo una niña con la que siempre jugaba. Pero cuando se lo decía a mamá, me decía que esa niña se había mudado, y siempre me engañaba. Incluso después de saber que tenía una hermana, me decía que había muerto y no me dejaba verla. Qué madre tan cruel, ¿verdad?”
@@ -1847,7 +1847,7 @@
 04_4ccf;4;ナオミはこちらへ近づいてくる。/ぼくは動くことも、立ち上がることもできない。/「奈美っ!　目を覚ませっ!　奈美っ！」/大声を上げるが、奈美はぐったりと意識を失ったままだ。;Naomi se acercó. No podía moverme ni levantarme. “¡Nami! ¡Despierta! ¡Nami!” Grité con todas mis fuerzas, pero Nami seguía inconsciente y sin fuerzas.
 04_4d3e;4;「あなたにはホントに感謝してるのよ」/ナオミはぼくをのぞきこんだ。/「妹の奈美を、こうして私のもとへ、わざわざ連れてきてくれたんだものね。……ごくろうさま。もうゆっくりと、お休みなさい」;“Te estoy muy agradecida.” Naomi se asomó a mirarme. “Por haber traído hasta mí a mi hermana Nami. Gracias por tu esfuerzo. Ahora descansa tranquilo.”
 04_4da9;4;ナオミは、あばれるぼくの体を強引に押し込むと、ふたを閉めるまぎわに、火のついたローソクを棺の中に投げ入れた。/「これで暗くないでしょ」;Naomi me metió a la fuerza, pese a que me debatía, y justo antes de cerrar la tapa arrojó dentro del ataúd una vela encendida. “Así no estarás a oscuras.”
-04_4e03;4;「アチチチ！」/ぼくは体をひねって火をさけた。/ローソクは棺の中で燃えつづけている。/「なんて女だ!　焼き殺す気か！」/さいわい弟切草はまだ新しいらしく、すぐには火は燃え移らなかった。/だが、ケムイ……ゴホ、ゴホ。/このままでは酸欠になってしまう。;“¡Ay, ay, ay!” Retorcí el cuerpo para esquivar el fuego. La vela seguía ardiendo dentro del ataúd. “¡Qué mujer! ¡¿Piensa quemarme vivo?!” Por suerte, las otogirisou parecían frescas y el fuego no prendió enseguida. Pero había humo... cof, cof. Así me iba a asfixiar.
+04_4e03;4;「アチチチ！」/ぼくは体をひねって火をさけた。/ローソクは棺の中で燃えつづけている。/「なんて女だ!　焼き殺す気か！」/さいわい弟切草はまだ新しいらしく、すぐには火は燃え移らなかった。/だが、ケムイ……ゴホ、ゴホ。/このままでは酸欠になってしまう。;“¡Ay, ay, ay!” Retorcí el cuerpo para esquivar el fuego. La vela seguía ardiendo dentro del ataúd. “¡Qué mujer! ¡¿Piensa quemarme vivo?!” Por suerte, las otogiriso parecían frescas y el fuego no prendió enseguida. Pero había humo... cof, cof. Así me iba a asfixiar.
 04_4e9d;4;「消さなきゃ……」/ぼくは体を転がして消そうとした。/「アチチチ！」/……火はやっぱりアツイ。/この火で後手のロープを焼き切ることにした。/「あちちち……くぅぅぅっ！」/……やっぱりアツイ。;“Tengo que apagarla...” Intenté rodar para apagarla. “¡Ay, ay, ay!”... el fuego quema, claro. Decidí usar ese fuego para quemar la cuerda que me ataba las manos. “Ay, ay, ay... ¡ugh!”... quema, claro.
 04_4f12;4;ぼくは狭い棺の中で歯をくいしばり、体をくねらせた。/「早く早く、切・;Apreté los dientes y me retorcí en el estrecho ataúd. “¡Rápido, rápido, rom-
 04_4f40;4;れ・;pe-
@@ -2133,12 +2133,12 @@
 05_1216;5;「えっ、何;“¿Eh? ¿Qué
 05_121e;5;?　何かついてるの;? ¿Tengo algo pegado
 05_122a;5;?　ヤだ;? ¡Qué asco
-05_1230;5;!　取って！」/「こんなモノ、いつつけたんだヨ。シュミ悪いぞ」/ぼくは奈美の髪にさしてあるものを取った。/……それは弟切草だった。;! ¡Quítamelo!”/“¿Cuándo te pusiste esto? Qué mal gusto tienes.”/Le saqué a Nami lo que llevaba prendido en el cabello... Era una otogirisou.
-05_1283;5;「弟切草……！」/奈美はひきつった顔で首を振った。/「知らない;“¡Otogirisou...!”/Nami sacudió la cabeza con el rostro crispado./“No lo sé
-05_12b0;5;。私知らない」/「そうだヨな……それじゃ、いつの間に、ダレ/が……」/「その前に、それ拾てちゃって！」/ぼくは弟切草を拾てようとして、ふと手が止まった。;. Yo no sé nada.”/“Tienes razón... Entonces, ¿cuándo y quién...?”/“¡Antes que nada, tírala!”/Iba a tirar la otogirisou cuando de pronto mi mano se detuvo.
+05_1230;5;!　取って！」/「こんなモノ、いつつけたんだヨ。シュミ悪いぞ」/ぼくは奈美の髪にさしてあるものを取った。/……それは弟切草だった。;! ¡Quítamelo!”/“¿Cuándo te pusiste esto? Qué mal gusto tienes.”/Le saqué a Nami lo que llevaba prendido en el cabello... Era una otogiriso.
+05_1283;5;「弟切草……！」/奈美はひきつった顔で首を振った。/「知らない;“¡Otogiriso...!”/Nami sacudió la cabeza con el rostro crispado./“No lo sé
+05_12b0;5;。私知らない」/「そうだヨな……それじゃ、いつの間に、ダレ/が……」/「その前に、それ拾てちゃって！」/ぼくは弟切草を拾てようとして、ふと手が止まった。;. Yo no sé nada.”/“Tienes razón... Entonces, ¿cuándo y quién...?”/“¡Antes que nada, tírala!”/Iba a tirar la otogiriso cuando de pronto mi mano se detuvo.
 05_1310;5;「あ……思いだした！」/「え、何を？」/「弟切草の、花言葉」/「な……何だったの？」;“Ah... ¡ya me acordé!”/“¿Eh? ¿De qué?”/“De su significado en el lenguaje de las flores.”/“¿Q-qué era?”
 05_134b;5;「あ……イヤ、たいしたことないよ」/「いってよ」/「いや、ほんとにたいしたことないから」/「気になるじゃない」/「でも奈美、きっとコワがるから」/「ううん、コワがらない」/「コワがるって」;“Ah... no, no es nada importante.”/“Dímelo.”/“No, de verdad no es nada importante.”/“Me dejas con la duda.”/“Pero, Nami, seguro que te dará miedo.”/“No, no me dará miedo.”/“Sí te dará.”
-05_13b6;5;「いってくれないと色々想像してよけいにコワイじゃないのよぉ！」/「そうか、じゃあいうけどサ……。弟切草の花言葉は、;“¡Si no me lo dices, me imaginaré de todo y me dará todavía más miedo!”/“Está bien, te lo digo... En el lenguaje de las flores, la otogirisou significa 
+05_13b6;5;「いってくれないと色々想像してよけいにコワイじゃないのよぉ！」/「そうか、じゃあいうけどサ……。弟切草の花言葉は、;“¡Si no me lo dices, me imaginaré de todo y me dará todavía más miedo!”/“Está bien, te lo digo... En el lenguaje de las flores, la otogiriso significa 
 05_13fe;5;復警なんだ」/「え、復警……！」/奈美は絶句したが、すぐに笑顔に戻った。;venganza.”/“¡¿Eh? ¿Venganza...?!”/Nami se quedó sin palabras, pero enseguida volvió a sonreír.
 05_1434;5;「なあんだ。それなら大丈夫;“Vaya, ¿era eso? Entonces no pasa nada
 05_1446;5;。コワくない」/「どうして？」/「だって、私、人に復警されるような覚えなんてないもの」/「奈美になくても、もし、オレの方にあった/ら……？」;. No da miedo.”/“¿Por qué?”/“Porque yo no recuerdo haberle dado a nadie motivo para vengarse de mí.”/“Pero aunque tú no lo tengas, ¿y si yo sí...?”
@@ -2447,7 +2447,7 @@
 05_53a3;5;・;.
 05_53a7;5;・;.
 05_53ab;5;・」/奈美は地面にひざまずいた。/目から涙がこぼれ落ちる。/;.” Nami se arrodilló en el suelo. Las lágrimas le caían de los ojos.
-05_53d7;5;その奈美の顔の横で、燃え上がる屋数の火に赤く照らしだされた弟切草が1本、;Junto al rostro de Nami, una otogirisou iluminada de rojo por el fuego de la mansión en llamas se mecía
+05_53d7;5;その奈美の顔の横で、燃え上がる屋数の火に赤く照らしだされた弟切草が1本、;Junto al rostro de Nami, una otogiriso iluminada de rojo por el fuego de la mansión en llamas se mecía
 05_540d;5;ゆらり、; despacio,
 05_5414;5;ゆらりとゆれていた。; muy despacio.
 05_544c;5;「姊さん……」/奈美は地面にひざまずいた。/目から涙がこぼれ落ちる。/……ぼくは奈美の肩を抱いたまま、しばらくぼうぜんと立ち尽くした。/ぼくは思った。/;“Hermana...” Nami se arrodilló en el suelo. Las lágrimas le caían de los ojos. ...Con el brazo sobre los hombros de Nami, me quedé de pie, aturdido, durante un rato. Pensé:
@@ -2613,7 +2613,7 @@
 06_011c;6;ぼくは少しムッとした。/「……おい、人の欠点をいうのはよせ」;Me molesté un poco./“...Oye, no hables de los defectos de los demás.”
 06_0144;6;「ちがう;“No es eso
 06_014a;6;。見てよ」/奈美はマドの外をさした。/;. Mira.”/Nami señaló por la ventana.
-06_016d;6;ぼくはやっとキゲンを直した。/そこには、本当にアグラをかいているように群生している野花があった。/「ああ、弟切草か」/「オトギリソウ……？」/「うん;Por fin se me pasó el enojo. Allí había, de verdad, un grupo de flores silvestres que parecían estar sentadas con las piernas cruzadas./“Ah, es otogirisou.”/“¿Otogirisou...?”/“Sí
+06_016d;6;ぼくはやっとキゲンを直した。/そこには、本当にアグラをかいているように群生している野花があった。/「ああ、弟切草か」/「オトギリソウ……？」/「うん;Por fin se me pasó el enojo. Allí había, de verdad, un grupo de flores silvestres que parecían estar sentadas con las piernas cruzadas./“Ah, es otogiriso.”/“¿Otogiriso...?”/“Sí
 06_01c7;6;。弟を切る草……って書く」;. Se escribe con los kanji de ʻhierba que corta al hermano menorʼ.”
 06_01dc;6;「へえ……;“Vaya...
 06_01e4;6;なんだかぶきみな名前。でも; qué nombre tan siniestro. Pero 
@@ -2707,13 +2707,13 @@
 06_0ceb;6;「うわああ！」/「サイドブレーキ引いて！」/「ばか、ソコ、ちがうッ！」/「きゃあーッ！」;“¡Uwaaa!” “¡Tira del freno de mano!” “¡Tonta, ahí no es!” “¡Kyaaa!”
 06_0d25;6;そのときぼくは/;En ese momento pensé:
 06_0d46;6;ああ、もう死ヌ！;¡Ah, ya me muero!
-06_0d53;6;　とカンタンに思った。;Eso pensé, sin más.
+06_0d53;6;　とカンタンに思った。; Eso pensé, sin más.
 06_0d69;6;ああ奈美、さいごに♥;¡Ah, Nami, por última vez♥!
-06_0d79;6;と抱きついた。;Y me abracé a ella.
+06_0d79;6;と抱きついた。; Y me abracé a ella.
 06_0d8b;6;ああ、トンカツ食いたい！;¡Ah, quiero comer tonkatsu!
 06_0d9c;6;　とトツ然に思った。;Eso pensé de repente.
 06_0db2;6;オンナの方がいい！;¡Una mujer es mejor!
-06_0dc0;6;　と歯を食いしばった。;Eso pensé, apretando los dientes.
+06_0dc0;6;　と歯を食いしばった。; Eso pensé, apretando los dientes.
 06_0ddd;6;車は止まった。/;El auto se detuvo.
 06_0df1;6;「ど……どうやったの？」/「念力さ;“¿C-cómo lo hiciste?” “Con telequinesis
 06_0e07;6;。エイと気合いかけたら、ピタリと止まった」/「ふうん……エライのね」/ぼくが何もしなかったことは、奈美もよく知っている。;. Concentré mi energía, y se detuvo de golpe.” “Vaya... qué admirable.” Nami sabía muy bien que yo no había hecho nada.
@@ -2754,9 +2754,9 @@
 06_1316;6;「きゃあ！」/;“¡Aaay!”
 06_1327;6;奈美;Nami
 06_132d;6;がしがみついてきた。/; se me aferró con fuerza.
-06_133c;6;よ……よし。/だが、足元を見て飛びさがった。/「見て、弟切草……！」;B-bien. Pero, al mirar el suelo, salté hacia atrás. “¡Mira, las otogirisou...!”
-06_1377;6;ぼくははじめて、ぼくの車が、一面の弟切草を踏んづけていることに気づいた。/「わあ、ホントだ……」/その弟切草は、すべて一方向に倒れている。;Por primera vez noté que mi auto estaba aplastando un campo entero de otogirisou. “Guau, es verdad...” Todos esos otogirisou estaban caídos en una misma dirección.
-06_13d1;6;「ぜんぶ南をさしてるぞ……！」/「どうしてこっちが南だってわかるの？」/「キタ道の反対だから」/「つまんないシャレ……」/「でも、ふしぎだよな」/「ええ……まるで弟切草が、私たちにこっちへ進めっていってるみたい」;“¡Todos apuntan al sur...!” “¿Cómo sabes que ese es el sur?” “Porque es lo opuesto al norte. ¡Sur-prendente!” “Qué chiste más tonto...” “Pero es raro, ¿verdad?” “Sí... es como si las otogirisou nos dijeran que sigamos por aquí.”
+06_133c;6;よ……よし。/だが、足元を見て飛びさがった。/「見て、弟切草……！」;B-bien. Pero, al mirar el suelo, salté hacia atrás. “¡Mira, las otogiriso...!”
+06_1377;6;ぼくははじめて、ぼくの車が、一面の弟切草を踏んづけていることに気づいた。/「わあ、ホントだ……」/その弟切草は、すべて一方向に倒れている。;Por primera vez noté que mi auto estaba aplastando un campo entero de otogiriso. “Guau, es verdad...” Todos esos otogiriso estaban caídos en una misma dirección.
+06_13d1;6;「ぜんぶ南をさしてるぞ……！」/「どうしてこっちが南だってわかるの？」/「キタ道の反対だから」/「つまんないシャレ……」/「でも、ふしぎだよな」/「ええ……まるで弟切草が、私たちにこっちへ進めっていってるみたい」;“¡Todos apuntan al sur...!” “¿Cómo sabes que ese es el sur?” “Porque es lo opuesto al norte. ¡Sur-prendente!” “Qué chiste más tonto...” “Pero es raro, ¿verdad?” “Sí... es como si las otogiriso nos dijeran que sigamos por aquí.”
 06_1457;6;「よォし」/とたんに、ぼくははりきった。;“¡Muy bien!” De inmediato me llené de ánimo.
 06_148d;6;「バラ色のシアワセが待っている;“Nos espera una felicidad color de rosa
 06_14a0;6;。;. 
@@ -2799,9 +2799,9 @@
 06_198a;6;こんど出て来たら供養してあげよう。;La próxima vez que aparezca, le haré un funeral.
 06_19a7;6;ぼくらはもう門の前まで来ている。/;Ya estábamos frente al portón.
 06_19c6;6;いまのさわぎで、ぼくらはいつの間にか門を入っている。;Con el alboroto, habíamos entrado al portón sin darnos cuenta.
-06_19f7;6;「わあ……」/「弟切草だあ……」/……広大な庭は、見渡すかぎりの弟切草だった。;“Vaya...” “Son otogirisou...” ...El enorme jardín estaba cubierto de otogirisou hasta donde alcanzaba la vista.
+06_19f7;6;「わあ……」/「弟切草だあ……」/……広大な庭は、見渡すかぎりの弟切草だった。;“Vaya...” “Son otogiriso...” ...El enorme jardín estaba cubierto de otogiriso hasta donde alcanzaba la vista.
 06_1a2f;6;「いっぱいの花！……まるでソバ畑みたいね！」/「何だか、誰かの怨念がこもってるみたい/だ……」/「またコワイこという……」/;“¡Cuántas flores! ¡Parece un campo de alforfón!” “Es como si estuvieran cargadas del rencor de alguien...” “Otra vez con cosas que dan miedo...”
-06_1a7c;6;弟切草畑はうなずくようにサワサワと揺れた。;El campo de otogirisou se meció con un susurro, como si asintiera.
+06_1a7c;6;弟切草畑はうなずくようにサワサワと揺れた。;El campo de otogiriso se meció con un susurro, como si asintiera.
 06_1a9a;6;「ねえ、早く行こうよ」/奈美がコワそうにいった。/ホントは、ぼくもかなりコワイ……。/だが、オトコとしては、ここが度胸の見せどころだ。;“Oye, vamos rápido.” Nami lo dijo con miedo. A decir verdad, yo también tenía bastante miedo... Pero como hombre, este era el momento de mostrar valor.
 06_1aeb;6;ぼくはいった。/;Dije:
 06_1b10;6;「競走だ;“¡Hagamos una carrera
@@ -2864,7 +2864,7 @@
 06_21b2;6;」;”
 06_21b6;6;と奈美を押し倒した。; y empujé a Nami hasta tumbarla.
 06_21c8;6;毛足の長いジュウタンがぜいたくだ。/奈美はされるがままになっている。/;La alfombra de pelo largo era un lujo. Nami se dejaba hacer.
-06_21f9;6;そこはおどろくほど広く、吹きぬけのホールになっている。/天井にはでかいシャンデリアがある。/左右には2階への階段、中世ヨーロッパ風の油絵、西洋ヨロイ、アンティークな大置時計が飾られている。;Era un vestíbulo de una amplitud asombrosa, abierto hasta el piso de arriba. Del techo colgaba una enorme lámpara de techo. A ambos lados había escaleras al segundo piso, y lo decoraban un óleo de estilo europeo medieval, una armadura occidental y un gran reloj de pie antiguo.
+06_21f9;6;そこはおどろくほど広く、吹きぬけのホールになっている。/天井にはでかいシャンデリアがある。/左右には2階への階段、中世ヨーロッパ風の油絵、西洋ヨロイ、アンティークな大置時計が飾られている。;Era un vestíbulo de una amplitud asombrosa, abierto hasta el piso de arriba. Del techo colgaba una enorme lámpara. A ambos lados había escaleras al segundo piso, y lo decoraban un óleo de estilo europeo medieval, una armadura occidental y un gran reloj de pie antiguo.
 06_2278;6;何より目をひくのは、正面にある巨大水槽だ。/「なんだか、人魚でも飼っていそう……」/「だとしたら、ちょっと汚ナイ人魚だな」/近づくと、潤った水の中に何かが動いているようにも見える。;Pero lo que más llamaba la atención era el enorme acuario del frente./“Parece que ahí podrían criar sirenas...”/“De ser así, sería una sirena bastante sucia.”/Al acercarnos, nos pareció que algo se movía dentro del agua turbia.
 06_22f2;6;「ゴメン下サーイ……！」/奈美がもういちど大きな声を上げた。/声はシーンと吸いこまれていく。/「気味悪いくらい静か……家の人、お出かけなのかしら」/「けど、電気がついてるからな……とにかく休ませてもらおうよ。アトで説明すればわかってくれるさ」;“¡Permiso, por favoooor...!”/Nami volvió a gritar con fuerza. Su voz fue absorbida por el silencio./“Qué silencio más inquietante... ¿Habrán salido los dueños?”/“Pero si las luces están encendidas... En todo caso, pidámosles que nos dejen descansar. Luego, al explicarles, lo entenderán.”
 06_2388;6;「このぬれた体を何とかしたい」/「え、シャ、シャワーだな……うん、そ、そうだったよね」/ぼくは思わずアセってしまった。/;“Quiero hacer algo con lo mojada que estoy.”/“¿Eh? L-la ducha, ¿no? Sí... s-sí, es verdad.”/Me puse nervioso sin poder evitarlo.
@@ -3147,7 +3147,7 @@
 07_1876;7;ぼくらは調理場へ飛びこんだ。/だが、さがしてみても、どこにも見当らない。/「おい、どこだ？」/「わからない……」/右からのような気もするが、ちがう。/左からのようにも思えるが、ちがう。/奈美がハッと気づいた。/「ねえッ、冷蔵■よ！？;Entramos de un salto en la cocina. Pero, por más que buscamos, no lo encontrábamos por ninguna parte./“Oye, ¿dónde está?”/“No lo sé...”/Me parecía que venía de la derecha, pero no. También me parecía que venía de la izquierda, pero tampoco./Nami cayó en la cuenta de pronto./“¡Oye! ¿No será el refrigerador?
 07_1907;7;」;”
 07_190c;7;たしかに、音は冷蔵■の中から聞こえる。/ぼくは冷蔵■のドアを開けた。/;En efecto, el sonido venía del interior del refrigerador. Abrí su puerta.
-07_1945;7;あった。/電話は冷蔵■の中でよく冷やされていた。/「ス、スイカとまちがえてる……」/「とにかく、出てみて」;Allí estaba. El teléfono se hallaba muy bien enfriado dentro del refrigerador./“L-lo confunden con una sandía...”/“En fin, contesta.”
+07_1945;7;あった。/電話は冷蔵■の中でよく冷やされていた。/「ス、スイカとまちがえてる……」/「とにかく、出てみて」;Allí estaba. El teléfono se hallaba muy bien enfriado dentro del refrigerador./“L-lo guardaron como si fuera una sandía...”/“En fin, contesta.”
 07_1989;7;「出て、何ていう？」/「モシモシ、っていえばいいじゃない」/「……だ、だナ」/ぼくは受話器をとった。/;“Si contesto, ¿qué digo?”/“Di ʻ¿Aló?ʼ y ya, ¿no?”/“...S-supongo.”/Tomé el auricular.
 07_19cb;7;「……も、もしもし？」/電話は例のキカイ音声で答えた。/「コノ電話ハ、現在食ベラレマセン、ピーッ」/「ふ、ふざけるな！」;“...¿A-aló?”/El teléfono respondió con esa voz mecánica de antes./“Este teléfono no puede ser comido en este momento, bip.”/“¡N-no te burles de mí!”
 07_1a1e;7;「でもヘンね;“Pero qué raro
@@ -3192,18 +3192,18 @@
 07_1e99;7;開いたドアから、カミナリの光が廊下までもれている;La luz de un relámpago se filtraba hasta el pasillo a través de la puerta abierta
 07_1eb7;7;。;.
 07_1ebf;7;入ってみると、室内はぶきみな花でおおわれている。/「まあ……！」;Al entrar, vimos que la habitación estaba cubierta de flores siniestras./“Vaya...”
-07_1ef0;7;「弟切草のミイラ……！」/それは、弟切草のドライフラワーだった。/;“¡Una momia de otogirisou...!”/En realidad eran otogirisou, flores secas.
+07_1ef0;7;「弟切草のミイラ……！」/それは、弟切草のドライフラワーだった。/;“¡Una momia de otogiriso...!”/En realidad eran otogiriso, flores secas.
 07_1f1d;7;「あきれたな……誰だか知らないが、よほどヒマなヤツだ」/「ホントね;“Increíble... no sé quién será, pero debe de tener un montón de tiempo libre.”/“Es verdad
-07_1f43;7;。失礼しちゃう！」/奈美は怒って弟切草の山を払い落とした。/;. ¡Qué falta de respeto!”/Furiosa, Nami barrió el montón de otogirisou.
+07_1f43;7;。失礼しちゃう！」/奈美は怒って弟切草の山を払い落とした。/;. ¡Qué falta de respeto!”/Furiosa, Nami barrió el montón de otogiriso.
 07_1f74;7;とたんに笑い声がした。/「うぎゃ、な、何ダ！？」/;De inmediato se oyó una risa./“¡Uagh! ¡¿Q-qué pasa?!”
-07_1f98;7;「弟切草の中！」;“¡Dentro de las otogirisou!”
+07_1f98;7;「弟切草の中！」;“¡Dentro de las otogiriso!”
 07_1fae;7;ドライフラワーをかきわけると、そこから笑い袋が出て来た。/;Al apartar las flores secas, de allí salió una bolsa de la risa.
 07_1fd5;7;むかし大はやりしたという、;De esas que, según dicen, fueron un gran éxito hace tiempo, 
 07_1fe8;7;ゲタゲタ笑いのあの笑い袋だ。/「なンだヨ、これ！……;esa bolsa de la risa de carcajadas estridentes./“¡Pero qué es esto!... 
 07_200a;7;あッ」/ぼくは突然思い出した。/「そうだ、復警……！」/「え？」;¡Ah!”/De pronto recordé./“Es verdad, la venganza...”/“¿Eh?”
 07_2039;7;「花言葉だよ;“Es el lenguaje de las flores
-07_2044;7;。弟切草の花言葉は、“復警”だったんだ！」/;. ¡En el lenguaje de las flores, la otogirisou significa ʻvenganzaʼ!”
-07_2069;7;「復警……！」/奈美はぞッと室内の弟切草を見回した。/「誰が、誰に復警するっていうの……！？」;“¡Venganza...!”/Con un escalofrío, Nami recorrió con la vista las otogirisou de la habitación./“¡¿Quién se va a vengar... y de quién...?!”
+07_2044;7;。弟切草の花言葉は、“復警”だったんだ！」/;. ¡En el lenguaje de las flores, la otogiriso significa ʻvenganzaʼ!”
+07_2069;7;「復警……！」/奈美はぞッと室内の弟切草を見回した。/「誰が、誰に復警するっていうの……！？」;“¡Venganza...!”/Con un escalofrío, Nami recorrió con la vista las otogiriso de la habitación./“¡¿Quién se va a vengar... y de quién...?!”
 07_20be;7;「きゃッ！」/「どこだ、近いぞ！」/「トナリよ！」/;“¡Kya!”/“¿Dónde? ¡Está cerca!”/“¡Es la de al lado!”
 07_20e7;7;ぼくらは廊下へ走り出た。そして、;Salimos corriendo al pasillo. Y entonces, 
 07_211b;7;ホームズ風にそのドアに目をつけた。;Al estilo de Holmes, le echamos el ojo a esa puerta.
@@ -3681,7 +3681,7 @@
 08_2793;8;母子手帳だった。; una libreta de salud maternoinfantil.
 08_27a3;8;「私とナオミの母子手帳……;“Son la mía y la de Naomi...
 08_27b8;8;私たち、双子だったのよ！」/「ばかだな……」/ぼくは笑った。/「よく見ろよ。ホラ、名字がちがう。この家には双子がいた。奈美と、ナオミって子だった。それだけじゃないか」/「ちがう！」/奈美は叫んだ。; ¡Éramos gemelas!”/“Qué tontería...”/Me reí./“Mira bien. Mira, el apellido es distinto. En esta casa hubo unas gemelas. Se llamaban Nami y Naomi. Eso es todo, ¿no?”/“¡No!”/Nami gritó.
-08_2835;8;「私やっとスベテを思い出したの！」/ページを開くと、パサリと何かが落ちた。/押し花にされた弟切草だった。/「;“¡Por fin lo he recordado todo!”/Al abrir las páginas, algo cayó con un leve ruido. Era una otogirisou prensada./“¡
+08_2835;8;「私やっとスベテを思い出したの！」/ページを開くと、パサリと何かが落ちた。/押し花にされた弟切草だった。/「;“¡Por fin lo he recordado todo!”/Al abrir las páginas, algo cayó con un leve ruido. Era una otogiriso prensada./“¡
 08_287c;8;、聞いて!　私たち、むかし弟を殺したのよ！」/;, escucha! ¡Hace mucho matamos a nuestro hermano menor!”
 08_28ab;8;奈美がとんでもないことをいいだした。;Nami dijo algo descabellado.
 08_28c3;8;「奈美……;“Nami...
@@ -4091,13 +4091,13 @@
 10_0248;10;「いいわよ……じゃ、車の中で」/ぼくらは急いで車の中へ戻った。;“Está bien... entonces, dentro del auto.” Volvimos de prisa al auto.
 10_0276;10;「じゃ……」/「え……」/奈美は目を閉じている。/て……てえへんだ、これからどうなんべえか……？?;“Entonces...” “Eh...” Nami tenía los ojos cerrados. Q-qué barbaridad, ¿y ahora qué va a pasar...??
 10_02b8;10;「スギで、スギで、スギで……」;“Demasiado, demasiado, demasiado...”
-10_02d6;10;「あッ」/ぼくは思わず声を上げた。/「え、どうしたの？」/「イ、イマ、弟切草が……！」/;“¡Ah!” Solté un grito sin querer. “¿Qué pasa?” “A-ahora mismo, la otogirisou...!”
+10_02d6;10;「あッ」/ぼくは思わず声を上げた。/「え、どうしたの？」/「イ、イマ、弟切草が……！」/;“¡Ah!” Solté un grito sin querer. “¿Qué pasa?” “A-ahora mismo, la otogiriso...!”
 10_0316;10;奈美;Nami
 10_031c;10;はぼくの視線をたどった。; siguió mi mirada.
-10_0337;10;「わあ、ホントだ……弟切草が、あんなにいっぱい」/「いや、そうじゃなくて……イ、イマ、そこで、弟切草のオバケが踊ったんだ」/「ばかいわないで;“¡Guau, es verdad... hay un montón de otogirisou!” “No, no es eso... A-ahora mismo, allí bailó un fantasma de otogirisou.” “No digas tonterías
+10_0337;10;「わあ、ホントだ……弟切草が、あんなにいっぱい」/「いや、そうじゃなくて……イ、イマ、そこで、弟切草のオバケが踊ったんだ」/「ばかいわないで;“¡Guau, es verdad... hay un montón de otogiriso!” “No, no es eso... A-ahora mismo, allí bailó un fantasma de otogiriso.” “No digas tonterías
 10_0388;10;。風に揺れたんでしょ」;. Se mecían con el viento.”
 10_0399;10;「ちがう;“No
-10_039f;10;。こんなにでっかい、弟切草のカタマリが」/「アハハハ……いつもの算談」/奈美は笑ったが、ぼくはホントに見たのだ。/弟切草が、ひとかたまりとなって立ち上がり、ゆらゆらとフラダンスをしたのを。;. ¡Una masa de otogirisou así de grande!” “Ja, ja, ja... tus bromas de siempre.” Nami rió, pero yo de verdad lo había visto: las otogirisou se juntaron en una sola masa, se pusieron de pie y bailaron hula, meciéndose.
+10_039f;10;。こんなにでっかい、弟切草のカタマリが」/「アハハハ……いつもの算談」/奈美は笑ったが、ぼくはホントに見たのだ。/弟切草が、ひとかたまりとなって立ち上がり、ゆらゆらとフラダンスをしたのを。;. ¡Una masa de otogiriso así de grande!” “Ja, ja, ja... tus bromas de siempre.” Nami rió, pero yo de verdad lo había visto: las otogiriso se juntaron en una sola masa, se pusieron de pie y bailaron hula, meciéndose.
 10_0418;10;「雨、とうとうひどくなっちゃったね」/奈美はまるで信じていない。/ぼくも錯覚だと割り切ることにした。/「よし……暗くなってきたし、どッか雨宿りできるとこでもさがした方がいいな」;“Por fin se puso fea la lluvia, ¿eh?” Nami no me creía en absoluto. Yo también decidí que había sido una ilusión. “Bien... ya está oscureciendo, mejor busquemos dónde resguardarnos de la lluvia.”
 10_0487;10;実をいうとぼくは、/;A decir verdad, 
 10_04ab;10;雨に打たれながら歩くのが好きだ。;Me gusta caminar bajo la lluvia.
@@ -4141,11 +4141,11 @@
 10_0a3a;10;気がつくと、いつの間にか門の前に来ている。/;Cuando me di cuenta, ya estábamos frente al portón.
 10_0a56;10;鉄の門には、地獄図のレリーフがあった。/「地獄門か……おれたち、地獄へ足を踏み入れちゃったわけだ」/「コワイこといわないで……」;En el portón de hierro había un relieve de un cuadro del infierno. “¿La puerta del infierno?... Entonces hemos puesto el pie en el infierno.” “No digas cosas que dan miedo...”
 10_0ab0;10;屋数の庭は見渡すかぎり草ボウボウだ。/;El jardín de la mansión estaba cubierto de maleza hasta donde alcanzaba la vista.
-10_0acd;10;奈美が目を丸くした。/「ねえ！……これ、みんな、弟切草よ！」/「ほんとだ……！」/「まるで弟切草の畑……;Nami abrió los ojos como platos. “¡Oye!... ¡Todo esto son otogirisou!” “Es verdad...!” “Es como un campo de otogirisou... 
-10_0b14;10;誰か作ってるのかしら？」/「弟切草の館……か」;¿Alguien los cultivará?” “La mansión de las otogirisou... ¿eh?”
-10_0b39;10;「あッ……」/「え？」/「何かが！」/弟切草の中に何かがいる。/「何？」/「魚！」/;“¡Ah...!” “¿Qué?” “¡Algo!” Había algo entre las otogirisou. “¿Qué?” “¡Un pez!”
+10_0acd;10;奈美が目を丸くした。/「ねえ！……これ、みんな、弟切草よ！」/「ほんとだ……！」/「まるで弟切草の畑……;Nami abrió los ojos como platos. “¡Oye!... ¡Todo esto son otogiriso!” “Es verdad...!” “Es como un campo de otogiriso... 
+10_0b14;10;誰か作ってるのかしら？」/「弟切草の館……か」;¿Alguien los cultivará?” “La mansión de las otogiriso... ¿eh?”
+10_0b39;10;「あッ……」/「え？」/「何かが！」/弟切草の中に何かがいる。/「何？」/「魚！」/;“¡Ah...!” “¿Qué?” “¡Algo!” Había algo entre las otogiriso. “¿Qué?” “¡Un pez!”
 10_0b7d;10;キラリと、銀色のウロコがハネた。;Una escama plateada brilló con un destello.
-10_0b93;10;「……算談キツイぜ、全く」/「ねえ、いまの魚……;“...Qué chiste más pesado, en serio.” “Oye, ese pez... 
+10_0b93;10;「……算談キツイぜ、全く」/「ねえ、いまの魚……;“...Qué chiste más pesado, en serio.” “Oye, el pez de hace un momento... 
 10_0bb3;10;人間くらいの大きさだったんじゃない？」/;¿No era del tamaño de una persona?”
 10_0bce;10;ぼくは何だか引き返したくなった。/「ねえ、;De pronto me dieron ganas de volver atrás. “Oye, 
 10_0be9;10;、どうする？」;, ¿qué hacemos?”
@@ -4171,7 +4171,7 @@
 10_0eae;10;ぼくらは四方を見回した。/;Miramos a nuestro alrededor.
 10_0ec6;10;「奈美はビーナス……♥」;“Nami, eres Venus...♥”
 10_0ed9;10;ぼくは奈美を抱きよせた。/;Abracé a Nami.
-10_0ef7;10;そこは吹きぬけのホールだった。/天井には大きなシャンデリア、正面には、何を飼っているのか、巨大な水槽がどんよりと潤った水をたたえている。;Era un vestíbulo abierto hasta el techo. Del techo colgaba una gran lámpara de techo y, al frente, un acuario gigantesco, ¿qué criarían ahí?, retenía un agua turbia y sucia.
+10_0ef7;10;そこは吹きぬけのホールだった。/天井には大きなシャンデリア、正面には、何を飼っているのか、巨大な水槽がどんよりと潤った水をたたえている。;Era un vestíbulo abierto hasta el techo. Del techo colgaba una gran lámpara y, al frente, un acuario gigantesco, ¿qué criarían ahí?, retenía un agua turbia y sucia.
 10_0f55;10;「何だ、あの水槽……？」/「プール代りに使うんじゃない？」/まさか、それほど大きくはない。;“¿Qué es ese acuario...?” “¿Lo usarán de piscina?” No era tan grande, claro.
 10_0f8e;10;ホールの正面には2階への階段がある。/;Al frente del vestíbulo había una escalera al segundo piso.
 10_0fab;10;右階段の下には、大きなオノを手にした西洋ヨロイ。/左階段の下には、暖炉と背丈ほどもある大置時計がおかれ、大きな振り子がゆったりと時を刻んでいる。/「もういっぺんドナってみようか？」/「ええ、きっと叫べば聞こえるわよね」;Bajo la escalera derecha, una armadura occidental con un gran hacha en la mano. Bajo la izquierda, una chimenea y un gran reloj de pie tan alto como una persona, cuyo gran péndulo marcaba el tiempo con calma. “¿Probamos a gritar otra vez?” “Sí, si gritamos seguro que nos oyen.”
@@ -4416,11 +4416,11 @@
 11_0004;11;2階へ上がると、左側3番目のドアが開いている。/「あそこだな」/ぼくと奈美はその部屋へ入った。/;Al subir al segundo piso, la tercera puerta de la izquierda estaba abierta. “Debe de ser ahí.” Nami y yo entramos en esa habitación.
 11_004a;11;「あ……」;“Ah...”
 11_0055;11;「まあ……」/;“Vaya...”
-11_0061;11;……カベいっぱいに、大きな弟切草が映し出されている。/「これ、ブリキオモチャの幻灯機だ」/「へえ……こんなの、まだあったのね」/「くそ、手のこんだことをしやがる」/「;...En toda la pared había una enorme otogirisou proyectada. “Es un proyector de linterna mágica, un juguete de hojalata.” “Vaya... ¿todavía quedaban de estos?” “Maldición, vaya que se esmeraron.” “
+11_0061;11;……カベいっぱいに、大きな弟切草が映し出されている。/「これ、ブリキオモチャの幻灯機だ」/「へえ……こんなの、まだあったのね」/「くそ、手のこんだことをしやがる」/「;...En toda la pared había una enorme otogiriso proyectada. “Es un proyector de linterna mágica, un juguete de hojalata.” “Vaya... ¿todavía quedaban de estos?” “Maldición, vaya que se esmeraron.” “
 11_00c5;11;！……」/奈美が急に息を吞んだ。;!...” Nami ahogó un grito de repente.
 11_00e0;11;反対側のカベに、血文字で;En la pared del otro lado, con letras de sangre, 
 11_00f6;11;　　　　『復警』/と書かれている。;estaba escrito ʻvenganzaʼ.
-11_010f;11;「そうだ……！」/ぼくは思い出した。/「え……？」/「弟切草の花言葉……;“¡Es verdad...!” Lo recordé. “¿Eh...?” “En el lenguaje de las flores, la otogirisou... 
+11_010f;11;「そうだ……！」/ぼくは思い出した。/「え……？」/「弟切草の花言葉……;“¡Es verdad...!” Lo recordé. “¿Eh...?” “En el lenguaje de las flores, la otogiriso... 
 11_0141;11;“復警”だったんだ……」;era ʻvenganzaʼ...”
 11_0158;11;奈美はこわそうに首をすくめた。/「誰が……;Nami encogió el cuello con aire asustado. “¿Quién... 
 11_0175;11;誰に、復警するっていうの？……」/;se vengará de quién?...”
@@ -4880,7 +4880,7 @@
 12_1852;12;コウモリとなって消えた……。/見れば、奈美もいなくなっている。;se convirtió en murciélago y desapareció... Al mirar, Nami también se había esfumado.
 12_187a;12;「奈美、どこだ！」/ぼくはナオミが教えてくれた庭へ走った。/;“¡Nami! ¿Dónde estás?”/Corrí hacia el jardín que Naomi me había indicado.
 12_18aa;12;「奈美……！」/;“¡Nami...!”
-12_18b9;12;庭には、一面の弟切草をなぎたおすように、風が吹き荒れている。/……風の中に奈美が背を向けて立っていた。/「な、奈美……」;En el jardín, un viento furioso soplaba como si fuera a derribar todo el campo de otogirisou... Entre el viento, Nami estaba de pie, dándome la espalda./“N-Nami...”
+12_18b9;12;庭には、一面の弟切草をなぎたおすように、風が吹き荒れている。/……風の中に奈美が背を向けて立っていた。/「な、奈美……」;En el jardín, un viento furioso soplaba como si fuera a derribar todo el campo de otogiriso... Entre el viento, Nami estaba de pie, dándome la espalda./“N-Nami...”
 12_190d;12;「私、思い出したの」/振り向かずに奈美はいった。/「私のお母さんはミイラだったわ……;“Lo recordé.”/Sin volverse, Nami dijo:/“Mi mamá era una momia...
 12_1945;12;お父さんは、ヨロイだった」/い……いったい、何の話をしているのだ。/「弟は怪魚だった。……姊のナオミは、コウモリに変身して血を吸うバンパイヤ……つまり吸血鬼だったの」;Mi papá era la armadura.”/¿D-de qué demonios estaba hablando?/“Mi hermano menor era el pez monstruoso... Mi hermana Naomi era una vampira que se transforma en murciélago y chupa sangre... es decir, una bebedora de sangre.”
 12_19af;12;「ンな……な、なんだってえ……？？？」/「私のいってることがわからない？」/「な、何とかわかろうとしてる……;“¿Q-qué...? ¿¿¿Qué dices...???”/“¿No entiendes lo que digo?”/“T-trato de entenderlo de algún modo... 
@@ -4974,7 +4974,7 @@
 12_2aea;12;階段を下りると、ヒトダマがおそった。/奈美を恐がらせまいと、ぼくはその口をふさいだ。;Al bajar las escaleras, un hitodama nos atacó. Para no asustar a Nami, le tapé la boca.
 13_0000;13;「うれしい」/奈美はぼくの胸にとびこんできた。/そのとき首筋がチクリとした。/「イテ……」/「あ、ゴメン。私ったら;“¡Qué feliz soy!”/Nami se lanzó contra mi pecho. En ese instante sentí un pinchazo en el cuello./“Ay...”/“Ah, perdón. Yo soy una 
 13_0046;13;あわて者……。いまからこんなにかんじゃって」;atolondrada... Mira que ponerme a morderte así desde ahora.”
-13_0061;13;奈美はぼくの首から八重歯をはなした。/な……奈美にこんなクセがあるとは知らなかった。/それにヘンなことをいっている。/とにかく、奈美の家族に会おう。/ヨロイだろうがバケツだろうが、ミイラだろうがヒモノだろうが、なに、構うものか。/奈美の家族なら、ぼくの家族だ。;Nami separó los caninos de mi cuello. No sabía que Nami tuviera esa manía. Además, decía cosas raras. En fin, conocería a la familia de Nami. Armadura o cubo, momia o pescado seco, ¡qué más daba! Si eran la familia de Nami, eran mi familia.
+13_0061;13;奈美はぼくの首から八重歯をはなした。/な……奈美にこんなクセがあるとは知らなかった。/それにヘンなことをいっている。/とにかく、奈美の家族に会おう。/ヨロイだろうがバケツだろうが、ミイラだろうがヒモノだろうが、なに、構うものか。/奈美の家族なら、ぼくの家族だ。;Nami separó los caninos de mi cuello. No sabía que Nami tuviera esa manía. Además, decía cosas raras. En fin, conocería a la familia de Nami. Armadura o cubeta, momia o pescado seco, ¡qué más daba! Si eran la familia de Nami, eran mi familia.
 13_0101;13;「じゃ」/奈美は何か黒いアタッシュケースのようなものを手にとった。/;“Bueno.”/Nami tomó algo parecido a un maletín negro.
 13_012f;13;「行きましょうか」;“¿Vamos?”
 13_0141;13;そういわれてぼくは、/;Al oírla, 
@@ -5177,7 +5177,7 @@
 13_23a1;13;。ワハハ……」;. ¡Jajaja...!”
 13_23ac;13;秘薬の秘伝をもらしたら、首がコロリ……なんだか、どこかで聞いた話と似ている。/「薬の原料は何なんですか？」/「うン;Si se filtraba el secreto de la medicina, la cabeza rodaría... Me sonaba a algo oído en otra parte./“¿Cuáles son los ingredientes de la medicina?”/“Mmm
 13_23f5;13;。いろいろとあるがね……;. Hay varios... 
-13_2404;13;主成分は、意外なものだ」/「弟切草ですか？;El componente principal es algo inesperado.”/“¿Será la otogirisou?
+13_2404;13;主成分は、意外なものだ」/「弟切草ですか？;El componente principal es algo inesperado.”/“¿Será la otogiriso?
 13_242a;13;」;”
 13_242f;13;「む……;“Mm... 
 13_2436;13;ムム」/ヨロイの父とミイラの母、ナオミと怪魚もびっくりしてぼくを見た。/「イエ、何となくそんな気がしただけで」/……もうどうでもいいことだ。/;¡Mmm!”/El padre armadura, la madre momia, Naomi y el pez monstruoso me miraron sorprendidos./“No, solo tuve esa corazonada.”/...Ya nada importaba.
@@ -5194,10 +5194,10 @@
 13_260a;13;「奈美」/ぼくはいった。/「おれがミニ生首になったら、ときどきは出して、ながめてくれよな」/「いわないで、;“Nami”, dije./“Cuando me convierta en una cabeza en miniatura, sácame de vez en cuando para mirarme, ¿sí?”/“No digas eso, 
 13_2649;13;……」/奈美は小声でいった。/「私、バカだった……;...”/Nami habló en voz baja./“Fui una tonta... 
 13_266b;13;血なんか、もういらない。切りたくなんかない」; Ya no necesito sangre. No quiero cortarte.”
-13_2687;13;ヨロイが後ろから、ワレガネのような声でせかした。/「オイ奈美、何をグズグズしとる。早いとこやらんと、わしがやるぞ」/奈美はぼくに耳うちした。/「もういちど、薬の主成分は弟切草かって聞いて！」/;La armadura me apuró desde atrás, con una voz áspera como de campana rota./“Oye, Nami, ¿qué haces tardando tanto? Si no lo haces pronto, lo haré yo.”/Nami me susurró al oído./“¡Pregúntale otra vez si el ingrediente principal de la medicina es la otogirisou!”
+13_2687;13;ヨロイが後ろから、ワレガネのような声でせかした。/「オイ奈美、何をグズグズしとる。早いとこやらんと、わしがやるぞ」/奈美はぼくに耳うちした。/「もういちど、薬の主成分は弟切草かって聞いて！」/;La armadura apuró a Nami desde atrás, con una voz áspera como de campana rota./“Oye, Nami, ¿qué haces tardando tanto? Si no lo haces pronto, lo haré yo.”/Nami me susurró al oído./“¡Pregúntale otra vez si el ingrediente principal de la medicina es la otogiriso!”
 13_2700;13;「え……？」/「みんなに念を押すの……。早く！」;“¿Qué...?”/“Confírmaselo a todos... ¡Rápido!”
 13_2721;13;ぼくはいわれた通りにした。/「ところでお父さん……;Hice lo que me dijo./“Por cierto, papá... 
-13_2740;13;秘薬の主成分って、弟切草ですよね？」/「ああ、そうだよ」/ヨロイと、ミイラと、怪魚と、ナオミは、一脊に明るくうなずいた。/;¿el ingrediente principal de la medicina secreta es la otogirisou, verdad?”/“Sí, así es.”/La armadura, la momia, el pez monstruoso y Naomi asintieron a coro, muy alegres.
+13_2740;13;秘薬の主成分って、弟切草ですよね？」/「ああ、そうだよ」/ヨロイと、ミイラと、怪魚と、ナオミは、一脊に明るくうなずいた。/;¿el ingrediente principal de la medicina secreta es la otogiriso, verdad?”/“Sí, así es.”/La armadura, la momia, el pez monstruoso y Naomi asintieron a coro, muy alegres.
 13_2790;13;とたん、剣が発光した。;En ese instante, la espada irradió luz.
 13_27ac;13;奈美は剣をはなした。/;Nami soltó la espada.
 13_27be;13;その剣が浮いた。/「ああッ！」/;La espada se elevó flotando./“¡Ah!”
@@ -5309,7 +5309,7 @@
 13_352a;13;・;.
 13_352e;13;。;.
 13_354f;13;ああ……星はきれいだ。/ぼくらは幸せだ……。/;Ah... Las estrellas eran hermosas. Éramos felices...
-13_3578;13;と思ったら、現実に戻った。/ぼくらはまだ一面の弟切草の中にいる。;Y entonces volví a la realidad. Seguíamos en medio de un campo cubierto de otogirisou.
+13_3578;13;と思ったら、現実に戻った。/ぼくらはまだ一面の弟切草の中にいる。;Y entonces volví a la realidad. Seguíamos en medio de un campo cubierto de otogiriso.
 13_35a7;13;「;“
 13_35aa;13;……」/「奈美……大丈夫だ。オレたち、誰かにサイミン術かなんかをかけられていたらしい」/「ええ……そうね」;...”/“Nami... Está bien. Parece que alguien nos aplicó hipnosis o algo así.”/“Sí... puede ser.”
 13_35ec;13;そして、シアワセなぼくと奈美は、/;Y entonces, Nami y yo, felices, 
@@ -5340,19 +5340,19 @@
 14_030d;14;奈美;Nami
 14_0313;14;はさかんにあたりを見回している。/「うん、あの黄色い花。さっきからあの花ばかり目につくの」; miraba a su alrededor sin parar./“Sí, esas flores amarillas. Desde hace rato solo me llaman la atención esas flores.”
 14_0356;14;風に揺れる小さな黄色い花が、かたまりとなって点々とつづいている。;Había grupos de pequeñas flores amarillas, mecidas por el viento, que se sucedían a lo largo del camino.
-14_0382;14;「ああ、弟切草か」/「え……オトギリソウ？」/「ああ;“Ah, es otogirisou.”/“¿Eh... otogirisou?”/“Sí
+14_0382;14;「ああ、弟切草か」/「え……オトギリソウ？」/「ああ;“Ah, es otogiriso.”/“¿Eh... otogiriso?”/“Sí
 14_03a3;14;。弟を切る草、って書く」/「へえ……」/奈美は手のひらに字を書いてみた。/「なんだか気味の悪い名前……」/「けど、なかなか役に立つ草なんだよ」/「へえ、どんなふうに？」;. Se escribe con los kanji de ʻhierba que corta al hermano menorʼ.”/“Vaya...”/Nami probó a trazar los kanji en la palma de la mano./“Qué nombre tan siniestro...”/“Pero es una hierba bastante útil.”/“¿Ah, sí? ¿Cómo?”
 14_0411;14;「うちのオフクロなんかこの時期になると、わざわざ田舎から取りよせて作るんだけどさ、;“Mi mamá, por ejemplo, cuando llega esta época las manda traer del campo solo para prepararlas, y 
-14_0442;14;弟切草の束を乾かしてショウチュウに漬けとくと、万能薬になるんだって」/「へえ、万能薬？」/「ああ;dice que si secas un manojo de otogirisou y lo dejas en shochu, se convierte en un remedio para todo.”/“¿Un remedio para todo?”/“Sí
+14_0442;14;弟切草の束を乾かしてショウチュウに漬けとくと、万能薬になるんだって」/「へえ、万能薬？」/「ああ;dice que si secas un manojo de otogiriso y lo dejas en shochu (licor japonés), se convierte en un remedio para todo.”/“¿Un remedio para todo?”/“Sí
 14_0484;14;。キズにはぬればいいし、ハライタには飲めばいい。カやハチに刺されたときもぬれば効くんだ」;. Si tienes una herida te lo untas, si te duele el estómago lo bebes. También sirve si te pican mosquitos o abejas.”
 14_04b7;14;「まるでコンビニ状態ね」/;“Es como una tienda de conveniencia.”
 14_04cf;14;奈美;Nami
 14_04d5;14;は目を丸くした。/聞き上手な奈美を相手に話すのは、いつもキモチがいい。/「弟が前に全身にジンマシンが出たときなんかさ、イヤがるのをオフクロがムリやりコレぬったんだよ」/「ええ、そしたら？」; abrió mucho los ojos. Hablar con Nami, tan buena oyente, siempre me hacía sentir bien./“Una vez que a mi hermano menor le salió urticaria por todo el cuerpo, mi mamá le untó esto a la fuerza, aunque no quería.”/“¿Y qué pasó?”
 14_0549;14;「すぐに治っちまった。ジツはそれまでは、オレも半信半疑だったんだけどね」/「へえ、スゴイんだ……;“Se le quitó enseguida. La verdad es que hasta entonces yo también tenía mis dudas.”/“Guau, qué increíble... 
-14_0582;14;それって、弟切草をショウチュウ漬けにするだけでできるの？」/「ああ; ¿Y eso se consigue solo dejando la otogirisou en shochu?”/“Sí
+14_0582;14;それって、弟切草をショウチュウ漬けにするだけでできるの？」/「ああ; ¿Y eso se consigue solo dejando la otogiriso en shochu?”/“Sí
 14_05ac;14;。花が■いているとき作るのが、いちばんなんだって」/「神秘的な花なのねえ……」/奈美は小さくため息をついた。;. Dicen que lo mejor es prepararlo cuando las flores están abiertas.”/“Qué flor tan misteriosa...”/Nami suspiró suavemente.
 14_05f3;14;「でも見直しちゃった。;“Pero ahora te valoro más. 
-14_0602;14;、何でもよく知ってるのね」/「はは、ただの二枚目じゃないだろ」/「うん、ただの物知りの三枚目」/気をよくしたぼくは、ついでに弟切草の伝説を、話して聞かせる気になった。;, ¡sabes de todo!”/“Ja, ja, no soy solo una cara bonita, ¿verdad?”/“Sí, solo un sabelotodo payaso.”/Animado, me dio por contarle de paso la leyenda de la otogirisou.
+14_0602;14;、何でもよく知ってるのね」/「はは、ただの二枚目じゃないだろ」/「うん、ただの物知りの三枚目」/気をよくしたぼくは、ついでに弟切草の伝説を、話して聞かせる気になった。;, ¡sabes de todo!”/“Ja, ja, no soy solo una cara bonita, ¿verdad?”/“Sí, solo un sabelotodo payaso.”/Animado, me dio por contarle de paso la leyenda de la otogiriso.
 14_068b;14;奈美のコワがるホラータッチでいこう。;Le daré un toque de terror, de los que asustan a Nami.
 14_06aa;14;オカルト調ならもっとこわがる。;Con un tono de ocultismo se asustará aún más.
 14_06be;14;「いいか、奈美」/「どうぞ！」/本気でのり出して来たので、ちょっと話しづらくなった。;“Escucha, Nami.”/“¡Dime!”/Se inclinó hacia mí con tanto interés que me resultó algo difícil hablar.
@@ -5367,7 +5367,7 @@
 14_0848;14;「ああ、どす黒い血がこびりついた大きなやつだ。その大ナタを手に、おのれ弟めと乗り込んだ」/「きゃッ、その先、もう話さなくていい……」/奈美は耳をおおった。/ぼくはかまわず話しつづけた。;“Sí, uno enorme, con sangre negruzca pegada. Con ese machete, entró diciendo ʻmaldito hermanoʼ.” “¡Kya! No sigas, ya no me cuentes más...” Nami se tapó los oídos. Yo seguí contando sin hacerle caso.
 14_08ba;14;「弟は恋人と一緒にいた。兄はまず、逃げようとする弟の髪の毛をムンズとつかんで引き倒し、その大ナタを思いっきり振り下ろした！」/「イヤッ！」/「ドバッと血しぶきが飛んで、首がゴロリ。兄は次に、ヒメイを上げて逃げまどう女の胸に、グサリとナタを振り下ろした！」;“El hermano menor estaba con su novia. El mayor primero agarró de los pelos al menor que intentaba huir, lo derribó y descargó el machete con todas sus fuerzas.” “¡No!” “La sangre salpicó a chorros y la cabeza rodó. Luego, a la mujer que huía gritando, le clavó el machete en el pecho.”
 14_095f;14;「;“
-14_0962;14;、ヤメてったら……！」/「そのとき血しぶきがかかった草だってのが、弟切草の名前の由来」/;, ¡que pares ya...!” “La hierba que recibió esa sangre es el origen del nombre otogirisou.”
+14_0962;14;、ヤメてったら……！」/「そのとき血しぶきがかかった草だってのが、弟切草の名前の由来」/;, ¡que pares ya...!” “La hierba que recibió esa sangre es el origen del nombre otogiriso.”
 14_09a5;14;「……」/;“...”
 14_09b3;14;奈美;Nami
 14_09b9;14;はふうっと息をついた。/「もう……シュミ悪いんだから」/ぼくを軽くにらんでいる。; suspiró. “Ay... qué mal gusto tienes.” Me fulminó levemente con la mirada.
@@ -5460,11 +5460,11 @@
 14_166a;14;欲望を感じて、奈美に抱きつこうとした。;Sentí deseo e intenté abrazar a Nami.
 14_168d;14;雨にぬれて、くっきりとわかる奈美の胸がまぶしい。;Mojada por la lluvia, la silueta del pecho de Nami se marcaba nítida y me deslumbraba.
 14_16b0;14;「あ……」/奈美が吐息した。/「え」;“Ah...” suspiró Nami. “¿Qué?”
-14_16d2;14;奈美が見とれているのは、一面の弟切草だ……。/;Lo que Nami contemplaba embelesada era un campo entero de otogirisou...
+14_16d2;14;奈美が見とれているのは、一面の弟切草だ……。/;Lo que Nami contemplaba embelesada era un campo entero de otogiriso...
 14_16fb;14;「あれ？」/奈美は後ろを振り返っている。/「え？　どうした？」/「なんだか、;“¿Eh?”/Nami miraba hacia atrás./“¿Qué? ¿Qué pasa?”/“Es que parece que el auto de 
 14_172b;14;の車沈んでるみたい……」/「ええ？」/ぼくは振り返って見た。/; se está hundiendo...”/“¿Qué?”/Me volví a mirar.
 14_1758;14;「……ほんとだ、沈んでる！」;“...Es verdad, ¡se está hundiendo!”
-14_176c;14;いったいどういうことなのだろう。/ぼくの車が群生する弟切草の中へ、ゆっくりとずぶずぶ沈んでいくのだ。/「弟切草が……;No entendía qué pasaba. Mi auto se hundía despacio, poco a poco, entre las otogirisou que crecían en grupos./“Las otogirisou... 
+14_176c;14;いったいどういうことなのだろう。/ぼくの車が群生する弟切草の中へ、ゆっくりとずぶずぶ沈んでいくのだ。/「弟切草が……;No entendía qué pasaba. Mi auto se hundía despacio, poco a poco, entre las otogiriso que crecían en grupos./“Las otogiriso... 
 14_17b5;14;車を食べてる！」/「急ごう」/早く逃げないと、ぼくらまで食べられてしまいそうな気がした。/ぼくも;¡se están comiendo el auto!”/“Rápido, vamos.”/Sentí que si no huíamos pronto, hasta a nosotros nos comerían. Tanto yo como 
 14_17f8;14;奈美;Nami
 14_17fe;14;もほとんど小走り状態だ。; íbamos casi a trote.
@@ -5484,10 +5484,10 @@
 14_1a49;14;「何だか、妖怪屋数;“Qué ambiente de mansión
 14_1a5a;14;って雰囲気だな……」/「でも明かりがついてるんだから。行ってみましょうよ」/奈美は安全なところだと決めつけているようだ。/; de yokai, ¿no...?”/“Pero tiene las luces encendidas. Vamos a ver.”/Nami parecía dar por sentado que era un lugar seguro.
 14_1aa7;14;「……そうだな、急いだ方がいい」/ぼくもそんな気になってきた。;“...Tienes razón, mejor nos apuramos.”/A mí también me fue dando esa sensación.
-14_1ace;14;門の向こうは、見渡すかぎりの弟切草が生いしげっている。/「まるで、弟切草の館だ」/;Más allá de la verja crecían las otogirisou hasta donde alcanzaba la vista./“Parece la mansión de las otogirisou.”
+14_1ace;14;門の向こうは、見渡すかぎりの弟切草が生いしげっている。/「まるで、弟切草の館だ」/;Más allá de la verja crecían las otogiriso hasta donde alcanzaba la vista./“Parece la mansión de las otogiriso.”
 14_1b08;14;「ねえ！;/“¡Oye!
 14_1b0f;14;」/;”
-14_1b15;14;奈美が小さく叫んだ。/「弟切草が、呼んでるみたい……！」/「ええ？」;/Nami gritó bajito./“Es como si las otogirisou me estuvieran llamando...”/“¿Qué?”
+14_1b15;14;奈美が小さく叫んだ。/「弟切草が、呼んでるみたい……！」/「ええ？」;/Nami gritó bajito./“Es como si las otogiriso me estuvieran llamando...”/“¿Qué?”
 14_1b49;14;「あ、血ッ！」/「え？」/「血が見えたの……;“¡Ah, sangre!”/“¿Qué?”/“Vi sangre...
 14_1b68;14;私、行かない方がイイと思う」/奈美はときどき、こんなふうにこれから起きることを予知する力を見せることがあった。; Creo que no deberíamos ir.”/Nami a veces mostraba así el poder de predecir lo que iba a ocurrir.
 14_1baf;14;「何いってんだよ、いまさら。さっきの木みたいに、カミナリに打たれたらどうすんだヨ」/「ええ……そりゃそうだけど」;“¿Qué estás diciendo, a estas alturas? ¿Y si nos cae un rayo como a ese árbol de hace rato?”/“Bueno... eso es verdad, pero...”
@@ -5501,8 +5501,8 @@
 14_1cc9;14;「行こう！　おれは左足から歩き出すとエンギがいいんだ」/ぼくは力強くいった。/「ホント？　じゃ、私も！」/「あ、イケね;“¡Vamos! Dicen que si empiezo a caminar con el pie izquierdo da buena suerte”, dije con fuerza. “¿En serio? ¡Entonces yo también!” “Ay, qué torpe
 14_1d13;14;。;.
 14_1d17;14;コレ右足だ」/「いきなりズッコケさせないでよ！」; Este es el derecho.” “¡No me hagas trastabillar así de golpe!”
-14_1d3f;14;ぼくと奈美は門を入って、見渡す限りの弟切草の中を歩いた。/;Nami y yo entramos por el portón y caminamos entre las otogirisou, que se extendían hasta donde alcanzaba la vista.
-14_1d69;14;「まるで弟切草畑を歩いてるみたい……」/屋数の玄関に近づくにつれ、レンガ道がデコボコして歩きにくくなった。;“Es como caminar por un campo de otogirisou...” A medida que nos acercábamos a la entrada de la mansión, el camino de ladrillo se volvía desparejo y difícil de caminar.
+14_1d3f;14;ぼくと奈美は門を入って、見渡す限りの弟切草の中を歩いた。/;Nami y yo entramos por el portón y caminamos entre las otogiriso, que se extendían hasta donde alcanzaba la vista.
+14_1d69;14;「まるで弟切草畑を歩いてるみたい……」/屋数の玄関に近づくにつれ、レンガ道がデコボコして歩きにくくなった。;“Es como caminar por un campo de otogiriso...” A medida que nos acercábamos a la entrada de la mansión, el camino de ladrillo se volvía desparejo y difícil de caminar.
 14_1daf;14;「あッ」/奈美が立ち止まった。/「私、何か踏んづけてる……照らしてみて」;“¡Ah!” Nami se detuvo. “Estoy pisando algo... Alúmbrame.”
 14_1de2;14;ぼくは懷中電灯で、奈美の足元を照らした。/「きゃあ、イヤ！」/何かの骨が散乱している。/バラバラなのではっきりしないが、どうも小動物のホネのようだ。/「コワイ……」;Iluminé los pies de Nami con la linterna. “¡Kyaa, qué asco!” Había huesos esparcidos. Estaban sueltos y no se distinguía bien, pero parecían huesos de algún animal pequeño. “Qué miedo...”
 14_1e4d;14;ぼくもコワイので取りつくろっていった。/;Yo también tenía miedo, así que dije para disimular:
@@ -5672,8 +5672,8 @@
 14_37ce;14;気味悪い足音はすぐそこまで来ている。/「ねえッ、来るッ！……ああッ！」/;Los siniestros pasos ya estaban casi encima./“¡Oye, vienen! ...¡Ahh!”
 14_380f;14;「ついた！」/「いったい、何が歩いてたんだ」/光を四方へ飛ばしてみるが、もう何も見えない。;“¡Se encendió!”/“¿Qué demonios andaba caminando?”/Dirigí la luz en todas direcciones, pero ya no se veía nada.
 15_000b;15;「奈美、だけど、さっき見たあれ、ほんとにミイラだったのかな？」/「え……;“Nami, pero eso que vimos hace rato, ¿de verdad era una momia?”/“¿Eh... 
-15_0036;15;どうして？」/「ミイラだとか、消えたヨロイだとか、ヘンな足音だとか、気配だとか……;¿Por qué?”/“Que una momia, que una armadura que desaparece, pasos extraños, presencias... 
-15_0067;15;信じられないことばかりだからさ」/「ホントよね」;es que son todas cosas imposibles de creer.”/“Es verdad.”
+15_0036;15;どうして？」/「ミイラだとか、消えたヨロイだとか、ヘンな足音だとか、気配だとか……;¿Por qué?”/“Una momia, una armadura que desaparece, pasos extraños, presencias... 
+15_0067;15;信じられないことばかりだからさ」/「ホントよね」;todo eso es imposible de creer.”/“Es verdad.”
 15_0085;15;「ひょっとしたら、誰かのイタズラじゃないかって気がしてきたんだヨ。屋数へ迷いこんだハイカーたちをおどかす趣味の主人がいるとかさ」/「……あり得るわね」/「おれ、あのミイラ調べてくるよ」/「ええ？」/「あれが本モノのミイラだったかどうか」;“Me está dando la impresión de que es una broma de alguien. Que tal vez el dueño de la mansión tiene la afición de asustar a los excursionistas que se pierden aquí.”/“...Podría ser.”/“Voy a examinar esa momia.”/“¿Eh?”/“A ver si era una momia de verdad.”
 15_010f;15;「そう……;“Sí... 
 15_0117;15;そうね」/そのとき;tienes razón.” En ese momento 
@@ -5842,9 +5842,9 @@
 15_1789;15;ホッとしたのか、奈美ははしゃいでネコを抱き上げた。;Tal vez por el alivio, Nami alzó al gato en brazos, muy contenta.
 15_17ab;15;……血の臭いがする。/どうもこのネコは好きになれない。/どうして奈美は平気で抱けるのだろう。/「よかった……さっきの物音も、きっとこの子だったのよ」;...Huele a sangre. No logro simpatizar con este gato. ¿Cómo puede Nami cargarlo tan tranquila?/“Menos mal... el ruido de antes también fue seguramente este gatito.”
 15_1807;15;奈美は落ちて散らばった花を拾ったが、;Nami recogió las flores desparramadas, pero
-15_1823;15;「きゃッ、これ弟切草じゃない！」/と、投げ拾てた。/よく見れば、かれんな花だが、ぼくらの気持ちがもうコワイ花にしている。/「あ……;“¡Aah, pero si esto es otogirisou!”/La tiró lejos. Mirándola bien, era una flor delicada, pero nuestro estado de ánimo ya la había vuelto una flor aterradora./“Ah...
+15_1823;15;「きゃッ、これ弟切草じゃない！」/と、投げ拾てた。/よく見れば、かれんな花だが、ぼくらの気持ちがもうコワイ花にしている。/「あ……;“¡Aah, pero si esto es otogiriso!”/La tiró lejos. Mirándola bien, era una flor delicada, pero nuestro estado de ánimo ya la había vuelto una flor aterradora./“Ah...
 15_1876;15;思い出した！」/「え？……何を？」; ¡Ya me acordé!”/“¿Eh?... ¿De qué cosa?”
-15_1890;15;「弟切草の花言葉……;“La otogirisou, en el lenguaje de las flores...
+15_1890;15;「弟切草の花言葉……;“La otogiriso, en el lenguaje de las flores...
 15_18a3;15;“復警”だったんだ」/「復警……！」/奈美はぞッとしたように見た。/「この家の人、それ知ってて生けたのかし/ら……？」/「ち……ちがうだろ」; Era ʻvenganzaʼ.”/“¡Venganza...!”/Nami me miró estremecida./“¿La gente de esta casa lo sabría y puso flores de todos modos...?”/“N-no creo.”
 15_1901;15;「あ……」/;“Ah...”
 15_190d;15;黒ネコはまるで誰かに呼ばれたように走り去った。/「あ、待って！」/奈美が後を追おうとする。/「オイ、よせ、バケるぞ」/「またすぐコワイこという……」;El gato negro salió corriendo como si alguien lo hubiera llamado./“¡Ah, espera!”/Nami intentó seguirlo./“Oye, no, que se va a transformar.”/“Otra vez diciendo cosas que dan miedo...”
@@ -5873,7 +5873,7 @@
 15_1c3b;15;こんどは奈美の腹がなった。/「ゴメン……私のお腹ものんき」/;Esta vez sonó el estómago de Nami. “Perdón... mi estómago también está muy tranquilo.”
 15_1c62;15;「ヨオシ！;“¡Muy bien! 
 15_1c6b;15;　もういい、なんか食いものさがそう」/「そうね、それがいいわ……」/奈美があっさりといった。/「えっ、ホントに？」;Ya basta, busquemos algo de comer.” “Sí, es lo mejor...” dijo Nami sin más. “¿Eh? ¿De verdad?”
-15_1cae;15;「だって、おなかすかしてコワがっててもサビシイでしょ？」/「ハイハイ、おおせの通りでごじゃりまする」/「でも黙って食べたら叱られるわよね？」/「いないんだから、アイサツのしようがないだろ」/「それもそうね……」;“Es que estar con hambre y con miedo es muy triste, ¿no?” “Sí, sí, como mande su merced.” “Pero si comemos sin avisar, nos van a regañar, ¿no?” “Como no hay nadie, no hay a quién saludar.” “Tienes razón...”
+15_1cae;15;「だって、おなかすかしてコワがっててもサビシイでしょ？」/「ハイハイ、おおせの通りでごじゃりまする」/「でも黙って食べたら叱られるわよね？」/「いないんだから、アイサツのしようがないだろ」/「それもそうね……」;“Es que estar con hambre y con miedo es muy triste, ¿no?” “Sí, sí, como mande su merced.” “Pero si comemos sin avisar, nos van a regañar, ¿no?” “Como no hay nadie, no hay a quién avisar.” “Tienes razón...”
 15_1d2e;15;ぼくらは食堂まで来た。/だけど、正直あまり期待していない。/この様子ではとうていまともな食べものがあるとは思えない。/「せめて缶詰でもあればうれしいのにね」/「食べものの前にミズが飲みたいわ」;Llegamos al comedor. Pero, la verdad, no tenía muchas esperanzas. Con este panorama, no me parecía que hubiera comida decente. “Aunque fuera una lata de conservas, me alegraría.” “Antes que comida, quiero beber agua.”
 15_1daa;15;そこでぼくは、いった。/;Entonces dije:
 15_1dd3;15;「よし、おいしいミズをさがしてやる！」;“¡Bien, voy a buscar agua rica!”
@@ -6012,7 +6012,7 @@
 15_30d9;15;、どこ見ていってんの！」;, ¡¿adónde estás mirando?!”
 15_30fc;15;ボイラー室はすぐにわかった。/ホールの階段裏にある鉄ドアの裏口から/10メートルほどの、地下階段を下りる。/そこがボイラー室だ。;La sala de calderas la encontré enseguida. Se baja por una escalera subterránea de unos diez metros desde la puerta trasera de hierro que hay detrás de la escalera del vestíbulo. Ahí está la sala de calderas.
 15_315b;15;中はかなりの熟気だった。/温度メーターを見ておどろいた。/温度調節ツマミが100度にセットしてある。/「いったい誰がこんなことを！」/ぼくは42度まで針を戻した。;Dentro hacía un calor sofocante. Me asusté al ver el medidor de temperatura: la perilla de ajuste estaba puesta en 100 grados. “¡¿Quién habrá hecho esto?!” Hice bajar la aguja hasta los 42 grados.
-15_31c5;15;圧力計を見ると、ボイラーの内圧は危険度いっぱいにまで上がっている。/安全弁が壊れていた。/いや、誰かが壊したのだとしたら……。/;Al mirar el manómetro, la presión interna de la caldera estaba al máximo de peligro. La válvula de seguridad estaba rota. O mejor dicho, si alguien la había roto...
+15_31c5;15;圧力計を見ると、ボイラーの内圧は危険度いっぱいにまで上がっている。/安全弁が壊れていた。/いや、誰かが壊したのだとしたら……。/;Al mirar el manómetro, la presión estaba al máximo de peligro. La válvula de seguridad estaba rota. O mejor dicho, si alguien la hubiera roto...
 15_321f;15;急に;De pronto, 
 15_322a;15;奈美;Nami
 15_3230;15;のことが心配になった。/「待ってろ、奈美！」; empezó a preocuparme. “¡Espera, Nami!”
@@ -6255,7 +6255,7 @@
 16_1ab2;16;「うしろにいるのがお母さんなのよ！」/「うしろって……？」/双子以外誰も写っていないが……。/「ねえ、この人、あのミイラに似てない！」/奈美がとんでもないことをいいはじめた。;“¡La que está detrás es mi mamá!”/“¿Detrás...?”/Aparte de las gemelas no aparecía nadie más, pero.../“Oye, ¿esta persona no se parece a la momia?”/Nami empezó a decir algo disparatado.
 16_1b1e;16;「おい、奈美……」/「どういうこと?　私、もらいっ子だったの?/いまのお母さん、ほんとのお母さんじゃなかったの！」/「奈美ッ……！」/ぼくは奈美の肩をつかんだ。/「さわらないで！」;“Oye, Nami...”/“¿Qué quiere decir eso? ¿Yo era una niña adoptada? ¡Mi mamá de ahora no es mi verdadera mamá!”/“¡Nami...!”/La agarré del hombro./“¡No me toques!”
 16_1b94;16;奈美は気が立っている。/「私といっしょにいちゃダメ……いままでコワイ目にあったのは、みんな私のせいだったのよ！」/「奈美、ヘンなことをいうな。誰もそんなふうに思っちゃいない」;Nami estaba alterada./“¡No debo estar contigo... todas las cosas espantosas que nos han pasado hasta ahora fueron por mi culpa!”/“Nami, no digas cosas raras. Nadie piensa eso.”
-16_1bfd;16;「ちがう!　弟切草は復警の花だもん!　誰かが私を狙ってるのよ!　私、;“¡No es así! ¡La otogirisou es la flor de la venganza! ¡Alguien me persigue! ¡Yo no quiero arrastrar a 
+16_1bfd;16;「ちがう!　弟切草は復警の花だもん!　誰かが私を狙ってるのよ!　私、;“¡No es así! ¡La otogiriso es la flor de la venganza! ¡Alguien me persigue! ¡Yo no quiero arrastrar a 
 16_1c2b;16;まで卷き添えにはしたくない！」/「バカなことをいうな奈美……！」/「イヤ！; a esto!”/“¡No digas tonterías, Nami...!”/“¡No!
 16_1c5c;16;　; ¡
 16_1c5f;16;、ひとりで逃げてッ！」/;, huye tú solo!”
@@ -6401,7 +6401,7 @@
 17_0257;17;』を手にとって、開いた。/「あ……」/;ʼ lo tomé y lo abrí. “Ah...”
 17_0271;17;ぼくは思わず声を上げた。/……そこには“怪魚”の図があった。;Se me escapó un grito sin querer... Allí había un dibujo del “pez monstruoso”.
 17_029c;17;人間から怪魚へ変身するさまが図解されていて、それに必要な、小物や、薬品を作る材料が示されているようだ。/ヘビ、コウモリ、ネズミ、トカゲ、カエル、黒ネコの生首……そして、;Mostraba con diagramas cómo un humano se transformaba en pez monstruoso, y parecía indicar los objetos y los ingredientes necesarios para preparar la medicina. Serpiente, murciélago, rata, lagarto, rana, cabeza cortada de gato negro... y, por último, 
-17_0308;17;弟切草。/「なんてこッた……」/ぼくは思わずうめいた。;otogirisou. “¡No puede ser...!” Gemí sin querer.
+17_0308;17;弟切草。/「なんてこッた……」/ぼくは思わずうめいた。;otogiriso. “¡No puede ser...!” Gemí sin querer.
 17_032e;17;これは、人間を怪魚に変身させる、ブラック魔術だ……。/「ということは、あの怪魚は、人間だったということか……！」/別のページには、逆に、怪魚を人間に戻す法が示されている。/何ということだ……。/ぼくの心に、哀しみのショックが広がる。;Era magia negra para transformar a un humano en pez monstruoso... “¿Eso significa que ese pez monstruoso era un ser humano...?” En otra página se mostraba, a la inversa, el método para devolver al pez monstruoso a su forma humana. ¿Cómo era posible...? Un golpe de tristeza se extendió por mi corazón.
 17_03c7;17;母が事故を起こした。/息子は動けない体になった。/そして、サカナに変じることを念じ、そうなった。/いま、姊はその弟を、もとに戻そうとしてい/る……;La madre provocó un accidente. El hijo quedó imposibilitado de moverse. Y deseó con todas sus fuerzas convertirse en pez, y así ocurrió. Ahora, la hermana intenta devolver a ese hermano a su forma original
 17_042d;17;。/;...
@@ -6441,7 +6441,7 @@
 17_098a;17;。/……カンは一瞬のうちに溶けてしまった。;. ...La lata se disolvió en un instante.
 17_09a7;17;「！……」/「硫酸よ、きっと！」/「やっぱりナオミは、オレたちを殺す気なんだ！」/「そうは思いたくないわ……お姊さんに会えばすべてがわかるわ」/「奈美、まだいってるのか！」;“¡...!” “¡Es ácido sulfúrico, seguro!” “¡Lo sabía, Naomi quiere matarnos!” “No quiero creerlo... Cuando veamos a mi hermana, lo entenderemos todo.” “¡Nami, todavía sigues con eso!”
 17_0a12;17;上から何かが落ちてきた。/;Algo cayó desde arriba.
-17_0a26;17;「弟切草だ！」/弟切草はあッという間に溶けて消えた。;“¡Es una otogirisou!” La otogirisou se disolvió y desapareció en un instante.
+17_0a26;17;「弟切草だ！」/弟切草はあッという間に溶けて消えた。;“¡Es una otogiriso!” La otogiriso se disolvió y desapareció en un instante.
 17_0a56;17;すると、;Entonces 
 17_0a5d;17;煙を上げて溶けていく鉄道模型が浮かんだ。/「あ……」/「わかったぞ奈美、これは水じゃない、硫酸だ！？」/「そんな……！」/「もうわかったろ。ナオミがおれたちを殺そうとしてるんだ！」/「でも、お姊さんが……」;me vino a la mente el tren de juguete disolviéndose entre humo. “Ah...” “¡Ya entendí, Nami, esto no es agua, es ácido sulfúrico!?” “No puede ser...!” “Ya lo entendiste. ¡Naomi quiere matarnos!” “Pero mi hermana...”
 17_0adf;17;「いいから逃げるんだ！」/ぼくは奈美の手をつかんだ。/「待って」/;“¡No importa, hay que huir!” Tomé a Nami de la mano. “Espera.”
@@ -6512,7 +6512,7 @@
 17_1949;17;あかずの間のドアはあっけなく破れた。;La puerta de la habitación que nunca se abre cedió con una facilidad decepcionante.
 17_1965;17;……中をひと目見たぼくは、思わず立ちすくんだ。/;...Apenas eché un vistazo al interior, me quedé paralizado.
 17_1986;17;そこは、哀しみの部屋だった。/床にも、カベにも、天井にも、窓辺にも……;Era una habitación de tristeza. En el suelo, en las paredes, en el techo, junto a las ventanas... 
-17_19b4;17;部屋いっぱいの弟切草だ。/それがみんなドライフラワー化している。/これは弟切草の墓場なのだ……。;Toda la habitación estaba llena de otogirisou. Y todas se habían convertido en flores secas. Era el cementerio de las otogirisou...
+17_19b4;17;部屋いっぱいの弟切草だ。/それがみんなドライフラワー化している。/これは弟切草の墓場なのだ……。;Toda la habitación estaba llena de otogiriso. Y todas se habían convertido en flores secas. Era el cementerio de las otogiriso...
 17_19f9;17;そればかりではない。/たったいままで遊んでいたように、古びた男の子のオモチャが散らばっている。/ぼくらが子供のころ遊んだ、懷かしいオモチャばかりだ……。/レーシングカーや、鉄道模型や、ミニカーや、いろいろなあのころのキャラクターグッズ……。;Y eso no era todo. Había viejos juguetes de niño esparcidos como si hubieran estado jugando hasta hacía un momento. Eran todos juguetes entrañables con los que jugamos de pequeños... autos de carrera, trenes en miniatura, autitos y toda clase de figuras de los personajes de aquella época...
 17_1a89;17;それから、ガラガラや、オシャブリや、赤ちゃんのころの、古いオモチャ……。/ぼくはわかった。/この部屋のすべての意味が、やっとわかった……。/……ここは、あの弟“怪魚”の遊び場だったのだ。;También había sonajeros, chupetes, viejos juguetes de cuando era bebé... Lo comprendí. Por fin comprendí el significado de todo lo que había en esta habitación... ...Este era el lugar de juegos de aquel hermano menor, el ʻpez monstruosoʼ.
 17_1afc;17;ぼくは、弟怪魚が、;Me imaginé a aquel hermano menor, el pez monstruoso, 
@@ -6544,7 +6544,7 @@
 17_1f16;17;』;ʼ
 17_1f1a;17;が行なわれている。/; se estaba celebrando.
 17_1f29;17;硫酸で満たされた水槽の前には、祭壇がすえられていた。;Frente al acuario lleno de ácido sulfúrico habían instalado un altar.
-17_1f4f;17;その上に、奈美が寝かされている。/弟切草に囲まれていて、よく見えないが、;Sobre él habían acostado a Nami. Rodeada de otogirisou, no la veía bien, pero 
+17_1f4f;17;その上に、奈美が寝かされている。/弟切草に囲まれていて、よく見えないが、;Sobre él habían acostado a Nami. Rodeada de otogiriso, no la veía bien, pero 
 17_1f80;17;ほとんどハダカだ。/……奈美は死んだように横たわっている。;estaba casi desnuda. ...Nami yacía como si estuviera muerta.
 17_1fa9;17;もちろん、主役はあの怪魚だ。/;Por supuesto, la figura principal era ese pez monstruoso.
 17_1fc0;17;そのとき、;Entonces, 
@@ -6718,7 +6718,7 @@
 18_0016;18;。/「うわ！」/;. “¡Uah!”
 18_002e;18;人をひいてしまった!/ぼくはあわてて飛び出して、前へ回った。;¡Había atropellado a alguien! Salí a toda prisa y rodeé el auto hacia el frente.
 18_005d;18;……誰もいない。/;...No había nadie.
-18_006f;18;あたりには、弟切草の群生が目につくばかりだ。/「どういうこと……？」/「;A mi alrededor solo se veían grupos de otogirisou. “¿Qué significa esto...?” “
+18_006f;18;あたりには、弟切草の群生が目につくばかりだ。/「どういうこと……？」/「;A mi alrededor solo se veían grupos de otogiriso. “¿Qué significa esto...?” “
 18_009d;18;……何だったの？」/奈美も車を降りてきた。/「女がいたんだ;...¿qué era eso?” Nami también bajó del auto. “Había una mujer
 18_00c4;18;。奈美も見ただろ？」/「ううん;. Tú también la viste, ¿no?” “No
 18_00d9;18;。私は何も……;. Yo no vi nada... 
@@ -6743,17 +6743,17 @@
 18_0340;18;「……コワイこといわないで」/;“...No digas cosas que dan miedo.”
 18_0358;18;奈美;Nami
 18_035e;18;が懷中電灯で照らしてくれた。; me iluminó con la linterna.
-18_037e;18;「これ、弟切草だわ……！」/考えられないことだった。/「まるでヘビ……」/奈美の声はふるえている。/どうしてこんなことになるのか、弟切草が、足首にグルグル卷きついているのだ。;“¡Esto es otogirisou...!”/Era inconcebible./“Como si fueran serpientes...”/La voz de Nami temblaba. No sabía cómo podía pasar, pero las otogirisou se me enroscaban una y otra vez en los tobillos.
+18_037e;18;「これ、弟切草だわ……！」/考えられないことだった。/「まるでヘビ……」/奈美の声はふるえている。/どうしてこんなことになるのか、弟切草が、足首にグルグル卷きついているのだ。;“¡Esto es otogiriso...!”/Era inconcebible./“Como si fueran serpientes...”/La voz de Nami temblaba. No sabía cómo podía pasar, pero las otogiriso se me enroscaban una y otra vez en los tobillos.
 18_0407;18;「花の妖精に見そめられちゃったかナ」;“Tal vez me ha echado el ojo un hada de las flores.”
 18_0421;18;「でも、弟を殺す花の妖精よ」/「ちがうだろ。弟の首ハネられたときに、その血を浴びた花の妖精だ」/「ヤメて……;“Pero es un hada de la flor que mata al hermano menor.”/“No, no es eso. Es el hada de la flor que se bañó en la sangre del hermano cuando le cortaron la cabeza.”/“Para...
-18_0468;18;算談がどんどんコワイ話になってく」/「だな……行こ！」/ぼくは足の弟切草を引きちぎって、森の中を進んだ。; Los chistes se vuelven cada vez más aterradores.”/“Cierto... ¡Vamos!”/Arranqué las otogirisou de mis pies y avancé por el bosque.
+18_0468;18;算談がどんどんコワイ話になってく」/「だな……行こ！」/ぼくは足の弟切草を引きちぎって、森の中を進んだ。; Los chistes se vuelven cada vez más aterradores.”/“Cierto... ¡Vamos!”/Arranqué las otogiriso de mis pies y avancé por el bosque.
 18_04b5;18;「オレ、奈美がつかんだのかと思ったよ♥」;“Oye, pensé que me había agarrado Nami♥”
 18_04d1;18;「あら、私ならもっとちがうとこつかむわ」/「え……ド、ドコを？」/「そうね;“Si fuera yo, agarraría otra cosa.”/“¿Eh...? ¿Q-qué cosa?”/“Veamos
 18_04fb;18;。たとえば……」;. Por ejemplo...”
-18_050d;18;「弟切草のタタリかもな」;“Quizás sea la maldición de las otogirisou.”
+18_050d;18;「弟切草のタタリかもな」;“Quizás sea la maldición de las otogiriso.”
 18_0520;18;奈美はそっと身ぶるいした。/「ねえ、もっと明るい方向で考えられない/の……？」/「ハイハイ、明るい方向へ向かいましょ」;Nami se estremeció suavemente./“Oye, ¿no puedes pensarlo de una forma más alegre...?”/“Sí, sí, vamos hacia el lado alegre.”
 18_0573;18;「そんならこっちで、タタってやる！」;“¡Entonces yo también los maldeciré!”
-18_058a;18;ぼくはぜんぶの弟切草のクビをハネた。/「ねえ！……そんなことすると、本当に弟切草のタタリがあるわよ」/;Les corté la cabeza a todos las otogirisou./“¡Oye!... Si haces eso, de verdad vas a recibir la maldición de las otogirisou.”
+18_058a;18;ぼくはぜんぶの弟切草のクビをハネた。/「ねえ！……そんなことすると、本当に弟切草のタタリがあるわよ」/;Les corté la cabeza a todos las otogiriso./“¡Oye!... Si haces eso, de verdad vas a recibir la maldición de las otogiriso.”
 18_05cb;18;……何だかほんとにコワくなった。;...De verdad me empezó a dar miedo.
 18_05e0;18;「でもさあ……」/歩きながらぼくはいった。/「なに？」/「おかしいんだよな;“Pero oye...”/Dije mientras caminaba./“¿Qué?”/“Es raro
 18_060b;18;。ブレーキ」/「車の話？」;. Los frenos.”/“¿Hablas del auto?”
@@ -6766,8 +6766,8 @@
 18_072c;18;うたれるとやばいよ。急ごう！」/;... Si nos cae uno, es peligroso. ¡Vamos rápido!”
 18_0745;18;道はもう完全に平坦になっていた。/ぼくたちはかけ足で森をぬけた。;El camino ya era completamente llano. Salimos del bosque a toda prisa.
 18_0789;18;「呪われた草花に栄光あれ！」;“¡Gloria a las plantas malditas!”
-18_07a1;18;ぼくは弟切草を引きちぎった。/「;Arranqué una otogirisou./“
-18_07b8;18;、そんないいかたは、失礼よ」/「ええ？　ダレにヨ？」/「弟切草サンに;, no hables así, es una falta de respeto.”/“¿Eh? ¿A quién?”/“Al señor otogirisou
+18_07a1;18;ぼくは弟切草を引きちぎった。/「;Arranqué una otogiriso./“
+18_07b8;18;、そんないいかたは、失礼よ」/「ええ？　ダレにヨ？」/「弟切草サンに;, no hables así, es una falta de respeto.”/“¿Eh? ¿A quién?”/“Al señor otogiriso
 18_07e3;18;。きっと、怒るとコワイわよぉ～」;. Seguro que da miedo cuando se enoja...”
 18_07fe;18;「ハハ、奈美、走るぞ！」/ほんとはコワくなったので、ぼくは森へ向かって走り出した。/「あ、待って……」/;“¡Jaja, Nami, a correr!”/En realidad me había dado miedo, así que eché a correr hacia el bosque./“Ah, espera...”
 18_0844;18;「ねえ、見て！」/;“Oye, mira...”
@@ -6806,7 +6806,7 @@
 18_0cde;18;こういうときは、おだてておくに限る。;En momentos así, lo mejor es halagarla.
 18_0cfb;18;「ホネ折り損のくたびれもうけっこう！」;“¿Romperme los huesos y cansarme en vano? ¡Pues encantado!”
 18_0d15;18;勇気を出して門をくぐった。/「まあ……こんなにいっぱい」/;Armé valor y crucé el portón. “Vaya... cuántas hay.”
-18_0d3f;18;あたりは一面の弟切草だ。;Por todas partes había otogirisou.
+18_0d3f;18;あたりは一面の弟切草だ。;Por todas partes había otogiriso.
 18_0d5a;18;「ならぬカンヅメ、するがカンヅメ！」;“¡Aguantar lo inaguantable... y encima enlatado!”
 18_0d71;18;カンヅメでもイイから、この屋数のお情けにすがろうという気になっている。;Aunque fuera enlatado, ya estaba dispuesto a aferrarme a la compasión de esta mansión.
 18_0d9c;18;門を入ると、;Al cruzar el portón, 
@@ -6817,15 +6817,15 @@
 18_0df5;18;気がつくと、ぼくらは門を入ってしまっている。/;Cuando me di cuenta, ya habíamos entrado por el portón.
 18_0e28;18;門を入ると、風が強くなった。/懷中電灯でまわりを照らしてみる。;Al cruzar el portón, el viento se hizo más fuerte. Intenté iluminar los alrededores con la linterna.
 18_0e5f;18;あたり一面の草花が、すべてぼくらの方を向いている。/;Todas las flores y hierbas de alrededor estaban vueltas hacia nosotros.
-18_0e86;18;「まあ……ぜんぶ弟切草！」/「うわあ……」/奈美のいう通りだった。/;“Vaya... ¡todo es otogirisou!” “Uaaah...” Era tal como decía Nami.
-18_0eba;18;見渡すかぎり、弟切草が一面の黄色い花をふるわせている。;Hasta donde alcanzaba la vista, las otogirisou hacían temblar sus flores amarillas.
+18_0e86;18;「まあ……ぜんぶ弟切草！」/「うわあ……」/奈美のいう通りだった。/;“Vaya... ¡todo es otogiriso!” “Uaaah...” Era tal como decía Nami.
+18_0eba;18;見渡すかぎり、弟切草が一面の黄色い花をふるわせている。;Hasta donde alcanzaba la vista, las otogiriso hacían temblar sus flores amarillas.
 18_0ee3;18;コワそうにしている奈美を見てぼくは、/;Al ver a Nami asustada:
 18_0f16;18;キレイだなあ;¡Qué hermosos!, 
 18_0f1e;18;とうっとりながめた。;pensé.
-18_0f32;18;別に弟切草が何をするわけでもないのにと冷静だった。;Pensé con calma que, después de todo, las otogirisou no iban a hacer nada.
-18_0f5c;18;ここで弟切草の伝説を話せばよかったと悔やんだ。;Lamenté no haber contado aquí la leyenda de las otogirisou.
+18_0f32;18;別に弟切草が何をするわけでもないのにと冷静だった。;Pensé con calma que, después de todo, las otogiriso no iban a hacer nada.
+18_0f5c;18;ここで弟切草の伝説を話せばよかったと悔やんだ。;Lamenté no haber contado aquí la leyenda de las otogiriso.
 18_0f84;18;伝説の秘薬は、毒ヘビなんかにもきくのだろうかと期待した。;Esperé que el legendario elixir también sirviera contra el veneno de las serpientes.
-18_0fab;18;「あれさ？」/「え？」/「いま、そこ、弟切草が動いた;“¿Eso de allá?” “¿Eh?” “Ahora mismo, allí, ¡una otogirisou se movió
+18_0fab;18;「あれさ？」/「え？」/「いま、そこ、弟切草が動いた;“¿Eso de allá?” “¿Eh?” “Ahora mismo, allí, ¡una otogiriso se movió
 18_0fcd;18;」;!”
 18_0fd8;18;ヘソに塗るとどうなるだろうと考えた。;Me pregunté qué pasaría si me lo aplicaba en el ombligo.
 18_0ff0;18;……ふふ、きっとよく効きそうだ。/「ねえ、早く入りましょ」/ぼくの心を読んだように奈美がいった。/;...Ji, ji, seguro que funcionaría muy bien. “Oye, entremos rápido.” Nami lo dijo como si me hubiera leído la mente.
@@ -6976,11 +6976,11 @@
 18_26bf;18;ま、;M-
 18_26c4;18;松田聖子が……」;Matsuda Seiko...”
 18_26d4;18;ぼくはその色っぽいドアを開けた。/;Abrí esa puerta de aire seductor.
-18_26f5;18;辛気くさい部屋だが、どうやらここは客室のようだ。/ガランとした部屋には、ベッドと書きもの用のデスクぐらいしかない。/「あら、あの花……」/奈美が気づいた。/窓辺に弟切草が飾られている。;Era una habitación deprimente, pero parecía ser un cuarto de huéspedes. En la habitación vacía no había más que una cama y un escritorio./“Mira, esa flor...”/Nami se dio cuenta. Junto a la ventana habían puesto una otogirisou de adorno.
-18_276e;18;「あッ、わかった！」/「え……何が？」/「思い出したんだ。弟切草の花言葉……“復警”だったんだ」/「まあ、復警……」/奈美はぞッとしたように、その“復警の花”を見つめている。;“¡Ah, ya sé!”/“¿Eh...? ¿Qué cosa?”/“Me acordé. La otogirisou, en el lenguaje de las flores... era ʻvenganzaʼ.”/“Vaya, venganza...”/Nami miraba estremecida esa “flor de la venganza”.
+18_26f5;18;辛気くさい部屋だが、どうやらここは客室のようだ。/ガランとした部屋には、ベッドと書きもの用のデスクぐらいしかない。/「あら、あの花……」/奈美が気づいた。/窓辺に弟切草が飾られている。;Era una habitación deprimente, pero parecía ser un cuarto de huéspedes. En la habitación vacía no había más que una cama y un escritorio./“Mira, esa flor...”/Nami se dio cuenta. Junto a la ventana habían puesto una otogiriso de adorno.
+18_276e;18;「あッ、わかった！」/「え……何が？」/「思い出したんだ。弟切草の花言葉……“復警”だったんだ」/「まあ、復警……」/奈美はぞッとしたように、その“復警の花”を見つめている。;“¡Ah, ya sé!”/“¿Eh...? ¿Qué cosa?”/“Me acordé. La otogiriso, en el lenguaje de las flores... era ʻvenganzaʼ.”/“Vaya, venganza...”/Nami miraba estremecida esa “flor de la venganza”.
 18_27e7;18;ぼくは、/;Entonces:
 18_2801;18;そんなものは気にするなと奈美を外へ連れ出した。;Saqué a Nami afuera diciéndole que no le diera importancia a eso.
-18_2828;18;その弟切草を口にくわえておどけて見せた。;Me puse esa otogirisou en la boca para hacerme el gracioso.
+18_2828;18;その弟切草を口にくわえておどけて見せた。;Me puse esa otogiriso en la boca para hacerme el gracioso.
 18_2845;18;奈美が笑ったのでホッとして連れ出した。/;Nami se rio, así que, aliviado, la saqué de allí.
 18_2866;18;花言葉は“復習”だとウソをつけばよかったと思った。;Pensé que habría sido mejor mentir y decir que su significado en el lenguaje de las flores era ʻrepasoʼ.
 18_288b;18;でもそれじゃ何のことかわからない。/;Pero así nadie habría entendido de qué se trataba.
@@ -7008,7 +7008,7 @@
 18_2cfb;18;「きっと科学的なカラクリがあるんだ」;“Seguro que tiene algún truco científico.”
 18_2d14;18;でも実は、何かの妖力ではないかと思いはじめている。/ぼくはその包丁を、マドから思いきり遠くへ放り投げた。;Pero, en realidad, empezaba a pensar que era obra de algún poder maligno. Lancé el cuchillo por la ventana, lo más lejos que pude.
 18_2d5e;18;「呪いだのタタリだの、ある訳がないよ」;“Maldiciones o castigos sobrenaturales, es imposible que existan.”
-18_2d7d;18;「タタリだとしたら、弟切草のタタリ……あわわ」;“Si fuera una maldición, sería la maldición de la otogirisou... ¡uy!”
+18_2d7d;18;「タタリだとしたら、弟切草のタタリ……あわわ」;“Si fuera una maldición, sería la maldición de la otogiriso... ¡uy!”
 18_2d9b;18;マズイ。逆に奈美をコワがらせてしまった。;Qué error. Sin querer, había asustado a Nami.
 18_2dbc;18;「オマエの体なら、オレがあやつってやる！」;“Si es tu cuerpo, lo controlaré yo.”
 18_2dd7;18;「え……;“Eh... 
@@ -7297,7 +7297,7 @@
 19_2585;19;……私は……私はいったい誰なの！」/「奈美……」;... yo... ¿quién soy yo en realidad?”/“Nami...”
 19_25ac;19;奈美は後ずさりながら叫んだ。/「;Nami gritó mientras retrocedía./“¡
 19_25c3;19;、もう私といっしょにいてはダメ!　いままでコワイ目にあったのはみんな私のせいだったんだもん！」/「奈美……ヘンなことはいうな。誰もそんなこと思っちゃいない！」;, ya no debes seguir conmigo! ¡Todo lo terrible que nos ha pasado hasta ahora fue por mi culpa!”/“Nami... no digas cosas raras. ¡Nadie piensa eso!”
-19_2620;19;「ちがう!　弟切草は復警の花だもん!　誰かが私を怨んでいるのよ!　私、;“¡No! ¡La otogirisou es la flor de la venganza! ¡Alguien me guarda rencor! ¡Incluso a 
+19_2620;19;「ちがう!　弟切草は復警の花だもん!　誰かが私を怨んでいるのよ!　私、;“¡No! ¡La otogiriso es la flor de la venganza! ¡Alguien me guarda rencor! ¡Incluso a 
 19_264f;19;まで卷き添えにしちゃう！」/「バカなことをいうな奈美……こんなとこは早く逃げ出そう！」/「イヤ！; lo voy a arrastrar conmigo!”/“No digas tonterías, Nami... ¡Salgamos de este lugar cuanto antes!”/“¡No!
 19_268e;19;　; ¡
 19_2691;19;はひとりで逃げてッ！」/;, escapa tú solo!”
@@ -7527,7 +7527,7 @@
 20_039e;20;・;.
 20_03a2;20;ぼんやりとぼくは意識を取り戻した。/動こうとしたが、なぜか身動きができない。/ここは食堂だ。/ぼくの体はテーブルの上に縛りつけられている。/;Recuperé la conciencia poco a poco. Intenté moverme, pero, por alguna razón, no podía. Estaba en el comedor. Mi cuerpo estaba atado sobre la mesa.
 20_03fb;20;怪魚とヨロイが動き回;El pez monstruoso y la armadura andaban de aquí 
-20_040c;20;っている。/やがて、線香の句いがした。/ぼくの枕元に弟切草の束が飾られた。;para allá. Pronto percibí olor a incienso. Junto a mi cabeza colocaron un ramo de otogirisou.
+20_040c;20;っている。/やがて、線香の句いがした。/ぼくの枕元に弟切草の束が飾られた。;para allá. Pronto percibí olor a incienso. Junto a mi cabeza colocaron un ramo de otogiriso.
 20_0449;20;……ここでぼくは殺されるらしい。/;...Al parecer iban a matarme aquí.
 20_0465;20;ヨロイがのぞいた。/無雜作に剣が振り上げられた。/「人の命ってこんなにあっけないものか;La armadura se asomó. Alzó la espada sin el menor cuidado./“¿Así de fácil se acaba una vida
 20_049c;20;」/;?”
@@ -7770,8 +7770,8 @@
 20_2bf1;20;。/「きれい……;. “Qué hermoso...
 20_2bfc;20;」/四散した火花が;” Cuando las chispas dispersas 
 20_2c0d;20;空中からぼくらの周りへ降りそそぐと、;cayeron del aire como lluvia a nuestro alrededor, 
-20_2c27;20;あたり一面の弟切草は、美しい野花に変わった。;todo el campo de otogirisou se convirtió en hermosas flores silvestres.
-20_2c69;20;「奈美、見ろよ。……お母さんとナオミが、君のシャドウをやっつけてくれたんだ」/奈美は身を起こし、飛び散る火花をながめた。/「きれい……」/四散した火花が空中からぼくらの周りへ降りそそぐと、あたり一面の弟切草は、美しい野花に変わった;“Nami, mira... tu madre y Naomi han vencido a tu sombra por ti.” Nami se incorporó y contempló las chispas que se dispersaban. “Qué hermoso...” Cuando las chispas dispersas cayeron del aire como lluvia a nuestro alrededor, todo el campo de otogirisou se convirtió en hermosas flores silvestres
+20_2c27;20;あたり一面の弟切草は、美しい野花に変わった。;todo el campo de otogiriso se convirtió en hermosas flores silvestres.
+20_2c69;20;「奈美、見ろよ。……お母さんとナオミが、君のシャドウをやっつけてくれたんだ」/奈美は身を起こし、飛び散る火花をながめた。/「きれい……」/四散した火花が空中からぼくらの周りへ降りそそぐと、あたり一面の弟切草は、美しい野花に変わった;“Nami, mira... tu madre y Naomi han vencido a tu sombra por ti.” Nami se incorporó y contempló las chispas que se dispersaban. “Qué hermoso...” Cuando las chispas dispersas cayeron del aire como lluvia a nuestro alrededor, todo el campo de otogiriso se convirtió en hermosas flores silvestres
 20_2d02;20;。;.
 20_2d07;20;ぼくらはロマンチックな世界に包まれた。/「わあ……」/「ステキだわ……」/天に星、地に花……。/;Nos envolvió un mundo romántico. “Oh...” “Qué maravilla...” Estrellas en el cielo, flores en la tierra...
 20_2d57;20;ぼくらは美しい満天の星々を見上げた。;Alzamos la vista hacia el hermoso cielo lleno de estrellas.
@@ -7854,7 +7854,7 @@
 21_0275;21;「ねえ、;“Oye, 
 21_027b;21;、あんな花もあるのね……？」;, ¿también hay flores como esas...?”
 21_0298;21;とつぜん奈美がいった。/道の左右に黄色い花が■き並んでいる。/「ああ、あれか;De pronto Nami dijo algo. A ambos lados del camino se alineaban flores amarillas en plena floración. “Ah, esas
-21_02cc;21;。弟切草っていうんだ」/「へえ……オトギリ草？」;. Se llaman otogirisou.”/“Vaya... ¿otogirisou?”
+21_02cc;21;。弟切草っていうんだ」/「へえ……オトギリ草？」;. Se llaman otogiriso.”/“Vaya... ¿otogiriso?”
 21_02ed;21;「弟を切る草、ッて書くのさ」/「ふうん……なんだかブキミね」/;“Se escribe con los kanji de ʻhierba que corta al hermano menorʼ.”/“Mmm... qué siniestro, ¿no?” 
 21_031b;21;奈美;Nami
 21_0321;21;はポツリといった。/「うん、これにはちょっとした伝説があるんだ」/「わあ、聞きたい……！」; murmuró. “Sí, tiene una pequeña leyenda.”/“¡Guau, quiero oírla...!”
@@ -7870,7 +7870,7 @@
 21_047e;21;「平安の昔、ある鷹匠の兄弟がいた。兄弟の家には、代々タカの傷を治す秘薬が伝えられていた。ところがある日、その秘伝が世間に広まってしまったんだ。調べてみると、弟が自分の恋人に教えたためだとわかった……怒り狂った兄は」/奈美が息を吞むのがわかった。/「一刀のもとに、弟の首を、バサッ！;“En el período Heian vivían dos hermanos halconeros. En su casa se transmitía de generación en generación un remedio secreto para curar las heridas de los halcones. Pero un día ese secreto se difundió por todo el mundo. Al investigar, se descubrió que el hermano menor se lo había contado a su amada... El hermano mayor, enfurecido,”/Sentí que Nami contenía el aliento./“De un solo tajo, le cortó la cabeza al hermano menor... ¡zas!
 21_053a;21;」;”
 21_054e;21;「キャッ……」/「そのときの血しぶきが、草の葉のウラにかかった……;“¡Ay...!”/“La sangre que salpicó en ese momento cayó sobre el envés de las hojas de la hierba...
-21_0577;21;その血はそれから消えることなく残って、このときから、あの花は弟切草と呼ばれるようになった」/「まあ……」/降り出した雨を受けて、あたりの弟切草が一脊にうなずいたように見えた。;Esa sangre no se borró jamás, y desde entonces aquella flor pasó a llamarse otogirisou.”/“Oh...”/Bajo la lluvia que empezaba a caer, las otogirisou de alrededor parecieron asentir todas a la vez.
+21_0577;21;その血はそれから消えることなく残って、このときから、あの花は弟切草と呼ばれるようになった」/「まあ……」/降り出した雨を受けて、あたりの弟切草が一脊にうなずいたように見えた。;Esa sangre no se borró jamás, y desde entonces aquella flor pasó a llamarse otogiriso.”/“Oh...”/Bajo la lluvia que empezaba a caer, las otogiriso de alrededor parecieron asentir todas a la vez.
 21_05e6;21;「でも、悲しい話ね;“Pero es una historia triste
 21_05f3;21;。兄弟で殺し合うなんて」/奈美はうっすらと涙まで浮かべている。/ひとりッ子の;. Matarse entre hermanos, qué horror.”/A Nami se le habían llenado los ojos de lágrimas. Hija única, 
 21_062d;21;奈美;Nami
@@ -7959,7 +7959,7 @@
 21_10a6;21;だが、ミイラって、何かの不吉な予兆なのだろうか。/「雨がひどくなった;Aunque, ¿acaso ver una momia era un mal presagio?/“Llueve cada vez más fuerte
 21_10d1;21;。急ごう」/;. Apurémonos.”
 21_10df;21;「あ……！」/ぼくと奈美は同時に声をあげた。;“¡Ah...!”/Nami y yo gritamos al mismo tiempo.
-21_1109;21;……あたり一面にしげっていた草花は、みんな弟切草だったのだ……。/「弟切草ばっかり……！」/「ああ……」/それは道しるべのように、木々の向こうの明かりの方へまで、つづいている。;Las flores y hierbas que crecían por todas partes eran todas otogirisou.../“¡Solo hay otogirisou...!”/“Sí...”/Se extendían como una señal de camino hasta la luz al otro lado de los árboles.
+21_1109;21;……あたり一面にしげっていた草花は、みんな弟切草だったのだ……。/「弟切草ばっかり……！」/「ああ……」/それは道しるべのように、木々の向こうの明かりの方へまで、つづいている。;Las flores y hierbas que crecían por todas partes eran todas otogiriso.../“¡Solo hay otogiriso...!”/“Sí...”/Se extendían como una señal de camino hasta la luz al otro lado de los árboles.
 21_1179;21;そこでぼくはいった。/;Entonces dije:
 21_11a1;21;「とりあえず行ってみよう」;“Por ahora, vayamos a ver.”
 21_11b3;21;「……ええ」/「よし;“...Sí.”/“Bien
@@ -7969,7 +7969,7 @@
 21_1235;21;「でも、イイことあるかも知れないし」;“Pero tal vez pase algo bueno.”
 21_124c;21;とにかく行ってみることにした。;De todos modos, decidí ir a ver.
 21_1278;21;「あの明かりめざしてかけ足だ、ソレッ！」;“¡Corramos hacia esa luz, vamos!”
-21_129a;21;「この弟切草をベッドに……なんてのは、ウヒヒ……ど、どう♥」;“Hacer de esta otogirisou nuestra cama... je, je, je... ¿q-qué te parece? ♥”
+21_129a;21;「この弟切草をベッドに……なんてのは、ウヒヒ……ど、どう♥」;“Hacer de esta otogiriso nuestra cama... je, je, je... ¿q-qué te parece? ♥”
 21_12cd;21;「あ」/ふいに奈美が足を止めた。/「どうしたんだヨ……？」/「見て」/奈美が指さした。;“Ah.”/De pronto Nami se detuvo./“¿Qué te pasa...?”/“Mira.”/Nami señaló con el dedo.
 21_1314;21;それは、大きな門のある古びた洋館だった。/「あのお屋数……！」/奈美は息をのんだ。/「まるで、;Era una vieja mansión de estilo occidental con un gran portón./“¡Esa mansión...!”/Nami contuvo el aliento./“Es como si 
 21_1355;21;自分で光ってるみたい！」/「だ……だよな」/背筋に鳥肌立つのがわかった。/「;brillara por sí misma!”/“S-sí... tienes razón.”/Sentí que se me ponía la piel de gallina./“
@@ -7988,12 +7988,12 @@
 21_14d7;21;「引き返そう！」/いってから、ぼくはギョッとなった。/「うわ……！」/何ということか。/屋数の門が少しずつこっちへ迫ってくるのだ。;“¡Volvamos!”/Apenas lo dije, me quedé helado./“¡Uaaah...!”/¿Qué estaba pasando? El portón de la mansión se acercaba a mí poco a poco.
 21_152c;21;「;“
 21_152f;21;、どこへ行くの？」/奈美が後ろから叫んだ。/「え……？」/何かが足にからみついている。/……;, ¿adónde vas?”/Nami gritó a mis espaldas./“¿Eh...?”/Algo se me había enredado en los pies...
-21_156b;21;弟切草だ。/「し……信じられない！」;Eran otogirisou./“¡N-no puede ser...!”
-21_1587;21;門が迫ってくるのではなかった。/ツル草でもない弟切草の群れが、ぼくの足にからみついて、ぼくの体を屋数の方へ屋数の方へ、と移動させていたのだ。/コレはいったいどういうことだ……！?;No era el portón el que se acercaba. Sin ser enredaderas, las otogirisou se habían enroscado en mis pies y me iban llevando, cada vez más, hacia la mansión. ¡¿Qué significaba aquello...?!
+21_156b;21;弟切草だ。/「し……信じられない！」;Eran otogiriso./“¡N-no puede ser...!”
+21_1587;21;門が迫ってくるのではなかった。/ツル草でもない弟切草の群れが、ぼくの足にからみついて、ぼくの体を屋数の方へ屋数の方へ、と移動させていたのだ。/コレはいったいどういうことだ……！?;No era el portón el que se acercaba. Sin ser enredaderas, las otogiriso se habían enroscado en mis pies y me iban llevando, cada vez más, hacia la mansión. ¡¿Qué significaba aquello...?!
 21_15f8;21;「待ってよ、;“¡Espera, 
 21_1601;21;……！」/奈美にはぼくが自分で歩いているように見えるらしい。/「置いていかないで;...!”/A Nami le parecía que yo caminaba por mi propia voluntad./“No me dejes atrás
 21_1635;21;。私も行く！」;. ¡Yo también voy!”
-21_1643;21;ぼくの体はどんどん弟切草の上を滑って、気がつくと、洋館の門はもう目の前にあった。/「もう、早足なんだから！」/奈美がやっと追いついて来た。/だいぶ息が切れている。/「どうする気？」;Mi cuerpo se deslizaba cada vez más sobre las otogirisou, y cuando me di cuenta, el portón de la mansión ya estaba frente a mí./“¡Caramba, qué rápido caminas!”/Por fin Nami me alcanzó, casi sin aliento./“¿Qué piensas hacer?”
+21_1643;21;ぼくの体はどんどん弟切草の上を滑って、気がつくと、洋館の門はもう目の前にあった。/「もう、早足なんだから！」/奈美がやっと追いついて来た。/だいぶ息が切れている。/「どうする気？」;Mi cuerpo se deslizaba cada vez más sobre las otogiriso, y cuando me di cuenta, el portón de la mansión ya estaba frente a mí./“¡Caramba, qué rápido caminas!”/Por fin Nami me alcanzó, casi sin aliento./“¿Qué piensas hacer?”
 21_16d7;21;「ここまで来たんだ;“Ya que llegamos hasta aquí
 21_16e3;21;。入ろうヨ」;. Entremos.”
 21_16ee;21;恐かったけど、そういった。/;Tenía miedo, pero lo dije.
@@ -8013,11 +8013,11 @@
 21_1857;21;ぼくは雨にぬれる石組みの門柱から中を見た。/;Miré hacia el interior desde las columnas de piedra del portón, empapadas por la lluvia.
 21_1878;21;「カギ、かかってるかな？」/「こうすればわかるわ」/奈美が手をかけると、重そうな門扉はゆっくりと開いた。;“¿Estará cerrado con llave?”/“Ahora lo sabremos.”/Cuando Nami puso la mano, la pesada hoja del portón se abrió despacio.
 21_18ce;21;邸内へ入ると、そこは、黄色い花が一面に■き乱れる広い庭だ。/;Al entrar en los terrenos, había un amplio jardín donde flores amarillas florecían por todas partes.
-21_1902;21;それはすべて弟切草だった。;Todo eran otogirisou.
+21_1902;21;それはすべて弟切草だった。;Todo eran otogiriso.
 21_1916;21;「まあ……！」/ぼくらはしばらく声もなく立ちつくした。/;“Oh...”/Nos quedamos un rato inmóviles, sin palabras.
 21_193a;21;やがて、奈美が振り返った。/「ねえ、;Por fin, Nami se volvió./“Oye, 
 21_1953;21;……」/「うん……」/「どうする？」;...”/“Sí...”/“¿Qué hacemos?”
-21_196e;21;カミナリと弟切草の中でぼくはいった。/;Entre los truenos y las otogirisou, dije:
+21_196e;21;カミナリと弟切草の中でぼくはいった。/;Entre los truenos y las otogiriso, dije:
 21_19a2;21;「ええっと……;“Eh...
 21_19ac;21;♥;♥
 21_19b1;21;♥;♥
@@ -8029,7 +8029,7 @@
 21_1a18;21;入る！」/「ちっとも占いになってないじゃない」/「バレたか……」;¡entramos!” “Eso no tiene nada de adivinación.” “Me pillaste...”
 21_1a47;21;「決心は変わらないさ」;“Mi decisión no cambiará.”
 21_1a59;21;ぼくは奈美の手をとって、玄関へ向かった。/;Tomé a Nami de la mano y me dirigí a la entrada.
-21_1a7b;21;「弟切草が呼んでいる」;“Las otogirisou me están llamando.”
+21_1a7b;21;「弟切草が呼んでいる」;“Las otogiriso me están llamando.”
 21_1a94;21;「他にも誰かが呼んでいる」;“Hay alguien más que también nos llama.”
 21_1aae;21;「待って」/玄関まで数メートルのところで奈美が止めた。/;“Espera.” Nami me detuvo a pocos metros de la entrada.
 21_1ad6;21;「ねえッ、あの木のかげ！……;“¡Oye! ¡La sombra de ese árbol!... 
@@ -8380,8 +8380,8 @@
 22_2499;22;「ここだ」/ぼくが見当つけたのは、2階廊下の左3つ目のドアだ。/「開けるぞ」/「ええ」;“Es aquí.” La puerta que había elegido era la tercera a la izquierda del pasillo del segundo piso./“La abro.”/“Sí.”
 22_24e0;22;ドアを開けて入ると;Al abrir la puerta y entrar, 
 22_24ee;22;、むッとするほどの酒くさいにおいに満ちていたが、そこはふつうの客間だった。/テーブルの上に光るものがある。;el lugar estaba lleno de un fuerte olor a alcohol, pero era una sala de huéspedes común y corriente. Sobre la mesa había algo que brillaba.
-22_2533;22;「料理用のナイフだ……！」/料理用ナイフには、何本かの草がからまっている。/「弟切草……！」/ぼくは不吉な気分におそわれた。/「どうしたの？」;“¡Es un cuchillo de cocina...!” Alrededor del cuchillo había varias hierbas enredadas. “¡Otogirisou...!” Me asaltó un presentimiento siniestro./“¿Qué pasa?”
-22_2594;22;「イヤなことを思い出したんだ。ほら、弟切草の花言葉」/「え……何だったの？」/「……;“Recordé algo desagradable. Mira, el significado de la otogirisou en el lenguaje de las flores.”/“¿Eh...? ¿Cuál era?”/“... 
+22_2533;22;「料理用のナイフだ……！」/料理用ナイフには、何本かの草がからまっている。/「弟切草……！」/ぼくは不吉な気分におそわれた。/「どうしたの？」;“¡Es un cuchillo de cocina...!” Alrededor del cuchillo había varias hierbas enredadas. “¡Otogiriso...!” Me asaltó un presentimiento siniestro./“¿Qué pasa?”
+22_2594;22;「イヤなことを思い出したんだ。ほら、弟切草の花言葉」/「え……何だったの？」/「……;“Recordé algo desagradable. Mira, el significado de la otogiriso en el lenguaje de las flores.”/“¿Eh...? ¿Cuál era?”/“... 
 22_25cb;22;“復警”」/;ʻVenganzaʼ”
 22_25df;22;「それじゃ、ここは……;“Entonces, este lugar es... 
 22_25ed;22;復警の館ってわけ？」;¿una mansión de venganza?”
@@ -8679,8 +8679,8 @@
 23_19ad;23;「待って;“Espera
 23_19b4;23;。あの音……！」/奈美がぎゅッとぼくの腕をつかんだ。/「あの絵からだ……？！」/音は、カベにかけられた大きな絵の中から聞こえてくる。;. ¡Ese ruido...!”/Nami me agarró fuerte del brazo./“¿¡Viene de ese cuadro...?!”/El sonido salía del interior de un gran cuadro colgado en la pared.
 23_1a16;23;ぼくらが近づくと、絵の中の音はふッと消えた。/「……」/思わずぼくは身ぶるいした。/「……なんだか薄気味悪い絵だ」/「ほんとね……」;Al acercarnos, el sonido del cuadro se apagó de golpe./“...”/Sin querer, me estremecí./“Es un cuadro que da mala espina.”/“Es cierto...”
-23_1a70;23;オカルト画とでもいうのか、暗い悪魔的なタッチで、剣を尊い合うふたりの女の子と、その母親らしい老女が描かれている。/身なりからすると、中世ヨーロッパか。/その周囲をふちどるのは、不気味にゆがんだ弟切草だった……。;Era lo que se llamaría una pintura ocultista, de trazo oscuro y demoníaco. Mostraba a dos niñas disputándose una espada y a una anciana que parecía su madre. Por las ropas, sería la Europa medieval. Lo que las enmarcaba eran unas otogirisou retorcidas de forma siniestra...
-23_1afb;23;「また、弟切草……」/「ねえ、この女の子たち、同じ顔してる！」/「ほんとだ……双子なのかな」/何気なくもらしたぼくの言葉に、奈美の血の気がひいた。/「双子……！」/「え」/「私……双子だった……！」;“Otra vez la otogirisou...”/“¡Oye, estas niñas tienen la misma cara!”/“Es verdad... ¿serán gemelas?”/Al oír lo que dije sin darle importancia, a Nami se le fue el color del rostro./“¡Gemelas...!”/“¿Eh?”/“¡Yo... yo era gemela...!”
+23_1a70;23;オカルト画とでもいうのか、暗い悪魔的なタッチで、剣を尊い合うふたりの女の子と、その母親らしい老女が描かれている。/身なりからすると、中世ヨーロッパか。/その周囲をふちどるのは、不気味にゆがんだ弟切草だった……。;Era lo que se llamaría una pintura ocultista, de trazo oscuro y demoníaco. Mostraba a dos niñas disputándose una espada y a una anciana que parecía su madre. Por las ropas, sería la Europa medieval. Lo que las enmarcaba eran unas otogiriso retorcidas de forma siniestra...
+23_1afb;23;「また、弟切草……」/「ねえ、この女の子たち、同じ顔してる！」/「ほんとだ……双子なのかな」/何気なくもらしたぼくの言葉に、奈美の血の気がひいた。/「双子……！」/「え」/「私……双子だった……！」;“Otra vez la otogiriso...”/“¡Oye, estas niñas tienen la misma cara!”/“Es verdad... ¿serán gemelas?”/Al oír lo que dije sin darle importancia, a Nami se le fue el color del rostro./“¡Gemelas...!”/“¿Eh?”/“¡Yo... yo era gemela...!”
 23_1b81;23;「ええ？……はは、ばかなこというなよ奈美」/ぼくは笑った。/「ひとりッ子の奈美が、何で双子なんだヨ？」/「そう……;“¿Eh?... Jaja, no digas tonterías, Nami.”/Me reí./“¿Por qué una hija única como tú iba a ser gemela?”/“Sí...
 23_1bca;23;そうよね」/奈美はひどく混乱している。/「でも私、この双子の絵から、何だか……;Es verdad.”/Nami estaba muy confundida./“Pero de este cuadro de gemelas me llega algo...
 23_1bfe;23;ああ、わからない！」;¡Ahh, no lo sé!”
@@ -9074,7 +9074,7 @@
 24_2e8b;24;私のふたりの娘と同じような、欲と惜悪がいまも生きつづけているからさ！”/;¡Porque la codicia y el odio, iguales a los de mis dos hijas, siguen vivos hasta hoy!”
 24_2ed5;24;情念は去った。/……;La emoción se fue... 
 24_2ee6;24;ヤミが少しずつ明るくなる。;La oscuridad se fue aclarando poco a poco.
-24_2efd;24;ぼくは2階廊下のカベだった。/向こうを、ナオミに連れられた奈美が歩いていく。/ふたりの手には、ブーケのような弟切草が握られている。/;Yo era una pared del pasillo del segundo piso. Por allá caminaba Nami, llevada por Naomi. En las manos de las dos había ramos de otogirisou, a modo de ramilletes.
+24_2efd;24;ぼくは2階廊下のカベだった。/向こうを、ナオミに連れられた奈美が歩いていく。/ふたりの手には、ブーケのような弟切草が握られている。/;Yo era una pared del pasillo del segundo piso. Por allá caminaba Nami, llevada por Naomi. En las manos de las dos había ramos de otogiriso, a modo de ramilletes.
 24_2f52;24;あかずの間のドアが、きしんでひらいた。/;La puerta de la habitación que nunca se abre se abrió rechinando.
 24_2f6b;24;奈美とナオミは、あかずの間へ消えた。;Nami y Naomi desaparecieron dentro de la habitación.
 24_2f85;24;ああ、奈美はあの部屋の中でミイラになった実の母に殺されるのだろうか。/「奈美！……奈美ッ……！」/ぼくは声にならない声で叫びつづけた。/ぼくは流せぬ無念の涙を流し、出せぬ声をふりしぼって泣いた。/;Ah, ¿iba Nami a ser asesinada, allí dentro, por su verdadera madre convertida en momia? “¡Nami!... ¡Nami...!” No dejé de gritar con una voz sin voz. Lloré, derramando lágrimas de rabia que no podían caer, y forzando una voz que no podía salir.
@@ -9183,9 +9183,9 @@
 24_425a;24;「奈美……大丈夫か！」/「;“Nami... ¿estás bien?” “¡
 24_4270;24;、ネコは……！」/奈美は血の気を失っている。/「ねえ、いまのネコは!　消えたの?　それとも、私にのりうつっちゃったの！？」;, el gato...!” Nami había perdido todo el color. “Oye, el gato de hace un momento, ¿desapareció? ¿O me poseyó?”
 24_42bc;24;奈美は恐怖にひきつっている。/「き……消えたんだと思うよ。だって、他に何も起こらないじゃないか」/そう答えたが、実は全く自信はない……。;Nami estaba crispada de terror. “Creo... creo que desapareció. Después de todo, no pasa nada más, ¿ves?” Así respondí, pero en realidad no estaba nada seguro...
-24_431b;24;とつぜん、一面の弟切草が死んだように色を失った。;De pronto, el campo de otogirisou perdió su color de golpe, como si muriera.
+24_431b;24;とつぜん、一面の弟切草が死んだように色を失った。;De pronto, el campo de otogiriso perdió su color de golpe, como si muriera.
 24_433f;24;「キャアアアア！」/;“¡Kyaaaa!”
-24_4352;24;……ぼくは大変な考えちがいをしていた。/ネコはたしかに悪霊の一時的な姿だったのかも知れないが、それは次の本体を見つけ出すまでの仮り住まいなのだ。/悪霊はこの一面の弟切草に取りついた。/そしていま、奈美の体に呪いをかけたのだ。;...Yo estaba terriblemente equivocado. Puede que el gato fuera, sí, una forma temporal del espíritu maligno, pero solo era una morada provisional hasta encontrar su siguiente cuerpo. El espíritu maligno se había apoderado de todo aquel campo de otogirisou. Y ahora había lanzado su maldición sobre el cuerpo de Nami.
+24_4352;24;……ぼくは大変な考えちがいをしていた。/ネコはたしかに悪霊の一時的な姿だったのかも知れないが、それは次の本体を見つけ出すまでの仮り住まいなのだ。/悪霊はこの一面の弟切草に取りついた。/そしていま、奈美の体に呪いをかけたのだ。;...Yo estaba terriblemente equivocado. Puede que el gato fuera, sí, una forma temporal del espíritu maligno, pero solo era una morada provisional hasta encontrar su siguiente cuerpo. El espíritu maligno se había apoderado de todo aquel campo de otogiriso. Y ahora había lanzado su maldición sobre el cuerpo de Nami.
 24_43e6;24;「;“
 24_43e9;24;、私、もうダメ……！」/奈美は珍しく弱音を吐いた。/「ばか、そんなことはない！」/「だって私、きっとイマ呪いをかけられたのよ。私はきっとお母さんのように双子を生んで、それから……」/おびえきった奈美の瞳の中に、ぼくが映っている。;, ya no puedo más...!” Nami, cosa rara, mostró su debilidad. “¡Tonta, no digas eso!” “Es que seguro que me acaban de echar la maldición. Seguro que tendré gemelos como mamá, y después...” En los ojos aterrados de Nami se reflejaba yo.
 24_4478;24;「奈美、聞くんだ」/ぼくはしっかりといい聞かせた。/;“Nami, escucha.” Se lo dije con firmeza.
@@ -9344,14 +9344,14 @@
 25_025a;25;ぼくは奈美にせまるマネをした。/「うふふ……ばかね」/ドキン。奈美もまんざらでもなさそうだ……。;Hice como que me abalanzaba sobre Nami./“Ji, ji... tonto.”/Mi corazón dio un vuelco. Nami tampoco parecía estar del todo en contra...
 25_029a;25;ぼくは奈美の先に立った。/「ああッ……」/ふいに奈美が足を止めた。/;Me adelanté a Nami. “¡Ah...!” De pronto Nami se detuvo.
 25_02cb;25;「どうした？」/「この草……みんな」;“¿Qué pasa?” “Esta hierba... toda es”
-25_02e9;25;懷中電灯で照らしてみると、見渡すかぎりの弟切草だ。/;Al iluminar con la linterna, hasta donde alcanzaba la vista no había más que otogirisou.
+25_02e9;25;懷中電灯で照らしてみると、見渡すかぎりの弟切草だ。/;Al iluminar con la linterna, hasta donde alcanzaba la vista no había más que otogiriso.
 25_0311;25;「こんなにいっぱい……」/「はは、何こわがってんだ。別に草はカミつきゃしないよ」;“Hay tantos...” “Ja, ja, ¿de qué tienes miedo? Las plantas no muerden.”
 25_0341;25;「ア痛ッ！」/「え、どうした？」/「……かみつかれたの」/;“¡Ay!” “¿Qué pasa?” “...Me mordieron.”
 25_0367;25;「ええ？」/ぼくは奈美の足を調べた。/足首のところに小さなキズがついてる。;“¿Qué?” Examiné el pie de Nami. En el tobillo tenía una pequeña herida.
 25_0399;25;「はは、見ろ;“Ja, ja, mira
 25_03a2;25;。草がかみついたりするもんか。小枝か何かでカスったんだよ」/「なあんだ……」/……キズのことはいわないでおこう。/それは、;. ¿Cómo va a morder una planta? Te habrás rasguñado con alguna ramita.” “Ah, era eso...” ...Mejor no decirle nada de la herida. Es que 
 25_03ea;25;人間の歯形のように見えたからだ。;parecía una marca de dientes humanos.
-25_0403;25;「あッ、弟切草が……」/奈美が息を吞んだ。/ぼくも絶句した。/一面の弟切草が、一脊になびいて、まるで道しるべのように、向こうへおいでおいでをしているのだ。;“¡Ah, las otogirisou...!” Nami contuvo el aliento. Yo también me quedé sin palabras. Todo el campo de otogirisou se inclinaba a una, como un indicador del camino, haciéndonos señas para que fuéramos hacia allá.
+25_0403;25;「あッ、弟切草が……」/奈美が息を吞んだ。/ぼくも絶句した。/一面の弟切草が、一脊になびいて、まるで道しるべのように、向こうへおいでおいでをしているのだ。;“¡Ah, las otogiriso...!” Nami contuvo el aliento. Yo también me quedé sin palabras. Todo el campo de otogiriso se inclinaba a una, como un indicador del camino, haciéndonos señas para que fuéramos hacia allá.
 25_046a;25;「草が、私たちを呼んでるみたい……」/「……か、風のせいだろ;“Parece que las plantas nos estuvieran llamando...” “...S-será el viento
 25_0491;25;」/ぼくはなるべく明るくいった。/「ねえ、ホントに、行くの？」;”. Lo dije con el mayor ánimo posible. “Oye, ¿de verdad vamos a ir?”
 25_04b8;25;そこで、ぼくはいった。/;Entonces dije: 
@@ -9407,12 +9407,12 @@
 25_0a64;25;「きゃあッ！」/とかいってるうちに、また落ちた。/ぼくたちはあわてて門の中へ入った。;Mientras gritábamos “¡Kyaa!” o algo así, volvió a caer otro rayo. Entramos corriendo por el portón.
 25_0ab0;25;雨にぬれて、黒光りする重そうな門扉は、手で押すと、カンタンに開いた。/;Mojadas por la lluvia, las pesadas hojas del portón brillaban negras. Al empujarlas con la mano, se abrieron sin dificultad.
 25_0ae3;25;「きゃア、キライ！」/ぼくらは雨とカミナリの中を夢中で走った。;“¡Kyaa, no lo soporto!” Corrimos como locos bajo la lluvia y los truenos.
-25_0b1c;25;広い庭には一面に黄色い花が■き乱れている。/「ねえっ、これぜんぶ弟切草よッ！」/;En el amplio jardín florecían flores amarillas por todas partes. “¡Oye, todo esto es otogirisou!”
+25_0b1c;25;広い庭には一面に黄色い花が■き乱れている。/「ねえっ、これぜんぶ弟切草よッ！」/;En el amplio jardín florecían flores amarillas por todas partes. “¡Oye, todo esto es otogiriso!”
 25_0b57;25;そのとき、何かがよぎった。/「ナッ、何ッ！」/;En ese momento, algo cruzó. “¡¿Q-qué es?!”
 25_0b78;25;「ネコよ！」/「ネコか……あーびっくりした」;“¡Es un gato!” “Un gato... ay, qué susto.”
 25_0b94;25;「でも不吉ね;“Pero es de mal agüero
 25_0b9e;25;。黒ネコだわ」/不吉な黒ネコは振り返った。/;. Es un gato negro.” El ominoso gato negro se volvió.
-25_0bc2;25;全身がうねって、緑色に光った。/「うわ！？」/ミドリのネコは、■きみだれる弟切草の中へ消えた……。/「ねえ;Todo su cuerpo ondeó y brilló de color verde. “¡¿Uaah?!” El gato verde desapareció entre las otogirisou que florecían en desorden... “Oye, 
+25_0bc2;25;全身がうねって、緑色に光った。/「うわ！？」/ミドリのネコは、■きみだれる弟切草の中へ消えた……。/「ねえ;Todo su cuerpo ondeó y brilló de color verde. “¡¿Uaah?!” El gato verde desapareció entre las otogiriso que florecían en desorden... “Oye, 
 25_0c08;25;、……いまの、バケネコ？」/奈美はおびえてぼくを見た。;... ¿eso de recién era un bakeneko?” Nami me miró con miedo.
 25_0c2b;25;そこでぼくはいった。/;Entonces dije:
 25_0c53;25;「ちがうよ、単なるバケネコみたいなネコだ」;“No, es solo un gato que parece un bakeneko.”
@@ -9598,9 +9598,9 @@
 26_14e7;26;ぼくらは2階で、アヤシイ部屋をすぐに見つけた。/;En el segundo piso encontramos enseguida una habitación sospechosa.
 26_1518;26;2階へ上がると、ひとつのドアが開け放したままになって、明かりがもれている。/「あそこだ」/;Al subir al segundo piso, vimos una puerta que había quedado abierta y de la que se filtraba luz. “Es allí.”
 26_1556;26;中へ入ったぼくらは、そのカベを見つめて立ちすくんだ。;Al entrar, nos quedamos petrificados mirando esa pared.
-26_157c;26;そこには気味悪いシミがあった。/「あのシミ、人間のかたちしてる……！」/その人がたは女のようにも、男のようにも見えた……。/ちょうどその手のあたりから、草が生えていた。/「弟切草だ……！」/弟切草はカベを破って生えているのだ。;Había una mancha siniestra. “Esa mancha tiene forma humana...” La silueta parecía de mujer, o también de hombre... De la zona de la mano le crecía una planta. “¡Es otogirisou...!” La otogirisou crecía rompiendo la pared.
+26_157c;26;そこには気味悪いシミがあった。/「あのシミ、人間のかたちしてる……！」/その人がたは女のようにも、男のようにも見えた……。/ちょうどその手のあたりから、草が生えていた。/「弟切草だ……！」/弟切草はカベを破って生えているのだ。;Había una mancha siniestra. “Esa mancha tiene forma humana...” La silueta parecía de mujer, o también de hombre... De la zona de la mano le crecía una planta. “¡Es otogiriso...!” La otogiriso crecía rompiendo la pared.
 26_160c;26;ぼくはイヤなことを思い出した。/「……どうしたの？」/「弟切草の花言葉、思い出したんだ」/「それで……何だったの？」/「……復警;Recordé algo desagradable. “...¿Qué pasa?” “Recordé su significado en el lenguaje de las flores.” “¿Y cuál era...?” “...Venganza
-26_1663;26;」/その人のかたちのシミは、弟切草をかかげて復警を誓う怨霊のように見えた。/「こわい……！」;.” La mancha con forma humana parecía el espíritu rencoroso de alguien que jura venganza levantando una otogirisou. “Me da miedo...!”
+26_1663;26;」/その人のかたちのシミは、弟切草をかかげて復警を誓う怨霊のように見えた。/「こわい……！」;.” La mancha con forma humana parecía el espíritu rencoroso de alguien que jura venganza levantando una otogiriso. “Me da miedo...!”
 26_16a2;26;ぼくは、奈美にいってやった。/;Le dije a Nami:
 26_16cc;26;「いやあ、奥さん、ゲイジュツ的なシミですなあ」;“Vaya, señora, qué mancha tan artística.”
 26_16ea;26;ぼくらは早々にその部屋を出た。/;Salimos pronto de esa habitación.
@@ -9778,7 +9778,7 @@
 27_0b49;27;「へえ;“Vaya
 27_0b4e;27;。ここは女の子の部屋だったんだ……」/「私、なつかしい……」/奈美がぽつんといった。/「うん、おれもだ。近所の女の子がよくこんなんで遊んでた」/「ううん、そういう意味じゃなくて……」/「ええ？」;. Así que esta era la habitación de una niña...”/“Siento nostalgia...”/dijo Nami de pronto./“Sí, yo también. Las niñas del barrio jugaban mucho con estas cosas.”/“No, no me refiero a eso...”/“¿Eh?”
 27_0bc6;27;「なつかしいの……このオモチャたちも、この部屋も……」/;“Me da nostalgia... estos juguetes, esta habitación también...”
-27_0be9;27;奈美がおかしなことをいいはじめた。/「ねえ、でもこれ、どうしてふたつずつあるのかしら？」/そういえば、ミルクのみ人形、ままごとセットなど、すべてふたつずつある。;Nami empezó a decir cosas raras./“Oye, pero ¿por qué habrá dos de cada uno?”/Ahora que lo pienso, tanto las muñecas de biberón como los juegos de casita, todo estaba de a dos.
+27_0be9;27;奈美がおかしなことをいいはじめた。/「ねえ、でもこれ、どうしてふたつずつあるのかしら？」/そういえば、ミルクのみ人形、ままごとセットなど、すべてふたつずつある。;Nami empezó a decir cosas raras./“Oye, pero ¿por qué habrá dos de cada cosa?”/Ahora que lo pienso, tanto las muñecas de biberón como los juegos de casita, todo estaba de a dos.
 27_0c44;27;「きっと女の子がふたりいたんだろ」/「……」/奈美はサルのオモチャを手にとった。/;“Seguro que había dos niñas.”/“...”/Nami tomó un mono de juguete.
 27_0c7c;27;「きゃあッ！;“¡Kyaa!
 27_0c86;27;」/奈美は恐怖の声をあげた。/サルのオモチャは歯をむきだし、怒ったようにシンバルを叩いた。/「奈美、拾てろよそんなもの！」/「とって!　手から離れないの！」;”/Nami soltó un grito de terror. El mono de juguete enseñó los dientes y golpeó sus platillos como enfurecido./“¡Nami, tira esa cosa!”/“¡Sácalo! ¡No se me despega de la mano!”
@@ -10147,7 +10147,7 @@
 28_27c9;28;「母たちが、どこにいるかはわかっているわ/ね？」/あかずの間か?/そこで母のミイラがぼくを待っているのか?/「はなせ、ドコだって行ってやる！」/「だめよ」/「なぜ止める！？」/「……私が、あなたを殺すのよ」/;“¿Sabes dónde están mi madre y los demás?” ¿La habitación que nunca se abre? ¿Ahí me esperaba la momia de la madre? “¡Suéltame, iré a donde sea!” “No.” “¡¿Por qué me detienes?!” “...Yo te mataré.”
 28_2849;28;「うっ」;“¡Ugh!”
 28_2852;28;凍るような痛みが体中をつきぬけ、目の前が真っ暗になった。;Un dolor helado me atravesó todo el cuerpo y mi vista se volvió completamente negra.
-28_2882;28;ぼんやりと何かが見える。/天井だ。/ぼくはベッドに寝かされている。/香水のようないい句いが立ちこめている。/花だろうか。/花瓶にいけられた、あわいむらさきの花だ。/弟切草ではない。;Veía algo borroso. Era el techo. Estaba acostado en una cama. Flotaba un agradable aroma, como de perfume. ¿Serían flores? En un jarrón había flores de un violeta pálido. No eran otogirisou.
+28_2882;28;ぼんやりと何かが見える。/天井だ。/ぼくはベッドに寝かされている。/香水のようないい句いが立ちこめている。/花だろうか。/花瓶にいけられた、あわいむらさきの花だ。/弟切草ではない。;Veía algo borroso. Era el techo. Estaba acostado en una cama. Flotaba un agradable aroma, como de perfume. ¿Serían flores? En un jarrón había flores de un violeta pálido. No eran otogiriso.
 28_28fb;28;「ライラックよ……」/「……！」/ナオミが椅子に座っている。/「いい香りでしょ」/看病でもされている錯覚がする。/奈美とそっくりなだけに、ナオミもキレイだ……。/「おい、奈美はドコだ！」;“Son lilas...” “¡...!” Naomi estaba sentada en una silla. “Huelen bien, ¿verdad?” Tuve la ilusión de que me cuidaba. Como era igualita a Nami, Naomi también era hermosa... “¡Oye, dónde está Nami!”
 28_2971;28;ここがあかずの間か。/だが奈美も車椅子のミイラも見えない。/「ここは、わたしの部屋……」/「なぜだ、オレを出せ！」/起き上がろうとすると、また腕をつかまれた。/ひんやりと冷たい。;¿Sería la habitación que nunca se abre? Pero no veía ni a Nami ni a la momia de la silla de ruedas. “Esta es mi habitación...” “¿Por qué? ¡Déjame salir!” Al intentar levantarme, me agarró otra vez del brazo. Estaba helado.
 28_29e2;28;「ここにいて;“Quédate aquí
@@ -10179,7 +10179,7 @@
 28_2e07;28;「ナオミッ！？」/……ナオミは消えた。/もう返事はなかった。/「オレは行く……！」/ナオミのさいごの言葉にそむいて、ぼくはあかずの間へ、奈美を助けに走った。;“¿¡Naomi!?”/...Naomi desapareció. Ya no hubo respuesta./“¡Voy a ir...!”/Desobedeciendo las últimas palabras de Naomi, corrí a la habitación que nunca se abre para salvar a Nami.
 28_2e6f;28;体当りするまでもなく、;Ni siquiera tuve que lanzarme contra ella, 
 28_2e7f;28;あかずの間のドアは開いた。/まるでぼくを待ちかまえていたように。/「奈美！」/ぼくは薄暗い部屋へ飛びこんだ。;la puerta de la habitación que nunca se abre se abrió, como si me hubiera estado esperando. “¡Nami!” Me lancé dentro de la habitación en penumbra.
-28_2ece;28;棺があった。/重いふたを開けると、いっぱいの弟切草の中に、奈美のミイラが埋もれている。/「奈美!　来たぞ！」/返事はない。/「奈美、何とかいってくれよ！」;Había un ataúd. Al abrir la pesada tapa, entre un montón de otogirisou yacía la momia de Nami. “¡Nami! ¡Ya llegué!” No hubo respuesta. “¡Nami, di algo, por favor!”
+28_2ece;28;棺があった。/重いふたを開けると、いっぱいの弟切草の中に、奈美のミイラが埋もれている。/「奈美!　来たぞ！」/返事はない。/「奈美、何とかいってくれよ！」;Había un ataúd. Al abrir la pesada tapa, entre un montón de otogiriso yacía la momia de Nami. “¡Nami! ¡Ya llegué!” No hubo respuesta. “¡Nami, di algo, por favor!”
 28_2f37;28;ミイラの口に耳を近づけてみるが、もう、あのカスレ声さえ聞こえない。/奈美は完全なミイラになってしまったのだろうか……。/;Acerqué el oído a la boca de la momia, pero ya no se oía ni esa voz ronca. ¿Nami se habría convertido por completo en una momia...? 
 28_2f90;28;……奥の暗がりから、ついにミイラの母親が姿を現わした。;...Desde la oscuridad del fondo, por fin apareció la madre momificada.
 28_2fb9;28;車椅子に座ったミイラは、動く気配もなく、言葉も発しない。/だが目玉の無いくぼみで、じっとぼくを見つめている。/「…………」/いま母のミイラが見ているのは、自分を拾てて逃げ去った男の顔だ。;La momia, sentada en una silla de ruedas, no daba señales de moverse ni decía una palabra. Pero con sus cuencas sin globos oculares me miraba fijamente. “...” Lo que la madre momificada veía ahora era el rostro del hombre que la había abandonado y huido.
@@ -10242,7 +10242,7 @@
 28_3cad;28;・;.
 28_3cb1;28;・;.
 28_3cb5;28;・。/ぼくはあらためてあたりを見渡した。;. Miré alrededor una vez más.
-28_3ce4;28;「あ……」/あたり一面の弟切草は、あわいむらさき色の;“Ah...”/Todo el campo de otogirisou se había vuelto de un tenue color púrpura, 
+28_3ce4;28;「あ……」/あたり一面の弟切草は、あわいむらさき色の;“Ah...”/Todo el campo de otogiriso se había vuelto de un tenue color púrpura, 
 28_3d08;28;花に変わっていた。/「ライラックだわ」/ライラック……。/ナオミの部屋にあった花だ。;y eran otras flores./“Son lilas”/Lilas... Eran las flores que había en la habitación de Naomi.
 28_3d40;28;幹も枝もなく、ただその花だけが広がっている。/ライラック畑だ。/「いい香りだな……」/「花言葉があるのよ」/奈美がいった。/;Sin troncos ni ramas, solo esas flores se extendían por todas partes. Un campo de lilas./“Qué buen aroma...”/“Tienen su significado en el lenguaje de las flores”, dijo Nami.
 28_3da4;28;「初;“Primer 
@@ -10373,13 +10373,13 @@
 29_06f0;29;は、美しい夕映えをながめた。; contempló el hermoso resplandor del atardecer.
 29_0705;29;「ねえ、あんなにいっぱいの花……！」/奈美は急に振り返っていった。;“Oye, ¡cuántas flores...!” dijo Nami, volviéndose de repente.
 29_073c;29;それは黄色く群生する野草だった。/「ああ、あの花のことか……」/ここからがぼくの出番だ。/「オホン、あの草はね;Eran unas hierbas silvestres que crecían en racimos amarillos. “Ah, esas flores...” Aquí empezaba mi turno. “Ejem, esa hierba se llama
-29_0782;29;」/「……オトギリソウでしょ？」/「なんだ……知ってたっけ」;”/“...Otogirisou, ¿verdad?”/“Vaya... ¿ya lo sabías?”
+29_0782;29;」/「……オトギリソウでしょ？」/「なんだ……知ってたっけ」;”/“...Otogiriso, ¿verdad?”/“Vaya... ¿ya lo sabías?”
 29_07a7;29;「何だったら、このハナの伝説の話でもする？」/「あ、うん……できれば」/「じゃ、いいわ;“Si quieres, te cuento la leyenda de esta flor.”/“Ah, sí... si puede ser.”/“Bueno, está bien
 29_07da;29;。まだ知らないことにするから。どうぞ」;. Haré como que todavía no la conozco. Adelante.”
 29_07f2;29;そこでぼくは思った。/;Entonces pensé:
 29_0813;29;ハナしておかなければ、ハナしにならない。;Si no hablo de las flores, no tengo de qué hablar.
 29_0831;29;思いっきり手みじかに話してやろう。;La contaré lo más breve posible.
-29_084f;29;ついに“弟切草”の語り部と化したぼくは、ああ、愛のスペシャルコース大作戦を開始するのであった。;Así, convertido por fin en el narrador de la “otogirisou”, ah, comencé la gran operación del curso especial del amor.
+29_084f;29;ついに“弟切草”の語り部と化したぼくは、ああ、愛のスペシャルコース大作戦を開始するのであった。;Así, convertido por fin en el narrador de la “otogiriso”, ah, comencé la gran operación del curso especial del amor.
 29_0899;29;「ムフフ、お女中、これにはおもしろい伝説がある」/「まあ……へえ、聞きたい！」/ぼくはテキ当な作り話で、口説きやすいムードにもっていくつもりだ。;“Ejem, jejeje, doncella, esto tiene una leyenda muy interesante.”/“Vaya... ¡ah, quiero oírla!”/Mi plan era llevarla, con una historia inventada, a un ambiente propicio para cortejarla.
 29_08f6;29;「平安のころ、ひとりの若者と美しい娘がいた。若者は娘にせつない恋をしていた……;“En la época Heian había un joven y una hermosa muchacha. El joven sentía por ella un amor doloroso...
 29_092a;29;そして、娘も若者をひそかに愛していたんだ」; Y ella también lo amaba en secreto.”
@@ -10480,11 +10480,11 @@
 29_18b8;29;突然むせかえるような甘いアダルトな句いをかいだ。;Percibí de repente un olor dulce y adulto, casi sofocante.
 29_18de;29;セットのかげで扇風機を回しているおじさんに気づいた。;Me fijé en un señor que hacía girar un ventilador detrás del decorado.
 29_1905;29;あ……あそこに、アークライトが。/;Ah... allá hay un reflector.
-29_191d;29;草むらの中に何人もの黒子がいるのに気づいた。;Noté que había varios tramoyistas vestidos de negro entre las otogirisou.
+29_191d;29;草むらの中に何人もの黒子がいるのに気づいた。;Noté que había varios tramoyistas vestidos de negro entre las otogiriso.
 29_193e;29;みんなで何か持ち上げている。;Entre todos levantaban algo.
 29_195c;29;「まあ……;“Vaya... 
 29_1964;29;ねえ……」/「うん……」;Oye...” “Sí...”
-29_197e;29;……それは一面の弟切草だった。/その小さな黄色い花々から、なぜか女の息づかいが感じられる。/;...Era un campo entero de otogirisou. No sé por qué, de aquellas pequeñas flores amarillas se percibía la respiración de una mujer.
+29_197e;29;……それは一面の弟切草だった。/その小さな黄色い花々から、なぜか女の息づかいが感じられる。/;...Era un campo entero de otogiriso. No sé por qué, de aquellas pequeñas flores amarillas se percibía la respiración de una mujer.
 29_19be;29;「……ああ」/奈美も同じことを感じたのか、うっとりと目を閉じている。;“...Ah.” Nami, sintiendo quizá lo mismo, había cerrado los ojos, embelesada.
 29_19eb;29;「お姊さん……;“Hermana... 
 29_19f6;29;」/「……エ？」/「あら……」/奈美は自分の言葉にびっくりしている。/「いま……私、なんて？」/「お姊さん……;” “...¿Eh?” “Ay...” Nami estaba sorprendida de sus propias palabras. “¿Qué... qué dije hace un momento?” “Hermana... 
@@ -10525,15 +10525,15 @@
 29_1f71;29;「奈美、ヘソとられるな！」;“¡Nami, que el Dios del Trueno no te robe el ombligo!”
 29_1f85;29;ぼくらは門の中へ飛び込んだ。/;Nos metimos corriendo por el portón.
 29_1f9f;29;「奈美、ヘソなめさせろ！」;“¡Nami, déjame lamerte el ombligo!”
-29_1fba;29;気がつくと、ぼくらは弟切草の中だ。/;Cuando me di cuenta, estábamos entre las otogirisou.
+29_1fba;29;気がつくと、ぼくらは弟切草の中だ。/;Cuando me di cuenta, estábamos entre las otogiriso.
 29_1fd8;29;「奈美、オニはヘソ、福は内！」;“¡Nami, demonios al ombligo y suerte adentro!”
 29_1ffd;29;気がつくと、ぼくらは門の中に入っている……。;Cuando me di cuenta, ya estábamos dentro del portón...
-29_202b;29;「まあ……」/「うん、ここもだ」/……数地内は、見渡す限りの弟切草だった。;“Vaya...” “Sí, aquí también”... Dentro del terreno de la mansión había otogirisou hasta donde alcanzaba la vista.
+29_202b;29;「まあ……」/「うん、ここもだ」/……数地内は、見渡す限りの弟切草だった。;“Vaya...” “Sí, aquí también”... Dentro del terreno de la mansión había otogiriso hasta donde alcanzaba la vista.
 29_205f;29;「あ……」/;“Ah...”
-29_2069;29;何かが弟切草の中を走った。/「何、いまの！」/奈美がおびえた。/「み、見てくる」/ぼくはザワザワと、弟切草の中へ分け入った。/たまにはイイところも見せなくては。/;Algo cruzó corriendo entre las otogirisou. “¡¿Qué fue eso?!” Nami se asustó. “V-voy a ver.” Me adentré entre las otogirisou haciéndolas crujir. De vez en cuando también debía lucirme.
+29_2069;29;何かが弟切草の中を走った。/「何、いまの！」/奈美がおびえた。/「み、見てくる」/ぼくはザワザワと、弟切草の中へ分け入った。/たまにはイイところも見せなくては。/;Algo cruzó corriendo entre las otogiriso. “¡¿Qué fue eso?!” Nami se asustó. “V-voy a ver.” Me adentré entre las otogiriso haciéndolas crujir. De vez en cuando también debía lucirme.
 29_20d5;29;何かが走った。;Algo corrió de nuevo.
 29_20e2;29;「あッ、待て、コイツ！」/ぼくは追っかけて、打ち合わせ外のそいつを捕えた。/「何だったの？」/ぼくはそいつをぶら下げて見せた。/「走ってたのは、コイツだった」/それは小さなプラカードだった。;“¡Ah, espera, tú!” Corrí tras eso y atrapé a la cosa que no estaba en el plan. “¿Qué era?” Se la mostré colgando. “Lo que corría era esto.” Era un pequeño cartel.
-29_215d;29;　/　/　　　おふたり様ようこそ/　　　テレビ・バス・ふかふかベッド完備/　　　　　　　　　ホテル『弟切莊;Bienvenidos los dos/Con TV, baño y camas mullidas/Hotel “Otogirisou
+29_215d;29;　/　/　　　おふたり様ようこそ/　　　テレビ・バス・ふかふかベッド完備/　　　　　　　　　ホテル『弟切莊;Bienvenidos los dos/Con TV, baño y camas mullidas/Hotel “Otogiriso
 29_219f;29;』;”
 29_21a4;29;　/それにはそう書かれていた。;Eso era lo que decía.
 29_21b9;29;「算談はよしてね」/コンとぶたれた。/え？……ボ、ボクじゃないのに。;“No bromees.” Me dieron un golpecito. ¿Eh?... Si yo no fui...
@@ -10948,7 +10948,7 @@
 30_274c;30;「ま、待てよ奈美……奈美こそ、それ！」/「え、何かついてる？」/奈美もおどろいてカガミを見た。/……その白いうなじに、くッきりと大きな歯形がついているのだ;“¡E-espera, Nami... pero mira lo tuyo!”/“¿Eh? ¿Tengo algo?” Nami también se sorprendió y miró el espejo... En su blanca nuca había una enorme marca de dientes, bien clara
 30_27ae;30;。;.
 30_27b3;30;「あ、待て！」/「ま、まだ何かあるの？」/「奈美、動くな」/ぼくは奈美の髪に刺さっていたものをぬいた。/それは……;“¡Ah, espera!”/“¿Q-qué, todavía hay algo más?”/“Nami, no te muevas.” Le saqué algo que tenía clavado en el pelo. Era... 
-30_2800;30;枯れた弟切草だった。/「こ……こんなものが、どうして……!　いつの間に！！」/奈美はすっかりおびえてしまっている。;una otogirisou marchita./“¿C-cómo es que esto...? ¡¿Cuándo?!” Nami estaba completamente aterrada.
+30_2800;30;枯れた弟切草だった。/「こ……こんなものが、どうして……!　いつの間に！！」/奈美はすっかりおびえてしまっている。;una otogiriso marchita./“¿C-cómo es que esto...? ¡¿Cuándo?!” Nami estaba completamente aterrada.
 30_2848;30;「あ……」/ぼくは絶句した。/「ああ、思い出したんでしょ？　花言葉……」/「う……うん」/こう先へ先へ読まれちゃかなわない。/「復警！？……だと思った」/マ……マダいってなかったのに……。;“Ah...” Me quedé sin palabras./“Ah, ¿ya lo recordaste, verdad? El lenguaje de las flores...”/“S-sí.” No hay quien pueda con que me lean los pensamientos antes que yo./“¿¡Venganza!?... Eso pensé.”/Y... y eso que yo todavía no lo había dicho...
 30_28c2;30;「シ、シカシ、いったい……」/「誰が、誰に、どう、復警するっていうのか……;“P-pero, ¿qué es lo que...?”/“Quién, de quién y cómo se vengaría... 
 30_28ef;30;ッて考えてるのね？」/「……うん」/;es lo que estás pensando, ¿verdad?”/“... Sí.”
@@ -11777,7 +11777,7 @@
 32_37ca;32;「ああッ！;“¡Aah! 
 32_37d4;32;……お母さんが！」/奈美が叫んだ。;...¡Mamá!”, gritó Nami.
 32_37fc;32;見送るように窓辺まで来た車椅子は、一瞬のうちに炎に包まれて燃え上がった。/ぼくらを助けて、奈美の母は死んだ……。;La silla de ruedas, que había llegado hasta la ventana como para despedirnos, fue envuelta por las llamas en un instante y ardió. La madre de Nami había muerto para salvarnos...
-32_3854;32;ぼくらは草むらから立ち上がった。/……草むらは、すべて弟切草だった。/「見て！」/奈美が叫んだ。/「弟切草が、ホタルに変わった……」/「……きっと;Nos levantamos de la hierba. ...Toda la hierba era otogirisou./“¡Mira!”, gritó Nami. “La otogirisou se ha convertido en luciérnagas...”/“...Seguro que 
+32_3854;32;ぼくらは草むらから立ち上がった。/……草むらは、すべて弟切草だった。/「見て！」/奈美が叫んだ。/「弟切草が、ホタルに変わった……」/「……きっと;Nos levantamos de la hierba. ...Toda la hierba era otogiriso./“¡Mira!”, gritó Nami. “La otogiriso se ha convertido en luciérnagas...”/“...Seguro que 
 32_38b5;32;お母さんがやったんだよ」/ホタルは一脊に天へ舞った。;ha sido tu mamá.”/Las luciérnagas se elevaron hacia el cielo todas a la vez.
 32_38eb;32;「あ……」/ぼくらは同時に夜空を見上げた。/ホタルは、ぼくらの頭上で、光りかがやく星となった。;“Ah...”/Alzamos la vista al cielo nocturno al mismo tiempo. Sobre nuestras cabezas, las luciérnagas se transformaron en estrellas resplandecientes.
 32_394c;32;「あ……」/ぼくらは同時に夜空を見上げた。/ホタルは、ぼくらの頭上で、光りかがやく星となった。/奈美は泣いていた。;“Ah...”/Alzamos la vista al cielo nocturno al mismo tiempo. Sobre nuestras cabezas, las luciérnagas se transformaron en estrellas resplandecientes. Nami estaba llorando.
@@ -11789,7 +11789,7 @@
 32_3a20;32;……」/奈美は小さくあえいだ。/「ごめんなさい;...”/Nami jadeó en voz baja./“Perdóname
 32_3a3e;32;。……私のために、ごめんなさい」/ぼくは奈美がいとおしくなった。;. ...Perdóname por lo que has hecho por mí.”/Sentí un cariño inmenso por Nami.
 32_3a66;32;「奈美……;“Nami... 
-32_3a70;32;おれは好きだ。何があっても、おれは好きだ」/ぼくは奈美にキスをした。/「うれしい……！」/ぼくは奈美を引きよせ、ぼくらの体は、ゆっくりと弟切草の草むらの中へ倒れていった……。;Yo te quiero. Pase lo que pase, te quiero.”/Besé a Nami./“¡Qué feliz me hace...!”/Atraje a Nami hacia mí y nuestros cuerpos cayeron lentamente sobre la hierba de otogirisou...
+32_3a70;32;おれは好きだ。何があっても、おれは好きだ」/ぼくは奈美にキスをした。/「うれしい……！」/ぼくは奈美を引きよせ、ぼくらの体は、ゆっくりと弟切草の草むらの中へ倒れていった……。;Yo te quiero. Pase lo que pase, te quiero.”/Besé a Nami./“¡Qué feliz me hace...!”/Atraje a Nami hacia mí y nuestros cuerpos cayeron lentamente sobre la hierba de otogiriso...
 32_3ade;32;甘い香りが句った。/;Flotaba un aroma dulce.
 32_3af0;32;「まあ……見て！」/いつのまにか、ぼくらのまわりは花束でおおわれている。/;“¡Oh... mira!”/Sin darnos cuenta, estábamos rodeados de ramos de flores.
 32_3b27;32;「あ……」/そのときぼくは、丘の上の人たちに気づいた。/「ああ、気にしないで……」/奈美はいった。;“Ah...”/Entonces reparé en la gente que estaba en lo alto de la colina./“Ah, no te preocupes...”, dijo Nami.
@@ -11891,7 +11891,7 @@
 33_0460;33;話がちょっとていねいすぎる。;Su forma de hablar es demasiado formal.
 33_047d;33;ふざけながらでないと、話ができない。;No puede contar nada si no es bromeando.
 33_049e;33;話をしながら、口説こう口説こうとする。;Mientras habla, intenta seducirla a cada rato.
-33_04cb;33;弟切草のことは、;Lo de la otogirisou lo entendí muy bien por la historia de 
+33_04cb;33;弟切草のことは、;Lo de la otogiriso lo entendí muy bien por la historia de 
 33_04d8;33;の話でとてもよくわかった。/;. 
 33_04ea;33;って、勉強以外のことはホントによく知っているの。/でも、……ヘンなところを走っているわ。; sabe de todo, de verdad, menos de lo que se estudia. Pero... estamos pasando por un lugar muy raro.
 33_0521;33;私は思わず、/;Sin pensarlo, 
@@ -11919,8 +11919,8 @@
 33_07de;33;のおかげで、私はとっても大切なものを与えられた気がする。;, siento que me han dado algo muy importante.
 33_0803;33;この人を好きになってよかった。/だってあんなにお気に入りの車があんなになっちゃって、まだローンの払いも終ってないのに、泣きごともいわないんだもの。/;Menos mal que me enamoré de este hombre. Porque, con lo querido que era ese auto y cómo ha quedado, y sin haber terminado de pagar el crédito, no se ha quejado ni una vez.
 33_085a;33;……よし、アトで、;...Bien, más tarde a 
-33_0865;33;にはうんとゴホウビあげよっと。/歩きはじめると、一面の弟切草だ……。; le daré un gran premio. Al echar a andar, todo está cubierto de otogirisou...
-33_08a5;33;と私は弟切草に導かれるようにして、その場所へ来た。/そこには錆びついた大きな門があった。/門は私たちを威圧するように立ちはだかっている。; y yo llegamos a aquel lugar, como guiados por las otogirisou. Allí había un gran portón oxidado. El portón se alzaba ante nosotros como para intimidarnos.
+33_0865;33;にはうんとゴホウビあげよっと。/歩きはじめると、一面の弟切草だ……。; le daré un gran premio. Al echar a andar, todo está cubierto de otogiriso...
+33_08a5;33;と私は弟切草に導かれるようにして、その場所へ来た。/そこには錆びついた大きな門があった。/門は私たちを威圧するように立ちはだかっている。; y yo llegamos a aquel lugar, como guiados por las otogiriso. Allí había un gran portón oxidado. El portón se alzaba ante nosotros como para intimidarnos.
 33_08ff;33;門の向こうには、大きな洋館がそびえ立っていた。/屋数は私たちを手招きしているように見えた。/私は屋数に目をこらした。/古色そう然といった感じだ。;Más allá del portón se alzaba una gran mansión de estilo occidental. La mansión parecía hacernos señas. La observé con atención. Tenía un aire muy antiguo, cargado de años.
 33_0962;33;誰も住んでいないようにも見えた。/正直いうと少し恐かったけれど、私には;Parecía que no vivía nadie. Para ser sincera, tenía un poco de miedo, pero 
 33_0990;33;がついている。/私たちは門の中へ入ることに決めた。/近づいて見ると、古びた洋館はいよいよぶきみだ。/私たちは助けあって、何とか玄関までたどりつき、屋数の中へ入った。; está conmigo. Decidimos entrar por el portón. Al acercarnos, la vieja mansión resultaba cada vez más siniestra. Nos ayudamos el uno al otro hasta llegar a la entrada y pasamos al interior.
@@ -12173,7 +12173,7 @@
 34_2078;34;「……」/私はそれを手にとってみた。/日記はひとりでに後ろの方のページをひらいた。/そこにはまだ新しいインクのあとがあった。;“...” Lo tomé en mis manos. El diario se abrió solo por una página hacia el final. Allí había marcas de tinta todavía fresca.
 34_20c4;34;きれいな女文字だ。/昔の3人暮らしの楽しさをつづった母の古い日記の余白へ、誰かが後から書きこんだものらしい。/3月20日……ついこの間のことだ。/私はそれを読みはじめた。;Era una letra femenina y bonita. Parecía que alguien lo había escrito después en los márgenes del viejo diario de mi madre, que contaba lo felices que eran cuando vivían los tres. 20 de marzo... hace muy poco. Empecé a leerlo.
 34_2135;34;『3月20日/道に迷った人を助けてあげた。/こんな山奥までひとりでハイキングにくるなんて、ムチャな人。/でも、こんな私をキレイだっていってくれた。/……きっと、うそつきだわ』;ʻ20 de marzo. Ayudé a un hombre que se había perdido. ¡Mira que venir solo de excursión hasta estas montañas, qué persona tan temeraria! Pero me dijo que soy hermosa, aun siendo como soy... Seguro que miente.ʼ
-34_219f;34;『3月21日/彼が熟を出した。/転んでネンザしているようだ。/弟切草のしぼり汁をぬってあげた。/やさしいね、といわれた。/うそばかりつく人だ』;ʻ21 de marzo. Él tuvo fiebre. Parece que se torció el tobillo al caer. Le unté jugo exprimido de otogirisou. Me dijo que soy amable. Es un hombre que solo dice mentiras.ʼ
+34_219f;34;『3月21日/彼が熟を出した。/転んでネンザしているようだ。/弟切草のしぼり汁をぬってあげた。/やさしいね、といわれた。/うそばかりつく人だ』;ʻ21 de marzo. Él tuvo fiebre. Parece que se torció el tobillo al caer. Le unté jugo exprimido de otogiriso. Me dijo que soy amable. Es un hombre que solo dice mentiras.ʼ
 34_21fa;34;『3月22日/彼はだいぶ元気になった。/ずっとここにいたいといってくれたが、きっとうそだ。/こんな私の前からはいなくなりたいに決まっている』;ʻ22 de marzo. Él ya se recuperó bastante. Dijo que quería quedarse aquí para siempre, pero seguro que es mentira. Seguro que lo que quiere es desaparecer de la vista de alguien como yo.ʼ
 34_224f;34;『3月23日/彼はとうとう山を下りた。/別れぎわに、またくるといった。/あの人はさいごまでうそつきだった』;ʻ23 de marzo. Por fin bajó de la montaña. Al despedirse, dijo que volvería. Hasta el final fue un mentiroso.ʼ
 34_2292;34;日記はここで終っているのかと思ったが、/ページをめくると、つづきがあった。;Pensé que el diario terminaba aquí, pero al pasar la página había más.
@@ -12218,7 +12218,7 @@
 34_2838;34;「奈美の声だ！」;“¡Es la voz de Nami!”
 34_2863;34;「奈美、おれほんとうに、ほんとうに好きだったんだよ……」;“Nami, de verdad, de verdad que te quería...”
 34_28a1;34;「さよなら……」;“Adiós...”
-35_0002;35;「ねえ！」/私は耳をすました。/落葉が風に舞うような音だ。/でも、あたりは一面の弟切草で、落葉が舞うような庭はない。/;"“¡Oye!” Agucé el oído. Era un sonido como de hojas secas bailando en el viento. Pero a mi alrededor solo había otogirisou; no era un jardín donde bailaran las hojas."
+35_0002;35;「ねえ！」/私は耳をすました。/落葉が風に舞うような音だ。/でも、あたりは一面の弟切草で、落葉が舞うような庭はない。/;"“¡Oye!” Agucé el oído. Era un sonido como de hojas secas bailando en el viento. Pero a mi alrededor solo había otogiriso; no era un jardín donde bailaran las hojas."
 35_0055;35;「……何か聞こえない?　ほら、何か、カサカサって……！」;“...¿No oyes algo? ¡Escucha, algo hace cric, cric...!”
 35_0079;35;「え？……風で草がゆれてんだろ」/;“¿Eh?... Será la hierba moviéndose con el viento.” 
 35_008f;35;はいつも楽天的だ。/「ちがう; siempre es optimista. “No
@@ -12273,7 +12273,7 @@
 35_0a42;35;は懷中電灯の光を中へ射しこんだ。/; dirigió la luz de la linterna hacia adentro.
 35_0a5f;35;「あっ！;“¡Ah!
 35_0a6d;35;」/私たちは同時に声を上げた。/「まただ……！」;” Los dos gritamos a la vez. “¡Otra vez...!”
-35_0a91;35;弟切草だった。/私はその花言葉を思い出した。/;Era otogirisou. Recordé su significado en el lenguaje de las flores.
+35_0a91;35;弟切草だった。/私はその花言葉を思い出した。/;Era otogiriso. Recordé su significado en el lenguaje de las flores.
 35_0ab7;35;「復警の温室……」/「おい、気持ちの悪いこというなよっ」/「なによ、自分はしょっちゅういうくせに！」/これで、おあいこよ。;“El invernadero de la venganza...” “Oye, no digas cosas que dan asco.” “¡Mira quién habla, si tú lo dices a cada rato!” Con esto, estamos a mano.
 35_0b09;35;私たちは中へ光を当てながら、温室の周りを巡った。/別に変わったこともなく、とうとうウラ側まで来てしまった。;Dimos la vuelta al invernadero iluminando el interior. No había nada extraño y acabamos llegando hasta la parte de atrás.
 35_0b4f;35;そこで私は、/;Entonces, 
@@ -13078,7 +13078,7 @@
 38_23bc;38;とつぜん暖炉が燃え上がった。/「うわッち！」/;De pronto, la chimenea estalló en llamas./“¡Aaay, quema!”
 38_23df;38;もう少しで焼かれるところだった。/後ろから見えない力にひっぱられた。/;Por poco se quema. Algo invisible lo jaló hacia atrás.
 38_240d;38;ナオミが私と入れかわった。;Naomi y yo intercambiamos lugares.
-38_242b;38;あっという間に、私は庭の一面の弟切草の中に立っている。/これから何が起ろうと、私は;En un abrir y cerrar de ojos, estoy de pie en medio del campo de otogirisou del jardín. Pase lo que pase de ahora en adelante, agradezco a 
+38_242b;38;あっという間に、私は庭の一面の弟切草の中に立っている。/これから何が起ろうと、私は;En un abrir y cerrar de ojos, estoy de pie en medio del campo de otogiriso del jardín. Pase lo que pase de ahora en adelante, agradezco a 
 38_2464;38;に感謝している。/そして、愛している。;. Y lo amo.
 38_247f;38;「奈美、どこだ！」/;“¡Nami! ¿Dónde estás?”/
 38_248f;38;が来た。/「奈美……！」/あんなにも息を切らしている。/「な、奈美……」; llegó./“¡Nami...!”/Viene tan agitado que casi no respira./“N-Nami...”
@@ -13322,7 +13322,7 @@
 39_1d12;39;「うしろにいるのがお母さんなのよ！」/「うしろって……？」/;“¡La que está detrás es mi mamá!”/“¿Detrás...?”/
 39_1d36;39;はなんだか気味悪そうにしている。/「おい、奈美……」/「さわらないで！」; parece sentirse incómodo, como asustado./“Oye, Nami...”/“¡No me toques!”
 39_1d6d;39;私はあとずさりながらいった。/「私といっしょにいちゃダメ……いままでコワイ目にあったのは、みんな私のせいだったのよ！」/「奈美、ヘンなことをいうな。誰もそんなふうに思っちゃいない」;Retrocedí mientras decía:/“No debes estar conmigo... ¡Todo lo terrible que nos ha pasado hasta ahora fue por mi culpa!”/“Nami, no digas cosas raras. Nadie piensa eso.”
-39_1ddc;39;「ちがう!　弟切草は復警の花だもん!　誰かが私を狙ってるのよ!　私、;“¡No es así! ¡La otogirisou es la flor de la venganza! ¡Alguien me persigue! ¡Yo no quiero arrastrar a 
+39_1ddc;39;「ちがう!　弟切草は復警の花だもん!　誰かが私を狙ってるのよ!　私、;“¡No es así! ¡La otogiriso es la flor de la venganza! ¡Alguien me persigue! ¡Yo no quiero arrastrar a 
 39_1e0a;39;まで卷き添えにはしたくない！」/「バカなことをいうな奈美……！」/; a esto!”/“¡No digas tonterías, Nami...!”/
 39_1e35;39;は私をなだめようと必死だ。/「イヤ！; hacía todo lo posible por calmarme./“¡No!
 39_1e4f;39;　; ¡
@@ -14103,7 +14103,7 @@
 42_0f65;42;「まあ……」/それは純白のウェディングドレスだった。/人が着ているのではない。/ただウェディングドレスだけが宙に浮いているのだ。;“Vaya...” Era un vestido de novia blanquísimo. No lo llevaba puesto nadie. Solo el vestido flotaba en el aire.
 42_0fb2;42;ドレスは白いベールをかぶっている。/白い手袋をつけている。/まるで見えない魂がそれらをつけてでもいるように。/手袋はその胸にブーケを抱いていた。;El vestido llevaba un velo blanco y guantes blancos, como si un alma invisible los vistiera. Los guantes sostenían un ramo contra el pecho.
 42_100b;42;白い手袋がひらりと動いた。/ブーケがこちらへ投げられた。/私はそれを受け取った。/;Uno de los guantes blancos se movió con un aleteo. El ramo fue lanzado hacia mí y lo recibí.
-42_1048;42;それは弟切草のドライフラワーだった。;Eran flores secas de otogirisou.
+42_1048;42;それは弟切草のドライフラワーだった。;Eran flores secas de otogiriso.
 42_1061;42;「きゃッ」/;“¡Kyaa!”
 42_106c;42;私はブーケを放り出した。/;Arrojé el ramo lejos.
 42_1084;42;見ると、ウェディングドレスは消えている。/奥のドアが閉じるところだ。/私は走った。;Al mirar, el vestido de novia había desaparecido. La puerta del fondo se estaba cerrando. Corrí.

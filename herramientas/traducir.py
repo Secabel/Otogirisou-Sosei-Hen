@@ -128,6 +128,8 @@ def componer_todo(X, U, tr, M, stats=None):
     if stats is not None: stats.extend(st_local)
     return res, prob
 
+BLOQ_UNION = {0x01, 0x13, 0x14, 0x02, 0x12, 0x0e, 0x09, 0x0a, 0x07, 0x2d, 0x2e, 0x2c, 0x38, 0x0d, 0x11, 0x15}      # comandos que cambian de fila/pagina/escena: ahi NO hace falta espacio de union
+
 def _pasada(X, U, tr, M, stats, inc, cad, deficit):
     """deficit[(escena, token del menu)] = filas que la ultima unidad de la pregunta no pudo liberar (empieza a mitad de linea): se reservan en las unidades anteriores de esa pagina (ronda siguiente)"""
     cad, cdest = cad
@@ -137,6 +139,8 @@ def _pasada(X, U, tr, M, stats, inc, cad, deficit):
     # el estado de llegada de esas entradas NO se toma de los llamantes (antes: el maximo de las 34 entradas -> 8 filas ocupadas -> 'Fingi no' + pagina nueva).
     zap = {(s2, o2) for sc2, (L2, _) in enumerate(X) if sc2 != 33 for t2 in L2 if t2.kind == 'c' and t2.op == 0x2d
            for (_, s2, o2) in S.ptrs(('c', t2.op, bytes(t2.data))) if s2 == 33}
+    # LOOP 5: el estado de pantalla NO viaja por los saltos op 0x2d (nombre resaltado = enlace a otra escena): el destino se compone con el estado de caida/otros saltos
+    # (antes: 'La sala de / calderas' cortada porque se heredaba el estado del llamante mas lleno, escena 39 -> 15).
     cache_lab = {}; fin_en = {}
     por_old = {(u['escena'], X[u['escena']][0][u['tok0']].old): u for u in U}
     def textos(ch): return [T.normalizar(tr[e['id']]) for e in ch]
@@ -212,6 +216,11 @@ def _pasada(X, U, tr, M, stats, inc, cad, deficit):
                             continue
                         ch = cad.get(u['id']); opcion = ch is not None and all(e['id'] in tr for e in ch)
                         ap0 = ''; nl0 = 0
+                        if not opcion and not fin:      # LOOP 5: texto + comando de pausa (0x29, 0x20...) + texto en la MISMA fila: el japones no usa espacio ('¿Eh?'+'Se oia' salia '¿Eh?Se oia'); se anade el espacio de union
+                            _k = u['tok1']
+                            while _k < len(L) and L[_k].kind == 'c' and L[_k].op not in BLOQ_UNION: _k += 1
+                            _v = por.get((sc, _k))
+                            if _k > u['tok1'] and _v is not None and _v['id'] in tr and re.search(r'[.?!…”»)]$', s) and re.match(r'[A-Za-zÁÉÍÓÚÑáéíóúñ¿¡“(0-9]', T.normalizar(tr[_v['id']])): s += ' '
                         if opcion:
                             txt, xx, pp, ps, piezas = lab(ch); r = piezas[ch.index(u)]          # la etiqueta se compone ENTERA: sus 01 originales sobran (filas vacias)
                             if u is ch[-1]:
@@ -227,13 +236,32 @@ def _pasada(X, U, tr, M, stats, inc, cad, deficit):
                             if lm:                 # la ULTIMA pagina (la que comparte pantalla con las opciones) deja sitio al menu
                                 R, G = lm; mk = (sc, MA[u['tok0']]); lim = 9 - R          # grupo 4: R==9 (opciones ocupan toda la pantalla) -> lim 0: el enunciado va solo en su(s) pagina(s)
                                 ultima = not any((sc, q) in por and (por[(sc, q)]['id'] not in tr or T.normalizar(tr[por[(sc, q)]['id']]).strip()) for q in range(u['tok1'], MA[u['tok0']]))      # grupo 2: unidades posteriores VACIAS (fusionadas) no cuentan
-                                if ultima: r = M.componer_unidad(s, st, fin, ml, maxl_fin=lim, gmax_fin=max(40, M.gmax - G), menu_limpio=True)
+                                if ultima: r = M.componer_unidad(s, st, fin, ml, maxl_fin=lim, gmax_fin=M.gmax - G, menu_limpio=True)      # LOOP 5 (limpieza): sin suelo de 40: pregunta + opciones <= gmax (el motor solo limpia 200 sprites; ver docs/08 32an)
                                 else: r = M.componer_unidad(s, st, fin, ml)          # grupo 2: las unidades previas NO comparten pantalla con las opciones (solo la ultima lo decide); antes se las comprimia a 1 fila y partia las preguntas en dos pantallas
                                 if r.endswith('\f'): fin = 0          # grupo 2: opciones en pagina limpia; sin salto de linea tras la espera
                                 else: r += '\n' * fin
                                 if ultima and st['lin'] + 1 > lim: deficit[mk] = min(8, deficit.get(mk, 0) + st['lin'] + 1 - lim)
                             else:
-                                _st0 = dict(st); r = M.componer_unidad(s, st, fin, ml) + '\n' * fin
+                                _st0 = dict(st)
+                                # LOOP 5 (limpieza, caso 'io.'): el texto que sigue SIN espera (p. ej. '\nNami' + ' se rio.' tras un enlace op 0x2d) comparte pagina; el motor solo limpia 200 huecos,
+                                # asi que esta unidad deja sitio a esos fragmentos (antes cada fragmento cabia por el suelo de 12 glifos y la pagina llegaba a 202). Ver docs/08 32ap.
+                                _res = 0; _q = u['tok1']; _n = 0
+                                while _q < len(L) and _n < 3 and _res < 40:
+                                    _t = L[_q]
+                                    if _t.kind == 'c':
+                                        if _t.op in (0x13, 0x14, 0x09, 0x0a, 0x03, 0x0e, 0x02, 0x0d): break
+                                        if _t.op == 0x12: _res += len(M.nombre)          # el nombre del jugador tambien ocupa huecos
+                                        _q += 1; continue
+                                    _v = por.get((sc, _q))
+                                    if _v is None: break
+                                    _tx = T.normalizar(tr[_v['id']]) if _v['id'] in tr else ''
+                                    _m1 = re.match(r'.+?(?:[.?!…]+”?|/|$)', _tx, re.S); _l = len(_m1.group(0).replace('/', '')) if _m1 else 0      # solo la PRIMERA frase: la unidad pegada a ella (nombre, enlace) no puede cortar antes
+                                    if _l > 24: break          # una frase larga se pagina sola; el problema son los fragmentos pequenos (suelo de 12 glifos de _paginar)
+                                    _res += _l; _n += 1; _q = _v['tok1']
+                                _g0 = M.gmax
+                                if _res: M.gmax = min(M.gmax, 193 - _res)      # margen: el calculo del compositor puede quedar ~3 por debajo del recuento real (espacios de union)
+                                try: r = M.componer_unidad(s, st, fin, ml) + '\n' * fin
+                                finally: M.gmax = _g0
                                 _m = re.search(r'([“¿¡(]+)(\n+)$', r); _sr = s.rstrip(' ')
                                 if _m and r[:_m.start()].strip() and _sr.endswith(_m.group(1)):      # v44: recomponer SIN el signo (su ancho podia forzar un corte antes)
                                     st.clear(); st.update(_st0); _nl = max(fin, 1)
@@ -257,7 +285,7 @@ def _pasada(X, U, tr, M, stats, inc, cad, deficit):
             if t.kind == 'c':
                 if t.op not in (1, 0x13): skip01 = False
                 for (_, s2, o2) in S.ptrs(('c', t.op, bytes(t.data))):
-                    if t.op not in (9, 0x0a) and not (t.op == 0x2d and (s2, o2) in zap):      # los punteros del menu van a etiquetas (ventana nueva); v68b: ni los del zapping
+                    if t.op not in (9, 0x0a, 0x2d):      # los punteros del menu van a etiquetas (ventana nueva); v68b: ni los del zapping
                         d = inc.get((s2, o2))
                         if d is None or (st['lin'], st['gl']) > (d['lin'], d['gl']): inc[(s2, o2)] = dict(st)
                 if t.op == 0x0e: alcanzable = False

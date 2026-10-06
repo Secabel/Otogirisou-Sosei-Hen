@@ -1,7 +1,7 @@
 ﻿id;espanol;original
 00_1335;“¡Es la noche de Copérnico, sígueme!” Giré.;“¡Es hora del giro copernicano, sígueme!” Giré sobre mis talones.
 00_134c;;(parte de 00_1335)
-02_4ac8;“Sangre roja, cara verde y flor amarilla. ¡Esto parece...!”;“Sangre roja, cara verde y la flor amarilla de la otogirisou. ¡Esto es como...!”
+02_4ac8;“Sangre roja, cara verde y flor amarilla. ¡Esto parece...!”;“Sangre roja, cara verde y la flor amarilla de la otogiriso. ¡Esto es como...!”
 02_4bb1;“¿Quieres probar?” Sonreí.;“¿Quieres probarla?” Sonreí con malicia.
 02_4c86;“Rojo, alto... ¡a quedarnos!”;“Si está en rojo, hay que detenerse... así que mejor nos quedamos a pasar la noche.”
 05_1064;“Les seguiré el juego.” Me puse de pie.;“Les seguiré el juego hasta el final.”/Me puse de pie.
@@ -20,26 +20,26 @@
 11_11c3;Pensé en ponerme algunas...;Algunas de ellas...pensé en ponérmelas.
 11_11d3;;(parte de 11_11c3)
 12_1c11;Pensé que la familia era lo primero y esperé al hermano, el pez monstruoso.;Pensé que lo importante era llevarse bien con la familia, y esperé a que su hermano, el pez monstruoso, se acercara.
-12_1c60;Lo primero era ella, así que fui a buscar a Nami.;Nada importaba más que la propia Nami, así que avancé por donde quizá podría encontrarla.
+12_1c60;Fui a buscar a Nami.;Nada importaba más que la propia Nami, así que avancé por donde quizá podría encontrarla.
 14_00c9;“Sentí el encanto de una mujer casada.”;“Es que, por un momento, sentí el encanto de una mujer casada.”
 14_019b;“Oh, belleza que avergüenza a las flores...”;“Oh, una belleza que avergüenza hasta a las flores...”
 14_01fb;“Oh, nariz roja que avergüenza a las flores...”;“Oh, una nariz tan roja que avergüenza hasta a las flores...”
 14_2226;Recé: “Caperucita, ayúdame...”;recé a Caperucita Roja: ʻAyúdame...ʼ
 14_2268;Ji, ji, Namii... quise ser lobo.;ji, ji, ji, Namii... intenté volverme lobo yo también, sin quedarme atrás.
-15_20a1;“¡Come víbora, es víbora!”;“¡La mujer que come serpiente es una mujer serpiente!”
+15_20a1;“¡Quien come víbora, víbora es!”;“¡La mujer que come serpiente es una mujer serpiente!”
 15_20f1;“¿Un chiste viperino?”;“¿Fue un chiste un poco viperino?”
 16_1db4;“¡Me largo, no me arrastres!”;“Me da miedo que me arrastres. ¡Yo me largo!”
 16_1dc2;;(parte de 16_1db4)
 16_1de9;“¡Pues te arrastro yo!”;“¡Y qué si me arrastras, yo te arrastro a ti!”
 16_1e1c;“Perdón, ¿qué es arrastrar?”;“Perdón... ¿qué es eso de arrastrar?”
 16_1e50;“Prefiero un rollo de sushi.”;“¡Más que arrastrarme a un lío, prefiero un rollo de sushi!”
-18_228a;Decidí que contestara Nami, que ama las llamadas largas.;decidí que contestara Nami, a quien le gustan las llamadas largas.
+18_228a;Que conteste Nami, que ama las llamadas largas.;decidí que contestara Nami, a quien le gustan las llamadas largas.
 18_22cf;Aunque con miedo, contesté como todo un hombre.;aunque me daba miedo, decidí contestar como todo un hombre.
 18_22ec;¿Lo compraría el mago Mr. Maric?;pensé que hasta el mago Mr. Maric lo compraría.
 18_230e;Admiré lo raro del modelo.;me dejó admirado que fuera un celular de un modelo tan raro.
 19_1f5e;¿O alguien se la llevó?;¿O acaso alguien se la había llevado?
 19_1f7c;Quizás se la llevaron los espíritus.;Quizás... se la llevaron los espíritus.
-21_129a;“¿Y si hacemos de la otogirisou nuestra cama? ♥”;“Hacer de esta otogirisou nuestra cama... je, je, je... ¿q-qué te parece? ♥”
+21_129a;“¿Y si hacemos de la otogiriso nuestra cama? ♥”;“Hacer de esta otogiriso nuestra cama... je, je, je... ¿q-qué te parece? ♥”
 22_18b8;“Un cuarto para los dos♥”;“Q-quiero una habitación donde los dos podamos estar tranquilos...♥”
 22_39a6;Le lancé una mirada dulce♥;Le eché a Nami una mirada dulce y coqueta ♥
 22_39df;Fulminé al espejo.;Fulminé con la mirada al espejo, que se estaba comportando raro.
@@ -47,7 +47,7 @@
 23_24a5;Grité: “¡Tu cuerpo es mío!”;Volví a gritar: “¡Si es tu cuerpo, es mío!”
 23_24ad;;(parte de 23_24a5)
 26_1849;“Quizá hay espíritus malignos o mononoke aquí.”;“Quizá haya espíritus malignos, o algún mononoke viviendo aquí...”
-29_191d;Noté varios tramoyistas de negro entre las flores.;noté que había varios tramoyistas vestidos de negro entre las otogirisou.
+29_191d;Noté varios tramoyistas de negro entre las flores.;noté que había varios tramoyistas vestidos de negro entre las otogiriso.
 31_09fe;Recordé el tacto de la mujer... y o-otra vez traté de hacerla volver.;Recordé el tacto de la mujer de hace un momento... y, o-otra vez, intenté hacerla volver.
 33_014a;Las mujeres nacen actrices.;Las mujeres son buenas actrices desde que nacen.
 33_0170;Pero actuando me gana.;Pero en lo de actuar,  me lleva ventaja, ¿no?
@@ -210,7 +210,7 @@
 18_0573;“¡Entonces los maldigo yo!”;“¡Entonces yo también los maldeciré!”
 18_0789;“¡Gloria a la flora maldita!”;“¡Gloria a las plantas malditas!”
 18_2d5e;“Maldiciones o castigos, imposible que existan.”;“Maldiciones o castigos sobrenaturales, es imposible que existan.”
-18_2d7d;“¿La otogirisou? ¡Uy!”;“Si fuera una maldición, sería la maldición de la otogirisou... ¡uy!”
+18_2d7d;“¿La otogiriso? ¡Uy!”;“Si fuera una maldición, sería la maldición de la otogiriso... ¡uy!”
 18_2dbc;“¡Tu cuerpo lo controlo yo!”;“Si es tu cuerpo, lo controlaré yo.”
 21_01d3;Me pregunté si sería una premonición de Nami.;Me pregunté si sería una especie de poder de premonición de Nami.
 21_021e;Falló: seguro es buena suerte.;Pero hoy se equivocó de lleno... seguro que es señal de buena suerte.
@@ -222,9 +222,9 @@
 22_2046;“¡Llamo al 110!”;¡Entonces llamo a la policía, al 110!
 22_206b;Por si acaso, abracé a Nami.;Pero no convenía enojar a quien estuviera al otro lado, así que...le rodeé los hombros a Nami con el brazo.
 22_2081;;(parte de 22_206b)
-23_08e1;Al verme así, me sentí desamparado y quise llorar.;Al pensar en cómo me veía, me sentí desamparado y con ganas de llorar.
+23_08e1;Verme así me desamparó y quise llorar.;Al pensar en cómo me veía, me sentí desamparado y con ganas de llorar.
 23_0907;Me dio rabia verme tan encogido y quise llorar.;Me dio rabia verme tan encogido y me dieron ganas de llorar.
-23_092b;Pensé que con Namii aquí estaría muy tranquilo ♥.;Pensé que, si Namii estuviera aquí, yo estaría de lo más tranquilo ♥.
+23_092b;Con Namii aquí estaría muy tranquilo ♥.;Pensé que, si Namii estuviera aquí, yo estaría de lo más tranquilo ♥.
 23_0951;¿Las estatuas griegas no sentirán vergüenza?;¿Las estatuas griegas de mármol no sentirán vergüenza?
 25_04e1;“Vamos. No se desprecia la amabilidad ajena.”;“Vamos. No se puede despreciar la amabilidad de los demás.”
 25_04e8;;(parte de 25_04e1)
@@ -257,7 +257,7 @@
 11_2342;“Ajá, ¿ahora sigue un canguro o un pelícano?”;“Ajá, ¿lo que viene ahora es un canguro, un pelícano o un mensajero?”
 13_1919;Resignado, pregunté: “¿Qué van a hacerme?”;Estaba resignado, pero algo me inquietaba./“¿Qué van a hacerme?”
 13_192a;;(parte de 13_1919)
-13_1941;Miré a Nami como una niña: “No me hagas daño.”;Miré a Nami como lo haría una niña./“No me hagas daño.”
+13_1941;Miré a Nami cual niña: “No me hagas daño.”;Miré a Nami como lo haría una niña./“No me hagas daño.”
 13_1958;;(parte de 13_1941)
 13_1999;Abracé fuerte a Nami: “Tú también vienes, ¿no?”;Abracé a Nami con todas mis fuerzas./“Nami también viene conmigo, ¿verdad?”
 13_19ab;;(parte de 13_1999)
@@ -328,7 +328,7 @@
 14_1307;Me preocupaba mi auto.;Más que eso, me preocupaba mi auto recién comprado.
 15_0951;Con recato, pisé el suelo.;Con recato, pisé con firmeza el suelo.
 15_0971;Pensamos algo indecente.;Pecaminosamente, tuvimos un pensamiento algo indecente.
-16_0100;Sentí que el diablo me llamaba y miré la puerta fijamente.;Sentí que el diablo me llamaba y fulminé la puerta con la mirada.
+16_0100;Sentí que el diablo me llamaba y miré la puerta.;Sentí que el diablo me llamaba y fulminé la puerta con la mirada.
 16_017f;Miré la oscuridad, detective.;Como un auténtico detective de hierro, fulminé la oscuridad con la mirada.
 16_01e0;Me guió la diosa del amor.;Me dejé guiar por la diosa del amor.
 18_0c92;“¡Nami, qué vergüenza, quiero meterme en un hoyo!”;“Nami, ¡si hubiera un hoyo, me escondería de la vergüenza!”
@@ -397,9 +397,9 @@
 15_0ea4;“Empecemos por lo picante.”;“Esta, esa... empecemos por lo picante.”
 16_0816;Pensé investigar más.;pensé que convendría investigar un poco más.
 16_0835;Pensé algo indecente.;pensé que a lo mejor estaba pensando en algo indecente.
-18_0f32;Pensé con calma que las otogirisou no harían nada.;Pensé con calma que, después de todo, las otogirisou no iban a hacer nada.
-18_0f5c;Lamenté no contar la leyenda.;Lamenté no haber contado aquí la leyenda de las otogirisou.
-18_0f84;Esperé que el elixir sirviera contra el veneno de serpiente.;Esperé que el legendario elixir también sirviera contra el veneno de las serpientes.
+18_0f32;Pensé con calma que las otogiriso no harían nada.;Pensé con calma que, después de todo, las otogiriso no iban a hacer nada.
+18_0f5c;Lamenté no contar la leyenda.;Lamenté no haber contado aquí la leyenda de las otogiriso.
+18_0f84;Esperé que el elixir curara el veneno de serpiente.;Esperé que el legendario elixir también sirviera contra el veneno de las serpientes.
 18_0fd8;Me pregunté qué pasaría si lo untaba en el ombligo.;Me pregunté qué pasaría si me lo aplicaba en el ombligo.
 19_01b9;Y fui como Zubat, justiciero.;y acudí con el corazón de Zubat, el justiciero.
 19_0211;¡Cuac! Fui de mirón ♥;¡Cuac!... Fui y volví con alma de mirón como Black Devil, ¡eso hice! ♥
@@ -586,7 +586,7 @@
 07_219e;;(parte de 07_2192)
 07_21a3;;(parte de 07_2192)
 08_163d;“¡¿Sus padres le enseñan modales en la mesa?!”;“¡¿Acaso sus padres le enseñan modales en la mesa?!”
-08_16a6;“¡Me sangraría la nariz!”;“¡Si como eso, me sangra la nariz!”
+08_16a6;“¡Con eso me sangra la nariz!”;“¡Si como eso, me sangra la nariz!”
 08_16de;“Hígado, anguila, ajo, ñame...”;“Hígado, tortuga de caparazón blando, huevo crudo, anguila, ajo, puerro, ñame rallado...”
 10_074c;“¡Arde mi corazón!”/Me abrí la camisa.;“¡Lo que arde es mi corazón!”/Me abrí la camisa y le mostré el pecho.
 10_07a6;“¡Fuego y peleas, flor de Edo!”/Volé sobre Edo.;“¡Los incendios y las peleas son las flores de Edo!”/Volé sobre las ochocientas ocho calles del gran Edo.
@@ -607,7 +607,7 @@
 16_17de;Para que Nami no lo viera, rompí el calendario y huí.;para que Nami no lo viera, rompí el calendario, lo tiré y salí corriendo.
 16_1810;Me dio mala espina y salí huyendo de allí.;me dio mala espina y salí corriendo de allí como si huyera.
 16_183a;Al saber que era butsumetsu, mal día, huí asustado.;al darme cuenta de que hoy era butsumetsu, un día de mala suerte, me asusté aún más y salí corriendo.
-16_1869;Akaguchi... ¿qué sería eso?, me pregunté mientras corría.;Akaguchi... ¿qué sería eso de la boca roja?, me pregunté mientras echaba a correr.
+16_1869;Akaguchi... ¿qué sería eso?, me pregunté corriendo.;Akaguchi... ¿qué sería eso de la boca roja?, me pregunté mientras echaba a correr.
 18_20e3;“Volvamos a la casilla de salida... ¡a sus marcas!”;“Entonces volvamos a la casilla de salida... ¡a sus marcas!”
 18_2103;“Mmm, el botón de reinicio...”;“Mmm, el botón de reinicio, el botón de reinicio...”
 19_0fde;“¡Esta armadura tiene truco!”;“¡Esta armadura tiene algún mecanismo!”
@@ -640,3 +640,18 @@
 35_2cfc;¿Lo hará a propósito...?;¿Lo estará haciendo a propósito...?
 35_2d13; Sentí la desconfianza de Nami.; Me llegó la desconfianza de Nami.
 29_00f8;Ya es hora de cortejarla.;Ya es hora de ir empezando a cortejarla.
+06_1e25;“Ahora tengo un as bajo la manga.”;“En momentos como este, tengo un as bajo la manga.”
+08_165e;“...Pero cuida bien el equilibrio nutricional.”;“...Pero ha pensado muy bien en el equilibrio nutricional.”
+12_0519;“¡Correría hasta sobre una plancha al rojo vivo!”;“¡Podría correr incluso sobre una plancha al rojo vivo!”
+12_053e;“¡Comería raspado de hielo en un congelador!”;“¡Me comería raspado de hielo dentro de un congelador!”
+14_0702;Pensé en exagerar la historia y contarla al detalle.;Pensé en exagerar la historia y contarla con todo detalle.
+14_068b;Le daré un toque de terror para asustar a Nami.;Le daré un toque de terror, de los que asustan a Nami.
+14_0f17;Giré el volante hacia la zanja para detener el auto.;Giré el volante para caer en la zanja y detener el auto.
+15_19f2;“O quizá venga el bakeneko, el jefe de todos.”;“O quizá se presente el bakeneko, el jefe de todos.”
+16_0160;Sentí que veía un fantasma y me quedé quieto.;Sentí que veía un fantasma y me quedé clavado en el sitio.
+16_0137;Oí la voz de un ángel y agucé el oído.;Sentí que oía la voz de un ángel y agucé el oído.
+16_0ffa;“¿Solo se medían? ¿No jugaban al doctor?”;“¿Solo se medían la estatura? ¿No jugaban al doctor?”
+16_1055;“¡Si es esa historia, cuéntamela después de huir!”;“¡Si es esa clase de historia, cuéntamela después de huir!”
+18_22b0;Me dio curiosidad qué mecanismo tendría.;Me dio curiosidad saber qué clase de mecanismo tendría.
+18_3026;“Busquemos el baño.” Salí a toda prisa.;“Busquemos el baño.” Salí de la habitación a toda prisa.
+23_2125;“¡No me digas que hay hasta hijos!”;“¡No me digas que hasta hay hijos de por medio!”
