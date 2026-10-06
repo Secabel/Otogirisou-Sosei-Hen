@@ -72,7 +72,7 @@ class Modelo:
         """s: texto ES normalizado (con '/'); estado = dict(x, pw, lin, gl). Devuelve texto con \\n y \\f (paginas cortadas en finales de frase, <=maxl filas y <=gmax glifos); actualiza estado.
         maxl_fin/gmax_fin: limite SOLO para la ultima pagina (la que comparte pantalla con las opciones de un menu): si no cabe, las ultimas frases pasan a una pagina nueva."""
         maxl = maxl or self.maxl
-        chunks = [m.group(0) for m in re.finditer(r'.+?(?:[.?!…]+”?(?!\s*[,;:a-záéíóúñü])\s*/?|/|$)', s, re.S) if m.group(0)]
+        chunks = [m.group(0) for m in re.finditer(r'.+?(?:[.?!…]+”?(?!\d)(?!\s*[,;:a-záéíóúñü])\s*/?|/|$)', s, re.S) if m.group(0)]
         mg = []                                      # un dialogo corto abierto (“ sin ”) no se parte entre paginas: se unen sus frases
         for ch in chunks:
             if mg and mg[-1].count('“') > mg[-1].count('”') and len(mg[-1].replace('/', '')) + len(ch) <= 75 and not mg[-1].rstrip().endswith('/'): mg[-1] += ch
@@ -83,7 +83,7 @@ class Modelo:
         gfin = self.gmax if gmax_fin is None else gmax_fin
         def cabe(e): return e['lin'] + 1 <= maxl_fin and e['gl'] <= gfin
         if cabe(st): estado.update(st); return txt
-        if menu_limpio and maxl_fin <= 0:      # grupo 4: las opciones llenan la pantalla -> enunciado entero y opciones solas en pagina limpia
+        if menu_limpio and (maxl_fin <= 0 or gfin <= 0):      # grupo 4: las opciones llenan la pantalla -> enunciado entero y opciones solas en pagina limpia
             estado.update(st); r = txt.rstrip('\n'); estado.update(x=X0, pw=0, lin=0, gl=0); return r + '\f'
         g0 = self.gmax
         for k in range(len(chunks), 0, -1):        # cuantas mas frases finales quepan en la pagina del menu, mejor

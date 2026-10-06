@@ -246,12 +246,12 @@ def parchear_ranuras(exe):
 # (avance 8*(w_ant+w_act)); se anade 1 px entre glifos (0x8003d0a4: el `sh` intermedio se cambia por `addiu v0,v0,16`).
 TABLA_AYUDA, CONT_AYUDA, INI_AYUDA = 0x800657c4, 0x80065e20, 0x80065e2c
 PAGINAS_AYUDA = [
- "Tú y Nami van en auto por la montaña, de cita. Todo va bien hasta que ven una otogirisou junto al camino.",
+ "Tú y Nami van en auto por la montaña, de cita. Todo va bien hasta que ven una otogiriso junto al camino.",
  "El auto falla y chocan. Bajo la lluvia, llegan a una vieja mansión sin saber el horror que los espera…",
- "Aparecerán opciones marcadas con letras. Lo que elijas cambiará la historia de “Otogirisou”.",
- "“Otogirisou” tiene varios guiones. Ninguna opción es la correcta: cada una lleva a un final inesperado.",
+ "Aparecerán opciones marcadas con letras. Lo que elijas cambiará la historia de “Otogiriso”.",
+ "“Otogiriso” tiene varios guiones. Ninguna opción es la correcta: cada una lleva a un final inesperado.",
  "Cada partida trae otro desenlace. Cuanto más leas, más opciones surgirán. Tú creas la historia.",
- "¿Qué historia surgirá? Todo depende de tus elecciones. Disfruta de la novela sonora “Otogirisou”.",
+ "¿Qué historia surgirá? Todo depende de tus elecciones. Disfruta de la novela sonora “Otogiriso”.",
 ]
 LIM_AYUDA = 298.0                                   # borde derecho maximo de la tinta (px)
 def envolver_ayuda(txt, ANCHO):
@@ -294,7 +294,7 @@ def texto_ayuda(exe, ID, ANCHO):
 REG_NOMBRE, POS_NOMBRE, SITIO_NOMBRE = 0x80062794, 0x80062960, 0x800213D4
 CENTRO_NOMBRE = 156.0
 # registro: (texto, [(indice de posicion, modo)])  modo 'c' = centrado en 156 px, 'i' = la tinta arranca donde arrancaba la del japones
-NOMBRE_TXT = {0: ('Bienvenido a Otogirisou.', [(0, 'c')]), 1: ('Tu nombre:', [(1, 'c'), (6, 'i')]), 2: ('¿Está bien así?', [(2, 'c')]),
+NOMBRE_TXT = {0: ('Bienvenido a Otogiriso.', [(0, 'c')]), 1: ('Tu nombre:', [(1, 'c'), (6, 'i')]), 2: ('¿Está bien así?', [(2, 'c')]),
               3: ('Empezar así', [(3, 'i')]), 4: ('', []), 5: ('Editar nombre', [(5, 'i'), (9, 'i')]),
               7: ('Desde el inicio', [(7, 'i')]), 8: ('Continuar', [(8, 'i')])}
 def pantalla_nombre(exe, ID, ANCHO):
@@ -329,10 +329,10 @@ def pantalla_nombre(exe, ID, ANCHO):
 # El texto largo usa un contador de huecos que empezaba en 0x50 (huecos 0x6e..): con el limite de atenuado ampliado a 0x90 (v20) se atenuaria -> empieza en 0x72 (huecos >= 0x90).
 REG_FIN, POS_FIN, SITIO_FIN, CUEVA_FIN = 0x80062374, 0x80062744, 0x80020C28, 0x80060B60
 CENTRO_FIN = 156.0
-FIN_TXT = {0: ('Otogirisou tiene un', 'c'), 1: ('sistema multiescenario:', 'c'), 2: ('al terminar, vivirás una', 'c'), 3: ('nueva historia. Antes,', 'c'),
+FIN_TXT = {0: ('Otogiriso tiene un', 'c'), 1: ('sistema multiescenario:', 'c'), 2: ('al terminar, vivirás una', 'c'), 3: ('nueva historia. Antes,', 'c'),
            4: ('guarda tu partida.', 'c'), 5: ('Guardar', 'i'), 6: ('No guardar', 'i'),
            7: ('Los datos de la partida', 'c'), 8: ('actual no se guardarán.', 'c'), 9: ('¿Estás de acuerdo?', 'c'), 10: ('Sí', 'i'), 11: ('No', 'i'),
-           12: ('Sigue disfrutando del', 'c'), 13: ('mundo de Otogirisou.', 'c'), 14: ('Y ahora, ¿qué final', 'c'), 15: ('te estará esperando?', 'c'),
+           12: ('Sigue disfrutando del', 'c'), 13: ('mundo de Otogiriso.', 'c'), 14: ('Y ahora, ¿qué final', 'c'), 15: ('te estará esperando?', 'c'),
            16: ('Continuar', 'i'), 17: ('Salir', 'i')}
 def pantalla_fin(exe, ID, ANCHO):
     gw = lambda c: min(ANCHO[c], 16)
