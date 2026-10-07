@@ -9,6 +9,7 @@ SEGUROS = {3, 9, 0xa, 0x14, 0x13, 0x15, 0x16, 0x1f, 0x20, 0x23, 0x24, 0x26, 0x29
 CIERRE_OK = SEGUROS | {5, 7, 0xb, 0x17, 0x18, 0x19, 0x1c, 0x1d, 0x1e, 0x21, 0x22, 0x25, 0x27, 0x28, 0x2a, 0x2b}    # ops que no mueven texto: los cierres pueden pasar antes de ellos
 import re
 _CIERRE = re.compile(r"[ ]*(?:[”’»)!?.,;:]|…(?=[ ”’)]))+(?:[ ]*[”’»)])*")
+SIN_FUSION = {'28_3c2d', '02_2b2f', '06_299b', '09_2c06', '09_2c9f', '11_0742', '16_0356', '16_16f4', '20_1fd1', '32_176f', '32_1b87', '32_2555', '10_1faf', '20_0718', '27_24fd', '39_118e'}      # LOOP 6 (pausa): la pausa del original va tras '¿verdad…' (frase cerrada dentro de una cita abierta); fusionar la movia a 'pero a' (antes del nombre)
 def _no_terminal(t):
     t = t.rstrip(' /')
     return bool(t) and (t[-1].isalnum() or t[-1] in ',;“' or (lambda u: u.count('“') > u.count('”'))(t.rsplit('/', 1)[-1]))     # tambien: dialogo abierto sin cerrar
@@ -53,7 +54,9 @@ def fusionar(X, U, tr):
                         tr[u['id']] = B; n += 1
                 if A.strip() and not any(ch.isalnum() for ch in B) and B.strip() and '/' not in B:        # solo signos/comillas: nunca solos tras una espera
                     tr[cur] = A + B; B = ''; tr[u['id']] = B; n += 1
-                elif A.strip() and _no_terminal(A):
+                elif u['id'] in SIN_FUSION:          # la pausa se queda donde esta; solo el espacio de union tras la puntuacion de A
+                    if B and not B.startswith((' ', '/')): B = ' ' + B; tr[u['id']] = B
+                elif A.strip() and _no_terminal(A) and u['id'] not in SIN_FUSION:
                     p0 = next((q for q, ch in enumerate(B) if ch.isalnum()), None)
                     m = re.compile(r'[.?!…]+”?').search(B, p0) if p0 is not None else None
                     pre, rest = (B[:m.end()], B[m.end():]) if m else (B, '')
@@ -154,7 +157,8 @@ def _pasada(X, U, tr, M, stats, inc, cad, deficit):
                 if L2[q].op == 0x12: lead = True; break
                 q -= 1
             if lead: gaps = [-1] + gaps
-            j = (T.NOM if lead else '') + ''.join(p + (T.NOM if g in gaps else '') for g, p in enumerate(ps))      # v21: el nombre del protagonista entre unidades de la etiqueta ocupa sitio
+            j = (T.NOM if lead else '') + ''.join(p + (T.NOM if g in gaps else '') for g, p in enumerate(ps))
+            j = re.sub(r'(”)/', r'\1 ', j)          # LOOP 6 (corte): en una OPCION la narracion sigue a la cita en la MISMA fila (el '/' del original forzaba salto: '“¡Naomi, espera!”' / 'Fui tras Naomi'); el ajuste por palabras decide donde cortar      # v21: el nombre del protagonista entre unidades de la etiqueta ocupa sitio
             if M.comprobar(j.replace(T.NOM, '')): cache_lab[k] = ('', 0, 0, ps, [''] * len(ch))
             else:
                 txt, xx, pp = M.componer_opcion(j.rstrip(' ')); cache_lab[k] = (txt, xx, pp, ps, _repartir(ps, txt, gaps))     # sin espacio final (abriria una fila vacia)

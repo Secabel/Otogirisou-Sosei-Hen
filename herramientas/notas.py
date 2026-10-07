@@ -19,12 +19,13 @@ NOTAS = [  # (regex, nota)  -- la nota debe caber en UNA fila
     (r'\bhannya', '*Hannya: máscara de demonio'),
     (r'\brakugo', '*Rakugo: relato cómico oral'),
     (r'\btatami', '*Tatami: estera de paja'),
-    (r'\bsashimi', '*Sashimi: pescado crudo'),
+    (r'\bsashimi', '*Sashimi: pez crudo'),
     (r'\btonkatsu', '*Tonkatsu: chuleta de cerdo'),
     (r'\bsuigyomatsu', '*Suigyomatsu: cuento Jugemu'),
     (r'\boiwa', '*Oiwa, Okiku: fantasmas'),
     (r'\bkaguya', '*Kaguya: princesa lunar'),
     (r'hubiera un incendio', '*NT: es un refrán japonés'),     # 06_1caf (terremoto, rayo, incendio, padre)
+    (r'¿Flores\?', '*NT: “hana” es flor y nariz'),     # 06_00f7 '¿Eh? ¿Flores?' (juego de palabras 花/鼻 de 06_0102; la nota va al final de esa pagina)
 ]
 NOTAS = [(re.compile(r, re.I), n) for r, n in NOTAS]
 GMAX_TOTAL = 196      # el motor limpia 200 huecos; margen de 4 sobre el recuento del compositor (LOOP 5 limpieza)
