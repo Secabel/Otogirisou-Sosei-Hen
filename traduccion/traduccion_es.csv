@@ -165,7 +165,7 @@
 00_1e82;0;「よし」/ぼくはいった。/;“Muy bien”, dije.
 00_1e97;0;ピンチだとドンドン冷静になる。;En el peligro, me vuelvo cada vez más sereno.
 00_1eac;0;「とりあえず、ここでじっとしていよう」/;“Por ahora, quedémonos quietos aquí.”
-00_1ec7;0;どたん場になるほどヤケッパチになる。;Cuanto más al borde del abismo, más me da por todo.
+00_1ec7;0;どたん場になるほどヤケッパチになる。;Cuanto más al límite, más temerario me vuelvo.
 00_1edf;0;「よし、ハッキリさせよう。家中さがして、ここの住人を見つけ出す！」/;“Bien, aclaremos esto. ¡Recorramos toda la casa y encontremos al habitante!”
 00_1f10;0;「そんな……何考えてるの。こんなところでジッとしてるなんて」/「じゃあ、どうする。探検でもしてみるか」/「それもイヤ！」/「じゃあどうするんだよ！」/「……帰りたい」/「だから、それはムリだって！」;“¿Cómo...? ¿Qué estás pensando? Quedarnos quietos en un lugar así.”/“Entonces qué hacemos. ¿Exploramos?”/“¡Eso tampoco!”/“¡Entonces qué quieres que hagamos!”/“...Quiero irme a casa.”/“¡Ya te dije que eso es imposible!”
 00_1f85;0;「じゃ、もうイイ！」/「わがままばっかりいうなよ……あっ、オイ奈美、どこ行くんだよっ！」/奈美はクルリと背を向けると、どんどん奥へ行ってしまった。;“¡Entonces, déjalo!”/“No seas tan caprichosa... ¡Oye, Nami, adónde vas!” Nami dio media vuelta de golpe y se internó cada vez más hacia el fondo.
@@ -746,7 +746,7 @@
 02_13d0;2;ぼくも不安になって奈美にすりよった。;Yo también me inquieté y me acerqué a Nami.
 02_13f0;2;男らしく道をさがすことにした。;Decidí buscar el camino como todo un hombre.
 02_140b;2;「道をさがすって……;“Dices que busquemos el camino... 
-02_1419;2;真っ暗よ」/燃えていた車の火も、この雨でもう消えてしまった。/「そういうときのために」/ぼくは持ち出しておいたバッグから、懷中電灯を取り出した。;si está oscuro como boca de lobo.”/El fuego del auto que ardía ya se había apagado con esta lluvia./“Para eso mismo.”/Del bolso que había sacado, saqué una linterna.
+02_1419;2;真っ暗よ」/燃えていた車の火も、この雨でもう消えてしまった。/「そういうときのために」/ぼくは持ち出しておいたバッグから、懷中電灯を取り出した。;si está oscuro como boca de lobo.”/El fuego del auto que ardía ya se había apagado con esta lluvia./“Para momentos como este.”/Del bolso que había traído, saqué una linterna.
 02_147b;2;「えらい……よく気がついたわね」/スイッチをいれると、ヤミの中に一面の黄色い花の群れが浮かび上がった。;“Muy bien... Qué buena idea haberla traído.”/Al encender el interruptor, en la oscuridad surgió un campo de flores amarillas.
 02_14c4;2;「まあ……」/「なんだヨ……ここ、弟切草だらけだぞ」/「ねえ、あんなとこに郵便受けがある！」/奈美がちょっと先の森を指さした。/赤い郵便受けが野ざらしにされ、後ろの森へつづく細い道がある。;“Vaya...”/“Qué es esto... Este lugar está lleno de otogiriso.”/“¡Oye, mira, allá hay un buzón!”/Nami señaló el bosque un poco más adelante. Un buzón rojo estaba abandonado a la intemperie y había un camino angosto que seguía hacia el bosque de atrás.
 02_153f;2;「ってことは、この先に家があるのよ！」/;“¡Eso quiere decir que más adelante hay una casa!”
@@ -1795,11 +1795,11 @@
 04_3e72;4;7月3日。/今日私は初めて知った。私に双子の妹がいたなんて。/お母さんが何かをかくしていたのは前から知っていたが、今日引き出しの中から母子手帳を見つけた。/なぜかくしていたのかとたずねても、お母さんは妹はすぐに死んでしまったとしかいわない。;3 de julio. Hoy me enteré por primera vez de que tengo una hermana gemela menor. Desde hace tiempo sabía que mamá escondía algo, pero hoy encontré una libreta de salud maternoinfantil en un cajón. Cuando le pregunté por qué la había escondido, solo me dijo que mi hermana murió enseguida.
 04_3f0d;4;けど私はちがうと思う。お母さんはまだ何かをかくしている。/今日私は20才になった。;Pero yo creo que no es así. Mamá todavía esconde algo. Hoy cumplí 20 años.
 04_3f43;4;9月20日。/母の日記を読んだ。ヤケドの原因がわかった。妹が起こした火事が原因だったことがわかった。;20 de septiembre. Leí el diario de Madre. Descubrí la causa de la quemadura. La causa fue el incendio que provocó mi hermana menor.
-04_3f87;4;母は奈美はそのときの火事が原因で死んだ; Madre dice que Nami murió en el incendio de entonces
-04_3fa4;4;奈美は死んだんだといっている; dice que Nami murió, dice
-04_3fb7;4;がそういっているが; eso dice, pero
-04_3fc2;4;うそに決まっている。うそ; seguro que es mentira. Mentira
-04_3fd1;4;うそに決まっている。絶対にうそまだ何かかくしている。; seguro que es mentira. Es totalmente mentira, todavía esconde algo.
+04_3f87;4;母は奈美はそのときの火事が原因で死んだ; Madre dice que Nami murió en el incendio de entonces...
+04_3fa4;4;奈美は死んだんだといっている; dice que Nami murió...
+04_3fb7;4;がそういっているが; lo dice, pero...
+04_3fc2;4;うそに決まっている。うそ; seguro que es mentira. Mentira...
+04_3fd1;4;うそに決まっている。絶対にうそまだ何かかくしている。; seguro que es mentira. Es totalmente mentira... todavía esconde algo.
 04_3ff3;4;9月30日。/母はまだかくしている;30 de septiembre. Madre todavía esconde algo
 04_400a;4;まだかくしている; todavía esconde algo
 04_4014;4;いくら聞いても答えてくれない; no responde por más que pregunto
@@ -1838,8 +1838,8 @@
 04_49f8;4;「でもね、人間の友達ができなかったかわりに、私には、それ以外のお友達がたくさんできたの。;“Pero sabes, a cambio de no poder hacer amigos humanos, pude hacer muchos otros tipos de amigos.
 04_4a31;4;わかる?　どういうお友達か……。/あのね、草や花、星や風とお話ができるようになったの。うふふ、信じられないでしょ？　でもほんとうなのよ。お姊さんを信じて……。素晴らしいわよ、お花畑ではいっぱいの花が愛を語っているの、風や星は宝石のような詩を、凉しい朝や静かな夜に届けてくれるの……」; ¿Sabes qué clase de amigos? Es que aprendí a hablar con las hierbas, las flores, las estrellas y el viento. Ji, ji, no lo puedes creer, ¿verdad? Pero es verdad. Cree en tu hermana... Es maravilloso: en el jardín de flores, miles de flores hablan de amor, y el viento y las estrellas me traen poemas como joyas en las mañanas frescas y las noches tranquilas...”
 04_4ade;4;日記に書いていた、お友達というのはそういう意味だったのか。/……ナオミは完全に自分の世界に閉じこもっている。;Así que a eso se refería con amigos en su diario... Naomi estaba completamente encerrada en su propio mundo.
-04_4b27;4;「人間は醜いでしょ。悲しいでしょ。信じたものはすぐに崩れていくわ。きのうまで信じていたものが、今日は得体の知れない化け物になって私を苦しめはじめるのよ。奈美……私はあなたのせいでヤケドを負ったことは知ってるわ。昔は私もそれを恨みに思ったわ。;“Los humanos son feos, ¿verdad? Tristes. Lo que uno cree se derrumba enseguida. Lo que creías ayer se convierte hoy en un monstruo irreconocible y empieza a atormentarme. Nami... sé que me quemé por tu culpa. Antes yo también te lo reproché con rencor.
-04_4bbc;4;でも、いまはちがうの。醜い人間ではなく、星や風の声が聞けるもの、木や花が友達だもの。奈美、私は幸せよ……。そして、妹のあなたにもこの幸せを味わって欲しいの」/; Pero ahora es distinto. No son los humanos feos, sino que oigo la voz de las estrellas y el viento, y los árboles y las flores son mis amigos. Nami, soy feliz... Y quiero que tú, mi hermanita, también saborees esta felicidad.”
+04_4b27;4;「人間は醜いでしょ。悲しいでしょ。信じたものはすぐに崩れていくわ。きのうまで信じていたものが、今日は得体の知れない化け物になって私を苦しめはじめるのよ。奈美……私はあなたのせいでヤケドを負ったことは知ってるわ。昔は私もそれを恨みに思ったわ。;“Los humanos son feos, ¿verdad? Tristes. Lo que uno cree se derrumba enseguida. Lo que yo creía hasta ayer hoy se convierte en un monstruo irreconocible y empieza a atormentarme. Nami... sé que me quemé por tu culpa. Antes yo también te lo reproché con rencor.
+04_4bbc;4;でも、いまはちがうの。醜い人間ではなく、星や風の声が聞けるもの、木や花が友達だもの。奈美、私は幸せよ……。そして、妹のあなたにもこの幸せを味わって欲しいの」/; Pero ahora es distinto. En vez de humanos feos, oigo la voz de las estrellas y el viento, y los árboles y las flores son mis amigos. Nami, soy feliz... Y quiero que tú, mi hermanita, también saborees esta felicidad.”
 04_4c22;4;車椅子が動き出した。;La silla de ruedas se puso en movimiento.
 04_4c38;4;「さあっ、行きましょう。熟いのは、ほんの一瞬だけだから」/わかった。/ナオミは奈美に、自分と同じヤケドをおわすつもりだ。/「待てっ！」/ぼくは叫んだ;“Bueno, vamos. Solo quema un instante.” Lo comprendí. Naomi pensaba dejar a Nami con las mismas quemaduras que ella. “¡Espera!” grité
 04_4c96;4;。/同時に、ナオミは振り返った。;. Al mismo tiempo, Naomi se volvió.
@@ -3367,7 +3367,7 @@
 07_38ed;7;「信じるものは救われる！」;“¡Quien cree será salvado!”
 07_3901;7;にわかクリスチャンで、頭からドアに体当たりだ。;Como cristiano de ocasión, embestí la puerta de cabeza.
 07_3926;7;「家内安全、商壳ハン盛」;“Seguridad en el hogar y prosperidad en los negocios.”
-07_393d;7;……豐川稻荷でOKだろうか。/;...¿Bastará con Toyokawa Inari?
+07_393d;7;……豐川稻荷でOKだろうか。/;...¿Bastará con Toyokawa Inari (santuario)?
 07_3957;7;「世界人類が平和でありますように」;“Que la humanidad viva en paz.”
 07_3972;7;……あのプレートは何なのだろう。/;...¿Qué será esa placa?
 07_398b;7;「なんじ、カンインするなかれ」;“No cometerás adulterio.”
@@ -5367,7 +5367,7 @@
 14_0848;14;「ああ、どす黒い血がこびりついた大きなやつだ。その大ナタを手に、おのれ弟めと乗り込んだ」/「きゃッ、その先、もう話さなくていい……」/奈美は耳をおおった。/ぼくはかまわず話しつづけた。;“Sí, uno enorme, con sangre negruzca pegada. Con ese machete, entró diciendo ʻmaldito hermanoʼ.” “¡Kya! No sigas, ya no me cuentes más...” Nami se tapó los oídos. Yo seguí contando sin hacerle caso.
 14_08ba;14;「弟は恋人と一緒にいた。兄はまず、逃げようとする弟の髪の毛をムンズとつかんで引き倒し、その大ナタを思いっきり振り下ろした！」/「イヤッ！」/「ドバッと血しぶきが飛んで、首がゴロリ。兄は次に、ヒメイを上げて逃げまどう女の胸に、グサリとナタを振り下ろした！」;“El hermano menor estaba con su novia. El mayor primero agarró de los pelos al menor que intentaba huir, lo derribó y descargó el machete con todas sus fuerzas.” “¡No!” “La sangre salpicó a chorros y la cabeza rodó. Luego, a la mujer que huía gritando, le clavó el machete en el pecho.”
 14_095f;14;「;“
-14_0962;14;、ヤメてったら……！」/「そのとき血しぶきがかかった草だってのが、弟切草の名前の由来」/;, ¡que pares ya...!” “La hierba que recibió esa sangre es el origen del nombre otogiriso.”
+14_0962;14;、ヤメてったら……！」/「そのとき血しぶきがかかった草だってのが、弟切草の名前の由来」/;, ¡que pares ya...!” “La hierba que quedó salpicada con esa sangre es el origen del nombre otogiriso.”
 14_09a5;14;「……」/;“...”
 14_09b3;14;奈美;Nami
 14_09b9;14;はふうっと息をついた。/「もう……シュミ悪いんだから」/ぼくを軽くにらんでいる。; suspiró. “Ay... qué mal gusto tienes.” Me fulminó levemente con la mirada.
@@ -9453,10 +9453,10 @@
 26_00bc;26;「ねえ、それって算談？……;“Oye, ¿eso es una broma?... 
 26_00cd;26;明かりつけたの、;La luz la encendiste tú, 
 26_00d8;26;なんでしょ？」/;, ¿verdad?”
-26_00e4;26;「え……？」/「私は……;“¿Eh...?”/“Yo... pensaba que 
-26_00f4;26;が、よくランプを見つけたなあって……; había sido muy listo al encontrar la lámpara...
+26_00e4;26;「え……？」/「私は……;“¿Eh...?”/“Yo... pensaba que tú, 
+26_00f4;26;が、よくランプを見つけたなあって……;, habías sido muy listo al encontrar la lámpara...
 26_010a;26;」/……ぼくらはランプの明かりの中で固まってしまった。;”/...Nos quedamos petrificados bajo la luz de la lámpara. 
-26_012d;26;「そ……それじゃ」/「いったい、誰がつけたの？」/ふたりの声はふるえている。/;“E-entonces...”/“¿Quién la encendió, en realidad?”/Las voces de ambos temblaban.
+26_012d;26;「そ……それじゃ」/「いったい、誰がつけたの？」/ふたりの声はふるえている。/;“E-entonces...”/“¿Quién la encendió, en realidad?”/Nuestras voces temblaban.
 26_015c;26;「きゃっ」/すぐ近くからの物音に、ぼくらはトビ上がった。;“¡Kyaa!”/Un ruido muy cercano nos hizo saltar. 
 26_0181;26;「だ……誰かいるのよ、やっぱり！」/「だッ、誰か……;“¡H-hay alguien, lo sabía!” “¡¿H-hay alguien...
 26_01a3;26;いるんですかあ！」/ぼくはやっとカスレ声を出した。/「; aquí?!” Por fin logré decir con voz ronca. “

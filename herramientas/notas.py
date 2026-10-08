@@ -21,6 +21,8 @@ NOTAS = [  # (regex, nota)  -- la nota debe caber en UNA fila
     (r'\btatami', '*Tatami: estera de paja'),
     (r'\bsashimi', '*Sashimi: pez crudo'),
     (r'\btonkatsu', '*Tonkatsu: chuleta de cerdo'),
+    (r'\bjitterbug', '*Jitterbug: baile de swing'),
+    (r'dios del trueno|roban? el ombligo', '*NT: superstición japonesa'),
     (r'\bsuigyomatsu', '*Suigyomatsu: cuento Jugemu'),
     (r'\boiwa', '*Oiwa, Okiku: fantasmas'),
     (r'\bkaguya', '*Kaguya: princesa lunar'),
@@ -29,6 +31,8 @@ NOTAS = [  # (regex, nota)  -- la nota debe caber en UNA fila
 ]
 NOTAS = [(re.compile(r, re.I), n) for r, n in NOTAS]
 GMAX_TOTAL = 196      # el motor limpia 200 huecos; margen de 4 sobre el recuento del compositor (LOOP 5 limpieza)
+MENU_REINICIA = True
+REPITE_CON_ENTRADA = True      # LOOP 7: si la pagina tiene una entrada (destino de salto) se puede llegar a ella sin haber pasado por la pagina que ya llevo la nota: se vuelve a poner
 POSPONER = False      # notas pospuestas a la pagina siguiente: DESACTIVADO (la pagina siguiente puede alcanzarse sin haber leido el termino)
 OPS_CORTE = ()
 
@@ -54,7 +58,7 @@ def insertar_notas(X, M, DEST, verbose=True):
     pend_total = 0
     for sc, (L, _) in enumerate(X):
         lines = 0; gl = 0; skip01 = False; k = 0; nombre = len(M.nombre); prev_txt = False
-        terms = {}; pag_txt = []; vistos = set()      # v67: solo la primera aparicion de cada termino en la escena
+        terms = {}; pag_txt = []; vistos = set(); invalidos = set()      # v67: solo la primera aparicion de cada termino en la escena
         dests = []; saltos = False; pend = None       # v68: ver docs/08 32ai
         while k < len(L):
             t = L[k]
@@ -63,7 +67,7 @@ def insertar_notas(X, M, DEST, verbose=True):
                     # v68: una nota es segura si todo destino de salto de la pagina cae en/antes del primer token con el termino
                     # (quien llega al final de la pagina ya leyo el termino). Si hay destino DESPUES, el termino puede no haberse leido:
                     # la nota se pospone a la pagina siguiente SOLO si esa no tiene destinos ni saltos (flujo lineal desde esta).
-                    seg = [n for n in sorted(terms) if n not in vistos]
+                    seg = [n for n in sorted(terms) if n not in vistos or (REPITE_CON_ENTRADA and (dests or n in invalidos))]
                     seguras = [n for n in seg if all(d <= terms[n] for d in dests)]
                     riesgo = [n for n in seg if n not in seguras]
                     nn = list(seguras); de_pend = False
@@ -80,10 +84,13 @@ def insertar_notas(X, M, DEST, verbose=True):
                             L[k:k] = [S.Tok('c', 1, b'\x00\x01', None) for _ in range(pad)] + [S.Tok('t', 0, M.codificar(nn[0]), None)]
                             vistos.add(nn[0]); puestas.append((sc, nn[0])); texto_pagina.append((sc, nn[0] + (' [pospuesta]' if (de_pend and nn[0] == pend) else ''), ' '.join(pag_txt)[:90])); k += pad + 1
                             if de_pend and nn[0] == pend: pend_total += 1
+                    if dests: invalidos |= vistos      # LOOP 7: a partir de una entrada (destino de salto) se pudo llegar a las paginas siguientes sin haber pasado por la que llevo la nota
+                    if nn and lines + (1 if prev_txt else 0) <= M.maxl - 1 and gl + len(nn[0]) <= GMAX_TOTAL: invalidos.discard(nn[0])
                     pend = riesgo[0] if (riesgo and POSPONER) else None      # v68b: POSPONER=False (LOOP 4: la nota pospuesta salia fuera de contexto, docs/08 32aj)
                     lines = 0; gl = 0; terms = {}; skip01 = (t.op == 0x13); pag_txt = []; prev_txt = False; dests = []; saltos = False
                     k += 1; continue
                 if t.old is not None and (sc, t.old) in DEST: dests.append(k)
+                if t.op == 0x0e and MENU_REINICIA: lines = 0; gl = 0; prev_txt = False; terms = {}; pag_txt = []; skip01 = False; k += 1; continue      # LOOP 7: al elegir una opcion el motor redibuja solo esa opcion (la pregunta y las demas desaparecen): la pagina se cuenta desde ella
                 if t.op in SALTOS: saltos = True
                 if t.op == 1:
                     if skip01: skip01 = False

@@ -224,7 +224,15 @@ def _pasada(X, U, tr, M, stats, inc, cad, deficit):
                             _k = u['tok1']
                             while _k < len(L) and L[_k].kind == 'c' and L[_k].op not in BLOQ_UNION: _k += 1
                             _v = por.get((sc, _k))
-                            if _k > u['tok1'] and _v is not None and _v['id'] in tr and re.search(r'[.?!…”»)]$', s) and re.match(r'[A-Za-zÁÉÍÓÚÑáéíóúñ¿¡“(0-9]', T.normalizar(tr[_v['id']])): s += ' '
+                            # LOOP 7: si la unidad siguiente quedo vacia (un '.' suelto fusionado atras), mirar la siguiente con texto ('mal.'+'Nami' salia pegado)
+                            _n = 0
+                            while _k > u['tok1'] and _v is not None and _v['id'] in tr and not T.normalizar(tr[_v['id']]).strip() and _n < 4:
+                                if _v['raw'].endswith('\n'): _v = None; break      # la unidad vacia conserva su salto de fila: ahi no hace falta espacio
+                                _k = _v['tok1'] + 1; _n += 1
+                                while _k < len(L) and L[_k].kind == 'c' and L[_k].op not in BLOQ_UNION: _k += 1
+                                _v = por.get((sc, _k))
+                            _sig = T.normalizar(tr[_v['id']]) if _v is not None and _v['id'] in tr else ''
+                            if _k > u['tok1'] and _v is not None and _v['id'] in tr and re.search(r'[.?!…”»)]$', s) and re.match(r'[A-Za-zÁÉÍÓÚÑáéíóúñ¿¡“(0-9]', _sig) and not (re.search(r'\d[.,]$', s) and _sig[:1].isdigit()) and not (re.search(r'(^|\s)[a-zñáéíóú]\w{0,4}[….]$', s) and re.match(r'\w{1,2}[….,]', _sig)): s += ' '
                         if opcion:
                             txt, xx, pp, ps, piezas = lab(ch); r = piezas[ch.index(u)]          # la etiqueta se compone ENTERA: sus 01 originales sobran (filas vacias)
                             if u is ch[-1]:
