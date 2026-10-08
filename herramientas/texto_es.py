@@ -114,9 +114,11 @@ class Modelo:
                 ls, xx, pp = self.envolver(''.join(chunks[i:j]), x, pw)
                 if self.filas(ls) <= capr and self.glifos(ls) <= capg: mejor = (j, ls, xx, pp)
                 else: break
-            if mejor is None and primera and (lin0 > 0 or gl0 > 0) and (x == X0 or capr < 2 or capg < 25):
-                ls0, _, _ = self.envolver(chunks[i], X0, 0)
+            if mejor is None and primera and (lin0 > 0 or gl0 > 0) and (x == X0 or capr < 2 or capg < 25 or chunks[i].startswith('/')):
+                _sal = chunks[i].startswith('/') and x != X0      # LOOP 7 (corte): la frase empieza tras un salto de fila pendiente; si no cabe en lo que queda de pagina se pasa ENTERA a la siguiente (antes se partia: 'Eres hija' | 'unica.'); el salto sobra en pagina nueva
+                ls0, _, _ = self.envolver(chunks[i][1:] if _sal else chunks[i], X0, 0)
                 if self.filas(ls0) <= maxl and self.glifos(ls0) <= self.gmax:     # cabe en una pagina limpia: mover la frase entera a la pagina siguiente
+                    if _sal: chunks[i] = chunks[i][1:]
                     paginas.append(['']); lin0 = 0; gl0 = 0; primera = False; x, pw = X0, 0
                     continue
             if mejor is None:                        # una sola frase no cabe: cortar por lineas respetando filas y glifos
