@@ -15,7 +15,7 @@ Fan translation into **Spanish** of *Otogirisou – Sosei Hen* (弟切草 蘇生
 <img src="screenshots/recortadas/captura_06.png" width="250" alt="In-game menu">
 </p>
 
-> **Work in progress.** This repository does **not** contain the game. You need your own copy of the original disc image. Ready-made patches (xdelta) will be published in [Releases](../../releases) when the project is finished; until then, you can build the disc yourself (see below).
+> **This repository does not contain the game.** You need your own copy of the original disc image. The ready-made BPS patch is in [Releases](https://github.com/Secabel/Otogirisou-Sosei-Hen/releases) (apply it to your original disc image with Flips or any BPS patcher); you can also build the disc yourself from source (see below).
 
 ## Building the translated disc from source
 
@@ -63,14 +63,15 @@ Only what is needed to generate the disc is included here. The game files, disc 
 ## Known issues
 
 - **Not translated by design:** the "1回目" counter and the "終" mark on the book screen.
-- The disc includes a demo of another game ("Machi"). Its menus are left untouched on purpose.
+- The disc includes a demo of another game ("Machi"). The demo itself is not translated; only its selector on the "Avance" screen ("Machi" / "Tráiler") is.
 - Not every route has been re-tested after every change; some typos or inconsistencies may remain.
 
 ## Changelog
 
 Build numbers (vNN) are internal disc versions used during development; only the important milestones are listed. Later build numbers only reflect rebuilds of the same content.
 
-- **v78 (current, untested):** v77 plus the Machi demo selector (“Machi” / “Tráiler”) translated.
+- **v1.0 (first release):** the v78 disc published as a BPS patch.
+- **v78:** v77 plus the Machi demo selector (“Machi” / “Tráiler”) translated.
 - **v77:** v76 plus LOOP 9 fixes: missing space after “…” before a new sentence, stray closing quote at page start, lavender-tint chain on fades (nt B side effect), “hana” note moved to the pun page, name-screen “K” brightness, “fuerte e innumerables”.
 - **v76:** v75 plus LOOP 8 fixes: name-link spacing, kitsunebi text and note, lavender note kept after the START reread (nt B), page cuts (mirror, wheelchair) and translation tweaks (placa, mirin note, nails in sun, fire/ruin pun note, otogiriso).
 - **v75:** v74 plus 8 clarifying parentheses (teru teru bozu, mamushi, sansho, yakitori, Hinamatsuri, Yamata no Orochi, Ishinomori, Awa Odori), Meiji note, and the Yokaribe pun fix (12_0ac3).
