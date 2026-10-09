@@ -328,7 +328,7 @@ def pantalla_nombre(exe, ID, ANCHO):
 # ---------------- aviso de fin de juego (rutina 0x80020b08; v30) ----------------
 # 3 pantallas: A (regs 0-6: explicacion + Guardar/No guardar), B (regs 7-11: confirmacion + Si/No), C (regs 12-17: Continuar/Salir).
 # Registros de 24 u16 (48 B) en 0x80062374, posiciones (x,y) en 0x80062744 (indice = registro). Esta rutina TAMBIEN dibuja el menu del demo (regs 18/19, no se tocan),
-# asi que el avance proporcional solo se aplica a registros < 18 (s4 = reg*0x30 < 0x360); el resto avanza 0xf0 como el original.
+# asi que el avance proporcional se aplica a registros < 20 (s4 = reg*0x30 < 0x3C0; 18/19 = menu de avance de la demo, LOOP 9); el resto avanza 0xf0 como el original.
 # x_sprite = x_tabla*16 - 0x30 + pluma  => centro de la 1a casilla = x_tabla - 3 px (en la pantalla del nombre era x_tabla): 'c' = x_nombre + 3, 'i' igual que en el nombre.
 # El texto largo usa un contador de huecos que empezaba en 0x50 (huecos 0x6e..): con el limite de atenuado ampliado a 0x90 (v20) se atenuaria -> empieza en 0x72 (huecos >= 0x90).
 REG_FIN, POS_FIN, SITIO_FIN, CUEVA_FIN = 0x80062374, 0x80062744, 0x80020C28, 0x80060B60
@@ -337,12 +337,13 @@ FIN_TXT = {0: ('Otogiriso tiene un', 'c'), 1: ('sistema multiescenario:', 'c'), 
            4: ('guarda tu partida.', 'c'), 5: ('Guardar', 'i'), 6: ('No guardar', 'i'),
            7: ('Los datos de la partida', 'c'), 8: ('actual no se guardarán.', 'c'), 9: ('¿Estás de acuerdo?', 'c'), 10: ('Sí', 'i'), 11: ('No', 'i'),
            12: ('Sigue disfrutando del', 'c'), 13: ('mundo de Otogiriso.', 'c'), 14: ('Y ahora, ¿qué final', 'c'), 15: ('te estará esperando?', 'c'),
-           16: ('Continuar', 'i'), 17: ('Salir', 'i')}
+           16: ('Continuar', 'i'), 17: ('Salir', 'i'),
+           18: ('Machi', 'j'), 19: ('Tráiler', 'j')}      # LOOP 9: menu de AVANCE (demo de Machi): 6 casillas JP cada uno; 'j' = centrado en el centro del texto JP original
 def pantalla_fin(exe, ID, ANCHO):
     gw = lambda c: min(ANCHO[c], 16)
     i = _o(SITIO_FIN); assert struct.unpack_from('<I', exe, i)[0] == _i(0x09, 17, 17, 0xf0), 'sitio fin inesperado'
     # cueva: si reg >= 18 (demo) -> s1 += 0xf0 ; si no -> cueva de avance proporcional (CUEVA)
-    f = [_i(0x0B, 20, 2, 0x360), _i(0x05, 2, 0, 3), 0, _r(31, 0, 0, 0, 0x08), _i(0x09, 17, 17, 0xf0), J << 26 | (CUEVA >> 2) & 0x3FFFFFF, 0]
+    f = [_i(0x0B, 20, 2, 0x3C0), _i(0x05, 2, 0, 3), 0, _r(31, 0, 0, 0, 0x08), _i(0x09, 17, 17, 0xf0), J << 26 | (CUEVA >> 2) & 0x3FFFFFF, 0]
     assert exe[_o(CUEVA_FIN):_o(CUEVA_FIN) + 4 * len(f)] == bytes(4 * len(f)), 'cueva fin ocupada'
     for k, w in enumerate(f): struct.pack_into('<I', exe, _o(CUEVA_FIN) + 4 * k, w)
     struct.pack_into('<I', exe, i, JAL << 26 | (CUEVA_FIN >> 2) & 0x3FFFFFF)                    # jal CUEVA_FIN (retardo: lh v1,(s2))
@@ -355,7 +356,12 @@ def pantalla_fin(exe, ID, ANCHO):
         S = sum(AV(a, b) for a, b in zip(ws, ws[1:]))
         o = _o(POS_FIN) + 4 * k; x_jp = struct.unpack_from('<h', exe, o)[0]
         if modo == 'c': x = CENTRO_FIN - (S + (ws[-1] - ws[0]) / 2) / 2 + 3
+        elif modo == 'j':
+            nj = list(struct.unpack_from('<24H', exe, _o(REG_FIN) + 48 * k)).index(0)      # casillas del texto JP original (antes de sobrescribir)
+            x = (x_jp - 3 + 8 * (nj - 1)) - (S + (ws[-1] - ws[0]) / 2) / 2 + 3
+            print('  demo reg %d %r: JP %d casillas, tinta ES %.0f px (JP %d px), x %d -> %d' % (k, txt, nj, S + (ws[0] + ws[-1]) / 2, 16 * nj, x_jp, round(x)))
         else: x = x_jp - 8 + ws[0] / 2
+        if k == 18: v = v + [ID[' '] - 0x100] * (6 - len(v))      # LOOP 9: el resalte del menu de avance usa rangos FIJOS de huecos (0x82..0x87 = 1er boton, 0x88..0x8f = 2o): el 1er boton debe ocupar exactamente 6 huecos (si no, la 'T' de 'Tráiler' cae en el rango del otro boton y sale de otro color)
         struct.pack_into('<24H', exe, _o(REG_FIN) + 48 * k, *(v + [0] * 24)[:24])
         struct.pack_into('<h', exe, o, int(round(x)))
 def mensajes_genericos(exe, ID, ANCHO, ch, inv, regs0, verbose=True):

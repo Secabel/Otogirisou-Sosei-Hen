@@ -70,7 +70,8 @@ Only what is needed to generate the disc is included here. The game files, disc 
 
 Build numbers (vNN) are internal disc versions used during development; only the important milestones are listed. Later build numbers only reflect rebuilds of the same content.
 
-- **v77 (current, untested):** v76 plus LOOP 9 fixes: missing space after “…” before a new sentence, stray closing quote at page start, lavender-tint chain on fades (nt B side effect), “hana” note moved to the pun page, name-screen “K” brightness, “fuerte e innumerables”.
+- **v78 (current, untested):** v77 plus the Machi demo selector (“Machi” / “Tráiler”) translated.
+- **v77:** v76 plus LOOP 9 fixes: missing space after “…” before a new sentence, stray closing quote at page start, lavender-tint chain on fades (nt B side effect), “hana” note moved to the pun page, name-screen “K” brightness, “fuerte e innumerables”.
 - **v76:** v75 plus LOOP 8 fixes: name-link spacing, kitsunebi text and note, lavender note kept after the START reread (nt B), page cuts (mirror, wheelchair) and translation tweaks (placa, mirin note, nails in sun, fire/ruin pun note, otogiriso).
 - **v75:** v74 plus 8 clarifying parentheses (teru teru bozu, mamushi, sansho, yakitori, Hinamatsuri, Yamata no Orochi, Ishinomori, Awa Odori), Meiji note, and the Yokaribe pun fix (12_0ac3).
 - **v74:** LOOP 7 fixes: missing space between sentences when a lone "." was merged into the previous text ("mal.Nami"); screens no longer split a sentence between two pages when it did not fit (and ~55 pages that started with an empty row were fixed); 53 translation notes (was 35: menus no longer hide notes, notes repeat when a page can be reached without having seen the earlier one) plus new notes for "jitterbug" and the thunder-god/navel superstition; 9 translation corrections (Naomi's diary rhythm, "Nuestras voces temblaban", "Toyokawa Inari (santuario)", etc.).
