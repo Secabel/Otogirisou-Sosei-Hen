@@ -101,14 +101,16 @@ def codigo_cb(star):
     e(_i(0x25, A0, T0, 8)); e(_i(0x25, A0, T1, -16)); e(0); FIN3 = len(c); e(0); e(0)      # y actual / y previa
     e(_i(0x25, A0, T0, -20)); e(_i(0x09, 0, T1, 0x98)); e(0); FIN4 = len(c); e(0); e(0)    # flag previo
     e(_i(0x24, T4, T0, -36)); e(_i(0x09, 0, T1, COLOR[0])); e(0); FIN5 = len(c); e(0); e(0)      # R del hueco anterior == lavanda
+    e(_i(0x24, T4, T0, -35)); e(_i(0x09, 0, T1, COLOR[1])); e(0); FIN6 = len(c); e(0); e(0)      # LOOP 9 (C): G y B del hueco anterior tambien == lavanda (con solo R, un fundido gris que pasaba por 0x64 encadenaba el tinte)
+    e(_i(0x24, T4, T0, -34)); e(_i(0x09, 0, T1, COLOR[2])); e(0); FIN7 = len(c); e(0); e(0)
     APLICAR = len(c)
     e(_i(0x09, 0, T2, COLOR[0])); e(_i(0x28, T4, T2, 4)); e(_i(0x09, 0, T2, COLOR[1])); e(_i(0x28, T4, T2, 5)); e(_i(0x09, 0, T2, COLOR[2]))
     e(_r(RA, 0, 0, 0, 8)); e(_i(0x28, T4, T2, 6))
     FIN = len(c); e(_r(RA, 0, 0, 0, 8)); e(0)
     def br(at, op, rs, rt, tgt): c[at] = _i(op, rs, rt, tgt - (at + 1)) & 0xffffffff
     br(FIN1, 0x05, T0, T1, FIN); br(APL1, 0x04, T0, T1, APLICAR); br(FIN2, 0x05, T2, 0, FIN)
-    br(FIN3, 0x05, T0, T1, FIN); br(FIN4, 0x05, T0, T1, FIN); br(FIN5, 0x05, T0, T1, FIN)
-    assert len(c) == 41, len(c)
+    br(FIN3, 0x05, T0, T1, FIN); br(FIN4, 0x05, T0, T1, FIN); br(FIN5, 0x05, T0, T1, FIN); br(FIN6, 0x05, T0, T1, FIN); br(FIN7, 0x05, T0, T1, FIN)
+    assert len(c) == 51, len(c)
     return c
 def aplicar_cb(exe, ID):
     c = codigo_cb(ID['*']); o = _o(NUEVO)

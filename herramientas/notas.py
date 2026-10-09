@@ -34,7 +34,7 @@ NOTAS = [  # (regex, nota)  -- la nota debe caber en UNA fila
     (r'hubiera un incendio', '*NT: es un refrán japonés'),     # 06_1caf (terremoto, rayo, incendio, padre)
     (r'\bmirin', '*Mirin: licor de arroz dulce'),     # 09_1bdd
     (r'quedaríamos en la ruina', '*NT: juego con “fuego” y “ruina”'),     # 10_091f (火の車; ver 10_0859)
-    (r'¿Flores\?', '*NT: “hana” es flor y nariz'),     # 06_00f7 '¿Eh? ¿Flores?' (juego de palabras 花/鼻 de 06_0102; la nota va al final de esa pagina)
+    (r'igualito que tu$|^nariz\.”$', '*NT: “hana” es flor y nariz'),     # LOOP 9: la nota va en la pagina del chiste (06_0102 'igualito que tu nariz'), no en la de '¿Flores?' (06_00f7)
 ]
 NOTAS = [(re.compile(r, re.I), n) for r, n in NOTAS]
 GMAX_TOTAL = 196      # el motor limpia 200 huecos; margen de 4 sobre el recuento del compositor (LOOP 5 limpieza)
@@ -42,6 +42,8 @@ MENU_REINICIA = True
 REPITE_CON_ENTRADA = True      # LOOP 7: si la pagina tiene una entrada (destino de salto) se puede llegar a ella sin haber pasado por la pagina que ya llevo la nota: se vuelve a poner
 POSPONER = False      # notas pospuestas a la pagina siguiente: DESACTIVADO (la pagina siguiente puede alcanzarse sin haber leido el termino)
 OPS_CORTE = ()
+
+FORZAR = {'*NT: “hana” es flor y nariz'}      # LOOP 9: la escena 33 salta (op 0e) al medio de esa pagina (06_011c); se acepta que la nota salga tambien por ese camino
 
 def comprobar(M):
     for _, n in NOTAS:
@@ -75,7 +77,7 @@ def insertar_notas(X, M, DEST, verbose=True):
                     # (quien llega al final de la pagina ya leyo el termino). Si hay destino DESPUES, el termino puede no haberse leido:
                     # la nota se pospone a la pagina siguiente SOLO si esa no tiene destinos ni saltos (flujo lineal desde esta).
                     seg = [n for n in sorted(terms) if n not in vistos or (REPITE_CON_ENTRADA and (dests or n in invalidos))]
-                    seguras = [n for n in seg if all(d <= terms[n] for d in dests)]
+                    seguras = [n for n in seg if n in FORZAR or all(d <= terms[n] for d in dests)]
                     riesgo = [n for n in seg if n not in seguras]
                     nn = list(seguras); de_pend = False
                     if pend and pend not in vistos and pend not in nn and not dests and not saltos: nn.append(pend); de_pend = True

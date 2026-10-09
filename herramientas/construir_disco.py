@@ -18,6 +18,7 @@ ap.add_argument('--reiniciar', action='store_true')
 ap.add_argument('--traduccion', action='store_true', help='aplica fuente ES + traduccion (CSV)')
 ap.add_argument('--csv', default='traduccion/traduccion_es.csv', help='CSV id;escena;japones;espanol')
 ap.add_argument('--rom', default="rom/Sound Novel Evolution 1 - Otogirisou - Sosei-hen (Japan) (Rev 1).bin", help='imagen original .bin (MODE2/2352)')
+ap.add_argument('--inicio', default=None, help='solo pruebas: la partida nueva empieza en ESCENA:OFFSET (p.ej. 19:10856)')
 ap.add_argument('--apertura14', action='store_true', help='solo pruebas: las 3 aperturas aleatorias van a la escena 14')
 a = ap.parse_args()
 
@@ -53,6 +54,13 @@ if a.apertura14:
     b44 = bytearray(escenas_orig[44])
     assert b44[0x325:0x32b] == bytes([0, 0x0e, 2, 0, 0, 0]) and b44[0x32b + 5] == 21 and b44[0x334 + 2] == 14
     b44[0x325 + 2] = 14; b44[0x32b + 5] = 14; escenas_orig[44] = bytes(b44)
+if a.inicio:
+    _sc, _of = (int(x) for x in a.inicio.split(':'))
+    b44 = bytearray(escenas_orig[44])
+    assert b44[0x325:0x32b] == bytes([0, 0x0e, 2, 0, 0, 0]) and b44[0x32b + 5] == 21 and b44[0x334 + 2] == 14, 'apertura distinta (--inicio incompatible con --apertura14)'
+    for _p, _q in ((0x325 + 2, 3), (0x32b + 5, 6), (0x334 + 2, 3)):
+        b44[_p] = _sc; b44[_p + 1] = (_of >> 16) & 255; b44[_p + 2] = (_of >> 8) & 255; b44[_p + 3] = _of & 255
+    escenas_orig[44] = bytes(b44); print('INICIO DE PRUEBA: escena %d offset %d' % (_sc, _of))
 hdr = struct.unpack('<9I', cd[:36])
 
 # 1) escenas (con relleno de estres si escala>1) -> sectores alineados

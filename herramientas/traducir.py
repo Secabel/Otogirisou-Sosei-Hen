@@ -134,7 +134,7 @@ def componer_todo(X, U, tr, M, stats=None):
         if '  ' in v_ and '  ' not in tr0.get(k_, ''): res[k_] = re.sub(r'(?<=[^\s])  +(?=[^\s])', ' ', v_)
     return res, prob
 
-BLOQ_UNION = {0x01, 0x13, 0x14, 0x02, 0x12, 0x0e, 0x09, 0x0a, 0x07, 0x2d, 0x2e, 0x2c, 0x38, 0x0d, 0x11, 0x15}      # comandos que cambian de fila/pagina/escena: ahi NO hace falta espacio de union
+BLOQ_UNION = {0x01, 0x13, 0x14, 0x02, 0x12, 0x0e, 0x09, 0x0a, 0x07, 0x2d, 0x2e, 0x2c, 0x38, 0x0d, 0x11}      # comandos que cambian de fila/pagina/escena: ahi NO hace falta espacio de union
 
 def _pasada(X, U, tr, M, stats, inc, cad, deficit):
     """deficit[(escena, token del menu)] = filas que la ultima unidad de la pregunta no pudo liberar (empieza a mitad de linea): se reservan en las unidades anteriores de esa pagina (ronda siguiente)"""
