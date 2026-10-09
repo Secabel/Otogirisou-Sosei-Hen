@@ -10,6 +10,7 @@ CIERRE_OK = SEGUROS | {5, 7, 0xb, 0x17, 0x18, 0x19, 0x1c, 0x1d, 0x1e, 0x21, 0x22
 import re
 _CIERRE = re.compile(r"[ ]*(?:[”’»)!?.,;:]|…(?=[ ”’)]))+(?:[ ]*[”’»)])*")
 SIN_FUSION = {'28_3c2d', '02_2b2f', '06_299b', '09_2c06', '09_2c9f', '11_0742', '16_0356', '16_16f4', '20_1fd1', '32_176f', '32_1b87', '32_2555', '10_1faf', '20_0718', '27_24fd', '39_118e'}      # LOOP 6 (pausa): la pausa del original va tras '¿verdad…' (frase cerrada dentro de una cita abierta); fusionar la movia a 'pero a' (antes del nombre)
+CORTE_ANTES = {'11_0b2d'}      # LOOP 8 (saltos): pagina nueva antes de estas unidades. 11_0b2d: desde la escena 7 llega con 5 filas ocupadas y el corte caia en 11_0b4f, que tambien se alcanza desde las escenas 22/41 con 1 sola fila (quedaba 'Fulmine al espejo.' solo en una pantalla)
 def _no_terminal(t):
     t = t.rstrip(' /')
     return bool(t) and (t[-1].isalnum() or t[-1] in ',;“' or (lambda u: u.count('“') > u.count('”'))(t.rsplit('/', 1)[-1]))     # tambien: dialogo abierto sin cerrar
@@ -122,13 +123,15 @@ def _repartir(partes, txt, gaps=()):
 
 def componer_todo(X, U, tr, M, stats=None):
     """El motor NO limpia la pagina al saltar (ni entre escenas): el estado (filas/glifos) llega por los saltos. Se itera hasta que los estados de llegada se estabilizan."""
-    tr, _ = fusionar(X, U, tr); inc = {}; cad = _cadenas_etiquetas(X, U); deficit = {}
+    tr0 = tr; tr, _ = fusionar(X, U, tr); inc = {}; cad = _cadenas_etiquetas(X, U); deficit = {}
     for ronda in range(12):
         antes = ({k: (v['lin'], v['gl']) for k, v in inc.items()}, dict(deficit))
         st_local = [] if stats is not None else None
         res, prob = _pasada(X, U, tr, M, st_local, inc, cad, deficit)
         if ({k: (v['lin'], v['gl']) for k, v in inc.items()}, deficit) == antes: break
     if stats is not None: stats.extend(st_local)
+    for k_, v_ in list(res.items()):          # LOOP 8: dobles espacios entre palabras/signos (nacen al fusionar una unidad que acaba en espacio con otra que empieza en espacio); se respetan los del CSV original (tablas)
+        if '  ' in v_ and '  ' not in tr0.get(k_, ''): res[k_] = re.sub(r'(?<=[^\s])  +(?=[^\s])', ' ', v_)
     return res, prob
 
 BLOQ_UNION = {0x01, 0x13, 0x14, 0x02, 0x12, 0x0e, 0x09, 0x0a, 0x07, 0x2d, 0x2e, 0x2c, 0x38, 0x0d, 0x11, 0x15}      # comandos que cambian de fila/pagina/escena: ahi NO hace falta espacio de union
@@ -219,7 +222,7 @@ def _pasada(X, U, tr, M, stats, inc, cad, deficit):
                             if fin and u['id'] not in cad: st.update(x=T.X0, pw=0, lin=st['lin'] + fin)      # v43: su salto de linea SI ocurre en el motor -> el estado vuelve al inicio de linea (antes seguia mid-linea: cortes prematuros)
                             continue
                         ch = cad.get(u['id']); opcion = ch is not None and all(e['id'] in tr for e in ch)
-                        ap0 = ''; nl0 = 0
+                        ap0 = ''; nl0 = 0; _cut = ''
                         if not opcion and not fin:      # LOOP 5: texto + comando de pausa (0x29, 0x20...) + texto en la MISMA fila: el japones no usa espacio ('¿Eh?'+'Se oia' salia '¿Eh?Se oia'); se anade el espacio de union
                             _k = u['tok1']
                             while _k < len(L) and L[_k].kind == 'c' and L[_k].op not in BLOQ_UNION: _k += 1
@@ -227,12 +230,17 @@ def _pasada(X, U, tr, M, stats, inc, cad, deficit):
                             # LOOP 7: si la unidad siguiente quedo vacia (un '.' suelto fusionado atras), mirar la siguiente con texto ('mal.'+'Nami' salia pegado)
                             _n = 0
                             while _k > u['tok1'] and _v is not None and _v['id'] in tr and not T.normalizar(tr[_v['id']]).strip() and _n < 4:
-                                if _v['raw'].endswith('\n'): _v = None; break      # la unidad vacia conserva su salto de fila: ahi no hace falta espacio
+                                if _v['raw'].endswith('\n') and not (_v['tok1'] < len(L) and L[_v['tok1']].kind == 'c' and L[_v['tok1']].op in (0x12, 0x2d)): _v = None; break      # la unidad vacia conserva su salto de fila: ahi no hace falta espacio (LOOP 8: salvo si sigue el nombre/enlace: ese salto se quita, ver fin=0 arriba)
                                 _k = _v['tok1'] + 1; _n += 1
                                 while _k < len(L) and L[_k].kind == 'c' and L[_k].op not in BLOQ_UNION: _k += 1
                                 _v = por.get((sc, _k))
+                            _lnk = False
+                            if _v is None and _k < len(L) and L[_k].kind == 'c':      # LOOP 8: texto (+ 0x15) (+ unidad vacia fusionada) + enlace de zapping (0x2d) con el nombre ('volvi…' + 'Nami' salia pegado)
+                                _q = _k + 1 if L[_k].op == 0x15 else _k
+                                if _q < len(L) and L[_q].kind == 't' and (sc, _q) in por and por[(sc, _q)]['id'] in tr and not T.normalizar(tr[por[(sc, _q)]['id']]).strip(): _q = por[(sc, _q)]['tok1']
+                                if _q + 1 < len(L) and L[_q].kind == 'c' and L[_q].op == 0x2d and L[_q + 1].kind == 't': _v = por.get((sc, _q + 1)); _k = _q + 1; _lnk = True
                             _sig = T.normalizar(tr[_v['id']]) if _v is not None and _v['id'] in tr else ''
-                            if _k > u['tok1'] and _v is not None and _v['id'] in tr and re.search(r'[.?!…”»)]$', s) and re.match(r'[A-Za-zÁÉÍÓÚÑáéíóúñ¿¡“(0-9]', _sig) and not (re.search(r'\d[.,]$', s) and _sig[:1].isdigit()) and not (re.search(r'(^|\s)[a-zñáéíóú]\w{0,4}[….]$', s) and re.match(r'\w{1,2}[….,]', _sig)): s += ' '
+                            if _k > u['tok1'] and _v is not None and _v['id'] in tr and re.search(r'[.?!…”»)]$' if not _lnk else r'[.?!…”»)A-Za-zÁÉÍÓÚÑáéíóúñ0-9]$', s) and re.match(r'[A-Za-zÁÉÍÓÚÑáéíóúñ¿¡“(0-9]', _sig) and not (re.search(r'\d[.,]$', s) and _sig[:1].isdigit()) and not (re.search(r'(^|\s)[a-zñáéíóú]\w{0,4}[….]$', s) and re.match(r'\w{1,2}[….,]', _sig)): s += ' '
                         if opcion:
                             txt, xx, pp, ps, piezas = lab(ch); r = piezas[ch.index(u)]          # la etiqueta se compone ENTERA: sus 01 originales sobran (filas vacias)
                             if u is ch[-1]:
@@ -240,6 +248,7 @@ def _pasada(X, U, tr, M, stats, inc, cad, deficit):
                                 nl = txt.count('\n')
                                 st.update(x=max(T.X0, xx - (M.x_opcion - T.X0)), pw=pp, lin=nl, gl=M.glifos(txt.split('\n')))
                         else:
+                            if u['id'] in CORTE_ANTES and (st['lin'] or st['gl']): _cut = '\f'; st.update(x=T.X0, pw=0, lin=0, gl=0)      # LOOP 8 (saltos): pagina nueva ANTES de esta unidad (ver CORTE_ANTES)
                             ml = None; k = u['tok1']; ops = []
                             while k < len(L) and L[k].kind == 'c': ops.append(L[k].op); k += 1
                             if 0x13 in ops and 0x0e in ops[ops.index(0x13):]: ml = M.maxl_preg
@@ -282,6 +291,7 @@ def _pasada(X, U, tr, M, stats, inc, cad, deficit):
                         if not opcion and not ap0:      # v44: signo de apertura (“ ¿ ¡ () que queda al final de una fila con un salto detras: pasa a abrir la fila siguiente (el original es salto + 「)
                             mm = re.search(r'([“¿¡(]+)(\n+)$', r)
                             if mm and r[:mm.start()].strip(): ap = mm.group(1); nlap = len(mm.group(2)); r = r[:mm.start()].rstrip(' ') + mm.group(2) + ap
+                        r = _cut + r
                         res[u['id']] = r; fin_en[(sc, u['tok1'])] = u['id']
                         if stats is not None: stats.append((u['id'], st['lin'] + 1, st['gl'], opcion))
                         if fin and not opcion: st.update(x=T.X0, pw=0, lin=st['lin'] + fin)

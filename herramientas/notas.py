@@ -23,6 +23,7 @@ NOTAS = [  # (regex, nota)  -- la nota debe caber en UNA fila
     (r'\btonkatsu', '*Tonkatsu: chuleta de cerdo'),
     (r'\bjitterbug', '*Jitterbug: baile de swing'),
     (r'dios del trueno|roban? el ombligo', '*NT: superstición japonesa'),
+    (r'\bkitsunebi', '*Kitsunebi: fuego fatuo de zorro'),
     (r'\bmeiji\b', '*Meiji: era (1868-1912)'),
     (r'\bhanako', '*Hanako-san: fantasma del baño'),
     (r'\bkendama', '*Kendama: juguete de bola'),
@@ -31,6 +32,8 @@ NOTAS = [  # (regex, nota)  -- la nota debe caber en UNA fila
     (r'\boiwa', '*Oiwa, Okiku: fantasmas'),
     (r'\bkaguya', '*Kaguya: princesa lunar'),
     (r'hubiera un incendio', '*NT: es un refrán japonés'),     # 06_1caf (terremoto, rayo, incendio, padre)
+    (r'\bmirin', '*Mirin: licor de arroz dulce'),     # 09_1bdd
+    (r'quedaríamos en la ruina', '*NT: juego con “fuego” y “ruina”'),     # 10_091f (火の車; ver 10_0859)
     (r'¿Flores\?', '*NT: “hana” es flor y nariz'),     # 06_00f7 '¿Eh? ¿Flores?' (juego de palabras 花/鼻 de 06_0102; la nota va al final de esa pagina)
 ]
 NOTAS = [(re.compile(r, re.I), n) for r, n in NOTAS]
