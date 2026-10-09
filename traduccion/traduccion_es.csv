@@ -126,7 +126,7 @@
 00_19a8;0;「なな、なんなんなんだ;“¡¿Q-q-qué demonios es esto
 00_19b5;0;」/歯の根があわない。;?!”/Me castañeteaban los dientes.
 00_19cf;0;とつぜん、スタンドの明かりが消え、部屋は真っ暗になった;De pronto, la luz de la lámpara se apagó y la habitación quedó en completa oscuridad. 
-00_19f3;0;。/車椅子が動き出した?;¿Se había puesto en marcha la silla de ruedas?
+00_19f3;0;。/車椅子が動き出した?;¿Se había movido la silla de ruedas?
 00_1a0f;0;「にに、ににに……げろッ;“¡H-h-huyamos
 00_1a1e;0;」/足がかってに動き出す。;!”/Mis pies se movieron por su cuenta.
 00_1a39;0;「ひ、ひ、ひひひ……;“J-j-jajaja... 
@@ -230,7 +230,7 @@
 00_297c;0;「ひとつずつ見ていこう」/;“Vamos viendo una por una.”
 00_2992;0;まずは、ひとつ目のドアを叩いたが、返事はない。/ノブを回すと、カギはかかってない。/ぼくはそっとドアを押し開いた。;Primero golpeé la primera puerta, pero no hubo respuesta. Giré el pomo y no tenía llave. Empujé la puerta con suavidad hasta abrirla.
 00_29df;0;廊下の光が中へさしこむ。/「ねえ、何かへんなにおいしない？」/奈美が鼻をつまんだ。/ぼくはドアを開き切った。/「な……なんだ、この部屋は！」/;La luz del pasillo entró en la habitación./“Oye, ¿no huele raro?”/Nami se tapó la nariz. Abrí la puerta del todo./“¡¿Q-qué es esta habitación?!”
-00_2a3f;0;カベというカベ、家具という家具のすべてに、すきまなくワラ人形が打ち込まれている。/それも、すべて五寸釘で。;En cada pared y en cada mueble había muñecos de paja clavados, sin dejar ni un espacio. Y todos con clavos de quince centímetros.
+00_2a3f;0;カベというカベ、家具という家具のすべてに、すきまなくワラ人形が打ち込まれている。/それも、すべて五寸釘で。;En cada pared y en cada mueble había muñecos de paja clavados, sin dejar ni un espacio. Y todos con clavos de cinco sun (15 cm).
 00_2a84;0;「……よくもこれだけのワラ人形を」/全部で何百体になるだろうか……。/「いや、待て……これ……弟切草だ」/……単なるワラ人形ではなかった。/ワラと見えたのは、ぜんぶ枯れた弟切草だったのだ。;“...Vaya cantidad de muñecos de paja.”/¿Cuántos cientos habría en total?.../“No, espera... esto... es otogiriso.”/...No eran simples muñecos de paja. Lo que parecía paja era todo otogiriso seca.
 00_2afd;0;奈美がボソリとつぶやいた。/「こんなにいっぱいのワラ人形を……よっぽど誰かを怨んでいたのね……」/「あッ、思いだした！」/奈美はビクンとぼくを見た。/「な、何を……？」/「花言葉だよ、弟切草の！」;Nami murmuró en voz baja./“Tantos muñecos de paja... debían de guardarle mucho rencor a alguien...”/“¡Ah, ya me acordé!”/Nami me miró sobresaltada./“¿Q-qué cosa...?”/“¡El lenguaje de las flores, el de la otogiriso!”
 00_2b7c;0;「花言葉……」/「ぴったりなんだよ。このワラ人形……いや、弟切草人形と、この奇妙な部屋と」/「えっ？」/「復警！……弟切草の花言葉は、復警だったんだ！」;“El lenguaje de las flores...”/“Encaja perfecto. Con estos muñecos de paja... no, muñecos de otogiriso, y con esta habitación tan extraña.”/“¿Eh?”/“¡Venganza!... ¡En el lenguaje de las flores, la otogiriso era venganza!”
@@ -985,7 +985,7 @@
 02_3ed0;2;が妙なことをいう。/……ぼくは顔を上げた。; dijo algo extraño. ...Levanté la vista.
 02_3ef6;2;そこに座っていたのは、ミイラだった。/;Lo que estaba sentado allí era una momia.
 02_3f13;2;とつぜん、スタンドの明かりが消え、部屋は真っ暗になった;De pronto, la luz de la lámpara se apagó y la habitación quedó en completa oscuridad. 
-02_3f37;2;。/車椅子が動き出した?;¿Se había puesto en marcha la silla de ruedas?
+02_3f37;2;。/車椅子が動き出した?;¿Se había movido la silla de ruedas?
 02_3f50;2;「あわわ……」/ぼくは後ずさった。/「イヤッ！」/奈美が服を引っ張る。/;“Aaah...” Retrocedí. “¡No!” Nami tiró de mi ropa.
 02_3f84;2;車輪のきしむ音が近づく。/「は、早く……;El chirrido de las ruedas se acercaba. “R-rápido... 
 02_3fa0;2;、ドアをッ！」/;, ¡la puerta!”
@@ -2048,7 +2048,7 @@
 05_0588;5;座っていたのは、皮膚が茶色く変色し、目がうつろなアナになったミイラだった。;Lo que estaba sentado era una momia de piel descolorida a un tono marrón y ojos convertidos en cuencas vacías.
 05_05d5;5;「だあア！」;“¡Uaaah!”
 05_05e8;5;とつぜん、スタンドの明かりが消え、部屋は真っ暗になった;De pronto, la luz de la lámpara se apagó y la habitación quedó en completa oscuridad. 
-05_060c;5;。/車椅子が動き出した?;¿Se había puesto en marcha la silla de ruedas?
+05_060c;5;。/車椅子が動き出した?;¿Se había movido la silla de ruedas?
 05_0628;5;「どひゃア！」;“¡Iiiiah!”
 05_063a;5;「ぎょえ～っ！」;“¡Guaaah!”
 05_0647;5;ぼくは奈美の手をつかんだ。/;Agarré la mano de Nami.
@@ -3369,7 +3369,7 @@
 07_3926;7;「家内安全、商壳ハン盛」;“Seguridad en el hogar y prosperidad en los negocios.”
 07_393d;7;……豐川稻荷でOKだろうか。/;...¿Bastará con Toyokawa Inari (santuario)?
 07_3957;7;「世界人類が平和でありますように」;“Que la humanidad viva en paz.”
-07_3972;7;……あのプレートは何なのだろう。/;...¿Qué será esa placa?
+07_3972;7;……あのプレートは何なのだろう。/;...¿Qué placa era esa?
 07_398b;7;「なんじ、カンインするなかれ」;“No cometerás adulterio.”
 07_399e;7;うろ覚えだが、カインというやつがカンインしたんだっけなあ？……;Lo recordaba vagamente: ¿no fue un tal Caín quien cometió adulterio?... 
 07_39c1;7;いや、あれは兄弟ゲンカだ。;No, eso fue una pelea entre hermanos. 
@@ -4094,10 +4094,10 @@
 10_02d6;10;「あッ」/ぼくは思わず声を上げた。/「え、どうしたの？」/「イ、イマ、弟切草が……！」/;“¡Ah!” Solté un grito sin querer. “¿Qué pasa?” “A-ahora mismo, la otogiriso...!”
 10_0316;10;奈美;Nami
 10_031c;10;はぼくの視線をたどった。; siguió mi mirada.
-10_0337;10;「わあ、ホントだ……弟切草が、あんなにいっぱい」/「いや、そうじゃなくて……イ、イマ、そこで、弟切草のオバケが踊ったんだ」/「ばかいわないで;“¡Guau, es verdad... hay un montón de otogiriso!” “No, no es eso... A-ahora mismo, allí bailó un fantasma de otogiriso.” “No digas tonterías
+10_0337;10;「わあ、ホントだ……弟切草が、あんなにいっぱい」/「いや、そうじゃなくて……イ、イマ、そこで、弟切草のオバケが踊ったんだ」/「ばかいわないで;“¡Guau, es verdad... cuántas otogiriso hay!” “No, no es eso... A-ahora mismo, allí bailó un espectro de otogiriso.” “No digas tonterías
 10_0388;10;。風に揺れたんでしょ」;. Se mecían con el viento.”
 10_0399;10;「ちがう;“No
-10_039f;10;。こんなにでっかい、弟切草のカタマリが」/「アハハハ……いつもの算談」/奈美は笑ったが、ぼくはホントに見たのだ。/弟切草が、ひとかたまりとなって立ち上がり、ゆらゆらとフラダンスをしたのを。;. ¡Una masa de otogiriso así de grande!” “Ja, ja, ja... tus bromas de siempre.” Nami rió, pero yo de verdad lo había visto: las otogiriso se juntaron en una sola masa, se pusieron de pie y bailaron hula, meciéndose.
+10_039f;10;。こんなにでっかい、弟切草のカタマリが」/「アハハハ……いつもの算談」/奈美は笑ったが、ぼくはホントに見たのだ。/弟切草が、ひとかたまりとなって立ち上がり、ゆらゆらとフラダンスをしたのを。;. ¡Una mata de otogiriso así de grande!” “Ja, ja, ja... tus bromas de siempre.” Nami rió, pero yo de verdad lo había visto: las otogiriso se juntaron en una sola masa, se pusieron de pie y bailaron hula, meciéndose.
 10_0418;10;「雨、とうとうひどくなっちゃったね」/奈美はまるで信じていない。/ぼくも錯覚だと割り切ることにした。/「よし……暗くなってきたし、どッか雨宿りできるとこでもさがした方がいいな」;“Por fin se puso fea la lluvia, ¿eh?” Nami no me creía en absoluto. Yo también decidí que había sido una ilusión. “Bien... ya está oscureciendo, mejor busquemos dónde resguardarnos de la lluvia.”
 10_0487;10;実をいうとぼくは、/;A decir verdad, 
 10_04ab;10;雨に打たれながら歩くのが好きだ。;Me gusta caminar bajo la lluvia.
@@ -4106,7 +4106,7 @@
 10_0527;10;雨ニモ負ケズ、風ニモ負ケヌ、丈夫な体を持ちたい。;Quiero tener un cuerpo robusto que no se rinda ni ante la lluvia ni ante el viento.
 10_0551;10;ぬれながら歩く奈美を、ぬれ甘なっとうみたいにおいしそうだと思った。;Pensé que Nami, caminando mojada, parecía unos frijoles confitados bañados en almíbar, de lo más apetitosos.
 10_0584;10;ぼくらは雨の中を歩き出した。/;Echamos a andar bajo la lluvia.
-10_0598;10;すると、何かがポッと赤く燃えた。/「あ……」/「キツネ火……！？」/「ちがう;De repente, algo ardió en rojo./“Ah...”/“¿Un fuego fatuo de zorro...?”/“No
+10_0598;10;すると、何かがポッと赤く燃えた。/「あ……」/「キツネ火……！？」/「ちがう;De repente, algo ardió en rojo./“Ah...”/“¿Un kitsunebi...?”/“No
 10_05c9;10;。火事よ！」/奈美が叫んだ。/「ほら！……大きなお屋数が燃えてる！」;. ¡Es un incendio!”/gritó Nami./“¡Mira!... ¡La mansión enorme se está quemando!”
 10_0614;10;目の前の森が、まるでカーテンでも引くようにひらけて古い館が現われた。/だが、もちろん火事などはなく、煙さえ上がってはいない。/「ああ、お屋数が燃える……！」/「おい、奈美……何をいってるんだ？」;"El bosque frente a nosotros se abrió como si corrieran una cortina y apareció una vieja mansión. Pero, por supuesto, no había incendio alguno; ni siquiera subía humo./“Ah, la mansión se quema...”/“Oye, Nami... ¿qué estás diciendo?”"
 10_068e;10;「火事よ！……そうなるの。あそこで、何人もの人が死ぬ！」/「奈美……！」/「;“¡Es un incendio!... Va a pasar. ¡Allí morirá mucha gente!”/“Nami...”/“¡
@@ -4128,7 +4128,7 @@
 10_08ca;10;うわ！」/ぼくらは;uah!” Nosotros, 
 10_08d8;10;火の車に追っかけられて逃げ回った。/;perseguidos por el auto en llamas, corrimos de un lado a otro.
 10_08f6;10;こ……これはタイヘンなことだ。/;Es-esto es muy grave.
-10_091f;10;あいつにつかまったらビンボーになる。;Si ese trasto nos atrapaba, nos quedaríamos pobres.
+10_091f;10;あいつにつかまったらビンボーになる。;Si ese trasto nos atrapaba, quedaríamos en la ruina.
 10_0935;10;振り返ると、ぼくの火の車は穴ボコに落ちて煙を吹いていた。;Al mirar atrás, mi auto en llamas había caído en un bache y echaba humo.
 10_0963;10;もう火の車との競走しかない。;Solo quedaba competir con el auto en llamas.
 10_0979;10;振り返ると、ぼくの火の車は門柱にぶつかって大破していた。/;Al mirar atrás, mi auto en llamas se había estrellado contra un poste del portón y estaba destrozado.
@@ -7943,7 +7943,7 @@
 21_0e23;21;ぼくらは着替えのバッグと懷中電灯を取って、明かりに向かって歩きはじめた。/「ねえ、でも、もしあれが家じゃなかったら……」/落雷のショックからか、奈美はまだおびえているようだ。;Tomamos el bolso con la muda de ropa y la linterna, y echamos a andar hacia la luz./“Oye, pero si no fuera una casa...”/Quizá por el susto del rayo, Nami aún parecía asustada.
 21_0e92;21;そこでぼくはいった。/;Entonces dije:
 21_0eba;21;「じゃあ、奈美は何だと思うんだよ？」;“Entonces, ¿tú qué crees que es, Nami?”
-21_0ed4;21;「あのネ、ヒトダマとか、キツネ火とか……」/……もっとコワイことになった。/「とにかく、行こ」/;“Bueno, un hitodama, o un fuego fatuo de zorro...”/...Todo se volvió aún más aterrador./“En fin, vamos.”
+21_0ed4;21;「あのネ、ヒトダマとか、キツネ火とか……」/……もっとコワイことになった。/「とにかく、行こ」/;“Bueno, un hitodama, o un kitsunebi (fuego fatuo de zorro)...”/...Todo se volvió aún más aterrador./“En fin, vamos.”
 21_0f0f;21;「とにかく、行ってたしかめようよ」;“De todos modos, vamos a comprobarlo.”
 21_0f2b;21;「まさか、オバケ屋数でもあるまいし」;“No creo que sea una mansión embrujada, ¿no?”
 21_0f43;21;ぼくは一歩を踏み出した。/「うわ……」/;Di un paso adelante. “¡Uf...!”

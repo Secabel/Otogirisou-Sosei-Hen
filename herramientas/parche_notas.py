@@ -81,3 +81,39 @@ def aplicar_y(exe, ID):
     assert struct.unpack_from('<I', exe, _o(SITIO))[0] == ORIGINAL, ('sitio de gancho distinto', hex(SITIO))
     for k, w in enumerate(c): struct.pack_into('<I', exe, o + 4 * k, w & 0xffffffff)
     struct.pack_into('<I', exe, _o(SITIO), 0x0C000000 | (CUEVA >> 2) & 0x3FFFFFF)
+    aplicar_cb(exe, ID)      # LOOP 8: tinte persistente (nt B)
+
+
+# ---- LOOP 8 (nt B): el tinte sobrevivia solo si el glifo se creaba por 0x800184ac. Al volver de la relectura (START) el motor recrea el texto
+# con callback nulo (0x80015bcc) por otra via y la nota queda blanca. Solucion: la propia callback nula (se llama cada fotograma, en orden
+# ascendente de hueco) pasa a ser 'tinte persistente': tine un glifo '*' y los glifos siguientes de la MISMA fila (y) si el hueco anterior ya tiene el tinte.
+NULO = 0x80015bcc; NUEVO = 0x800663a0
+def codigo_cb(star):
+    T0, T1, T2, T4, T5, A0, A1, RA = 8, 9, 10, 12, 13, 4, 5, 31
+    c = []
+    def e(w): c.append(w)
+    e(_i(0x25, A0, T0, 4)); e(_i(0x09, 0, T1, 0x98)); FIN1 = len(c); e(0); e(0)       # 2: bne t0,t1,FIN ; nop
+    e(_i(0x25, A0, T0, 0xc)); e(_i(0x09, 0, T1, star))
+    e(_r(0, A1, T4, 2, 0)); e(_r(T4, A1, T4, 0, 0x21)); e(_r(0, T4, T4, 3, 0))
+    e(_i(0x0F, 0, T5, 0x8008)); e(_i(0x09, T5, T5, -0x3650)); e(_r(T4, T5, T4, 0, 0x21))
+    APL1 = len(c); e(0); e(0)                                                  # beq t0,t1,APLICAR ; nop
+    e(_i(0x0B, A1, T2, 0x51)); FIN2 = len(c); e(0); e(0)                       # sltiu t2,a1,0x51 ; bne t2,zero,FIN ; nop
+    e(_i(0x25, A0, T0, 8)); e(_i(0x25, A0, T1, -16)); e(0); FIN3 = len(c); e(0); e(0)      # y actual / y previa
+    e(_i(0x25, A0, T0, -20)); e(_i(0x09, 0, T1, 0x98)); e(0); FIN4 = len(c); e(0); e(0)    # flag previo
+    e(_i(0x24, T4, T0, -36)); e(_i(0x09, 0, T1, COLOR[0])); e(0); FIN5 = len(c); e(0); e(0)      # R del hueco anterior == lavanda
+    APLICAR = len(c)
+    e(_i(0x09, 0, T2, COLOR[0])); e(_i(0x28, T4, T2, 4)); e(_i(0x09, 0, T2, COLOR[1])); e(_i(0x28, T4, T2, 5)); e(_i(0x09, 0, T2, COLOR[2]))
+    e(_r(RA, 0, 0, 0, 8)); e(_i(0x28, T4, T2, 6))
+    FIN = len(c); e(_r(RA, 0, 0, 0, 8)); e(0)
+    def br(at, op, rs, rt, tgt): c[at] = _i(op, rs, rt, tgt - (at + 1)) & 0xffffffff
+    br(FIN1, 0x05, T0, T1, FIN); br(APL1, 0x04, T0, T1, APLICAR); br(FIN2, 0x05, T2, 0, FIN)
+    br(FIN3, 0x05, T0, T1, FIN); br(FIN4, 0x05, T0, T1, FIN); br(FIN5, 0x05, T0, T1, FIN)
+    assert len(c) == 41, len(c)
+    return c
+def aplicar_cb(exe, ID):
+    c = codigo_cb(ID['*']); o = _o(NUEVO)
+    assert exe[o:o + 4 * len(c)] == bytes(4 * len(c)), 'cueva de callback ocupada'
+    assert NUEVO + 4 * len(c) <= 0x80066490
+    on = _o(NULO); assert struct.unpack_from('<II', exe, on) == (0x03E00008, 0), 'callback nula distinta'
+    for k, w in enumerate(c): struct.pack_into('<I', exe, o + 4 * k, w & 0xffffffff)
+    struct.pack_into('<II', exe, on, 0x08000000 | ((NUEVO >> 2) & 0x3FFFFFF), 0)
