@@ -316,6 +316,10 @@ def pantalla_nombre(exe, ID, ANCHO):
     # mas largo los ultimos glifos ('mbre') quedaban brillantes. Limite 0x50 -> 0x90.
     j = _o(0x80020af4); assert struct.unpack_from('<I', exe, j)[0] == _i(0x0A, 6, 2, 0x50), 'limite atenuado'
     struct.pack_into('<I', exe, j, _i(0x0A, 6, 2, 0x90))
+    # LOOP 9 (H): en la pantalla B el contador de huecos arranca en 0x50 (huecos 0x6e..): con el texto ES la 'K' del nombre cae en el hueco 0x8f (atenuado, como 'Tu nombre:')
+    # y 'ohei.' en 0x90.. (brillantes). Contador 0x50 -> 0x51: toda la linea del nombre queda en huecos >= 0x90 (brillante) y 'Tu nombre:' (hasta 0x8f) sigue atenuado.
+    j = _o(0x8002178c); assert struct.unpack_from('<I', exe, j)[0] == _i(0x09, 0, 2, 0x50), 'contador pantalla B'
+    struct.pack_into('<I', exe, j, _i(0x09, 0, 2, 0x51))
     # pantalla B ("主人公の名前は <nombre> です。"): 'で' 'す' '。' tras el nombre -> '.' pegado al nombre y casillas vacias
     for a, viejo, nuevo in ((0x80021868, _i(0x09, 0, 2, 0x18a), _i(0x09, 0, 2, ID['.'])), (0x800218a4, _i(0x09, 0, 3, 0x15b), _i(0x09, 0, 3, ID[' '])),
                             (0x800218e0, _i(0x09, 0, 3, 0x101), _i(0x09, 0, 3, ID[' ']))):
