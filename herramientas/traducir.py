@@ -63,7 +63,7 @@ def fusionar(X, U, tr):
                     pre, rest = (B[:m.end()], B[m.end():]) if m else (B, '')
                     if '/' in pre: pre, rest = B.split('/', 1)[0], '/' + B.split('/', 1)[1]   # no cruzar saltos de linea forzados
                     B = rest.lstrip(' ')
-                    sep = ' ' if (A and pre and A[-1] not in ' /-“¿¡(‘ʻ' and pre[0] not in ' /”’ʼ»)!?.,;:…-' and not (A[-1].isalnum() and pre[0].isalnum())) else ''     # v60: frase que sigue a puntuacion ('...' '.”') sin espacio -> se anade (letra+letra = palabra partida a proposito: no se toca)
+                    sep = ' ' if (A and pre and A[-1] not in ' /-“¿¡(‘ʻ' and pre[0] not in ' /”’ʼ»)!?.,;:…-' and not ((A[-1].isalnum() and A[-1] not in 'ʻʼ') and (pre[0].isalnum() and pre[0] not in 'ʻʼ'))) else ''     # v60: frase que sigue a puntuacion ('...' '.”') sin espacio -> se anade (letra+letra = palabra partida a proposito: no se toca)
                     tr[cur] = A + sep + pre + (' ' if rest and not rest.strip() else '')          # grupo 4: el espacio final de la unidad (antes del nombre/etc.) no se pierde al fusionar ('bien.Kohei')
                     if B and not B.startswith('/') and not pre.endswith('/'): B = ' ' + B           # el espacio va al inicio de B (si cae al inicio de linea se descarta)
                     tr[u['id']] = B; n += 1
@@ -149,6 +149,21 @@ def _pasada(X, U, tr, M, stats, inc, cad, deficit):
     # (antes: 'La sala de / calderas' cortada porque se heredaba el estado del llamante mas lleno, escena 39 -> 15).
     cache_lab = {}; fin_en = {}
     por_old = {(u['escena'], X[u['escena']][0][u['tok0']].old): u for u in U}
+    por_fin = {(u['escena'], u['tok1']): u for u in U}
+    def _pid_antes(sc, L, i):
+        """unidad de texto anterior al token i (nombre), aunque haya comandos (color, pausa...) entre medias"""
+        q0 = i; lo = max(i - 10, -1)
+        while q0 > lo:
+            if (sc, q0) in fin_en: return fin_en[(sc, q0)]
+            uv = por_fin.get((sc, q0))          # LOOP 10: unidad vaciada por fusion (su texto esta en la anterior): saltar su salto de fila y seguir hacia la unidad que lleva el texto ('Kohe' / 'i')
+            if uv is not None and uv['id'] in res and not res[uv['id']].strip() and q0 > uv['tok0']: q0 = uv['tok0']; lo = max(q0 - 10, -1); continue
+            if q0 < i and L[q0].kind == 'c' and L[q0].op in (1, 0x13): return None
+            if q0 < i and L[q0].kind == 't':
+                uq = por.get((sc, q0))
+                if uq is not None and uq['id'] in res and not res[uq['id']].strip(): q0 -= 1; continue          # fragmento vaciado: seguir buscando hacia atras
+                return None
+            q0 -= 1
+        return None
     def textos(ch): return [T.normalizar(tr[e['id']]) for e in ch]
     def lab(ch):
         k = ch[0]['id']
@@ -240,7 +255,7 @@ def _pasada(X, U, tr, M, stats, inc, cad, deficit):
                                 if _q < len(L) and L[_q].kind == 't' and (sc, _q) in por and por[(sc, _q)]['id'] in tr and not T.normalizar(tr[por[(sc, _q)]['id']]).strip(): _q = por[(sc, _q)]['tok1']
                                 if _q + 1 < len(L) and L[_q].kind == 'c' and L[_q].op == 0x2d and L[_q + 1].kind == 't': _v = por.get((sc, _q + 1)); _k = _q + 1; _lnk = True
                             _sig = T.normalizar(tr[_v['id']]) if _v is not None and _v['id'] in tr else ''
-                            if _k > u['tok1'] and _v is not None and _v['id'] in tr and re.search(r'[.?!…”»)]$' if not _lnk else r'[.?!…”»)A-Za-zÁÉÍÓÚÑáéíóúñ0-9]$', s) and re.match(r'[A-Za-zÁÉÍÓÚÑáéíóúñ¿¡“(0-9]', _sig) and not (re.search(r'\d[.,]$', s) and _sig[:1].isdigit()) and not (re.search(r'(^|\s)[a-zñáéíóú]\w{0,4}[….]$', s) and re.match(r'\w{1,2}[….,]', _sig)): s += ' '
+                            if _k > u['tok1'] and _v is not None and _v['id'] in tr and re.search(r'[.?!…”»)ʼ]$' if not _lnk else r'[.?!…”»)ʼA-Za-zÁÉÍÓÚÑáéíóúñ0-9]$', s) and re.match(r'[A-Za-zÁÉÍÓÚÑáéíóúñ¿¡“(ʻ0-9]', _sig) and not (re.search(r'\d[.,]$', s) and _sig[:1].isdigit()) and not (re.search(r'(^|\s)[a-zñáéíóú]\w{0,4}[….]$', s) and re.match(r'\w{1,2}[….,]', _sig)): s += ' '
                         if opcion:
                             txt, xx, pp, ps, piezas = lab(ch); r = piezas[ch.index(u)]          # la etiqueta se compone ENTERA: sus 01 originales sobran (filas vacias)
                             if u is ch[-1]:
@@ -283,6 +298,39 @@ def _pasada(X, U, tr, M, stats, inc, cad, deficit):
                                 if _res: M.gmax = min(M.gmax, 193 - _res)      # margen: el calculo del compositor puede quedar ~3 por debajo del recuento real (espacios de union)
                                 try: r = M.componer_unidad(s, st, fin, ml) + '\n' * fin
                                 finally: M.gmax = _g0
+                                if (re.match(r'\f[.,;:!?”…»)]', r) or (re.match(r'\n[.,;:!?”…»)]', r) and _st0['lin'] + 1 >= M.maxl)) and u['tok0'] > 0 and L[u['tok0'] - 1].kind == 'c' and L[u['tok0'] - 1].op == 0x12:
+                                    # LOOP 10: la pagina se llena justo tras el nombre y la puntuacion pegada a el ('Kohei' / '. Lo demas') abria la pagina nueva: la ultima fila de la unidad anterior (con el nombre) pasa a la pagina nueva
+                                    _p = _pid_antes(sc, L, u['tok0'] - 1); _rp = res.get(_p, '').rstrip(' ') if _p else ''; _ix = _rp.rfind('\n'); _cut2 = _ix + 1 if _ix > 0 else -1
+                                    _ms = list(re.finditer(r'[.?!…]+”?[ \n]', _rp))      # mejor cortar al empezar la frase (si son <= 3 filas); si no, la ultima fila
+                                    if _ms and _ms[-1].end() < len(_rp) and _rp[_ms[-1].end():].count('\n') <= 2 and _rp[:_ms[-1].end()].strip(): _cut2 = _ms[-1].end()
+                                    if _cut2 > 0 and '\f' not in _rp[_cut2:] and _rp[_cut2:].strip():
+                                        _tail = _rp[_cut2:]; _head = _rp[:_cut2].rstrip(' \n'); _tr = _tail.split('\n'); _xs, _ps = T.X0, 0
+                                        for _c in _tr[-1]: _xs, _ps = M.avanzar(_xs, _ps, _c)
+                                        _xs, _ps = M.avanzar_nombre(_xs, _ps); _stb = dict(st)
+                                        st.clear(); st.update(_st0); st.update(x=_xs, pw=_ps, lin=len(_tr) - 1, gl=M.glifos(_tr) + len(M.nombre))
+                                        _g0 = M.gmax
+                                        if _res: M.gmax = min(M.gmax, 193 - _res)
+                                        try: _r2 = M.componer_unidad(s, st, fin, ml) + '\n' * fin
+                                        finally: M.gmax = _g0
+                                        if _r2[:1] in '\f\n': st.clear(); st.update(_stb)      # sigue sin caber: se deja como estaba
+                                        else: res[_p] = _head + '\f' + _tail; r = _r2
+                                if re.match(r'\n[.,;:!?”…»)]', r) and u['tok0'] > 0 and L[u['tok0'] - 1].kind == 'c' and L[u['tok0'] - 1].op == 0x12:
+                                    # LOOP 10: el nombre queda al final de la fila y la puntuacion pegada a el ('Kohei' / '!”') salta a la fila siguiente: el nombre (con su signo de apertura) pasa a la fila nueva
+                                    _p = _pid_antes(sc, L, u['tok0'] - 1); _rp = res.get(_p, '').rstrip(' ') if _p else ''
+                                    if _rp and not _rp.endswith('\n') and _st0['lin'] + 1 < M.maxl:
+                                        _mm = re.search(r'([“¿¡(]+)$', _rp); _xs, _ps = T.X0, 0
+                                        if _mm and _rp[:_mm.start()].strip():
+                                            _nr = _rp[:_mm.start()].rstrip(' ') + '\n' + _mm.group(1)
+                                            for _c in _mm.group(1): _xs, _ps = M.avanzar(_xs, _ps, _c)
+                                        else: _nr = _rp + '\n'
+                                        _xs, _ps = M.avanzar_nombre(_xs, _ps); _stb = dict(st)
+                                        st.clear(); st.update(_st0); st.update(x=_xs, pw=_ps, lin=_st0['lin'] + 1)
+                                        _g0 = M.gmax
+                                        if _res: M.gmax = min(M.gmax, 193 - _res)
+                                        try: _r2 = M.componer_unidad(s, st, fin, ml) + '\n' * fin
+                                        finally: M.gmax = _g0
+                                        if re.match(r'[\n\f]', _r2): st.clear(); st.update(_stb)
+                                        else: res[_p] = _nr; r = _r2
                                 _m = re.search(r'([“¿¡(]+)(\n+)$', r); _sr = s.rstrip(' ')
                                 if _m and r[:_m.start()].strip() and _sr.endswith(_m.group(1)):      # v44: recomponer SIN el signo (su ancho podia forzar un corte antes)
                                     st.clear(); st.update(_st0); _nl = max(fin, 1)
@@ -322,14 +370,7 @@ def _pasada(X, U, tr, M, stats, inc, cad, deficit):
                     if un and un['id'] in tr:                # puntuacion pegada al nombre (', ' '.' ...): debe caber tambien
                         s2 = T.normalizar(tr[un['id']])[:1]
                         if s2 and s2 in ',.;:!?”…' and s2 in M.AN: extra = 8 * (p1 + M.AN[s2])
-                    pid = None
-                    for q0 in range(i, max(i - 10, -1), -1):          # unidad de texto anterior, aunque haya comandos (color, pausa...) entre medias
-                        if (sc, q0) in fin_en: pid = fin_en[(sc, q0)]; break
-                        if q0 < i and L[q0].kind == 'c' and L[q0].op in (1, 0x13): break
-                        if q0 < i and L[q0].kind == 't':
-                            uq = por.get((sc, q0))
-                            if uq is not None and uq['id'] in res and not res[uq['id']].strip(): continue          # fragmento vaciado: seguir buscando hacia atras
-                            break
+                    pid = _pid_antes(sc, L, i)
                     if x1 + extra > M.lim and st['x'] != T.X0 and pid in res and not res[pid].endswith('\n'):
                         # v21: el motor corta DENTRO del nombre ('Kohe' / 'i'); el nombre se pasa entero a la linea siguiente
                         rp = res[pid].rstrip(' '); mm = re.search(r'([“¿¡(]+)$', rp)
