@@ -569,6 +569,9 @@ def pausa_menu(exe, ID, ANCHO, exe0):
     parche(0x8003654c, 0x24020006, jal(SAVEG))                              # v48: entrada a Guardar: guarda los huecos de escena
     for _a in (0x8003475c, 0x80034830, 0x80034910):                         # v48: salidas del modulo de tarjeta/libros hacia la pausa (v0 = 0x12): RBX restaura y hace el sh del estado
         parche(_a, 0x3c018008, jal(RBX)); parche(_a + 4, 0xa422a8b2, 0)
+    # v81: limite de dibujo de la pausa 0x45 -> 0x46 (se dibujan los huecos < max). Con nombre de 6 letras el titulo ('nombre y Nami' = 11 glifos) acaba en el hueco 0x45
+    # (la fila 'Volver' ocupa un hueco de ESP: sel = 0x3a) y el ultimo glifo ('i') quedaba fuera. El hueco 0x45 es de la pausa: la salida solo reactiva desde el 0x46.
+    parche(0x80035ff4, _i(9, 0, 2, 0x45), _i(9, 0, 2, 0x46))
     parche(0x80035f78, _i(0x2B, 28, 0, 0x55c), jal(CLR2))                 # constructor de la pausa: desmarca + control de atenuado
     parche(0x800366ec, 0x3c028008, J << 26 | (EXD2 >> 2) & 0x3FFFFFF)   # v29: segunda salida
     parche(0x800364d0, 0x3c028008, jal(EXD))                               # salida de la pausa (entrada comun 0x800364d0: la rama de modo != 3 salta aqui): duplicar con tope en vez del bucle original

@@ -298,16 +298,22 @@ def _pasada(X, U, tr, M, stats, inc, cad, deficit):
                                 if _res: M.gmax = min(M.gmax, 193 - _res)      # margen: el calculo del compositor puede quedar ~3 por debajo del recuento real (espacios de union)
                                 try: r = M.componer_unidad(s, st, fin, ml) + '\n' * fin
                                 finally: M.gmax = _g0
-                                if (re.match(r'\f[.,;:!?”…»)]', r) or (re.match(r'\n[.,;:!?”…»)]', r) and _st0['lin'] + 1 >= M.maxl)) and u['tok0'] > 0 and L[u['tok0'] - 1].kind == 'c' and L[u['tok0'] - 1].op == 0x12:
+                                _nom = u['tok0'] > 0 and L[u['tok0'] - 1].kind == 'c' and L[u['tok0'] - 1].op == 0x12
+                                _pc1 = r[1:].split('\f')[0].strip('\n ') if (r[:1] == '\f' or (r[:1] == '\n' and _st0['lin'] + 1 >= M.maxl)) else ''
+                                _viud = bool(_pc1) and '\n' not in _pc1 and len(_pc1.split()) <= 2 and u['tok0'] > 0      # v82: la pagina nueva abre con una o dos palabras sueltas de una frase que venia de la pagina anterior
+                                if ((re.match(r'\f[.,;:!?”…»)]', r) or (re.match(r'\n[.,;:!?”…»)]', r) and _st0['lin'] + 1 >= M.maxl)) and _nom) or _viud:
                                     # LOOP 10: la pagina se llena justo tras el nombre y la puntuacion pegada a el ('Kohei' / '. Lo demas') abria la pagina nueva: la ultima fila de la unidad anterior (con el nombre) pasa a la pagina nueva
                                     _p = _pid_antes(sc, L, u['tok0'] - 1); _rp = res.get(_p, '').rstrip(' ') if _p else ''; _ix = _rp.rfind('\n'); _cut2 = _ix + 1 if _ix > 0 else -1
+                                    if _viud and not _nom and (not _rp.strip() or re.search(r'[.?!…”»)]\s*$', _rp)): _cut2 = -1      # v82: solo si la frase anterior queda abierta
+                                    elif _cut2 <= 0 and 0 < len(_rp.strip()) <= 14 and '\n' not in _rp and '\f' not in _rp: _cut2 = 0      # v82: la unidad anterior es solo un signo de apertura ('“', '“Vaya,'): viaja entera a la pagina nueva
                                     _ms = list(re.finditer(r'[.?!…]+”?[ \n]', _rp))      # mejor cortar al empezar la frase (si son <= 3 filas); si no, la ultima fila
-                                    if _ms and _ms[-1].end() < len(_rp) and _rp[_ms[-1].end():].count('\n') <= 2 and _rp[:_ms[-1].end()].strip(): _cut2 = _ms[-1].end()
-                                    if _cut2 > 0 and '\f' not in _rp[_cut2:] and _rp[_cut2:].strip():
+                                    if _ms and _ms[-1].end() < len(_rp) and _rp[_ms[-1].end():].count('\n') <= 2 and _rp[:_ms[-1].end()].strip() and _cut2 != 0 and not (_viud and not _nom and _cut2 < 0): _cut2 = _ms[-1].end()
+                                    if _cut2 >= 0 and '\f' not in _rp[_cut2:] and _rp[_cut2:].strip():
                                         _tail = _rp[_cut2:]; _head = _rp[:_cut2].rstrip(' \n'); _tr = _tail.split('\n'); _xs, _ps = T.X0, 0
                                         for _c in _tr[-1]: _xs, _ps = M.avanzar(_xs, _ps, _c)
-                                        _xs, _ps = M.avanzar_nombre(_xs, _ps); _stb = dict(st)
-                                        st.clear(); st.update(_st0); st.update(x=_xs, pw=_ps, lin=len(_tr) - 1, gl=M.glifos(_tr) + len(M.nombre))
+                                        if _nom: _xs, _ps = M.avanzar_nombre(_xs, _ps)
+                                        _stb = dict(st)
+                                        st.clear(); st.update(_st0); st.update(x=_xs, pw=_ps, lin=len(_tr) - 1, gl=M.glifos(_tr) + (len(M.nombre) if _nom else 0))
                                         _g0 = M.gmax
                                         if _res: M.gmax = min(M.gmax, 193 - _res)
                                         try: _r2 = M.componer_unidad(s, st, fin, ml) + '\n' * fin

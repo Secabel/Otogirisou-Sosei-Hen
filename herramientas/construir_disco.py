@@ -48,7 +48,9 @@ if a.traduccion:
     CUEVAS_EXT = {}
     import parche_menus; parche_menus.aplicar(exe, ID, AN, cuevas_lim=(_bram0 + 0x1300, _bram0 + 0x1330, CUEVAS_EXT))
     if a.notas: import parche_notas; parche_notas.aplicar_y(exe, ID)      # v59 experimental      # EXPERIMENTO v8: titulo + mensajes de menu (ver docs/08)
-    M = texto_es.Modelo(ID, AN, nombre=NOMBRE)
+    # v82 (prueba): OTO_NOMBRE_LAYOUT = nombre ficticio SOLO para repartir lineas (p. ej. 'WWWWWW' = ancho del peor nombre posible, 96 px); el nombre por defecto sigue siendo NOMBRE
+    NOMBRE_LAYOUT = 'WWWWWW'      # v82: el reparto de lineas/paginas reserva el ancho del peor nombre posible (6 letras 'W' = 96 px) para que NINGUN nombre desborde; NOMBRE ('Kohei') solo se usa para parche_nombre
+    M = texto_es.Modelo(ID, AN, nombre=os.environ.get('OTO_NOMBRE_LAYOUT') or NOMBRE_LAYOUT)
     import csv
     tr = {r['id']: r['espanol'] for r in csv.DictReader(open(a.csv, encoding='utf-8-sig', newline=''), delimiter=';') if r['espanol'] != ''}
     import etiquetas_cortas; tr, nc = etiquetas_cortas.aplicar(tr); print('opciones de menu acortadas:', nc)
