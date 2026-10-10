@@ -103,7 +103,7 @@ Build numbers (vNN) are internal disc versions used during development; only the
 - Translation and ROM hacking: **Talion**.
 - Tools: Python, [Keystone](https://www.keystone-engine.org/), [Capstone](https://www.capstone-engine.org/), [DuckStation](https://www.duckstation.org/) and [PCSX-Redux](https://github.com/grumpycoders/pcsx-redux) for testing.
 - Part of the Spanish script is based on the English translation of the Super Famicom version by **ButThouMust** and **Guest** ([otogirisou-english](https://github.com/ButThouMust/otogirisou-english), GPL v3); the rest is new translation from the PlayStation Japanese text. Thanks to them for their work.
-- The license will be defined at the first release (it must be compatible with GPL v3 because of the text above).
+- License: [GNU GPL v3](LICENSE), as required by the GPL v3 text above.
 
 ## Legal
 
