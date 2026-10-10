@@ -75,6 +75,9 @@ Only what is needed to generate the disc is included here. The game files, disc 
 
 Build numbers (vNN) are internal disc versions used during development; only the important milestones are listed. Later build numbers only reflect rebuilds of the same content.
 
+- **v1.2:** the v82 disc published as a BPS patch (`Otogirisou_ES_v82.bps`). **Text layout no longer depends on the player name:** the Spanish font is proportional, so a wide name (e.g. “Takumi”, “Mamoru”, “WWWWWW”) used to push some lines past the screen edge while “Kohei” fit. Lines and pages are now laid out reserving the width of the widest possible 6-letter name (96 px), so every name from “I” to “WWWWWW” displays correctly; the cost is a slightly shorter line wherever the name appears. About 960 of ~10,000 pages are re-flowed (text unchanged). Also: the pause menu title (“<name> y Nami”) is no longer truncated with a 6-letter name, and the new layout avoids one- or two-word leftover screens and stray punctuation at the start of a page.
+- **v82:** v81 plus the name-independent layout and page rules described above.
+- **v81:** v80 plus the pause-menu title fix for 6-letter names (draw limit 0x45 -> 0x46).
 - **v1.1:** the v80 disc published as a BPS patch (`Otogirisou_ES_v80.bps`). **If you edited the player name with v1.0 (v79), the game could freeze when opening the ZAPPING box (and possibly Options or the pause menu); this release fixes it.**
 - **v80:** v79 plus a fix for that freeze (the code that limits the ZAPPING box overlapped a game variable that the name-entry screen overwrites; it now lives in memory owned by the patch) and the name screens (“Bienvenido a Otogiriso. / Tu nombre: / ¿Está bien así?”) now show all text in white, like the Japanese original.
 - **v1.0 (first release):** the v79 disc published as a BPS patch (`Otogirisou_ES_v79.bps`).

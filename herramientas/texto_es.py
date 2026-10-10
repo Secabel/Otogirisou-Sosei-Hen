@@ -114,7 +114,13 @@ class Modelo:
                 ls, xx, pp = self.envolver(''.join(chunks[i:j]), x, pw)
                 if self.filas(ls) <= capr and self.glifos(ls) <= capg: mejor = (j, ls, xx, pp)
                 else: break
-            if mejor is None and primera and (lin0 > 0 or gl0 > 0) and (x == X0 or capr < 2 or capg < 25 or chunks[i].startswith('/')):
+            _viuda = False
+            if mejor is None and primera and (lin0 > 0 or gl0 > 0) and x != X0 and capr >= 2 and capg >= 25 and not chunks[i].startswith('/'):      # v82: la frase empieza a mitad de fila y no cabe en lo que queda de pagina: si TODO corte posible deja una palabra o dos sueltas en la pagina siguiente, pasa ENTERA a la pagina nueva
+                _l0, _, _ = self.envolver(chunks[i], x, pw)
+                _r = [l for l in _l0 if l.strip()]; _g = [len(l.rstrip(' ')) for l in _r]
+                _ks = [k for k in range(1, len(_r)) if k <= capr and sum(_g[:k]) <= capg and len(_r) - k <= maxl and sum(_g[k:]) <= self.gmax]
+                _viuda = bool(_ks) and all(len(_r) - k == 1 and len(_r[k].split()) <= 2 for k in _ks)
+            if mejor is None and primera and (lin0 > 0 or gl0 > 0) and (x == X0 or capr < 2 or capg < 25 or chunks[i].startswith('/') or _viuda):
                 _sal = chunks[i].startswith('/') and x != X0      # LOOP 7 (corte): la frase empieza tras un salto de fila pendiente; si no cabe en lo que queda de pagina se pasa ENTERA a la siguiente (antes se partia: 'Eres hija' | 'unica.'); el salto sobra en pagina nueva
                 ls0, _, _ = self.envolver(chunks[i][1:] if _sal else chunks[i], X0, 0)
                 if self.filas(ls0) <= maxl and self.glifos(ls0) <= self.gmax:     # cabe en una pagina limpia: mover la frase entera a la pagina siguiente
@@ -130,6 +136,7 @@ class Modelo:
                     g1, g2 = sum(gl_l[:k]), sum(gl_l[k:])
                     if k <= capr and g1 <= capg and len(ls) - k <= maxl and g2 <= self.gmax:
                         pen = abs(g1 - g2) - (25 if ls[k - 1].rstrip().endswith((',', ';', ':')) else 0)
+                        if len(ls) - k == 1 and len(ls[k].split()) <= 2: pen += 80          # v82: no dejar una palabra o dos sueltas en la pagina siguiente
                         if mejor_k is None or pen < mejor_k[0]: mejor_k = (pen, k)
                 if mejor_k:
                     k = mejor_k[1]; paginas.append(ls[:k]); cur = ls[k:]; g = sum(gl_l[k:]); primera = False
