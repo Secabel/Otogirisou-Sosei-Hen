@@ -14,6 +14,11 @@ Fan translation into **Spanish** of *Otogirisou – Sosei Hen* (弟切草 蘇生
 <img src="screenshots/recortadas/captura_05.png" width="250" alt="Choices">
 <img src="screenshots/recortadas/captura_06.png" width="250" alt="In-game menu">
 </p>
+<p>
+<img src="screenshots/recortadas/captura_07.png" width="250" alt="Help screen">
+<img src="screenshots/recortadas/captura_08.png" width="250" alt="Translation note">
+<img src="screenshots/recortadas/captura_09.png" width="250" alt="Story text (Nami's view)">
+</p>
 
 > **This repository does not contain the game.** You need your own copy of the original disc image. The ready-made BPS patch is in [Releases](https://github.com/Secabel/Otogirisou-Sosei-Hen/releases) (apply it to your original disc image with Flips or any BPS patcher); you can also build the disc yourself from source (see below).
 
@@ -70,7 +75,7 @@ Only what is needed to generate the disc is included here. The game files, disc 
 
 Build numbers (vNN) are internal disc versions used during development; only the important milestones are listed. Later build numbers only reflect rebuilds of the same content.
 
-- **v1.0 (first release):** the v78 disc published as a BPS patch.
+- **v1.0 (first release):** the v79 disc published as a BPS patch (`Otogirisou_ES_v79.bps`).
 - **v79:** v78 plus layout fixes found in a full playthrough: orphaned punctuation at the start of a page or row after the player name, a name split across rows (“Kohe” / “i”), single quotes glued together in the diary, and clearer wording on the Nami/Kohei choice screen.
 - **v78:** v77 plus the Machi demo selector (“Machi” / “Tráiler”) translated.
 - **v77:** v76 plus LOOP 9 fixes: missing space after “…” before a new sentence, stray closing quote at page start, lavender-tint chain on fades (nt B side effect), “hana” note moved to the pun page, name-screen “K” brightness, “fuerte e innumerables”.
