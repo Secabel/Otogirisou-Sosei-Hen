@@ -72,7 +72,7 @@ class Modelo:
         """s: texto ES normalizado (con '/'); estado = dict(x, pw, lin, gl). Devuelve texto con \\n y \\f (paginas cortadas en finales de frase, <=maxl filas y <=gmax glifos); actualiza estado.
         maxl_fin/gmax_fin: limite SOLO para la ultima pagina (la que comparte pantalla con las opciones de un menu): si no cabe, las ultimas frases pasan a una pagina nueva."""
         maxl = maxl or self.maxl
-        chunks = [m.group(0) for m in re.finditer(r'.+?(?:[.?!…]+[”ʼ]?(?!\d)(?!\s*[,;:a-záéíóúñü])\s*/?|/|$)', s, re.S) if m.group(0)]
+        chunks = [m.group(0) for m in re.finditer(r'.+?(?:[.?!…]+[”ʼ]?(?![”ʼ])(?!\d)(?!\s*[,;:a-záéíóúñü])\s*/?|/|$)', s, re.S) if m.group(0)]
         mg = []                                      # un dialogo corto abierto (“ sin ”) no se parte entre paginas: se unen sus frases
         for ch in chunks:
             if mg and mg[-1].count('“') > mg[-1].count('”') and len(mg[-1].replace('/', '')) + len(ch) <= 75 and not mg[-1].rstrip().endswith('/'): mg[-1] += ch

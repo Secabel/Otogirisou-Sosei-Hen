@@ -71,6 +71,7 @@ Only what is needed to generate the disc is included here. The game files, disc 
 Build numbers (vNN) are internal disc versions used during development; only the important milestones are listed. Later build numbers only reflect rebuilds of the same content.
 
 - **v1.0 (first release):** the v78 disc published as a BPS patch.
+- **v79:** v78 plus layout fixes found in a full playthrough: orphaned punctuation at the start of a page or row after the player name, a name split across rows (“Kohe” / “i”), single quotes glued together in the diary, and clearer wording on the Nami/Kohei choice screen.
 - **v78:** v77 plus the Machi demo selector (“Machi” / “Tráiler”) translated.
 - **v77:** v76 plus LOOP 9 fixes: missing space after “…” before a new sentence, stray closing quote at page start, lavender-tint chain on fades (nt B side effect), “hana” note moved to the pun page, name-screen “K” brightness, “fuerte e innumerables”.
 - **v76:** v75 plus LOOP 8 fixes: name-link spacing, kitsunebi text and note, lavender note kept after the START reread (nt B), page cuts (mirror, wheelchair) and translation tweaks (placa, mirin note, nails in sun, fire/ruin pun note, otogiriso).
