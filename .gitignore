@@ -38,3 +38,6 @@ traduccion/*
 !traduccion/mando_es.bin
 screenshots/*
 !screenshots/recortadas/
+
+# Version en ingles (WIP): no subir hasta que este lista
+/english/

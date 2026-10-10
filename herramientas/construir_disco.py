@@ -42,7 +42,11 @@ if a.traduccion:
     import json, fuente_es, texto_es, traducir
     ID, AN = fuente_es.aplicar_fuente(cd, exe, notas=a.notas)
     import parche_nombre; NOMBRE = 'Kohei'; parche_nombre.aplicar(exe, ID, NOMBRE)
-    import parche_menus; parche_menus.aplicar(exe, ID, AN)
+    # v80: cuevas del limite de zapping en el bloque del cargador (RAM nuestra), NO en el exe (docs/08 32ay). Direcciones fijas dentro de los 88 sectores de arranque:
+    # blob_ram + 0x1300 / + 0x1330 (el blob mide ~0x1288 y los 88 sectores cargados llegan hasta blob_ram + 0x13b0).
+    _hdr0 = struct.unpack('<9I', cd[:36]); _off0 = (0x80 + _hdr0[8] + 15) & ~15; _bram0 = RAM0 + _off0
+    CUEVAS_EXT = {}
+    import parche_menus; parche_menus.aplicar(exe, ID, AN, cuevas_lim=(_bram0 + 0x1300, _bram0 + 0x1330, CUEVAS_EXT))
     if a.notas: import parche_notas; parche_notas.aplicar_y(exe, ID)      # v59 experimental      # EXPERIMENTO v8: titulo + mensajes de menu (ver docs/08)
     M = texto_es.Modelo(ID, AN, nombre=NOMBRE)
     import csv
@@ -97,6 +101,15 @@ blob, sim = cg.construir(exe, blob_ram, slots, slotsz, logaddr, esc)
 assert off_blob + len(blob) <= 88 * 2048 and blob_ram + len(blob) <= ((blob_ram + 0x1400 + 0x7ff) & ~0x7ff), ('blob no cabe', len(blob))
 cd[off_blob:88 * 2048] = bytes(88 * 2048 - off_blob)          # 9o bloque comprimido de fuente sin uso
 cd[off_blob:off_blob + len(blob)] = blob
+if a.traduccion:                                    # v80: cuevas del limite de zapping (ver arriba)
+    assert off_blob == _off0 and blob_ram == _bram0, 'el bloque del cargador se ha movido'
+    assert len(blob) <= 0x1300 and off_blob + 0x13a0 <= 88 * 2048, ('el blob invade las cuevas', len(blob))
+    for _dir, _w in CUEVAS_EXT.items():
+        _o_ = off_blob + (_dir - blob_ram)
+        assert 0x1300 <= _dir - blob_ram and (_dir - blob_ram) + 4 * len(_w) <= 0x13a0, hex(_dir)
+        assert cd[_o_:_o_ + 4 * len(_w)] == bytes(4 * len(_w)), 'cueva ocupada ' + hex(_dir)
+        for _k, _x in enumerate(_w): struct.pack_into('<I', cd, _o_ + 4 * _k, _x)
+    print('cuevas de zapping en el cargador:', {hex(k): len(v) for k, v in CUEVAS_EXT.items()})
 print('blob %d B en CDIMG+0x%x (RAM 0x%08x)' % (len(blob), off_blob, blob_ram), {k: hex(v) for k, v in sim.items()})
 
 # peticion del script de arranque: 302 -> 1 sector
