@@ -199,12 +199,15 @@ def parchear_slots_opciones(exe, esp_glifo):
 # (el texto de la historia empieza en el hueco 0x50); las versiones ES lo amplian (0x59/0x64) para las filas largas de Opciones -> en el zapping se borraban
 # las casillas 0x50..0x63 del texto (primeras ~20 letras de la pagina) y se oscurecian las 0x42..0x58 (confirmado con estados guardados antes/despues).
 # Arreglo: el limite ampliado solo si ST_ (0x8007a8ba) != 0 (Opciones desde el titulo = 1, desde la pausa = 2); con ST_ == 0 (zapping) vale el original 0x46.
-CUEVA_LIM_A, CUEVA_LIM_B = 0x8005BCF0, 0x8005BD70
-def limite_zapping(exe):
+# v80: LAS CUEVAS YA NO ESTAN EN EL EXE. 0x8005BCF0..0x8005BD20 (la antigua CUEVA_LIM_A) es una variable del juego: la pantalla de entrada de nombre (0x8003b030) copia ahi
+# 24 halfwords (tabla 0x80012ad4 -> 0x8005b9a8 + 0x348) y pisaba la cueva; al abrir el zapping/Opciones despues de editar el nombre se ejecutaban datos y el juego se colgaba
+# (save_19_freeze.sav; docs/08 32ay). Ahora las cuevas viven en el bloque del cargador (RAM nuestra, cargada del CD), direcciones y bytes los aporta construir_disco.
+# cuevas = (dir_A, dir_B, ext): ext es un dict {direccion: [palabras]} que construir_disco escribe en el CDIMG.
+def limite_zapping(exe, cuevas):
+    CUEVA_LIM_A, CUEVA_LIM_B, ext = cuevas
     def cueva(cave, w):
-        o = _o(cave); assert exe[o:o + 0x38] == bytes(0x38), 'hueco limite zapping ocupado ' + hex(cave)
-        assert len(w) <= 14
-        for k, x in enumerate(w): struct.pack_into('<I', exe, o + 4 * k, x)
+        assert len(w) <= 14 and cave not in ext
+        ext[cave] = list(w)
     jal_ = lambda a_: 0x0C000000 | (a_ >> 2) & 0x3FFFFFF
     j_ = lambda a_: 0x08000000 | (a_ >> 2) & 0x3FFFFFF
     # (1) atenuado 0x800394ac: rutina HOJA (no se puede usar jal: ra vivo). Al entrar se calcula el limite en t4 (0x59 o 0x46 segun ST_) y se salta de vuelta.
@@ -316,10 +319,15 @@ def pantalla_nombre(exe, ID, ANCHO):
     # mas largo los ultimos glifos ('mbre') quedaban brillantes. Limite 0x50 -> 0x90.
     j = _o(0x80020af4); assert struct.unpack_from('<I', exe, j)[0] == _i(0x0A, 6, 2, 0x50), 'limite atenuado'
     struct.pack_into('<I', exe, j, _i(0x0A, 6, 2, 0x90))
-    # LOOP 9 (H): en la pantalla B el contador de huecos arranca en 0x50 (huecos 0x6e..): con el texto ES la 'K' del nombre cae en el hueco 0x8f (atenuado, como 'Tu nombre:')
-    # y 'ohei.' en 0x90.. (brillantes). Contador 0x50 -> 0x51: toda la linea del nombre queda en huecos >= 0x90 (brillante) y 'Tu nombre:' (hasta 0x8f) sigue atenuado.
+    # v80: el texto largo de las pantallas del nombre se dibuja en los huecos 0x6e.. (contador 0x50 -> hueco = contador + 0x1e). Con el limite de atenuado ampliado a 0x90 (v20),
+    # todo glifo que cae en 0x6e..0x8f sale GRIS en vez de blanco (en el original todo el texto es blanco; solo la opcion no seleccionada es gris): en la pantalla A los 34 primeros
+    # glifos ('Bienvenido a Otogiriso.' + 'Tu nombre:' + '¿') y en la B 'Tu nombre:' (LOOP 9 H lo dejo atenuado a proposito con el contador 0x51). Arreglo: contador 0x72 en las dos
+    # pantallas -> todo el texto largo empieza en el hueco 0x90 (>= limite de atenuado). Mismo truco que pantalla_fin. Presupuesto: A = 48 glifos desde 0x90 + nombre <= 6 -> 198 < 200 huecos.
+    # (Hallazgo del chat de la version en ingles, confirmado por el usuario; ver docs/08 32ay.)
+    j = _o(0x8002152c); assert struct.unpack_from('<I', exe, j)[0] == _i(0x09, 0, 2, 0x50), 'contador pantalla A'
+    struct.pack_into('<I', exe, j, _i(0x09, 0, 2, 0x72))
     j = _o(0x8002178c); assert struct.unpack_from('<I', exe, j)[0] == _i(0x09, 0, 2, 0x50), 'contador pantalla B'
-    struct.pack_into('<I', exe, j, _i(0x09, 0, 2, 0x51))
+    struct.pack_into('<I', exe, j, _i(0x09, 0, 2, 0x72))
     # pantalla B ("主人公の名前は <nombre> です。"): 'で' 'す' '。' tras el nombre -> '.' pegado al nombre y casillas vacias
     for a, viejo, nuevo in ((0x80021868, _i(0x09, 0, 2, 0x18a), _i(0x09, 0, 2, ID['.'])), (0x800218a4, _i(0x09, 0, 3, 0x15b), _i(0x09, 0, 3, ID[' '])),
                             (0x800218e0, _i(0x09, 0, 3, 0x101), _i(0x09, 0, 3, ID[' ']))):
@@ -801,7 +809,8 @@ def cabecera_libros(exe, ID, ANCHO):
     c = out
     return len(c), xt
 
-def aplicar(exe, ID, ANCHO, mapa_json='tablas/mapa_ids_otogiri.json', verbose=True):
+def aplicar(exe, ID, ANCHO, mapa_json='tablas/mapa_ids_otogiri.json', verbose=True, cuevas_lim=None):
+    assert cuevas_lim is not None, 'v80: limite_zapping necesita cuevas fuera del exe (cuevas_lim=(dirA, dirB, dict)); ver construir_disco.py'
     m = json.load(open(mapa_json, encoding='utf-8'))
     ch = {int(k, 0) - 0x100: v for k, v in m.items() if len(v) == 1}          # u16 -> caracter JP
     inv = {}
@@ -867,7 +876,7 @@ def aplicar(exe, ID, ANCHO, mapa_json='tablas/mapa_ids_otogiri.json', verbose=Tr
     parchear_ranuras(exe)
     tp_ = pausa_menu(exe, ID, ANCHO, exe0)
     parchear_limites_v23(exe)
-    limite_zapping(exe)
+    limite_zapping(exe, cuevas_lim)
     if verbose: print('parche_menus: pausa (glifos filas, hueco selector, palabras titulo):', tp_)
     if verbose: print('parche_menus: PEN %d palabras, %d sitios' % (n_pen, len(SITIOS_FILA)))
     if verbose:
