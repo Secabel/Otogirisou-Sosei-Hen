@@ -406,7 +406,14 @@ def escenas_es(tr, M, verbose=False, notas=False):
         L = X[sc][0]
         for u in sorted(lst, key=lambda u: -u['tok0']):
             old = L[u['tok0']].old; nuevos = []
-            for ti, trozo in enumerate(comp[u['id']].split('\f')):
+            _txt = comp[u['id']]
+            # LOOP 11: espacio ANTES del nombre (op 0x12): 'Kohei…Kohei', 'Cálmate,Kohei', 'saber deKohei'. El compositor/fusion dejaba la unidad sin su espacio final cuando el nombre sigue (con o sin pausas entre medias).
+            _q = u['tok1']
+            while _q < len(L) and ((L[_q].kind == 'c' and L[_q].op not in (0x01, 0x13, 0x14, 0x02, 0x0e, 0x09, 0x0a, 0x03, 0x2d, 0x2e, 0x2c, 0x38, 0x0d, 0x11, 0x07, 0x12)) or (L[_q].kind == 't' and len(L[_q].data) == 0)): _q += 1
+            if _txt and _q < len(L) and L[_q].kind == 'c' and L[_q].op == 0x12 and _txt[-1] not in ' \n\f“¡¿(‘ʻ' and (T.normalizar(tr.get(u['id'], '')).endswith(' ') or _txt[-1] in '….,;:!?”)'):
+                if _q > u['tok1']: L.insert(_q, S.Tok('t', 0, M.codificar(' '), None))      # hay pausas (0x15/0x16/0x29...) entre el texto y el nombre: el espacio va justo antes del nombre
+                else: _txt += ' '
+            for ti, trozo in enumerate(_txt.split('\f')):
                 if ti: nuevos += [S.Tok('c', 0x13, b'\x00\x13', None), S.Tok('c', 1, b'\x00\x01', None)]
                 for k, linea in enumerate(trozo.split('\n')):
                     if k: nuevos.append(S.Tok('c', 1, b'\x00\x01', None))
