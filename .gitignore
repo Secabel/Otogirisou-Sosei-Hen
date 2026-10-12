@@ -39,5 +39,26 @@ traduccion/*
 screenshots/*
 !screenshots/recortadas/
 
-# Version en ingles (WIP): no subir hasta que este lista
-/english/
+# Version en ingles
+!/english/
+english/*
+!english/tools/
+!english/translation/
+!english/tables/
+english/tools/*
+!english/tools/*.py
+english/translation/*
+!english/translation/translation_en.csv
+!english/translation/short_labels_en.csv
+!english/translation/controller_en.bin
+!english/translation/glossary_en.md
+!english/translation/translation_instructions_en.md
+english/tables/*
+!english/tables/mapa_ids_otogiri.json
+!english/tables/ops_cmd_v2.json
+!english/tables/ops_cmd.json
+!english/tables/id_fixes_en.json
+!english/tables/correcciones_ids.json
+!english/tables/ocr_rapid.json
+!english/tables/ocr_dudosos.json
+!english/tables/ocr_candidatos.json

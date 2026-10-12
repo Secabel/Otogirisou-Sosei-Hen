@@ -1,8 +1,17 @@
-# Otogirisou – Sosei Hen (PSX) — Spanish Fan Translation
+# Otogirisou – Sosei Hen (PSX) — Spanish & English Fan Translation
 
-Fan translation into **Spanish** of *Otogirisou – Sosei Hen* (弟切草 蘇生篇, *Sound Novel Evolution 1*), the Sony PlayStation sound novel by Chunsoft. The whole script is translated, along with the menus, the save/copy/erase screens, the end-of-game screens and the controller image.
+Fan translation into **Spanish** and **English** of *Otogirisou – Sosei Hen* (弟切草 蘇生篇, *Sound Novel Evolution 1*), the Sony PlayStation sound novel by Chunsoft. The whole script is translated, along with the menus, the save/copy/erase screens, the end-of-game screens and the controller image.
 
-**Screenshots** (DuckStation)
+This repository holds **both patches**, built from the same engine tools:
+
+| Patch | Language | Release asset | Source folders |
+|---|---|---|---|
+| Spanish | Español | `Otogirisou_ES_vNN.bps` | `herramientas/`, `traduccion/`, `tablas/` |
+| English | English | `Otogirisou_EN_vNN.bps` | `english/` |
+
+Both are published under the **same release tag** (currently **v1.5**), as two separate releases: one for Spanish and one for English. Download the `.bps` whose name starts with `Otogirisou_ES` or `Otogirisou_EN`.
+
+**Screenshots** (DuckStation, Spanish version; the English version has the same layout)
 
 <p>
 <img src="screenshots/recortadas/captura_01.png" width="250" alt="Title screen">
@@ -20,9 +29,11 @@ Fan translation into **Spanish** of *Otogirisou – Sosei Hen* (弟切草 蘇生
 <img src="screenshots/recortadas/captura_09.png" width="250" alt="Story text (Nami's view)">
 </p>
 
-> **This repository does not contain the game.** You need your own copy of the original disc image. The ready-made BPS patch is in [Releases](https://github.com/Secabel/Otogirisou-Sosei-Hen/releases) (apply it to your original disc image with Flips or any BPS patcher); you can also build the disc yourself from source (see below).
+> **This repository does not contain the game.** You need your own copy of the original disc image. The ready-made BPS patches (Spanish and English) are in [Releases](https://github.com/Secabel/Otogirisou-Sosei-Hen/releases) (apply it to your original disc image with Flips or any BPS patcher); you can also build the disc yourself from source (see below).
 
 ## Building the translated disc from source
+
+Steps 1–3 are common to both languages; step 4 depends on the language.
 
 1. **Get this repository** (`git clone https://github.com/Secabel/Otogirisou-Sosei-Hen.git`, or "Download ZIP" and extract it). It already includes the translation CSV, the tables and the generator scripts.
 2. **Install the tools:**
@@ -34,7 +45,9 @@ Fan translation into **Spanish** of *Otogirisou – Sosei Hen* (弟切草 蘇生
    |---|---|---|---|
    | `Sound Novel Evolution 1 - Otogirisou - Sosei-hen (Japan) (Rev 1).bin` | 712,192,656 bytes | `4B915D81` | `30773aee2aab14a6c1bab92c01f88aa5779a876f` |
 
-4. **Run, from the repository root:**
+4. **Run the generator for your language.**
+
+   **Spanish** — from the repository root:
 
    ```
    python herramientas/generar_disco.py
@@ -42,9 +55,20 @@ Fan translation into **Spanish** of *Otogirisou – Sosei Hen* (弟切草 蘇生
 
    On Windows, if you get encoding errors, set `PYTHONUTF8=1` first (`set PYTHONUTF8=1`). The script extracts the game files it needs from your disc image, applies the translation and the code patches, and writes the result to `rom/es_completo/` (`.bin` + `.cue`). Open the `.cue` in your emulator. To change the output name, edit `NOMBRE` at the top of `generar_disco.py`.
 
-The disc generation has been verified to be reproducible: building from a clean clone gives a byte-for-byte identical disc.
+   **English** — from the `english` folder:
+
+   ```
+   cd english
+   python tools/generate_disc.py
+   ```
+
+   Same requirements and the same original disc image (`../rom/...`). The result is written to `rom/en_completo/` (`.bin` + `.cue`). To change the output name, edit `NOMBRE` at the top of `generate_disc.py`.
+
+The Spanish disc generation has been verified to be reproducible: building from a clean clone gives a byte-for-byte identical disc.
 
 ## Repository contents
+
+### Spanish patch
 
 | File / folder | What it is |
 |---|---|
@@ -63,6 +87,18 @@ The disc generation has been verified to be reproducible: building from a clean 
 | `herramientas/notas.py`, `herramientas/parche_notas.py` | Translation notes: where to insert them in the script, and the code patch that draws them in lavender |
 | `herramientas/disco.py`, `herramientas/mdec_psx.py` | PSX disc sector writing and MDEC image encoding |
 
+### English patch (`english/`)
+
+| File / folder | What it is |
+|---|---|
+| `english/translation/translation_en.csv` | English translation: source of truth (`;` separated, columns `id;escena;japones;japones_corregido;ingles`) |
+| `english/translation/short_labels_en.csv` | Shortened labels for menu options |
+| `english/translation/controller_en.bin` | Controller image with the button names in English |
+| `english/translation/glossary_en.md`, `english/translation/translation_instructions_en.md` | Glossary and translation guidelines |
+| `english/tables/*.json` | Glyph-id map, script command lengths and OCR/id corrections used to read the Japanese text |
+| `english/tools/generate_disc.py` | **Entry point.** Builds the English disc (settings at the top) |
+| `english/tools/build_disc.py` and the rest of `english/tools/*.py` | Same pipeline as the Spanish tools, with English names (`typeset.py` = text layout, `font_patch.py` = font, `patch_menus.py`, `patch_name.py`, `patch_controller.py`, `notes.py`/`notes_en.py`, `lang.py` = per-language settings, …) |
+
 Only what is needed to generate the disc is included here. The game files, disc images and emulator files are never committed (see `.gitignore`, which only allows the files listed above).
 
 ## Known issues
@@ -73,7 +109,13 @@ Only what is needed to generate the disc is included here. The game files, disc 
 
 ## Changelog
 
-Build numbers (vNN) are internal disc versions used during development; only the important milestones are listed. The builds that were published as a patch are marked with their release number (v1.0, v1.1, …).
+Build numbers (vNN) are internal disc versions used during development; only the important milestones are listed. The builds that were published as a patch are marked with their release number (v1.0, v1.1, …). Spanish and English have separate build numbers; since v1.5 both patches are published under the same release tag.
+
+### English patch
+
+- **EN v12 (release v1.5, `Otogirisou_EN_v12.bps`) — first English release:** full English translation of the PlayStation Japanese script, menus, save/copy/erase screens, end-of-game screens and controller image, with honorifics (-san/-kun/-chan) kept, 28 translation notes and shortened menu labels. Text layout is name-independent (it reserves the width of the widest 6-letter name) and includes the page-break rules around the player name from the Spanish v86 (a sentence is not cut right before the name; the cut falls at the end of a sentence or clause).
+
+### Spanish patch
 
 - **v86 (release v1.5, `Otogirisou_ES_v86.bps`):** v85 plus fixes to page breaks around the player name found in a playthrough: a sentence is no longer cut right before the name (“…la letra de” | “Kohei.”, “…de cuando Kohei” | “y yo fuimos…”, “¿y si Kohei” | “había cambiado…”). The cut now falls at the end of a sentence or clause and the name travels with the rest of its phrase. About 10 spots (27 lines) are re-flowed; text is unchanged.
 - **v85 (release v1.4, `Otogirisou_ES_v85.bps`):** v84 plus two menus whose question and options were one row too tall for the screen (scenes 4 and 17) shortened so they fit.
@@ -106,6 +148,7 @@ Build numbers (vNN) are internal disc versions used during development; only the
 ## Credits
 
 - Translation and ROM hacking: **Talion**.
+- English version: the translation is made from the PlayStation Japanese text; the English Super Famicom translation by ButThouMust and Guest was only used as a reference for names and terms.
 - Tools: Python, [Keystone](https://www.keystone-engine.org/), [Capstone](https://www.capstone-engine.org/), [DuckStation](https://www.duckstation.org/) and [PCSX-Redux](https://github.com/grumpycoders/pcsx-redux) for testing.
 - Part of the Spanish script is based on the English translation of the Super Famicom version by **ButThouMust** and **Guest** ([otogirisou-english](https://github.com/ButThouMust/otogirisou-english), GPL v3); the rest is new translation from the PlayStation Japanese text. Thanks to them for their work.
 - License: [GNU GPL v3](LICENSE), as required by the GPL v3 text above.
