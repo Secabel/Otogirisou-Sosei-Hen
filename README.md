@@ -9,9 +9,11 @@ This repository holds **both patches**, built from the same engine tools:
 | Spanish | Español | `Otogirisou_ES_vNN.bps` | `herramientas/`, `traduccion/`, `tablas/` |
 | English | English | `Otogirisou_EN_vNN.bps` | `english/` |
 
-Both are published under the **same release tag** (currently **v1.5**), as two separate releases: one for Spanish and one for English. Download the `.bps` whose name starts with `Otogirisou_ES` or `Otogirisou_EN`.
+Both are published in the **same release** (currently **v1.5**). Download the `.bps` whose name starts with `Otogirisou_ES` (Spanish) or `Otogirisou_EN` (English).
 
-**Screenshots** (DuckStation, Spanish version; the English version has the same layout)
+**Screenshots** (DuckStation)
+
+Spanish:
 
 <p>
 <img src="screenshots/recortadas/captura_01.png" width="250" alt="Title screen">
@@ -27,6 +29,14 @@ Both are published under the **same release tag** (currently **v1.5**), as two s
 <img src="screenshots/recortadas/captura_07.png" width="250" alt="Help screen">
 <img src="screenshots/recortadas/captura_08.png" width="250" alt="Translation note">
 <img src="screenshots/recortadas/captura_09.png" width="250" alt="Story text (Nami's view)">
+</p>
+
+English:
+
+<p>
+<img src="screenshots/recortadas/captura_en_01.png" width="250" alt="Title screen">
+<img src="screenshots/recortadas/captura_en_02.png" width="250" alt="Menu">
+<img src="screenshots/recortadas/captura_en_03.png" width="250" alt="Story text with translation note">
 </p>
 
 > **This repository does not contain the game.** You need your own copy of the original disc image. The ready-made BPS patches (Spanish and English) are in [Releases](https://github.com/Secabel/Otogirisou-Sosei-Hen/releases) (apply it to your original disc image with Flips or any BPS patcher); you can also build the disc yourself from source (see below).
@@ -109,7 +119,7 @@ Only what is needed to generate the disc is included here. The game files, disc 
 
 ## Changelog
 
-Build numbers (vNN) are internal disc versions used during development; only the important milestones are listed. The builds that were published as a patch are marked with their release number (v1.0, v1.1, …). Spanish and English have separate build numbers; since v1.5 both patches are published under the same release tag.
+Build numbers (vNN) are internal disc versions used during development; only the important milestones are listed. The builds that were published as a patch are marked with their release number (v1.0, v1.1, …). Spanish and English have separate build numbers; since v1.5 both patches are published in the same release.
 
 ### English patch
 
