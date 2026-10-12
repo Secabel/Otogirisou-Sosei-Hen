@@ -15,6 +15,38 @@ def _no_terminal(t):
     t = t.rstrip(' /')
     return bool(t) and (t[-1].isalnum() or t[-1] in ',;“' or (lambda u: u.count('“') > u.count('”'))(t.rsplit('/', 1)[-1]))     # tambien: dialogo abierto sin cerrar
 
+SOFT_Q13 = {0x15, 0x16, 0x1f, 0x20, 0x23, 0x24, 0x26, 0x29}      # LOOP 12: pausas/colores que se pueden cruzar al mirar los vecinos de un fin de pagina
+QUITAR_13_ON = __import__('os').environ.get('OTO_Q13', '1') == '1'
+SOLO_ON = __import__('os').environ.get('OTO_SOLO', '1') == '1'
+QUITAR_13 = set()      # (escena, indice del op 0x13 que se elimina); se rellena en _pasada y se aplica en escenas_es
+def _quitar13(sc, L, i, ID_U, tr):
+    """LOOP 12: el guion japones tiene un fin de pagina (op 0x13) pegado al NOMBRE del jugador (justo antes o justo despues). En espanol el orden cambia y la frase queda cortada
+    ('...era la letra de' | 'Kohei.', '...de cuando Kohei' | 'y yo fuimos...', '“' colgando | 'Kohei, ya es hora...'). Si el texto anterior NO termina frase, se elimina ese 0x13 (y su 01) y el compositor pagina solo."""
+    q = i - 1; nom_antes = False; pid = None
+    while q >= 0:
+        t = L[q]
+        if t.kind == 'c':
+            if t.op == 1 or t.op in SOFT_Q13: q -= 1; continue
+            if t.op == 0x12: nom_antes = True; q -= 1; continue
+            return False
+        u = ID_U.get(q)
+        if u is None: return False
+        if u['id'] in tr and T.normalizar(tr[u['id']]).strip(): pid = u; break
+        q = u['tok0'] - 1
+    if pid is None: return False
+    q = i + 1; nom_desp = False
+    while q < len(L):
+        t = L[q]
+        if t.kind == 'c':
+            if t.op == 1 or t.op in SOFT_Q13: q += 1; continue
+            nom_desp = t.op == 0x12; break
+        u = ID_U.get(q)
+        if u is not None and u['id'] in tr and not T.normalizar(tr[u['id']]).strip(): q = u['tok1']; continue
+        break
+    if not (nom_antes or nom_desp): return False
+    _tp = T.normalizar(tr[pid['id']])
+    return _tp.rstrip(' /')[-1:].isalnum() or _tp.rstrip(' /')[-1:] in ',;'      # la comilla/signo de apertura colgando se trata aparte (no se toca aqui)
+
 def _ops_entre(L, a, b):
     ops = [t.op for t in L[a:b] if t.kind == 'c']
     if 0x13 in ops:                      # el 01 que sigue a 13 es parte del fin de pagina
@@ -124,6 +156,7 @@ def _repartir(partes, txt, gaps=()):
 def componer_todo(X, U, tr, M, stats=None):
     """El motor NO limpia la pagina al saltar (ni entre escenas): el estado (filas/glifos) llega por los saltos. Se itera hasta que los estados de llegada se estabilizan."""
     tr0 = tr; tr, _ = fusionar(X, U, tr); inc = {}; cad = _cadenas_etiquetas(X, U); deficit = {}
+    QUITAR_13.clear()
     for ronda in range(12):
         antes = ({k: (v['lin'], v['gl']) for k, v in inc.items()}, dict(deficit))
         st_local = [] if stats is not None else None
@@ -140,6 +173,10 @@ def _pasada(X, U, tr, M, stats, inc, cad, deficit):
     """deficit[(escena, token del menu)] = filas que la ultima unidad de la pregunta no pudo liberar (empieza a mitad de linea): se reservan en las unidades anteriores de esa pagina (ronda siguiente)"""
     cad, cdest = cad
     por = {(u['escena'], u['tok0']): u for u in U}; res = {}; prob = []; DEST = E.destinos(X)
+    ID_U = {}
+    for u_ in U:
+        for q_ in range(u_['tok0'], u_['tok1']): ID_U.setdefault(u_['escena'], {})[q_] = u_
+    for sc_ in range(len(X)): ID_U.setdefault(sc_, {})
     # v68b: la escena 33 es el bloque ZAPPING (perspectiva de Nami, 53 cuadros op 0x38). TODAS las entradas desde otras escenas son op 0x2d.
     # El zapping empieza en pantalla limpia (el usuario lo razona: antes se ve a Kohei, dentro a Nami; confirmado en la captura 'Fingi no' del LOOP 4):
     # el estado de llegada de esas entradas NO se toma de los llamantes (antes: el maximo de las 34 entradas -> 8 filas ocupadas -> 'Fingi no' + pagina nueva).
@@ -157,7 +194,9 @@ def _pasada(X, U, tr, M, stats, inc, cad, deficit):
             if (sc, q0) in fin_en: return fin_en[(sc, q0)]
             uv = por_fin.get((sc, q0))          # LOOP 10: unidad vaciada por fusion (su texto esta en la anterior): saltar su salto de fila y seguir hacia la unidad que lleva el texto ('Kohe' / 'i')
             if uv is not None and uv['id'] in res and not res[uv['id']].strip() and q0 > uv['tok0']: q0 = uv['tok0']; lo = max(q0 - 10, -1); continue
-            if q0 < i and L[q0].kind == 'c' and L[q0].op in (1, 0x13): return None
+            if q0 < i and L[q0].kind == 'c' and L[q0].op in (1, 0x13):
+                if (sc, q0) in QUITAR_13 or (sc, q0 - 1) in QUITAR_13: q0 -= 1; continue      # LOOP 12: fin de pagina eliminado = transparente
+                return None
             if q0 < i and L[q0].kind == 't':
                 uq = por.get((sc, q0))
                 if uq is not None and uq['id'] in res and not res[uq['id']].strip(): q0 -= 1; continue          # fragmento vaciado: seguir buscando hacia atras
@@ -223,7 +262,9 @@ def _pasada(X, U, tr, M, stats, inc, cad, deficit):
             u = por.get((sc, i))
             if u:
                 raw = u['raw']; fin = len(raw) - len(raw.rstrip('\n')); skip01 = False
-                if fin and u['id'] in tr and u['id'] not in cad and u['tok1'] < len(L) and L[u['tok1']].kind == 'c' and L[u['tok1']].op in (0x12, 0x2d):
+                _kk = u['tok1']
+                while _kk < len(L) and L[_kk].kind == 'c' and L[_kk].op in SOFT_Q13: _kk += 1      # LOOP 12 (D): las pausas entre el texto y el nombre no impiden quitar el salto de fila del japones
+                if fin and u['id'] in tr and u['id'] not in cad and _kk < len(L) and L[_kk].kind == 'c' and L[_kk].op in (0x12, 0x2d):
                     _t = T.normalizar(tr[u['id']]).rstrip()          # v44b: el original rompe fila ANTES del nombre; en espanol la frase sigue ('La voz de' + Nami): se quita ese salto
                     if _t[-1:].isalpha() or _t[-1:] in ',;': fin = 0
                 if u['id'] in tr:
@@ -301,25 +342,38 @@ def _pasada(X, U, tr, M, stats, inc, cad, deficit):
                                 _nom = u['tok0'] > 0 and L[u['tok0'] - 1].kind == 'c' and L[u['tok0'] - 1].op == 0x12
                                 _pc1 = r[1:].split('\f')[0].strip('\n ') if (r[:1] == '\f' or (r[:1] == '\n' and _st0['lin'] + 1 >= M.maxl)) else ''
                                 _viud = bool(_pc1) and '\n' not in _pc1 and len(_pc1.split()) <= 2 and u['tok0'] > 0      # v82: la pagina nueva abre con una o dos palabras sueltas de una frase que venia de la pagina anterior
-                                if ((re.match(r'\f[.,;:!?”…»)]', r) or (re.match(r'\n[.,;:!?”…»)]', r) and _st0['lin'] + 1 >= M.maxl)) and _nom) or _viud:
+                                _solo = SOLO_ON and _nom and r[:1] == '\f' and not _viud and not re.match(r'\f[.,;:!?”…»)]', r)      # LOOP 12 (C, D): la pagina nueva abre justo tras el nombre y la frase anterior queda abierta ('...de cuando Kohei' | 'y yo fuimos...')
+                                if ((re.match(r'\f[.,;:!?”…»)]', r) or (re.match(r'\n[.,;:!?”…»)]', r) and _st0['lin'] + 1 >= M.maxl)) and _nom) or _viud or _solo:
                                     # LOOP 10: la pagina se llena justo tras el nombre y la puntuacion pegada a el ('Kohei' / '. Lo demas') abria la pagina nueva: la ultima fila de la unidad anterior (con el nombre) pasa a la pagina nueva
                                     _p = _pid_antes(sc, L, u['tok0'] - 1); _rp = res.get(_p, '').rstrip(' ') if _p else ''; _ix = _rp.rfind('\n'); _cut2 = _ix + 1 if _ix > 0 else -1
                                     if _viud and not _nom and (not _rp.strip() or re.search(r'[.?!…”»)]\s*$', _rp)): _cut2 = -1      # v82: solo si la frase anterior queda abierta
                                     elif _cut2 <= 0 and 0 < len(_rp.strip()) <= 14 and '\n' not in _rp and '\f' not in _rp: _cut2 = 0      # v82: la unidad anterior es solo un signo de apertura ('“', '“Vaya,'): viaja entera a la pagina nueva
                                     _ms = list(re.finditer(r'[.?!…]+”?[ \n]', _rp))      # mejor cortar al empezar la frase (si son <= 3 filas); si no, la ultima fila
                                     if _ms and _ms[-1].end() < len(_rp) and _rp[_ms[-1].end():].count('\n') <= 2 and _rp[:_ms[-1].end()].strip() and _cut2 != 0 and not (_viud and not _nom and _cut2 < 0): _cut2 = _ms[-1].end()
-                                    if _cut2 >= 0 and '\f' not in _rp[_cut2:] and _rp[_cut2:].strip():
-                                        _tail = _rp[_cut2:]; _head = _rp[:_cut2].rstrip(' \n'); _tr = _tail.split('\n'); _xs, _ps = T.X0, 0
-                                        for _c in _tr[-1]: _xs, _ps = M.avanzar(_xs, _ps, _c)
-                                        if _nom: _xs, _ps = M.avanzar_nombre(_xs, _ps)
-                                        _stb = dict(st)
-                                        st.clear(); st.update(_st0); st.update(x=_xs, pw=_ps, lin=len(_tr) - 1, gl=M.glifos(_tr) + (len(M.nombre) if _nom else 0))
-                                        _g0 = M.gmax
-                                        if _res: M.gmax = min(M.gmax, 193 - _res)
-                                        try: _r2 = M.componer_unidad(s, st, fin, ml) + '\n' * fin
-                                        finally: M.gmax = _g0
-                                        if _r2[:1] in '\f\n': st.clear(); st.update(_stb)      # sigue sin caber: se deja como estaba
-                                        else: res[_p] = _head + '\f' + _tail; r = _r2
+                                    _cands = [_cut2]
+                                    if _solo:      # LOOP 12 (C, D): se prueba, por orden, cortar al inicio de la ultima frase (<= 3 filas), tras la ultima coma/dos puntos de la ultima fila, o al inicio de la ultima fila; la primera que cabe en la pagina nueva
+                                        _rp = res.get(_p, '').rstrip(' \n') if _p else ''; _cands = []
+                                        if _rp and '\f' not in _rp and _no_terminal(_rp):
+                                            _ms2 = list(re.finditer(r'[.?!…]+”?[ \n]', _rp))
+                                            if _ms2 and _ms2[-1].end() < len(_rp) and _rp[_ms2[-1].end():].count('\n') <= 2 and _rp[:_ms2[-1].end()].strip(): _cands.append(_ms2[-1].end())
+                                            _ix = _rp.rfind('\n'); _mc = list(re.finditer(r'[,;:…] (?=\S)', _rp[_ix + 1:]))
+                                            if _mc and _rp[:_ix + 1 + _mc[-1].end()].strip(): _cands.append(_ix + 1 + _mc[-1].end())
+                                            if _ix > 0: _cands.append(_ix + 1)
+                                            elif len(_rp) <= 14: _cands.append(0)
+                                    for _cut2 in _cands:
+                                        if _cut2 >= 0 and '\f' not in _rp[_cut2:] and _rp[_cut2:].strip():
+                                            _tail = _rp[_cut2:]; _head = _rp[:_cut2].rstrip(' \n'); _tr = _tail.split('\n'); _xs, _ps = T.X0, 0
+                                            for _c in _tr[-1]: _xs, _ps = M.avanzar(_xs, _ps, _c)
+                                            if _solo and _tail[-1] not in '“¿¡(': _xs, _ps = M.avanzar(_xs, _ps, ' ')
+                                            if _nom: _xs, _ps = M.avanzar_nombre(_xs, _ps)
+                                            _stb = dict(st)
+                                            st.clear(); st.update(_st0); st.update(x=_xs, pw=_ps, lin=len(_tr) - 1, gl=M.glifos(_tr) + (len(M.nombre) if _nom else 0))
+                                            _g0 = M.gmax
+                                            if _res: M.gmax = min(M.gmax, 193 - _res)
+                                            try: _r2 = M.componer_unidad(s, st, fin, ml) + '\n' * fin
+                                            finally: M.gmax = _g0
+                                            if _r2[:1] in '\f\n': st.clear(); st.update(_stb)      # sigue sin caber: se deja como estaba
+                                            else: res[_p] = _head + '\f' + _tail; r = _r2; break
                                 if re.match(r'\n[.,;:!?”…»)]', r) and u['tok0'] > 0 and L[u['tok0'] - 1].kind == 'c' and L[u['tok0'] - 1].op == 0x12:
                                     # LOOP 10: el nombre queda al final de la fila y la puntuacion pegada a el ('Kohei' / '!”') salta a la fila siguiente: el nombre (con su signo de apertura) pasa a la fila nueva
                                     _p = _pid_antes(sc, L, u['tok0'] - 1); _rp = res.get(_p, '').rstrip(' ') if _p else ''
@@ -368,7 +422,10 @@ def _pasada(X, U, tr, M, stats, inc, cad, deficit):
                 if t.op == 1:
                     if skip01: skip01 = False
                     else: st.update(x=T.X0, pw=0, lin=st['lin'] + 1)
-                elif t.op == 0x13: st.update(x=T.X0, pw=0, lin=0, gl=0); skip01 = True; i += 1; continue
+                elif t.op == 0x13:
+                    if QUITAR_13_ON and (sc, t.old) not in DEST and not (i + 1 < len(L) and (sc, L[i + 1].old) in DEST) and _quitar13(sc, L, i, ID_U[sc], tr):
+                        QUITAR_13.add((sc, i)); skip01 = True; i += 1; continue      # LOOP 12: este fin de pagina desaparece: el estado de pagina sigue
+                    st.update(x=T.X0, pw=0, lin=0, gl=0); skip01 = True; i += 1; continue
                 elif t.op == 0x14: st.update(x=T.X0, pw=0, lin=0, gl=0)      # grupo 2: 0x14 tambien limpia la pagina. Prueba con el guion JP: si solo 0x13 limpiara, 68 de 7434 paginas pasarian de 9 filas (hasta 16); si limpian ambos, 15 de 7561. Ademas 33 de las 37 secuencias de >=10 filas entre 0x13 llevan un 0x14 que las parte bien.
                 elif t.op == 0x12:
                     x1, p1 = M.avanzar_nombre(st['x'], st['pw']); extra = 0
@@ -399,6 +456,10 @@ def escenas_es(tr, M, verbose=False, notas=False):
     comp, prob = componer_todo(X, U, tr, M)
     if prob: raise SystemExit('caracteres sin glifo: %s' % prob[:10])
     # reinsercion (\\f = fin de pagina: op 13 + op 01)
+    _kill = set()
+    for (sc_, i_) in QUITAR_13:
+        _kill.add(id(X[sc_][0][i_]))
+        if i_ + 1 < len(X[sc_][0]) and X[sc_][0][i_ + 1].kind == 'c' and X[sc_][0][i_ + 1].op == 1: _kill.add(id(X[sc_][0][i_ + 1]))
     por_escena = {}
     for u in U:
         if u['id'] in comp: por_escena.setdefault(u['escena'], []).append(u)
@@ -421,6 +482,9 @@ def escenas_es(tr, M, verbose=False, notas=False):
             if not nuevos: nuevos.append(S.Tok('t', 0, b'', None))
             nuevos[0].old = old
             L[u['tok0']:u['tok1']] = nuevos
+    if _kill:
+        for sc_ in range(len(X)): X[sc_][0][:] = [x_ for x_ in X[sc_][0] if id(x_) not in _kill]
+        if verbose: print('LOOP 12: fines de pagina (0x13) pegados al nombre eliminados:', len(QUITAR_13))
     # paginas en blanco (dos op 13 seguidos sin texto entre ellos): se quita una espera
     DEST = E.destinos(X); quitadas = 0
     for sc, (L, _) in enumerate(X):
