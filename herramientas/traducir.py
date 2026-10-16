@@ -85,7 +85,7 @@ def fusionar(X, U, tr):
                         tr[cur] = A = A.rstrip(' ') + mc.group(0).strip(); B = B[mc.end():]
                         if B and not B.startswith((' ', '/')) and B[0].isalnum() and mc.group(0).rstrip()[-1] in '.,;:!?”’»)…': B = ' ' + B
                         tr[u['id']] = B; n += 1
-                if A.strip() and not any(ch.isalnum() for ch in B) and B.strip() and '/' not in B:        # solo signos/comillas: nunca solos tras una espera
+                if A.strip() and not any(ch.isalnum() for ch in B) and B.strip() and '/' not in B and not (set(B.strip()) <= set('“¡¿(‘ʻ ')):        # solo signos/comillas: nunca solos tras una espera. LOOP 13: salvo signos de APERTURA (“ ¡ ¿): esos no vuelven atras (quedaban colgados al final de la pagina anterior, 18_08b3)
                     tr[cur] = A + B; B = ''; tr[u['id']] = B; n += 1
                 elif u['id'] in SIN_FUSION:          # la pausa se queda donde esta; solo el espacio de union tras la puntuacion de A
                     if B and not B.startswith((' ', '/')): B = ' ' + B; tr[u['id']] = B

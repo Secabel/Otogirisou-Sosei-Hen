@@ -9,7 +9,7 @@ This repository holds **both patches**, built from the same engine tools:
 | Spanish | Español | `Otogirisou_ES_vNN.bps` | `herramientas/`, `traduccion/`, `tablas/` |
 | English | English | `Otogirisou_EN_vNN.bps` | `english/` |
 
-Both are published in the **same release** (currently **v1.5**). Download the `.bps` whose name starts with `Otogirisou_ES` (Spanish) or `Otogirisou_EN` (English).
+Both are published in the **same release** (currently **v1.6**). Download the `.bps` whose name starts with `Otogirisou_ES` (Spanish) or `Otogirisou_EN` (English).
 
 **Screenshots** (DuckStation)
 
@@ -123,10 +123,12 @@ Build numbers (vNN) are internal disc versions used during development; only the
 
 ### English patch
 
+- **EN v13 (release v1.6, `Otogirisou_EN_v13.bps`):** v12 plus two layout fixes found in a Spanish playthrough that apply to the shared engine: an opening quote (“) is no longer left hanging at the end of the previous screen (247 lines re-flowed), and a new quotation that follows a closing quote or a sentence always starts on a new row.
 - **EN v12 (release v1.5, `Otogirisou_EN_v12.bps`) — first English release:** full English translation of the PlayStation Japanese script, menus, save/copy/erase screens, end-of-game screens and controller image, with honorifics (-san/-kun/-chan) kept, 28 translation notes and shortened menu labels. Text layout is name-independent (it reserves the width of the widest 6-letter name) and includes the page-break rules around the player name from the Spanish v86 (a sentence is not cut right before the name; the cut falls at the end of a sentence or clause).
 
 ### Spanish patch
 
+- **v87 (release v1.6, `Otogirisou_ES_v87.bps`):** v86 plus fixes from a playthrough of the last chapter. **Layout (applied to every line):** a new quotation glued to the previous one or to a sentence (”“, …“) now starts on a new row (20 lines, e.g. “…alas de murciélago…“Sa… Salgamos.”), and an opening quote or “¡” is no longer moved back to the end of the previous screen (87 lines). **Text:** nine lines rewritten because they read unnaturally or were unclear (who is speaking about whom in the diary scene, “¿Se la habría llevado Naomi?”, the heart-massage line, the otogiriso box, the scar speech, among others).
 - **v86 (release v1.5, `Otogirisou_ES_v86.bps`):** v85 plus fixes to page breaks around the player name found in a playthrough: a sentence is no longer cut right before the name (“…la letra de” | “Kohei.”, “…de cuando Kohei” | “y yo fuimos…”, “¿y si Kohei” | “había cambiado…”). The cut now falls at the end of a sentence or clause and the name travels with the rest of its phrase. About 10 spots (27 lines) are re-flowed; text is unchanged.
 - **v85 (release v1.4, `Otogirisou_ES_v85.bps`):** v84 plus two menus whose question and options were one row too tall for the screen (scenes 4 and 17) shortened so they fit.
 - **v84 (release v1.3, `Otogirisou_ES_v84.bps`):** v82 plus fixes from a full playthrough: a stray “ya” in one sentence was removed; a missing space before the player name was fixed in 12 places (e.g. “Kohei…Kohei”); 18 lines where the -san/-kun honorific after the player name had been omitted are restored; and the menu option “Jaja, me rindo, ¡qué ácido!” now shows the Japanese pun (rendirse/ácido) in Spanish.
