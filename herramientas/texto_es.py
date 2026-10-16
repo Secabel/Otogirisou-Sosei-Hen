@@ -8,6 +8,7 @@ NOM = '\u2060'             # v21: marca interna = el nombre del protagonista (op
 SALTO = '\u200b'          # marca interna: linea vacia que SI se emite (salto forzado por un espacio final); se borra al componer
 def normalizar(s):
     s = s.replace('...', '…').replace("'", 'ʼ').replace('’', 'ʼ').replace('‘', 'ʻ').replace('—', '-').replace('–', '-').replace('«', '“').replace('»', '”')
+    s = re.sub(r'(?<=[”.…!?])“', '/“', s)      # LOOP 13: una cita nueva pegada al cierre/frase anterior (”“  …“  .“) empieza SIEMPRE en fila nueva (en el guion JP es '」/「'); 20 unidades iban pegadas
     return s
 class Modelo:
     def __init__(self, ID, ANCHO, margen_px=6, lineas_pagina=8, nombre='Kohei', jp_px=16, gmax=190, filas_pregunta=5, x_opcion=0x25C):
