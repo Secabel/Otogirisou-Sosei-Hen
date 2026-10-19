@@ -49,4 +49,35 @@ def resumir(path='/tmp/escenas_v3.pkl',verbose=True):
             if rowsQ+fo[0]>9: malos.append((sc,j,rowsQ,fo[0],fo[1]))
     if verbose: print('menus',tot,'desbordan',len(malos)); [print(x) for x in malos]
     return malos
-if __name__=='__main__': resumir(*(sys.argv[1:2]))
+def huecos(D, inv, limite=198, verbose=True):
+    """LOOP 14: el motor limpia 200 huecos (sprites) de texto; cada letra/espacio de las opciones ocupa uno, mas uno por opcion y 6 por nombre (nombre maximo). Lo que pase de 200 queda en pantalla tras elegir ('nos!”').
+    Mide cada menu (op 9/0a) sobre las escenas finales: suma de todas las opciones + n opciones (+ la pregunta si comparte pagina)."""
+    malos = []; tot = 0; mx = 0
+    for sc, b in enumerate(D['esc']):
+        T = S.parse_scene(b); O = []; o = 0
+        for t in T: O.append(o); o += S.tok_len(t)
+        for j, t in enumerate(T):
+            if t[0] != 'c' or t[1] not in (9, 0xa): continue
+            try: pt = S.ptrs(t)
+            except Exception: continue
+            n = 0; ok = True
+            for p in pt:
+                if p[2] not in O: ok = False; break
+                q = O.index(p[2])
+                while q < len(T) and not (T[q][0] == 'c' and T[q][1] == 2):
+                    if T[q][0] == 't': n += len(dec_es.dec(T[q][1], inv).replace('\n', ''))
+                    elif T[q][1] == 0x12: n += 6
+                    q += 1
+            if not ok: continue
+            k = j - 1; g = 0
+            while k >= 0 and not (T[k][0] == 'c' and T[k][1] in (0x13, 0x14, 0xe, 2, 3)):
+                if T[k][0] == 't': g += len(dec_es.dec(T[k][1], inv))
+                elif T[k][1] == 0x12: g += 6
+                k -= 1
+            real = n + g + len(pt); tot += 1; mx = max(mx, real)
+            if real > limite: malos.append((sc, j, real))
+    if verbose: print('menus (huecos de sprite)', tot, 'maximo', mx, 'sobre', limite, ':', len(malos)); [print(x) for x in malos]
+    return malos
+if __name__=='__main__':
+    resumir(*(sys.argv[1:2]))
+    D_, inv_ = dec_es.cargar(sys.argv[1] if len(sys.argv) > 1 else '/tmp/escenas_v3.pkl'); huecos(D_, inv_)

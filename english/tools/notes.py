@@ -62,12 +62,18 @@ def insertar_notas(X, M, DEST, verbose=True):
             else: i = 0x100 + b[p]; p += 1
             s.append(inv.get(i, '?'))
         return ''.join(s)
+    def _glosado(m, s, k):
+        resto = s[m.end():]; q = k + 1
+        while q < len(L) and q < k + 6 and len(resto) < 3:      # el parentesis puede abrirse en la fila siguiente
+            if L[q].kind == 't': resto += decodificar(bytes(L[q].data))
+            q += 1
+        return re.match(r'\s*\(', resto) is not None
     texto_pagina = []; puestas = []; omit = {'sin_filas': 0, 'sin_glifos': 0, 'sucia': 0, 'sin_13': 0}
     SALTOS = (0x0e, 0x0d, 0x09, 0x0a, 0x2d)       # comandos que saltan/eligen (ver script_fmt.ptrs)
     pend_total = 0
     for sc, (L, _) in enumerate(X):
         lines = 0; gl = 0; skip01 = False; k = 0; nombre = len(M.nombre); prev_txt = False
-        terms = {}; pag_txt = []; vistos = set(); invalidos = set()      # v67: solo la primera aparicion de cada termino en la escena
+        terms = {}; pag_txt = []; vistos = set(); invalidos = set(); glosados = set()      # v67: solo la primera aparicion de cada termino en la escena
         dests = []; saltos = False; pend = None       # v68: ver docs/08 32ai
         while k < len(L):
             t = L[k]
@@ -112,7 +118,9 @@ def insertar_notas(X, M, DEST, verbose=True):
                 if t.old is not None and (sc, t.old) in DEST: dests.append(k)
                 s = decodificar(bytes(t.data)); gl += len(s); pag_txt.append(s); prev_txt = True
                 for r, n in NOTAS:
-                    if r.search(s) and n not in terms: terms[n] = k
+                    _ms = list(r.finditer(s))
+                    if _ms and all(_glosado(m_, s, k) for m_ in _ms): glosados.add(n)      # LOOP 14: un termino que ya lleva su glosa entre parentesis ('shochu (licor japones)') no lleva ademas la nota, ni antes ni despues en la escena
+                    elif _ms and n not in terms and n not in glosados: terms[n] = k
             k += 1
     if verbose:
         for x in texto_pagina: print('NOTA', x)

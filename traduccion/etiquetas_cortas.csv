@@ -78,7 +78,7 @@
 10_0c55;;(parte de 10_0c4b)
 10_0c72;“¿Ballena u orca? ¡Atrapémosla viva!”;“Una ballena o una orca. ¡Atrapémoslo vivo y avisemos a una sociedad científica!”
 10_0c7e;;(parte de 10_0c72)
-11_1501;Quería arreglarlo rápido: me interesan las calderas.;Quería arreglarlo rápido porque me interesan las calderas.
+11_1501;Quería arreglarlo: me interesan las calderas.;Quería arreglarlo rápido porque me interesan las calderas.
 11_1529;Si arreglo esto rápido, con Nami... ji, ji.;Si lo arreglaba rápido y volvía enseguida, con Nami... ji, ji, ji.
 12_1df9;Me arrastra el delirio de Nami...;Estoy por dejarme arrastrar por el delirio equivocado de Nami...
 14_071b;Inventaré algo cualquiera.;En realidad no la conozco bien, así que inventaré una historia cualquiera.
@@ -397,7 +397,7 @@
 15_0ea4;“Empecemos por lo picante.”;“Esta, esa... empecemos por lo picante.”
 16_0816;Pensé investigar más.;pensé que convendría investigar un poco más.
 16_0835;Pensé algo indecente.;pensé que a lo mejor estaba pensando en algo indecente.
-18_0f32;Pensé con calma que las otogiriso no harían nada.;Pensé con calma que, después de todo, las otogiriso no iban a hacer nada.
+18_0f32;Pensé que las otogiriso no harían nada.;Pensé con calma que, después de todo, las otogiriso no iban a hacer nada.
 18_0f5c;Lamenté no contar la leyenda.;Lamenté no haber contado aquí la leyenda de las otogiriso.
 18_0f84;Esperé que el elixir curara el veneno de serpiente.;Esperé que el legendario elixir también sirviera contra el veneno de las serpientes.
 18_0fd8;Me pregunté qué pasaría si lo untaba en el ombligo.;Me pregunté qué pasaría si me lo aplicaba en el ombligo.
@@ -531,7 +531,7 @@
 14_1c70;Lo más importante: aguantar haciéndose el fuerte.;Lo más importante de todo es aguantar haciéndose el fuerte.
 14_1c8e;Ataquemos con pasión.;Ataquemos con el corazón en llamas.
 14_1ca7;¡Operación Otogiri, ya!♥;Entonces, ¡comienza la Operación Otogiri del guerrero del amor!♥
-15_1a37;“¡Bakeneko, pez, armadura... qué casa de monstruos!”;“Bakeneko, pez monstruoso, armadura embrujada... ¡esto ya es una mansión de monstruos!”
+15_1a37;“¡Bakeneko, pez, armadura… casa de monstruos!”;“Bakeneko, pez monstruoso, armadura embrujada... ¡esto ya es una mansión de monstruos!”
 15_1ab4;“¡Vengan Oiwa y Okiku!”;“Invitando también a Oiwa, a Okiku y a Otsuyu, ¡un festín de vino y carne con Nami y el pez!”
 16_1549;Si hay otro... ¡no lo perdono!;S... si se hubiera metido con algún tipo a escondidas... ¡No... no se lo perdonaré!
 18_14d1;Sentí que alguien me llamaba y me volví.;Tuve la sensación de que alguien me llamaba y me volví.
@@ -613,7 +613,7 @@
 19_0fde;“¡Esta armadura tiene truco!”;“¡Esta armadura tiene algún mecanismo!”
 19_1043;“¡Alguien nos apunta!”;“¡De todos modos, alguien nos tiene en la mira!”
 21_0f63;“Espectro de Brocken... ¿eh?”;“El espectro del Brocken... no sé nada de eso, ¿eh?”
-22_149f;Pensé que teníamos que escapar de aquí como fuera.;pensé que, costara lo que costara, teníamos que escapar de aquí.
+22_149f;Pensé que debíamos escapar de aquí como fuera.;pensé que, costara lo que costara, teníamos que escapar de aquí.
 22_14df;Pensé en escondernos y esperar hasta la mañana.;pensé en escondernos en algún lugar y esperar hasta la mañana.
 22_14ff;Vendámoslos a un circo.;Oye, Echizen-ya, ¿y si atrapamos a esos tipos y los vendemos a un circo de fenómenos?
 22_1534;Quiero pasar la noche con ella;Más que eso, quiero quedarme a pasar la noche con Nami, solos los dos... uf, uf.
@@ -655,3 +655,19 @@
 18_22b0;Me dio curiosidad qué mecanismo tendría.;Me dio curiosidad saber qué clase de mecanismo tendría.
 18_3026;“Busquemos el baño.” Salí a toda prisa.;“Busquemos el baño.” Salí de la habitación a toda prisa.
 23_2125;“¡No me digas que hay hasta hijos!”;“¡No me digas que hasta hay hijos de por medio!”
+02_4a60;“El diario ajeno no se mira. Salgamos.”;“No deberíamos mirar el diario de otra persona
+02_4a77;;(parte de 02_4a60)
+06_1b10;“¡Una carrera! ¡En sus marcas, listos, ya!”;“¡Hagamos una carrera
+06_1b18;;(parte de 06_1b10)
+06_1b1c;;(parte de 06_1b10)
+07_06b4;Una momia con lápiz labial… ¡qué miedo! ♥;Si... si fuera una momia con lápiz labial, 
+07_06c9;;(parte de 07_06b4)
+07_27c7;“¡Qué lata! ¿Cuántas veces llevo haciendo esto?”;“Bah, qué lata
+07_27d3;;(parte de 07_27c7)
+15_2c88;Claro, pensaba dejar entrar primero a Nami.;Por supuesto, pensaba dejar que Nami entrara primero.
+16_1d5a;“¿Y qué si me arrastras? ¡Yo te salvaré!”;“¡Y qué si me arrastras a esto
+16_1d67;;(parte de 16_1d5a)
+16_1d7c;“¿Arrastrarme? Muéstramelo un poquito ♥”;“¿Cómo es eso de arrastrar? Muéstramelo un poquito ♥”
+26_1142;“¿O una maldición, un castigo del más allá?”;“¡¿O será alguna maldición, un castigo del más allá?!”
+32_04ef;“¡Maldito, sal de ahí!” Pateé la pared con fuerza.;“¡Maldito, sal de ahí!
+32_04ff;;(parte de 32_04ef)

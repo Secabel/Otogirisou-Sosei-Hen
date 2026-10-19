@@ -167,7 +167,11 @@ def componer_todo(X, U, tr, M, stats=None):
         if '  ' in v_ and '  ' not in tr0.get(k_, ''): res[k_] = re.sub(r'(?<=[^\s])  +(?=[^\s])', ' ', v_)
     return res, prob
 
-BLOQ_UNION = {0x01, 0x13, 0x14, 0x02, 0x12, 0x0e, 0x09, 0x0a, 0x07, 0x2d, 0x2e, 0x2c, 0x38, 0x0d, 0x11}      # comandos que cambian de fila/pagina/escena: ahi NO hace falta espacio de union
+def _fragmento(a, b):
+    """a y b son trozos de una palabra deletreada o tartamudeada ('a.'+'d.'+'i.'+'ó.'+'s,' ; 'na…'+'mi….'): NO llevan espacio de union"""
+    return bool((re.search(r'(^|\s)[a-zñáéíóú][….]$', a) and re.match(r'[a-zñáéíóú]{1,2}[….,]', b)) or (re.search(r'(^|\s)[a-zñáéíóú]\w{0,4}[….]$', a) and re.match(r'[a-zñáéíóú]{1,2}[….]', b)))
+
+BLOQ_UNION = {0x01, 0x13, 0x14, 0x02, 0x12, 0x0e, 0x09, 0x0a, 0x2d, 0x2e, 0x2c, 0x38, 0x0d, 0x11}   # LOOP 14: 0x07 (espera de N frames) NO cambia de fila: 'blanco…'+0x07+'Es un vestido' salia pegado      # comandos que cambian de fila/pagina/escena: ahi NO hace falta espacio de union
 
 def _pasada(X, U, tr, M, stats, inc, cad, deficit):
     """deficit[(escena, token del menu)] = filas que la ultima unidad de la pregunta no pudo liberar (empieza a mitad de linea): se reservan en las unidades anteriores de esa pagina (ronda siguiente)"""
@@ -209,6 +213,14 @@ def _pasada(X, U, tr, M, stats, inc, cad, deficit):
         if k not in cache_lab:
             ps = textos(ch); L2 = X[ch[0]['escena']][0]
             gaps = [g for g in range(len(ch) - 1) if any(L2[q].kind == 'c' and L2[q].op == 0x12 for q in range(ch[g]['tok1'], ch[g + 1]['tok0']))]
+            # LOOP 14: union de unidades de una etiqueta SIN espacio ('“¡Suéltame!”'+'Naomi', 'gusta,'+'pero', 'sit down?”'+'inviting', 'Iʼll…'+'say'): se anade el espacio al final de la unidad anterior (saltando unidades vacias)
+            _last = None
+            for _g in range(len(ps)):
+                if not ps[_g].strip(): continue
+                if _last is not None and not any(x in gaps for x in range(_last, _g)):
+                    _a, _b = ps[_last], ps[_g]
+                    if re.search(r'[.?!…”»)ʼ,;:]$', _a) and re.match(r'[A-Za-zÁÉÍÓÚÑáéíóúñ¿¡“(‘ʻ0-9]', _b) and not (re.search(r'\d[.,]$', _a) and _b[:1].isdigit()) and not _fragmento(_a, _b): ps[_last] = _a + ' '
+                _last = _g
             lead = False; q = ch[0]['tok0'] - 1                      # nombre ANTES de la primera unidad (la etiqueta empieza por el nombre)
             while q >= 0 and L2[q].kind == 'c' and L2[q].op not in (1, 2, 9, 0x0a, 0x0e, 0x13):
                 if L2[q].op == 0x12: lead = True; break
@@ -296,7 +308,7 @@ def _pasada(X, U, tr, M, stats, inc, cad, deficit):
                                 if _q < len(L) and L[_q].kind == 't' and (sc, _q) in por and por[(sc, _q)]['id'] in tr and not T.normalizar(tr[por[(sc, _q)]['id']]).strip(): _q = por[(sc, _q)]['tok1']
                                 if _q + 1 < len(L) and L[_q].kind == 'c' and L[_q].op == 0x2d and L[_q + 1].kind == 't': _v = por.get((sc, _q + 1)); _k = _q + 1; _lnk = True
                             _sig = T.normalizar(tr[_v['id']]) if _v is not None and _v['id'] in tr else ''
-                            if _k > u['tok1'] and _v is not None and _v['id'] in tr and re.search(r'[.?!…”»)ʼ]$' if not _lnk else r'[.?!…”»)ʼA-Za-zÁÉÍÓÚÑáéíóúñ0-9]$', s) and re.match(r'[A-Za-zÁÉÍÓÚÑáéíóúñ¿¡“(ʻ0-9]', _sig) and not (re.search(r'\d[.,]$', s) and _sig[:1].isdigit()) and not (re.search(r'(^|\s)[a-zñáéíóú]\w{0,4}[….]$', s) and re.match(r'\w{1,2}[….,]', _sig)): s += ' '
+                            if _k > u['tok1'] and _v is not None and _v['id'] in tr and re.search(r'[.?!…”»)ʼ,;:]$' if not _lnk else r'[.?!…”»)ʼA-Za-zÁÉÍÓÚÑáéíóúñ0-9]$', s) and re.match(r'[A-Za-zÁÉÍÓÚÑáéíóúñ¿¡“(ʻ0-9]', _sig) and not (re.search(r'\d[.,]$', s) and _sig[:1].isdigit()) and not _fragmento(s, _sig): s += ' '
                         if opcion:
                             txt, xx, pp, ps, piezas = lab(ch); r = piezas[ch.index(u)]          # la etiqueta se compone ENTERA: sus 01 originales sobran (filas vacias)
                             if u is ch[-1]:

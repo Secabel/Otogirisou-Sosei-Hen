@@ -9,7 +9,7 @@ This repository holds **both patches**, built from the same engine tools:
 | Spanish | Español | `Otogirisou_ES_vNN.bps` | `herramientas/`, `traduccion/`, `tablas/` |
 | English | English | `Otogirisou_EN_vNN.bps` | `english/` |
 
-Both are published in the **same release** (currently **v1.6**). Download the `.bps` whose name starts with `Otogirisou_ES` (Spanish) or `Otogirisou_EN` (English).
+Both are published in the **same release** (currently **v1.7**). Download the `.bps` whose name starts with `Otogirisou_ES` (Spanish) or `Otogirisou_EN` (English).
 
 **Screenshots** (DuckStation)
 
@@ -123,11 +123,13 @@ Build numbers (vNN) are internal disc versions used during development; only the
 
 ### English patch
 
+- **EN v14 (release v1.7, `Otogirisou_EN_v14.bps`):** v13 plus three fixes. **Leftover text after a choice:** the engine only clears 200 text sprites per screen and each letter, space and option of a menu uses one; 92 menus exceeded that (up to 257) and left the tail of the last option on the next screen. About 170 options were shortened so every menu fits. **Glued text:** a space is now added after “…” (and after commas) when the next sentence follows a short pause, and between the parts of a menu option (“race.On your marks”, “lipstick,that’d”, “bethe one”, “sit down?”inviting”). **Duplicate notes:** a term that already has its explanation in parentheses (“shochu (Japanese liquor)”) no longer also gets the in-game note.
 - **EN v13 (release v1.6, `Otogirisou_EN_v13.bps`):** v12 plus two layout fixes found in a Spanish playthrough that apply to the shared engine: an opening quote (“) is no longer left hanging at the end of the previous screen (247 lines re-flowed), and a new quotation that follows a closing quote or a sentence always starts on a new row.
 - **EN v12 (release v1.5, `Otogirisou_EN_v12.bps`) — first English release:** full English translation of the PlayStation Japanese script, menus, save/copy/erase screens, end-of-game screens and controller image, with honorifics (-san/-kun/-chan) kept, 28 translation notes and shortened menu labels. Text layout is name-independent (it reserves the width of the widest 6-letter name) and includes the page-break rules around the player name from the Spanish v86 (a sentence is not cut right before the name; the cut falls at the end of a sentence or clause).
 
 ### Spanish patch
 
+- **v88 (release v1.7, `Otogirisou_ES_v88.bps`):** v87 plus three fixes. **Leftover text after a choice:** the engine only clears 200 text sprites per screen and each letter, space and option of a menu uses one; 12 menus exceeded that (e.g. the diary choice in scene 2 left “nos!”” on the next screen) and 13 options were shortened so every menu fits. **Glued text:** a space is now added after “…” followed by a short pause (“blanco…Es un vestido blanco.”), after commas (“me gusta,pero”) and between the parts of a menu option (“¡Suéltame!”Naomi”, “calma.“De”).
 - **v87 (release v1.6, `Otogirisou_ES_v87.bps`):** v86 plus fixes from a playthrough of the last chapter. **Layout (applied to every line):** a new quotation glued to the previous one or to a sentence (”“, …“) now starts on a new row (20 lines, e.g. “…alas de murciélago…“Sa… Salgamos.”), and an opening quote or “¡” is no longer moved back to the end of the previous screen (87 lines). **Text:** nine lines rewritten because they read unnaturally or were unclear (who is speaking about whom in the diary scene, “¿Se la habría llevado Naomi?”, the heart-massage line, the otogiriso box, the scar speech, among others).
 - **v86 (release v1.5, `Otogirisou_ES_v86.bps`):** v85 plus fixes to page breaks around the player name found in a playthrough: a sentence is no longer cut right before the name (“…la letra de” | “Kohei.”, “…de cuando Kohei” | “y yo fuimos…”, “¿y si Kohei” | “había cambiado…”). The cut now falls at the end of a sentence or clause and the name travels with the rest of its phrase. About 10 spots (27 lines) are re-flowed; text is unchanged.
 - **v85 (release v1.4, `Otogirisou_ES_v85.bps`):** v84 plus two menus whose question and options were one row too tall for the screen (scenes 4 and 17) shortened so they fit.
