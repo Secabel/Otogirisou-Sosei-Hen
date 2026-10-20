@@ -221,6 +221,13 @@ def _pasada(X, U, tr, M, stats, inc, cad, deficit):
                     _a, _b = ps[_last], ps[_g]
                     if re.search(r'[.?!…”»)ʼ,;:]$', _a) and re.match(r'[A-Za-zÁÉÍÓÚÑáéíóúñ¿¡“(‘ʻ0-9]', _b) and not (re.search(r'\d[.,]$', _a) and _b[:1].isdigit()) and not _fragmento(_a, _b): ps[_last] = _a + ' '
                 _last = _g
+            # LOOP 15: en las OPCIONES el corazon (♥) siempre lleva un espacio delante (dentro de la unidad y entre unidades)
+            ps = [re.sub(r'(?<=[^\s♥/])♥', ' ♥', _p) for _p in ps]
+            _l = None
+            for _g in range(len(ps)):
+                if not ps[_g].strip(): continue
+                if _l is not None and ps[_g].startswith('♥') and not any(x in gaps for x in range(_l, _g)) and not ps[_l].endswith((' ', '/')): ps[_l] += ' '
+                _l = _g
             lead = False; q = ch[0]['tok0'] - 1                      # nombre ANTES de la primera unidad (la etiqueta empieza por el nombre)
             while q >= 0 and L2[q].kind == 'c' and L2[q].op not in (1, 2, 9, 0x0a, 0x0e, 0x13):
                 if L2[q].op == 0x12: lead = True; break
