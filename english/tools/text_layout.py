@@ -13,6 +13,7 @@ def set_language(code):
 def normalizar(s):
     s = s.replace('...', '…').replace("'", 'ʼ').replace('’', 'ʼ').replace('‘', 'ʻ').replace('—', '—' if EMDASH else '-').replace('–', '-').replace('«', '“').replace('»', '”')
     s = re.sub(r'(?<=[”.…!?])“', '/“', s)      # LOOP 13: una cita nueva pegada al cierre/frase anterior empieza SIEMPRE en fila nueva (en el japones es '」/「')
+    s = re.sub(r'(?<=[^\s♥/])♥', ' ♥', s)      # LOOP 15: el corazon ♥ siempre lleva un espacio delante (texto y opciones)
     return s
 class Modelo:
     def __init__(self, ID, ANCHO, margen_px=6, lineas_pagina=8, nombre='Kohei', jp_px=16, gmax=190, filas_pregunta=5, x_opcion=0x25C, abreviaturas=()):
