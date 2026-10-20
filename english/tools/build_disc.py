@@ -147,6 +147,11 @@ if a.traduccion:                                    # v31: imagen del mando (MDE
     import patch_controller as parche_mando
     if os.path.exists(LC['controller']): _l, _n, _v = parche_mando.sectores(LC['controller']); poner(_l, _n, _v); print('mando: %d sectores' % (len(_n) // 2048))
     else: print('AVISO: falta %s -> la imagen del mando queda en JAPONES' % LC['controller'])
+# LOOP 16: el volumen ISO9660 (PVD, sector 16) declaraba el tamano del disco ORIGINAL y las escenas nuevas quedaban fuera de el; los emuladores estrictos, conversores (PBP) y la PSP pueden recortar o rechazar esa zona. Se declara el tamano real.
+orig.seek(16 * SS + 24); _pvd0 = orig.read(2048); _pvd = bytearray(_pvd0)
+assert _pvd[1:6] == b'CD001' and struct.unpack_from('<I', _pvd, 80)[0] == total_sect
+struct.pack_into('<I', _pvd, 80, total_sect + sectores_nuevos); struct.pack_into('>I', _pvd, 84, total_sect + sectores_nuevos)
+poner(16, bytes(_pvd), _pvd0)
 print('sectores modificados:', len(cambios))
 assert all(l < NEW0 for l in cambios)
 
@@ -171,6 +176,11 @@ with open(out_bin, 'r+b' if ya else 'wb') as f:
     for k in range(sectores_nuevos):
         sub_k = sub if k < sectores_nuevos - 1 else b'\x00\x00\x89\x00\x00\x00\x89\x00'
         f.write(disco.sector_form1(NEW0 + k, bytes(datos[k * 2048:(k + 1) * 2048]), sub_k))
+    # LOOP 16: relleno al final hasta completar bloques de 16 sectores y UN bloque mas. Beetle PSX con PBP (PSX2PSP/PSXPackager) y la PSP se cuelgan si el juego lee escenas del ultimo bloque incompleto (la escena 44 de inicio quedaba ahi): el disco original nunca lee esa zona.
+    relleno = (-(NEW0 + sectores_nuevos)) % 16 + 16
+    for k in range(relleno):
+        f.write(disco.sector_form1(NEW0 + sectores_nuevos + k, bytes(2048)))
+    print('relleno final: %d sectores (total %d, multiplo de 16: %s)' % (relleno, NEW0 + sectores_nuevos + relleno, (NEW0 + sectores_nuevos + relleno) % 16 == 0))
 print('escrito %s (%.0f MB) en %.0f s' % (out_bin, os.path.getsize(out_bin) / 1e6, time.time() - t))
 open(os.path.join(a.salida, a.nombre + '.cue'), 'w').write('FILE "%s.bin" BINARY\r\n  TRACK 01 MODE2/2352\r\n    INDEX 01 00:00:00\r\n' % a.nombre)
 # 5) verificacion
